@@ -9,6 +9,8 @@ from urllib.request import urlretrieve
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
 
 class StopFetch(Exception): pass
 
@@ -39,21 +41,26 @@ class Fetcher(QThread):
 
             self.title.emit('({}/{}) Fetching download addresses'.format(index+1, len(urls)))
             driver.get('http://www.flvxz.com/?url=' + url)
-            for i in range(50):
-                sleep(0.1)
-                if self.stop:
-                    break
+            try:
+                WebDriverWait(driver, 10).until(lambda the_driver:
+                                    the_driver.find_element_by_id('result').is_displayed())
+            except TimeoutException:
+                fails.append('Timeout to fectch: ' + url)
+                continue
+
             if self.stop:
                 break
+            sleep(2) # even use WebDriveWait, seems still need to wait a little bit
+                     # to get correct page_source
             page_source = driver.page_source
 
             getter = self.makeGetter(url)
             if getter is None:
-                self.error.emit('URL not supported yet : ' + url)
+                fails.append('URL not supported yet: ' + url)
                 continue
             files = getter(page_source)
             if len(files) == 0:
-                fails.append('Failed to fectch : ' + url)
+                fails.append('No valid file addesses foun : ' + url)
                 continue
 
             titles = []
