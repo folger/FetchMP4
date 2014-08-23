@@ -116,6 +116,8 @@ class Fetcher(QThread):
             return self.getCNTV
         if url.find('tv.sohu.com') > 0:
             return self.getSohu
+        if url.find('www.letvxia.com') > 0:
+            return self.getLeTV
 
     def progressHook(self, count, blocksize, totalsize):
         if self.stop:
@@ -150,6 +152,11 @@ class Fetcher(QThread):
         else:
             count = nn // 2
         return ss[count:2*count]
+
+    def getLeTV(self, page_source):
+        ss = re.findall('http://g3.letv.cn/\d+/\d+/\d+/letv-uts/\d+/[^.]+.mp4[^<]+')
+        s = ss[0]
+        return [s.replace('&amp;', '&')]
 
 class MP4Fetcher(QDialog):
     stop = pyqtSignal()
