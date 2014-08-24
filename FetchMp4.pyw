@@ -12,6 +12,10 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 
+import inspect
+def get_abs_file_path(f):
+    return os.path.join(os.path.dirname(inspect.getfile(inspect.currentframe())), f)
+
 class StopFetch(Exception): pass
 
 class Fetcher(QThread):
@@ -19,7 +23,7 @@ class Fetcher(QThread):
     setrange = pyqtSignal(int, int)
     progress = pyqtSignal(int)
     enable = pyqtSignal(bool)
-    error = pyqtSignal(str)
+    error = pyqtSignal(str, str)
 
     def __init__(self, parent):
         super(Fetcher, self).__init__(parent)
@@ -30,9 +34,13 @@ class Fetcher(QThread):
         fails = []
         urls = self.text.rstrip().split('\n')
 
-        fetchPath = os.environ['MP4_FETCH_PATH']
-        mp4Path = os.environ['MP4_PATH']
-        driver = webdriver.Chrome('./chromedriver')
+        try:
+            fetchPath = os.environ['MP4_FETCH_PATH']
+            mp4Path = os.environ['MP4_PATH']
+        except KeyError as e:
+            self.error.emit('Fatal Error', 'Need to define both MP4_FETCH_PATH and MP4_PATH environment variable')
+            return
+        driver = webdriver.Chrome(get_abs_file_path('chromedriver'))
         self.enable.emit(False)
         for index, url in enumerate(urls):
             url = url.lstrip()
@@ -101,7 +109,7 @@ class Fetcher(QThread):
             self.setrange.emit(0, 0)
             if len(names) == len(https):
                 self.title.emit('Joining ...')
-                cmd = ['MP4Box']
+                cmd = [get_abs_file_path('MP4Box')]
                 for name in names:
                     cmd += ['-force-cat', '-cat', name]
                 cmd.append('-new')
@@ -111,7 +119,7 @@ class Fetcher(QThread):
                 break
 
         if len(fails) > 0:
-            self.error.emit('\n'.join(fails))
+            self.error.emit('Files that fail', '\n'.join(fails))
         driver.quit()
         self.enable.emit(True)
         self.title.emit('Stopped' if self.stop else 'All Done')
@@ -173,6 +181,10 @@ class MP4Fetcher(QDialog):
     def __init__(self, parent=None):
         super(MP4Fetcher, self).__init__(parent)
         self.setWindowTitle('MP4 Fetcher')
+
+        icon = QIcon()
+        icon.addPixmap(QPixmap(get_abs_file_path('main.ico')))
+        self.setWindowIcon(icon)
 
         self.resize(600, 300)
 
@@ -239,8 +251,10 @@ class MP4Fetcher(QDialog):
             self.isFetch = False
             self.btnFetch.setText('Stop')
 
-    def errorReport(self, error):
-        QMessageBox.information(self, "Files that fail", error)
+    def errorReport(self, title, error):
+        QMessageBox.information(self, title, error)
+        if title == 'Fatal Error':
+            self.close()
 
 app = QApplication(sys.argv)
 dlg = MP4Fetcher()
