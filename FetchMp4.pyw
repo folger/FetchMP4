@@ -70,7 +70,7 @@ class Fetcher(QThread):
                 continue
             files = getter(page_source)
             if len(files) == 0:
-                fails.append('No valid file addesses foun : ' + url)
+                fails.append('No valid file addesses found : ' + url)
                 continue
 
             titles = []
@@ -100,7 +100,7 @@ class Fetcher(QThread):
                     except StopFetch:
                         pass
                     except Exception as e:
-                        fails.append(name + ' ' + str(e))
+                        fails.append(name + '---' + str(e))
                 else:
                     names.append(filename)
                 if self.stop:
@@ -146,8 +146,10 @@ class Fetcher(QThread):
         self.stop = True
 
     def getTudou(self, page_source):
-        ss = re.findall(r'http://k.youku.com/player/getFlvPath/sid/\w+/st/mp4/fileid/[^<]+',
-                        page_source)[1:]
+        ss = re.findall(r'http://(?:\d+\.\d+\.\d+\.\d+/mp4/|k.youku.com/player/getFlvPath/sid/\w+/st/mp4/fileid/)[^<]+',
+                        page_source)
+        if len(ss) > 1:
+            ss = ss[1:]
         return [s.replace('&amp;', '&') for s in ss]
 
     def getQQ(self, page_source):
