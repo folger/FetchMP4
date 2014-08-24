@@ -41,17 +41,19 @@ class Fetcher(QThread):
 
             self.title.emit('({}/{}) Fetching download addresses'.format(index+1, len(urls)))
             driver.get('http://www.flvxz.com/?url=' + url)
+
+            def waitCheck(the_driver):
+                result = the_driver.find_element_by_id('result')
+                return result and result.find_element_by_tag_name('span')
+
             try:
-                WebDriverWait(driver, 10).until(lambda the_driver:
-                                    the_driver.find_element_by_id('result').is_displayed())
+                WebDriverWait(driver, 10).until(waitCheck)
             except TimeoutException:
                 fails.append('Timeout to fectch: ' + url)
                 continue
 
             if self.stop:
                 break
-            sleep(2) # even use WebDriveWait, seems still need to wait a little bit
-                     # to get correct page_source
             page_source = driver.page_source
 
             getter = self.makeGetter(url)
