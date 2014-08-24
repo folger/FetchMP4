@@ -1,7 +1,7 @@
 FetchMP4
 ========
 
-A simple GUI to fetch mp4 from video website, require pyqt4 with python3.
+A simple GUI to fetch mp4 from video website, require pyqt4 with python3, and Google Chrome.
 
 1. Get all files from http://pan.baidu.com/s/1dDF1z9,
 put them into FetchMp4 folder, and extract selenium-2.39.0-py3.3.egg.zip to your python
