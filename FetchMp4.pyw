@@ -26,7 +26,7 @@ class Fetcher(QThread):
     error = pyqtSignal(str, str)
 
     def __init__(self, parent):
-        super(Fetcher, self).__init__(parent)
+        super().__init__(parent)
         self.stop = False
         parent.stop.connect(self.setStop)
 
