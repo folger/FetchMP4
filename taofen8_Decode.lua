@@ -2662,6 +2662,9 @@ function inzfb()
     mSleep(1000)
   end
 end
+function _FOR_()
+  mSleep(50)
+end
 function main()
   idtime()
   if ov ~= 1 then
@@ -2731,14 +2734,14 @@ function main()
     mSleep(3000)
     igd = 0
     math.randomseed(os.clock() * 10000)
-    for _FORV_3_ = 1, 100 do
-      do break end
-      mSleep(1000)
-      igd = 10
-      IG()
-      zrwopen()
-      zrw()
-    end
+    --for _FORV_3_ = 1, 100 do
+      --do break end
+      --mSleep(1000)
+      --igd = 10
+      --IG()
+      --zrwopen()
+      --zrw()
+    --end
     repeat
       _FOR_()
       keyDown("HOME")
@@ -3788,7 +3791,6 @@ function zrw()
             end
           end
         end
-    end
     keyDown("HOME")
     mSleep(150)
     keyUp("HOME")
@@ -4128,7 +4130,6 @@ function zrw()
           end
         end
       end
-    end
     keyDown("HOME")
     mSleep(150)
     keyUp("HOME")
