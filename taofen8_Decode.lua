@@ -377,39 +377,29 @@ function enmsim()
     appRun("com.apple.Preferences")
     mSleep(1000)
     while true do
-      y = findColorInRegion(31487, 17, 81, 25, 87)
-      x = findColorInRegion(31487, 17, 81, 25, 87)
+      x,y = findColorInRegion(31487, 17, 81, 25, 87)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(0, 90, 292, 71, 292, 71)
-      x = findColorInRegionFuzzy(0, 90, 292, 71, 292, 71)
+      x,y = findColorInRegionFuzzy(0, 90, 292, 71, 292, 71)
       if x > 0 then
-        y = findColorInRegionFuzzy(0, 90, 351, 97, 351, 97)
-        x = findColorInRegionFuzzy(0, 90, 351, 97, 351, 97)
+        x,y = findColorInRegionFuzzy(0, 90, 351, 97, 351, 97)
         if x > 0 then
-          y = findColorInRegionFuzzy(0, 90, 292, 95, 292, 95)
-          x = findColorInRegionFuzzy(0, 90, 292, 95, 292, 95)
+          x,y = findColorInRegionFuzzy(0, 90, 292, 95, 292, 95)
           if x > 0 then
-            y = findColorInRegionFuzzy(0, 90, 316, 79, 316, 79)
-            x = findColorInRegionFuzzy(0, 90, 316, 79, 316, 79)
+            x,y = findColorInRegionFuzzy(0, 90, 316, 79, 316, 79)
             if x > 0 then
-              y = findColorInRegionFuzzy(0, 90, 311, 71, 311, 71)
-              x = findColorInRegionFuzzy(0, 90, 311, 71, 311, 71)
+              x,y = findColorInRegionFuzzy(0, 90, 311, 71, 311, 71)
               if x > 0 then
-                y = findColorInRegionFuzzy(0, 90, 299, 84, 299, 84)
-                x = findColorInRegionFuzzy(0, 90, 299, 84, 299, 84)
+                x,y = findColorInRegionFuzzy(0, 90, 299, 84, 299, 84)
                 if x > 0 then
-                  y = findColorInRegionFuzzy(0, 90, 326, 71, 326, 71)
-                  x = findColorInRegionFuzzy(0, 90, 326, 71, 326, 71)
+                  x,y = findColorInRegionFuzzy(0, 90, 326, 71, 326, 71)
                   if x > 0 then
-                    y = findColorInRegionFuzzy(0, 90, 322, 97, 322, 97)
-                    x = findColorInRegionFuzzy(0, 90, 322, 97, 322, 97)
+                    x,y = findColorInRegionFuzzy(0, 90, 322, 97, 322, 97)
                     if x > 0 then
-                      y = findColorInRegionFuzzy(0, 90, 349, 79, 349, 79)
-                      x = findColorInRegionFuzzy(0, 90, 349, 79, 349, 79)
+                      x,y = findColorInRegionFuzzy(0, 90, 349, 79, 349, 79)
                     end
                   end
                 end
@@ -426,8 +416,7 @@ function enmsim()
 	  
     end
     while true do
-      y = findColorInRegionFuzzy(16749824, 95, 63, 247, 69, 253)
-      x = findColorInRegionFuzzy(16749824, 95, 63, 247, 69, 253)
+      x,y = findColorInRegionFuzzy(16749824, 95, 63, 247, 69, 253)
       if x > 0 then
         break
       end
@@ -440,13 +429,11 @@ function enmsim()
     end
     mSleep(500)
     if ip == "3G" then
-      y = findColorInRegionFuzzy(16749824, 95, 63, 247, 69, 253)
-      x = findColorInRegionFuzzy(16749824, 95, 63, 247, 69, 253)
+      x,y = findColorInRegionFuzzy(16749824, 95, 63, 247, 69, 253)
       if x > 0 then
         x1 = x + 466
         y1 = y
-        y = findColorInRegionFuzzy(5036132, 95, 529, 234, 535, 240)
-        x = findColorInRegionFuzzy(5036132, 95, 529, 234, 535, 240)
+        x,y = findColorInRegionFuzzy(5036132, 95, 529, 234, 535, 240)
         if x > 0 then
           click(x, y)
         else
@@ -457,21 +444,18 @@ function enmsim()
         mSleep(2000)
       end
     else
-      y = findColorInRegionFuzzy(31487, 95, 51, 572, 57, 578)
-      x = findColorInRegionFuzzy(31487, 95, 51, 572, 57, 578)
+      x,y = findColorInRegionFuzzy(31487, 95, 51, 572, 57, 578)
       if x > 0 then
         x1 = x + 466
         y1 = y
-        y = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
-        x = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
+        x,y = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
         if x > 0 then
           click(x, y)
           mSleep(4000)
           click(x, y)
           k = 0
           while true do
-            y = findColorInRegion(31487, 282, 645, 349, 738)
-            x = findColorInRegion(31487, 282, 645, 349, 738)
+            x,y = findColorInRegion(31487, 282, 645, 349, 738)
             if x > 0 then
               click(x, y)
               mSleep(500)
@@ -483,8 +467,7 @@ function enmsim()
               k = 0
             end
             mSleep(500)
-            y = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
-            x = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
+            x,y = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
             if x > 0 then
               mSleep(200)
             else
@@ -492,8 +475,7 @@ function enmsim()
                 click(x1, y1)
                 k = 0
                 while true do
-                  y = findColorInRegion(31487, 282, 645, 349, 738)
-                  x = findColorInRegion(31487, 282, 645, 349, 738)
+                  x,y = findColorInRegion(31487, 282, 645, 349, 738)
                   if x > 0 then
                     click(x, y)
                     mSleep(800)
@@ -505,8 +487,7 @@ function enmsim()
                     k = 0
                   end
                   mSleep(800)
-                  y = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
-                  x = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
+                  x,y = findColorInRegionFuzzy(5036132, 95, 526, 588, 530, 594)
                   if x > 0 then
                     mSleep(200)
                     break
@@ -524,12 +505,10 @@ function enmsim()
     appRun("com.apple.mobilesafari")
     mSleep(1500)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web搜索2.bmp", 80, 60, 50, 160, 102)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web搜索2.bmp", 80, 60, 50, 160, 102)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web搜索2.bmp", 80, 60, 50, 160, 102)
       if x > 0 then
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web搜索栏.bmp", 80, 60, 50, 160, 102)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web搜索栏.bmp", 80, 60, 50, 160, 102)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web搜索栏.bmp", 80, 60, 50, 160, 102)
       end
       if x > 0 then
         mSleep(800)
@@ -546,14 +525,12 @@ function enmsim()
     click(580, 1093)
     mSleep(1000)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web打不开.bmp", 90, 79, 367, 199, 422)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web打不开.bmp", 90, 79, 367, 199, 422)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web打不开.bmp", 90, 79, 367, 199, 422)
       if x > 0 then
         click(589, 77)
         mSleep(6000)
       end
-      y = findColorInRegionFuzzy(6724095, 95, 289, 401, 295, 407)
-      x = findColorInRegionFuzzy(6724095, 95, 289, 401, 295, 407)
+      x,y = findColorInRegionFuzzy(6724095, 95, 289, 401, 295, 407)
       if x > 0 then
         xx = x
         yy = y
@@ -585,16 +562,13 @@ function enmsim()
         kh = 0
         while true do
           mSleep(500)
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp系统工具.bmp", 75, 6, 440, 65, 515)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp系统工具.bmp", 75, 6, 440, 65, 515)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp系统工具.bmp", 75, 6, 440, 65, 515)
           if x > 0 then
           else
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/系统工具.bmp", 75, 10, 395, 65, 485)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/系统工具.bmp", 75, 10, 395, 65, 485)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/系统工具.bmp", 75, 10, 395, 65, 485)
             if x > 0 then
             else
-              y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2系统工具.bmp", 75, 10, 395, 65, 485)
-              x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2系统工具.bmp", 75, 10, 395, 65, 485)
+              x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2系统工具.bmp", 75, 10, 395, 65, 485)
             end
           end
           if x > 0 then
@@ -604,16 +578,14 @@ function enmsim()
         end
         kh = kh + 1
         if kh == 1 then
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2连接.bmp", 90, 430, 380, 500, 430)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2连接.bmp", 90, 430, 380, 500, 430)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2连接.bmp", 90, 430, 380, 500, 430)
           if x > 0 then
             x = x + 5
             y = y + 3
             click(x, y)
             mSleep(4000)
             while true do
-              y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2断线.bmp", 90, 90, 430, 380, 500, 430)
-              x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2断线.bmp", 90, 90, 430, 380, 500, 430)
+              x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2断线.bmp", 90, 90, 430, 380, 500, 430)
               if x > 0 then
                 mSleep(2000)
                 do break end
@@ -624,8 +596,7 @@ function enmsim()
           end
         end
         while true do
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2断线.bmp", 90, 430, 380, 500, 430)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2断线.bmp", 90, 430, 380, 500, 430)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2断线.bmp", 90, 430, 380, 500, 430)
           if x > 0 then
             x = x + 5
             y = y + 3
@@ -635,16 +606,14 @@ function enmsim()
         end
         mSleep(25000)
         while true do
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2连接.bmp", 90, 430, 380, 500, 430)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2连接.bmp", 90, 430, 380, 500, 430)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2连接.bmp", 90, 430, 380, 500, 430)
           if x > 0 then
             x = x + 5
             y = y + 3
             click(x, y)
             mSleep(5000)
             else
-              y = findColorInRegion(31487, 434, 400, 440, 550)
-              x = findColorInRegion(31487, 434, 400, 440, 550)
+              x,y = findColorInRegion(31487, 434, 400, 440, 550)
               if x > 0 then
                 xx = x
                 yy = y
@@ -661,28 +630,23 @@ function enmsim()
               end
               mSleep(500)
               while true do
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web打不开.bmp", 85, 79, 367, 199, 422)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web打不开.bmp", 85, 79, 367, 199, 422)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/web打不开.bmp", 85, 79, 367, 199, 422)
                 if x > 0 then
                   click(589, 77)
                   mSleep(6000)
                 end
-                y = findColorInRegion(31487, 434, 400, 440, 550)
-                x = findColorInRegion(31487, 434, 400, 440, 550)
+                x,y = findColorInRegion(31487, 434, 400, 440, 550)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp系统工具.bmp", 75, 6, 440, 65, 515)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp系统工具.bmp", 75, 6, 440, 65, 515)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp系统工具.bmp", 75, 6, 440, 65, 515)
                 if x > 0 then
                 else
-                  y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/系统工具.bmp", 75, 10, 395, 65, 485)
-                  x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/系统工具.bmp", 75, 10, 395, 65, 485)
+                  x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/系统工具.bmp", 75, 10, 395, 65, 485)
                   if x > 0 then
                   else
-                    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2系统工具.bmp", 75, 10, 395, 65, 485)
-                    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2系统工具.bmp", 75, 10, 395, 65, 485)
+                    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2系统工具.bmp", 75, 10, 395, 65, 485)
                   end
                 end
                 if x > 0 then
@@ -695,20 +659,16 @@ function enmsim()
                 end
               end
               while true do
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启路由.bmp", 75, 14, 578, 74, 641)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启路由.bmp", 75, 14, 578, 74, 641)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启路由.bmp", 75, 14, 578, 74, 641)
                 if x > 0 then
                 else
-                  y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/重启路由器.bmp", 75, 11, 508, 82, 647)
-                  x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/重启路由器.bmp", 75, 11, 508, 82, 647)
+                  x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/重启路由器.bmp", 75, 11, 508, 82, 647)
                   if x > 0 then
                   else
-                    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2重启路由.bmp", 75, 10, 570, 75, 620)
-                    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2重启路由.bmp", 75, 10, 570, 75, 620)
+                    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp2重启路由.bmp", 75, 10, 570, 75, 620)
                     if x > 0 then
                     else
-                      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启设备.bmp", 75, 5, 600, 75, 627)
-                      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启设备.bmp", 75, 5, 600, 75, 627)
+                      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启设备.bmp", 75, 5, 600, 75, 627)
                     end
                   end
                 end
@@ -723,20 +683,16 @@ function enmsim()
                 mSleep(500)
               end
               while true do
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb真启动路由.bmp", 75, 249, 227, 328, 273)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb真启动路由.bmp", 75, 249, 227, 328, 273)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb真启动路由.bmp", 75, 249, 227, 328, 273)
                 if x > 0 then
                 else
-                  y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/真正重启路由.bmp", 75, 231, 210, 302, 245)
-                  x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/真正重启路由.bmp", 75, 231, 210, 302, 245)
+                  x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/真正重启路由.bmp", 75, 231, 210, 302, 245)
                   if x > 0 then
                   else
-                    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2真启路由.bmp", 75, 243, 231, 326, 276)
-                    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2真启路由.bmp", 75, 243, 231, 326, 276)
+                    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb2真启路由.bmp", 75, 243, 231, 326, 276)
                     if x > 0 then
                     else
-                      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启.bmp", 75, 243, 231, 326, 276)
-                      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启.bmp", 75, 243, 231, 326, 276)
+                      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tp重启.bmp", 75, 243, 231, 326, 276)
                     end
                   end
                 end
@@ -751,8 +707,7 @@ function enmsim()
                 mSleep(500)
               end
               while true do
-                y = findColorInRegion(31487, 420, 520, 650, 1000)
-                x = findColorInRegion(31487, 420, 520, 650, 1000)
+                x,y = findColorInRegion(31487, 420, 520, 650, 1000)
                 if x > 0 then
                   x = x + 3
                   y = y + 3
@@ -787,14 +742,11 @@ function gjcfz()
     touchMove(1, 283, 50)
     touchUp(1)
     mSleep(700)
-    y = findColorInRegionFuzzy(c1, 90, 278, 883, 278, 883)
-    x = findColorInRegionFuzzy(c1, 90, 278, 883, 278, 883)
+    x,y = findColorInRegionFuzzy(c1, 90, 278, 883, 278, 883)
     if x > 0 then
-      y = findColorInRegionFuzzy(c2, 90, 311, 927, 311, 927)
-      x = findColorInRegionFuzzy(c2, 90, 311, 927, 311, 927)
+      x,y = findColorInRegionFuzzy(c2, 90, 311, 927, 311, 927)
       if x > 0 then
-        y = findColorInRegionFuzzy(c3, 90, 353, 958, 353, 958)
-        x = findColorInRegionFuzzy(c3, 90, 353, 958, 353, 958)
+        x,y = findColorInRegionFuzzy(c3, 90, 353, 958, 353, 958)
       end
     end
     if not (x > 0) then
@@ -814,11 +766,9 @@ function inow()
   end
 end
 function wifi()
-  y = findColorInRegion(31487, 130, 410, 500, 780)
-  x = findColorInRegion(31487, 130, 410, 500, 780)
+  x,y = findColorInRegion(31487, 130, 410, 500, 780)
   if x > 0 then
-    y = findColorInRegion(31487, 317, 500, 323, 750)
-    x = findColorInRegion(31487, 317, 500, 323, 750)
+    x,y = findColorInRegion(31487, 317, 500, 323, 750)
     if x > 0 then
       click(x, y)
       mSleep(400)
@@ -886,8 +836,7 @@ function wifi()
                         click(x, y)
                         mSleep(300)
                       else
-                        y = findColorInRegion(31487, 308, 627, 314, 633)
-                        x = findColorInRegion(31487, 308, 627, 314, 633)
+                        x,y = findColorInRegion(31487, 308, 627, 314, 633)
                         if x > 0 then
                           click(x, y)
                           mSleep(800)
@@ -958,8 +907,7 @@ end
 function ddqc1()
   while true do
     mSleep(500)
-    y = findColorInRegionFuzzy(15221275, 85, 132, 222, 170, 387)
-    x = findColorInRegionFuzzy(15221275, 85, 132, 222, 170, 387)
+    x,y = findColorInRegionFuzzy(15221275, 85, 132, 222, 170, 387)
     if x > 0 then
       mSleep(2500)
       break
@@ -1162,16 +1110,14 @@ function IG()
       mSleep(1000)
     end
     mSleep(600)
-    y = findColorInRegion(31487, 310, 1070, 319, 1079)
-    x = findColorInRegion(31487, 310, 1070, 319, 1079)
+    x,y = findColorInRegion(31487, 310, 1070, 319, 1079)
     if 0 < x then
       mSleep(1000)
       break
     end
   end
   while true do
-    y = findColorInRegionFuzzy(16777215, 95, 270, 555, 270, 555)
-    x = findColorInRegionFuzzy(16777215, 95, 270, 555, 270, 555)
+    x,y = findColorInRegionFuzzy(16777215, 95, 270, 555, 270, 555)
     if 0 < x then
       break
     end
@@ -1180,12 +1126,10 @@ function IG()
   mSleep(800)
   igd = igd + 1
   if igd == 1 or igd == 2 then
-    y = findColorInRegionFuzzy(9710569, 80, 222, 681, 224, 683)
-    x = findColorInRegionFuzzy(9710569, 80, 222, 681, 224, 683)
+    x,y = findColorInRegionFuzzy(9710569, 80, 222, 681, 224, 683)
     if 0 < x then
     else
-      y = findColorInRegionFuzzy(753109, 80, 222, 681, 224, 683)
-      x = findColorInRegionFuzzy(753109, 80, 222, 681, 224, 683)
+      x,y = findColorInRegionFuzzy(753109, 80, 222, 681, 224, 683)
     end
     if 0 < x then
       click(x, y)
@@ -1194,23 +1138,20 @@ function IG()
     click(516, 68)
     while true do
       mSleep(300)
-      y = findColorInRegion(31487, 45, 90, 52, 100)
-      x = findColorInRegion(31487, 45, 90, 52, 100)
+      x,y = findColorInRegion(31487, 45, 90, 52, 100)
       if 0 < x then
         mSleep(500)
         break
       end
     end
-    y = findColorInRegionFuzzy(4969826, 80, 536, 481, 536, 481)
-    x = findColorInRegionFuzzy(4969826, 80, 536, 481, 536, 481)
+    x,y = findColorInRegionFuzzy(4969826, 80, 536, 481, 536, 481)
     if 0 < x then
     else
       click(533, 282)
     end
     while true do
       mSleep(300)
-      y = findColorInRegion(31487, 33, 79, 39, 85)
-      x = findColorInRegion(31487, 33, 79, 39, 85)
+      x,y = findColorInRegion(31487, 33, 79, 39, 85)
       if 0 < x then
         click(49, 83)
         mSleep(500)
@@ -1223,8 +1164,7 @@ function IG()
       while true do
         k = k + 1
         mSleep(800)
-        y = findColorInRegion(31487, 609, 67, 613, 75)
-        x = findColorInRegion(31487, 609, 67, 613, 75)
+        x,y = findColorInRegion(31487, 609, 67, 613, 75)
         if 0 < x then
           mSleep(1000)
           break
@@ -1239,8 +1179,7 @@ function IG()
     end
     while true do
       mSleep(300)
-      y = findColorInRegion(31487, 33, 79, 39, 85)
-      x = findColorInRegion(31487, 33, 79, 39, 85)
+      x,y = findColorInRegion(31487, 33, 79, 39, 85)
       if 0 < x then
         click(49, 83)
         mSleep(500)
@@ -1249,8 +1188,7 @@ function IG()
   end
   while true do
     mSleep(300)
-    y = findColorInRegion(31487, 310, 1070, 319, 1079)
-    x = findColorInRegion(31487, 310, 1070, 319, 1079)
+    x,y = findColorInRegion(31487, 310, 1070, 319, 1079)
     if 0 < x then
       mSleep(600)
       break
@@ -1258,20 +1196,17 @@ function IG()
   end
   click(488, 823)
   while true do
-    y = findColorInRegionFuzzy(3355443, 95, 284, 641, 284, 641)
-    x = findColorInRegionFuzzy(3355443, 95, 284, 641, 284, 641)
+    x,y = findColorInRegionFuzzy(3355443, 95, 284, 641, 284, 641)
     if 0 < x then
       break
     end
   end
   repeat
-    y = findColorInRegionFuzzy(3355443, 95, 284, 641, 284, 641)
-    x = findColorInRegionFuzzy(3355443, 95, 284, 641, 284, 641)
+    x,y = findColorInRegionFuzzy(3355443, 95, 284, 641, 284, 641)
   until not (0 < x)
   while true do
     mSleep(100)
-    y = findColorInRegion(13421772, 439, 954, 439, 954)
-    x = findColorInRegion(13421772, 439, 954, 439, 954)
+    x,y = findColorInRegion(13421772, 439, 954, 439, 954)
     if 0 < x then
       mSleep(200)
       click(x, y)
@@ -1295,8 +1230,7 @@ function web()
           openrw()
         else
           inow()
-          y = findColorInRegion(15603062, 406, 744, 406, 744)
-          x = findColorInRegion(15603062, 406, 744, 406, 744)
+          x,y = findColorInRegion(15603062, 406, 744, 406, 744)
           if 0 < x then
             click(x, y)
             mSleep(2000)
@@ -1324,8 +1258,7 @@ function web()
                   click(590, 78)
                   mSleep(3500)
                 end
-                y = findColorInRegion(31487, 478, 245, 629, 387)
-                x = findColorInRegion(31487, 478, 245, 629, 387)
+                x,y = findColorInRegion(31487, 478, 245, 629, 387)
                 if 0 < x then
                   mSleep(500)
                   break
@@ -1341,8 +1274,7 @@ function web()
                   xx = x + 5
                   yy = y + 5
                   while true do
-                    y = findColorInRegion(31487, 435, 659, 482, 686)
-                    x = findColorInRegion(31487, 435, 659, 482, 686)
+                    x,y = findColorInRegion(31487, 435, 659, 482, 686)
                     if 0 < x then
                       mSleep(500)
                       click(x, y)
@@ -1350,8 +1282,7 @@ function web()
                     end
                     click(xx, yy)
                     mSleep(2000)
-                    y = findColorInRegion(31487, 455, 490, 470, 505)
-                    x = findColorInRegion(31487, 455, 490, 470, 505)
+                    x,y = findColorInRegion(31487, 455, 490, 470, 505)
                     if 0 < x then
                       mSleep(200)
                       inputText(app)
@@ -1366,15 +1297,13 @@ function web()
                     end
                   end
                   while true do
-                    y = findColorInRegion(31487, 435, 659, 482, 686)
-                    x = findColorInRegion(31487, 435, 659, 482, 686)
+                    x,y = findColorInRegion(31487, 435, 659, 482, 686)
                     if 0 < x then
                       mSleep(500)
                       click(x, y)
                       mSleep(1000)
                     end
-                    y = findColorInRegion(31487, 455, 490, 470, 505)
-                    x = findColorInRegion(31487, 455, 490, 470, 505)
+                    x,y = findColorInRegion(31487, 455, 490, 470, 505)
                     if 0 < x then
                       mSleep(200)
                       inputText(app)
@@ -1396,8 +1325,7 @@ function web()
                   mSleep(150)
                   keyUp("HOME")
                   mSleep(2300)
-                  y = findColorInRegion(31487, 478, 245, 629, 387)
-                  x = findColorInRegion(31487, 478, 245, 629, 387)
+                  x,y = findColorInRegion(31487, 478, 245, 629, 387)
                   if 0 < x then
                     mSleep(500)
                   end
@@ -1421,8 +1349,7 @@ function tf()
       mSleep(1000)
       k = 0
     end
-    y = findColorInRegion(31487, 433, 646, 439, 652)
-    x = findColorInRegion(31487, 433, 646, 439, 652)
+    x,y = findColorInRegion(31487, 433, 646, 439, 652)
     if 0 < x then
       click(x, y)
       mSleep(1000)
@@ -1453,12 +1380,10 @@ function tf()
     k = k + 1
     if k == 30 then
       k = 0
-      y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
-      x = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
+      x,y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
       if 0 < x then
       else
-        y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
-        x = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
+        x,y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
       end
       if 0 < x then
         click(x, y)
@@ -1518,12 +1443,10 @@ function tf()
       k = k + 1
       if k == 45 then
         k = 0
-        y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
-        x = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
+        x,y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
         if 0 < x then
         else
-          y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
-          x = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
+          x,y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
         end
         if 0 < x then
           click(x, y)
@@ -1595,8 +1518,7 @@ function tf()
           mSleep(800)
         end
       end
-      y = findColorInRegion(16203135, 295, 843, 295, 843)
-      x = findColorInRegion(16203135, 295, 843, 295, 843)
+      x,y = findColorInRegion(16203135, 295, 843, 295, 843)
       if 0 < x then
         click(x, y)
         mSleep(800)
@@ -1648,8 +1570,7 @@ function tf()
   end
 end
 function openrw()
-  y = findColorInRegion(16203135, 628, 140, 628, 180)
-  x = findColorInRegion(16203135, 628, 140, 628, 180)
+  x,y = findColorInRegion(16203135, 628, 140, 628, 180)
   if x > 0 then
   else
     appRun("com.taofen8.TfClient")
@@ -1663,20 +1584,17 @@ function openrw()
     k = k + 1
     if k == 45 then
       k = 0
-      y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
-      x = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
+      x,y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
       if x > 0 then
       else
-        y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
-        x = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
+        x,y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
       end
       if x > 0 then
         click(x, y)
         mSleep(2500)
       end
     end
-    y = findColorInRegionFuzzy(15876889, 85, 252, 698, 252, 698)
-    x = findColorInRegionFuzzy(15876889, 85, 252, 698, 252, 698)
+    x,y = findColorInRegionFuzzy(15876889, 85, 252, 698, 252, 698)
     if x > 0 then
       y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/空帐号.bmp", 90, 158, 380, 242, 403)
       x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/空帐号.bmp", 90, 158, 380, 242, 403)
@@ -1738,8 +1656,7 @@ function openrw()
         mSleep(800)
       end
     end
-    y = findColorInRegion(16203135, 295, 843, 295, 843)
-    x = findColorInRegion(16203135, 295, 843, 295, 843)
+    x,y = findColorInRegion(16203135, 295, 843, 295, 843)
     if x > 0 then
       click(x, y)
       mSleep(800)
@@ -1782,8 +1699,7 @@ function openrw()
     wifi()
     y1 = y1 - 20
     y2 = y1 + 20
-    y = findColorInRegionFuzzy(15658734, 100, 10, y1, 10, y2)
-    x = findColorInRegionFuzzy(15658734, 100, 10, y1, 10, y2)
+    x,y = findColorInRegionFuzzy(15658734, 100, 10, y1, 10, y2)
     if x > 0 then
       break
     end
@@ -1810,26 +1726,19 @@ function openrw()
       do break end
       sj = 0
       mSleep(100)
-      y = findColorInRegionFuzzy(16777215, 90, x2, y2, x2, y2)
-      x = findColorInRegionFuzzy(16777215, 90, x2, y2, x2, y2)
+      x,y = findColorInRegionFuzzy(16777215, 90, x2, y2, x2, y2)
       if x > 0 then
-        y = findColorInRegionFuzzy(16777215, 90, x3, y3, x3, y3)
-        x = findColorInRegionFuzzy(16777215, 90, x3, y3, x3, y3)
+        x,y = findColorInRegionFuzzy(16777215, 90, x3, y3, x3, y3)
         if x > 0 then
-          y = findColorInRegionFuzzy(16777215, 90, x4, y4, x4, y4)
-          x = findColorInRegionFuzzy(16777215, 90, x4, y4, x4, y4)
+          x,y = findColorInRegionFuzzy(16777215, 90, x4, y4, x4, y4)
           if x > 0 then
-            y = findColorInRegionFuzzy(16777215, 90, x5, y5, x5, y5)
-            x = findColorInRegionFuzzy(16777215, 90, x5, y5, x5, y5)
+            x,y = findColorInRegionFuzzy(16777215, 90, x5, y5, x5, y5)
             if x > 0 then
-              y = findColorInRegionFuzzy(16777215, 90, x6, y6, x6, y6)
-              x = findColorInRegionFuzzy(16777215, 90, x6, y6, x6, y6)
+              x,y = findColorInRegionFuzzy(16777215, 90, x6, y6, x6, y6)
               if x > 0 then
-                y = findColorInRegionFuzzy(16777215, 90, x7, y7, x7, y7)
-                x = findColorInRegionFuzzy(16777215, 90, x7, y7, x7, y7)
+                x,y = findColorInRegionFuzzy(16777215, 90, x7, y7, x7, y7)
                 if x > 0 then
-                  y = findColorInRegionFuzzy(16777215, 90, x8, y8, x8, y8)
-                  x = findColorInRegionFuzzy(16777215, 90, x8, y8, x8, y8)
+                  x,y = findColorInRegionFuzzy(16777215, 90, x8, y8, x8, y8)
                 end
               end
             end
@@ -1852,8 +1761,7 @@ function tfrw()
       wifi()
       y1 = y1 - 20
       y2 = y1 + 20
-      y = findColorInRegionFuzzy(15658734, 100, 10, y1, 10, y2)
-      x = findColorInRegionFuzzy(15658734, 100, 10, y1, 10, y2)
+      x,y = findColorInRegionFuzzy(15658734, 100, 10, y1, 10, y2)
       if x > 0 then
         break
       end
@@ -1880,26 +1788,19 @@ function tfrw()
         do break end
         sj = 0
         mSleep(100)
-        y = findColorInRegionFuzzy(16777215, 90, x2, y2, x2, y2)
-        x = findColorInRegionFuzzy(16777215, 90, x2, y2, x2, y2)
+        x,y = findColorInRegionFuzzy(16777215, 90, x2, y2, x2, y2)
         if x > 0 then
-          y = findColorInRegionFuzzy(16777215, 90, x3, y3, x3, y3)
-          x = findColorInRegionFuzzy(16777215, 90, x3, y3, x3, y3)
+          x,y = findColorInRegionFuzzy(16777215, 90, x3, y3, x3, y3)
           if x > 0 then
-            y = findColorInRegionFuzzy(16777215, 90, x4, y4, x4, y4)
-            x = findColorInRegionFuzzy(16777215, 90, x4, y4, x4, y4)
+            x,y = findColorInRegionFuzzy(16777215, 90, x4, y4, x4, y4)
             if x > 0 then
-              y = findColorInRegionFuzzy(16777215, 90, x5, y5, x5, y5)
-              x = findColorInRegionFuzzy(16777215, 90, x5, y5, x5, y5)
+              x,y = findColorInRegionFuzzy(16777215, 90, x5, y5, x5, y5)
               if x > 0 then
-                y = findColorInRegionFuzzy(16777215, 90, x6, y6, x6, y6)
-                x = findColorInRegionFuzzy(16777215, 90, x6, y6, x6, y6)
+                x,y = findColorInRegionFuzzy(16777215, 90, x6, y6, x6, y6)
                 if x > 0 then
-                  y = findColorInRegionFuzzy(16777215, 90, x7, y7, x7, y7)
-                  x = findColorInRegionFuzzy(16777215, 90, x7, y7, x7, y7)
+                  x,y = findColorInRegionFuzzy(16777215, 90, x7, y7, x7, y7)
                   if x > 0 then
-                    y = findColorInRegionFuzzy(16777215, 90, x8, y8, x8, y8)
-                    x = findColorInRegionFuzzy(16777215, 90, x8, y8, x8, y8)
+                    x,y = findColorInRegionFuzzy(16777215, 90, x8, y8, x8, y8)
                   end
                 end
               end
@@ -2600,8 +2501,7 @@ function inzfb()
   while true do
     mSleep(500)
     inow()
-    y = findColorInRegionFuzzy(16197752, 90, 573, 1091, 579, 1097)
-    x = findColorInRegionFuzzy(16197752, 90, 573, 1091, 579, 1097)
+    x,y = findColorInRegionFuzzy(16197752, 90, 573, 1091, 579, 1097)
     if x > 0 then
       mSleep(1000)
       break
@@ -2620,8 +2520,7 @@ function inzfb()
       if x > 0 then
         mSleep(500)
         inow()
-        y = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
-        x = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
+        x,y = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
         if x > 0 then
           yyy = y + 46
           click(200, yyy)
@@ -2630,8 +2529,7 @@ function inzfb()
           inputText(zfb)
           mSleep(800)
           inow()
-          y = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
-          x = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
+          x,y = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
           if x > 0 then
             yyy = y + 46
             click(532, yyy)
@@ -2640,8 +2538,7 @@ function inzfb()
           end
           while true do
             inow()
-            y = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
-            x = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
+            x,y = findColorInRegionFuzzy(3372526, 90, 532, 230, 532, 380)
             if x > 0 then
               mSleep(500)
             end
@@ -2653,8 +2550,7 @@ function inzfb()
   end
   while true do
     inow()
-    y = findColorInRegionFuzzy(16197752, 90, 61, 1079, 67, 1085)
-    x = findColorInRegionFuzzy(16197752, 90, 61, 1079, 67, 1085)
+    x,y = findColorInRegionFuzzy(16197752, 90, 61, 1079, 67, 1085)
     if x > 0 then
       break
     end
@@ -2783,14 +2679,12 @@ function zrw()
       x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/性价比首页.bmp", 85, 36, 1095, 71, 1130)
       if not (x > 0) then
         mSleep(500)
-        y = findColorInRegion(31487, 140, 788, 148, 794)
-        x = findColorInRegion(31487, 140, 788, 148, 794)
+        x,y = findColorInRegion(31487, 140, 788, 148, 794)
         if x > 0 then
           click(x, y)
           mSleep(1500)
         end
-        y = findColorInRegionFuzzy(14328305, 95, 222, 939, 222, 939)
-        x = findColorInRegionFuzzy(14328305, 95, 222, 939, 222, 939)
+        x,y = findColorInRegionFuzzy(14328305, 95, 222, 939, 222, 939)
         if x > 0 then
           mSleep(200)
           click(x, y)
@@ -2799,8 +2693,7 @@ function zrw()
         end
         mousekk(600, 500, 100, 500, 20)
         mSleep(700)
-        y = findColorInRegion(31487, 140, 788, 148, 794)
-        x = findColorInRegion(31487, 140, 788, 148, 794)
+        x,y = findColorInRegion(31487, 140, 788, 148, 794)
         if x > 0 then
           click(x, y)
           mSleep(1500)
@@ -2839,8 +2732,7 @@ function zrw()
     while true do
       wifi()
       mSleep(500)
-      y = findColorInRegion(12452353, 70, 193, 215, 199)
-      x = findColorInRegion(12452353, 70, 193, 215, 199)
+      x,y = findColorInRegion(12452353, 70, 193, 215, 199)
       if x > 0 then
         b = b + 1
         if not (b < 8) then
@@ -2856,8 +2748,7 @@ function zrw()
       click(150, y)
       mSleep(5000)
       for _FORV_7_ = 1, 3 do
-        y = findColorInRegion(0, 69, 83, 69, 83)
-        x = findColorInRegion(0, 69, 83, 69, 83)
+        x,y = findColorInRegion(0, 69, 83, 69, 83)
         if x > 0 then
           mouse(560, 400, 50, 400, 10)
         else
@@ -2867,8 +2758,7 @@ function zrw()
       end
       while true do
         mSleep(1200)
-        y = findColorInRegion(12452353, 70, 193, 215, 199)
-        x = findColorInRegion(12452353, 70, 193, 215, 199)
+        x,y = findColorInRegion(12452353, 70, 193, 215, 199)
         if x > 0 then
           break
         end
@@ -2897,8 +2787,7 @@ function zrw()
           mSleep(1000)
         end
         mSleep(900)
-        y = findColorInRegionFuzzy(16749127, 85, 314, 694, 316, 696)
-        x = findColorInRegionFuzzy(16749127, 85, 314, 694, 316, 696)
+        x,y = findColorInRegionFuzzy(16749127, 85, 314, 694, 316, 696)
         if x > 0 then
           mSleep(500)
           break
@@ -2926,8 +2815,7 @@ function zrw()
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(16750674, 85, 215, 474, 215, 474)
-            x = findColorInRegionFuzzy(16750674, 85, 215, 474, 215, 474)
+            x,y = findColorInRegionFuzzy(16750674, 85, 215, 474, 215, 474)
             if x > 0 then
               click(x, y)
               mSleep(1000)
@@ -2996,38 +2884,32 @@ function zrw()
                   click(562, 1090)
                   mSleep(1500)
                 end
-                y = findColorInRegionFuzzy(15651374, 90, 570, 1061, 576, 1067)
-                x = findColorInRegionFuzzy(15651374, 90, 570, 1061, 576, 1067)
+                x,y = findColorInRegionFuzzy(15651374, 90, 570, 1061, 576, 1067)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(12512816, 90, 579, 1084, 585, 1090)
-                x = findColorInRegionFuzzy(12512816, 90, 579, 1084, 585, 1090)
+                x,y = findColorInRegionFuzzy(12512816, 90, 579, 1084, 585, 1090)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(1211071, 90, 88, 798, 94, 804)
-                x = findColorInRegionFuzzy(1211071, 90, 88, 798, 94, 804)
+                x,y = findColorInRegionFuzzy(1211071, 90, 88, 798, 94, 804)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(13177876, 90, 451, 216, 457, 222)
-                x = findColorInRegionFuzzy(13177876, 90, 451, 216, 457, 222)
+                x,y = findColorInRegionFuzzy(13177876, 90, 451, 216, 457, 222)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(2277350, 90, 44, 435, 48, 439)
-                x = findColorInRegionFuzzy(2277350, 90, 44, 435, 48, 439)
+                x,y = findColorInRegionFuzzy(2277350, 90, 44, 435, 48, 439)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(13406003, 90, 317, 1100, 323, 1105)
-                x = findColorInRegionFuzzy(13406003, 90, 317, 1100, 323, 1105)
+                x,y = findColorInRegionFuzzy(13406003, 90, 317, 1100, 323, 1105)
                 if x > 0 then
                   mSleep(300)
                   click(x, y)
@@ -3057,22 +2939,19 @@ function zrw()
       k = k + 1
       if k ~= 100 then
         mSleep(500)
-        y = findColorInRegionFuzzy(14011054, 90, 596, 556, 600, 560)
-        x = findColorInRegionFuzzy(14011054, 90, 596, 556, 600, 560)
+        x,y = findColorInRegionFuzzy(14011054, 90, 596, 556, 600, 560)
         if x > 0 then
           mSleep(300)
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(3394297, 90, 424, 718, 424, 718)
-        x = findColorInRegionFuzzy(3394297, 90, 424, 718, 424, 718)
+        x,y = findColorInRegionFuzzy(3394297, 90, 424, 718, 424, 718)
         if x > 0 then
           mSleep(300)
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
-        x = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
+        x,y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
         if x > 0 then
           mSleep(500)
           break
@@ -3096,14 +2975,12 @@ function zrw()
           mSleep(600)
           click(199, 933)
           mSleep(1500)
-          y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
-          x = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
+          x,y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
           if x > 0 then
             click(x, y)
             mSleep(1000)
           end
-          y = findColorInRegion(31487, 397, 574, 403, 580)
-          x = findColorInRegion(31487, 397, 574, 403, 580)
+          x,y = findColorInRegion(31487, 397, 574, 403, 580)
           if x > 0 then
             click(x, y)
             mSleep(2000)
@@ -3114,14 +2991,12 @@ function zrw()
               click(519, 104)
             end
           else
-            y = findColorInRegionFuzzy(12338751, 90, 590, 230, 592, 232)
-            x = findColorInRegionFuzzy(12338751, 90, 590, 230, 592, 232)
+            x,y = findColorInRegionFuzzy(12338751, 90, 590, 230, 592, 232)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(3235699, 95, 110, 128, 112, 130)
-            x = findColorInRegionFuzzy(3235699, 95, 110, 128, 112, 130)
+            x,y = findColorInRegionFuzzy(3235699, 95, 110, 128, 112, 130)
             if x > 0 then
               y = math.random(1, 4)
               if y == 1 then
@@ -3146,20 +3021,17 @@ function zrw()
               end
               mSleep(900)
             end
-            y = findColorInRegionFuzzy(10106170, 90, 600, 119, 602, 121)
-            x = findColorInRegionFuzzy(10106170, 90, 600, 119, 602, 121)
+            x,y = findColorInRegionFuzzy(10106170, 90, 600, 119, 602, 121)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(12274496, 91, 421, 570, 427, 576)
-            x = findColorInRegionFuzzy(12274496, 91, 421, 570, 427, 576)
+            x,y = findColorInRegionFuzzy(12274496, 91, 421, 570, 427, 576)
             if x > 0 then
               click(x, y)
               mSleep(2000)
             end
-            y = findColorInRegionFuzzy(3432822, 90, 146, 588, 152, 594)
-            x = findColorInRegionFuzzy(3432822, 90, 146, 588, 152, 594)
+            x,y = findColorInRegionFuzzy(3432822, 90, 146, 588, 152, 594)
             if x > 0 then
               click(x, y)
               mSleep(1000)
@@ -3172,8 +3044,7 @@ function zrw()
                 mSleep(1000)
                 click(595, 159)
                 mSleep(1000)
-                y = findColorInRegionFuzzy(10828860, 95, 429, 553, 425, 559)
-                x = findColorInRegionFuzzy(10828860, 95, 429, 553, 425, 559)
+                x,y = findColorInRegionFuzzy(10828860, 95, 429, 553, 425, 559)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
@@ -3187,8 +3058,7 @@ function zrw()
                 end
               end
             end
-            y = findColorInRegionFuzzy(10631996, 90, 590, 53, 594, 57)
-            x = findColorInRegionFuzzy(10631996, 90, 590, 53, 594, 57)
+            x,y = findColorInRegionFuzzy(10631996, 90, 590, 53, 594, 57)
             if x > 0 then
               click(x, y)
               mSleep(1000)
@@ -3265,13 +3135,11 @@ function zrw()
         appRun("com.51fanli.fanli")
       end
       wifi()
-      y = findColorInRegionFuzzy(8963840, 98, 381, 1075, 381, 1075)
-      x = findColorInRegionFuzzy(8963840, 98, 381, 1075, 381, 1075)
+      x,y = findColorInRegionFuzzy(8963840, 98, 381, 1075, 381, 1075)
       if x > 0 then
         break
       end
-      y = findColorInRegionFuzzy(2536704, 98, 220, 891, 220, 891)
-      x = findColorInRegionFuzzy(2536704, 98, 220, 891, 220, 891)
+      x,y = findColorInRegionFuzzy(2536704, 98, 220, 891, 220, 891)
       if x > 0 then
         mSleep(600)
         click(x, y)
@@ -3285,35 +3153,30 @@ function zrw()
       while true do
         mSleep(1000)
         wifi()
-        y = findColorInRegion(31487, 307, 625, 313, 631)
-        x = findColorInRegion(31487, 307, 625, 313, 631)
+        x,y = findColorInRegion(31487, 307, 625, 313, 631)
         if x > 0 then
           mSleep(300)
           click(x, y)
           mSleep(2000)
         end
-        y = findColorInRegionFuzzy(7895160, 90, 474, 497, 480, 503)
-        x = findColorInRegionFuzzy(7895160, 90, 474, 497, 480, 503)
+        x,y = findColorInRegionFuzzy(7895160, 90, 474, 497, 480, 503)
         if x > 0 then
           mSleep(600)
           click(x, y)
         end
-        y = findColorInRegionFuzzy(8963840, 90, 381, 1075, 381, 1075)
-        x = findColorInRegionFuzzy(8963840, 90, 381, 1075, 381, 1075)
-        if x > 0 then
-          mSleep(600)
-          click(x, y)
-          mSleep(900)
-        end
-        y = findColorInRegionFuzzy(16739857, 90, 518, 172, 518, 172)
-        x = findColorInRegionFuzzy(16739857, 90, 518, 172, 518, 172)
+        x,y = findColorInRegionFuzzy(8963840, 90, 381, 1075, 381, 1075)
         if x > 0 then
           mSleep(600)
           click(x, y)
           mSleep(900)
         end
-        y = findColorInRegionFuzzy(3983369, 80, 215, 569, 215, 569)
-        x = findColorInRegionFuzzy(3983369, 80, 215, 569, 215, 569)
+        x,y = findColorInRegionFuzzy(16739857, 90, 518, 172, 518, 172)
+        if x > 0 then
+          mSleep(600)
+          click(x, y)
+          mSleep(900)
+        end
+        x,y = findColorInRegionFuzzy(3983369, 80, 215, 569, 215, 569)
         if x > 0 then
           mSleep(800)
           break
@@ -3362,8 +3225,7 @@ function zrw()
       mSleep(600)
       b = _UPVALUE0_.pass
       while true do
-        y = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
-        x = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
+        x,y = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
         if x > 0 then
           mSleep(200)
           click(x, y)
@@ -3413,14 +3275,12 @@ function zrw()
             a = _UPVALUE0_.string.format("%s%s", a, s)
           else
             mSleep(300)
-            y = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
-            x = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
+            x,y = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
             if x > 0 then
               mSleep(400)
               break
             end
-            y = findColorInRegionFuzzy(12983838, 98, 239, 887, 239, 887)
-            x = findColorInRegionFuzzy(12983838, 98, 239, 887, 239, 887)
+            x,y = findColorInRegionFuzzy(12983838, 98, 239, 887, 239, 887)
             if x > 0 then
               mSleep(400)
               break
@@ -3430,8 +3290,7 @@ function zrw()
       end
       while true do
         mSleep(500)
-        y = findColorInRegionFuzzy(5789784, 95, 41, 84, 41, 84)
-        x = findColorInRegionFuzzy(5789784, 95, 41, 84, 41, 84)
+        x,y = findColorInRegionFuzzy(5789784, 95, 41, 84, 41, 84)
         if x > 0 then
           click(x, y)
           mSleep(1000)
@@ -3512,15 +3371,13 @@ function zrw()
       k = k + 1
       if k ~= 25 then
         mSleep(500)
-        y = findColorInRegion(10921638, 39, 173, 39, 173)
-        x = findColorInRegion(10921638, 39, 173, 39, 173)
+        x,y = findColorInRegion(10921638, 39, 173, 39, 173)
         mSleep(3500)
         for _FORV_3_ = 1, tb do
           while true do
             x = math.random(43, 576)
             y = math.random(200, 1045)
-            y = findColorInRegionFuzzy(4539717, 60, x, y, x, y)
-            x = findColorInRegionFuzzy(4539717, 60, x, y, x, y)
+            x,y = findColorInRegionFuzzy(4539717, 60, x, y, x, y)
             if x > 0 then
               click(x, y)
               mSleep(4000)
@@ -3585,12 +3442,10 @@ function zrw()
         mSleep(4000)
       end
       wifi()
-      y = findColorInRegionFuzzy(2666470, 90, 75, 1072, 81, 1078)
-      x = findColorInRegionFuzzy(2666470, 90, 75, 1072, 81, 1078)
+      x,y = findColorInRegionFuzzy(2666470, 90, 75, 1072, 81, 1078)
       if not (x > 0) then
         mSleep(300)
-        y = findColorInRegionFuzzy(16545056, 70, 318, 1008, 318, 1008)
-        x = findColorInRegionFuzzy(16545056, 70, 318, 1008, 318, 1008)
+        x,y = findColorInRegionFuzzy(16545056, 70, 318, 1008, 318, 1008)
         if x > 0 then
           mSleep(300)
           click(x, y)
@@ -3606,8 +3461,7 @@ function zrw()
       click(x, y)
       mSleep(2500)
       wifi()
-      y = findColorInRegionFuzzy(5298201, 90, 232, 872, 238, 878)
-      x = findColorInRegionFuzzy(5298201, 90, 232, 872, 238, 878)
+      x,y = findColorInRegionFuzzy(5298201, 90, 232, 872, 238, 878)
       if x > 0 then
         mSleep(200)
         click(x, y)
@@ -3618,8 +3472,7 @@ function zrw()
         mSleep(3000)
       end
       while true do
-        y = findColorInRegionFuzzy(1348555, 95, 62, 82, 62, 82)
-        x = findColorInRegionFuzzy(1348555, 95, 62, 82, 62, 82)
+        x,y = findColorInRegionFuzzy(1348555, 95, 62, 82, 62, 82)
         if x > 0 then
           click(50, 84)
           mSleep(2000)
@@ -3637,14 +3490,12 @@ function zrw()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegion(31487, 448, 677, 454, 683)
-      x = findColorInRegion(31487, 448, 677, 454, 683)
+      x,y = findColorInRegion(31487, 448, 677, 454, 683)
       if x > 0 then
         mSleep(500)
         click(x, y)
       end
-      y = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
-      x = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
+      x,y = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
       if x > 0 then
         mSleep(3300)
         break
@@ -3670,8 +3521,7 @@ function zrw()
       end
       while true do
         mSleep(400)
-        y = findColorInRegionFuzzy(15398138, 90, 50, 81, 54, 85)
-        x = findColorInRegionFuzzy(15398138, 90, 50, 81, 54, 85)
+        x,y = findColorInRegionFuzzy(15398138, 90, 50, 81, 54, 85)
         if x > 0 then
           mSleep(2000)
           break
@@ -3679,15 +3529,13 @@ function zrw()
       end
       if _UPVALUE0_.fl9 == 0 and _FORV_3_ == 2 then
         while true do
-          y = findColorInRegionFuzzy(16690205, 85, 173, 369, 173, 369)
-          x = findColorInRegionFuzzy(16690205, 85, 173, 369, 173, 369)
+          x,y = findColorInRegionFuzzy(16690205, 85, 173, 369, 173, 369)
           if x > 0 then
             mSleep(300)
             click(x, y)
             mSleep(500)
           end
-          y = findColorInRegionFuzzy(11458540, 85, 236, 469, 236, 469)
-          x = findColorInRegionFuzzy(11458540, 85, 236, 469, 236, 469)
+          x,y = findColorInRegionFuzzy(11458540, 85, 236, 469, 236, 469)
           if x > 0 then
             mSleep(300)
             click(x, y)
@@ -3720,8 +3568,7 @@ function zrw()
         mSleep(800)
         k = 0
         while true do
-          y = findColorInRegion(31487, 297, 642, 303, 648)
-          x = findColorInRegion(31487, 297, 642, 303, 648)
+          x,y = findColorInRegion(31487, 297, 642, 303, 648)
           if x > 0 then
             mSleep(400)
             click(x, y)
@@ -3740,22 +3587,19 @@ function zrw()
               inputText(a)
               inputText(s)
               mSleep(800)
-              y = findColorInRegionFuzzy(11514807, 95, 571, 1075, 571, 1075)
-              x = findColorInRegionFuzzy(11514807, 95, 571, 1075, 571, 1075)
+              x,y = findColorInRegionFuzzy(11514807, 95, 571, 1075, 571, 1075)
               if x > 0 then
                 mSleep(500)
                 click(x, y)
                 mSleep(1000)
               end
-              y = findColorInRegionFuzzy(4044272, 95, 236, 468, 236, 468)
-              x = findColorInRegionFuzzy(4044272, 95, 236, 468, 236, 468)
+              x,y = findColorInRegionFuzzy(4044272, 95, 236, 468, 236, 468)
               if x > 0 then
                 mSleep(500)
                 click(x, y)
                 mSleep(1000)
               end
-              y = findColorInRegionFuzzy(15195586, 95, 232, 675, 232, 675)
-              x = findColorInRegionFuzzy(15195586, 95, 232, 675, 232, 675)
+              x,y = findColorInRegionFuzzy(15195586, 95, 232, 675, 232, 675)
               if x > 0 then
                 mSleep(500)
                 click(x, y)
@@ -3775,8 +3619,7 @@ function zrw()
                     k = k + 1
                     if k ~= 15 then
                       mSleep(600)
-                      y = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
-                      x = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
+                      x,y = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
                       if x > 0 then
                         mSleep(400)
                         break
@@ -3810,8 +3653,7 @@ function zrw()
         click(43, 1095)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(13904940, 90, 76, 1088, 82, 1094)
-      x = findColorInRegionFuzzy(13904940, 90, 76, 1088, 82, 1094)
+      x,y = findColorInRegionFuzzy(13904940, 90, 76, 1088, 82, 1094)
       if x > 0 then
         mSleep(1000)
         break
@@ -3866,29 +3708,24 @@ function zrw()
     appRun("com.dianping.dpscope")
     mSleep(4000)
     while true do
-      y = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
-      x = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
+      x,y = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
       if x > 0 then
         click(92, 236)
         mSleep(2000)
       else
-        y = findColorInRegionFuzzy(16745472, 90, 301, 934, 307, 940)
-        x = findColorInRegionFuzzy(16745472, 90, 301, 934, 307, 940)
+        x,y = findColorInRegionFuzzy(16745472, 90, 301, 934, 307, 940)
         if x > 0 then
           click(x, y)
           mSleep(2000)
         end
-        y = findColorInRegion(31487, 330, 619, 487, 684)
-        x = findColorInRegion(31487, 330, 619, 487, 684)
+        x,y = findColorInRegion(31487, 330, 619, 487, 684)
         if x > 0 then
           click(x, y)
         end
         wifi()
-        y = findColorInRegionFuzzy(16744448, 80, 40, 51, 40, 51)
-        x = findColorInRegionFuzzy(16744448, 80, 40, 51, 40, 51)
+        x,y = findColorInRegionFuzzy(16744448, 80, 40, 51, 40, 51)
         if not (x > 0) then
-          y = findColorInRegion(31487, 614, 314, 620, 320)
-          x = findColorInRegion(31487, 614, 314, 620, 320)
+          x,y = findColorInRegion(31487, 614, 314, 620, 320)
           if x > 0 then
             mSleep(2500)
             break
@@ -3917,8 +3754,7 @@ function zrw()
           k = 0
         end
         while true do
-          y = findColorInRegion(31487, 330, 619, 487, 684)
-          x = findColorInRegion(31487, 330, 619, 487, 684)
+          x,y = findColorInRegion(31487, 330, 619, 487, 684)
           if x > 0 then
             click(x, y)
           end
@@ -3933,8 +3769,7 @@ function zrw()
               mSleep(500)
             end
             wifi()
-            y = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
-            x = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
+            x,y = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
             if x > 0 then
               mSleep(1200)
               click(92, 236)
@@ -3954,21 +3789,18 @@ function zrw()
             x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
             if x > 0 then
               while true do
-                y = findColorInRegion(31487, 330, 619, 487, 684)
-                x = findColorInRegion(31487, 330, 619, 487, 684)
+                x,y = findColorInRegion(31487, 330, 619, 487, 684)
                 if x > 0 then
                   click(x, y)
                 end
                 wifi()
-                y = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
-                x = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
+                x,y = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
                 if x > 0 then              
                   click(30, 86)
                   mSleep(2000)
                  end
                     for _FORV_3_ = 1, 2 do
-                      y = findColorInRegion(31487, 330, 619, 487, 684)
-                      x = findColorInRegion(31487, 330, 619, 487, 684)
+                      x,y = findColorInRegion(31487, 330, 619, 487, 684)
                       if x > 0 then
                         click(x, y)
                       end
@@ -3986,8 +3818,7 @@ function zrw()
                       y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
                       x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
                       if not (x > 0) then
-                        y = findColorInRegionFuzzy(16750084, 90, 220, 220, 230, 1080)
-                        x = findColorInRegionFuzzy(16750084, 90, 220, 220, 230, 1080)
+                        x,y = findColorInRegionFuzzy(16750084, 90, 220, 220, 230, 1080)
                         if x > 0 then
                           yy = y - 30
                         else
@@ -3997,8 +3828,7 @@ function zrw()
                           y = math.random(230, yy)
                           click(100, y)
                           mSleep(5000)
-                          y = findColorInRegion(31487, 330, 619, 487, 684)
-                          x = findColorInRegion(31487, 330, 619, 487, 684)
+                          x,y = findColorInRegion(31487, 330, 619, 487, 684)
                           if x > 0 then
                             click(x, y)
                           end
@@ -4012,8 +3842,7 @@ function zrw()
                           end
                           mouse(300, 900, 300, 280, 15)
                           mSleep(3000)
-                          y = findColorInRegion(31487, 330, 619, 487, 684)
-                          x = findColorInRegion(31487, 330, 619, 487, 684)
+                          x,y = findColorInRegion(31487, 330, 619, 487, 684)
                           if x > 0 then
                             click(x, y)
                           end
@@ -4028,28 +3857,22 @@ function zrw()
                           mouse(300, 900, 300, 280, 15)
                           mSleep(3000)
                           while true do
-                            y = findColorInRegion(31487, 330, 619, 487, 684)
-                            x = findColorInRegion(31487, 330, 619, 487, 684)
+                            x,y = findColorInRegion(31487, 330, 619, 487, 684)
                             if x > 0 then
                               click(x, y)
                             end
-                            yy = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
-                            xx = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
-                            y = findColorInRegionFuzzy(16737843, 90, 287, 84, 287, 84)
-                            x = findColorInRegionFuzzy(16737843, 90, 287, 84, 287, 84)
-                            if x > 0 or 1 > xx then
+                            x,y = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
+                            x,y = findColorInRegionFuzzy(16737843, 90, 287, 84, 287, 84)
                               break
                             end
                             click(30, 86)
                             mSleep(2000)
                           end
-                          y = findColorInRegion(31487, 330, 619, 487, 684)
-                          x = findColorInRegion(31487, 330, 619, 487, 684)
+                          x,y = findColorInRegion(31487, 330, 619, 487, 684)
                           if x > 0 then
                             click(x, y)
                           end
-                          y = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
-                          x = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
+                          x,y = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
                           if x > 0 then
                           else
                             for _FORV_3_ = 1, 1 do
@@ -4062,14 +3885,12 @@ function zrw()
                       end
                     end
                     while true do
-                      y = findColorInRegion(31487, 330, 619, 487, 684)
-                      x = findColorInRegion(31487, 330, 619, 487, 684)
+                      x,y = findColorInRegion(31487, 330, 619, 487, 684)
                       if x > 0 then
                         click(x, y)
                       end
                       wifi()
-                      y = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
-                      x = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
+                      x,y = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
                       if x > 0 then
                         break
                       end
@@ -4080,8 +3901,7 @@ function zrw()
                 end
               end
             for _FORV_3_ = 1, tb do
-              y = findColorInRegion(31487, 330, 619, 487, 684)
-              x = findColorInRegion(31487, 330, 619, 487, 684)
+              x,y = findColorInRegion(31487, 330, 619, 487, 684)
               if x > 0 then
                 click(x, y)
               end
@@ -4102,8 +3922,7 @@ function zrw()
               mSleep(2000)
               mousekk(300, 900, 300, 250, 20)
               mSleep(3000)
-              y = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
-              x = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
+              x,y = findColorInRegionFuzzy(16737843, 85, 31, 72, 37, 78)
               if x > 0 then
               else
                 for _FORV_7_ = 1, 1 do
@@ -4113,13 +3932,11 @@ function zrw()
                 mSleep(1200)
               end
               while true do
-                y = findColorInRegion(31487, 330, 619, 487, 684)
-                x = findColorInRegion(31487, 330, 619, 487, 684)
+                x,y = findColorInRegion(31487, 330, 619, 487, 684)
                 if x > 0 then
                   click(x, y)
                 end
-                y = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
-                x = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
+                x,y = findColorInRegionFuzzy(16744448, 80, 526, 82, 526, 82)
                 if x > 0 then
                   break
                 end
@@ -4129,7 +3946,6 @@ function zrw()
             end
           end
         end
-      end
     keyDown("HOME")
     mSleep(150)
     keyUp("HOME")
@@ -4142,16 +3958,14 @@ function zrw()
     while true do
       k = k + 1
       mSleep(500)
-      y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
-      x = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
+      x,y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
       if x > 0 then
         mSleep(300)
         click(x, y)
         k = 5
         mSleep(800)
       end
-      y = findColorInRegion(31487, 441, 722, 447, 728)
-      x = findColorInRegion(31487, 441, 722, 447, 728)
+      x,y = findColorInRegion(31487, 441, 722, 447, 728)
       if x > 0 then
         mSleep(500)
         click(x, y)
@@ -4181,8 +3995,7 @@ function zrw()
       click(450, y)
       while true do
         mSleep(500)
-        y = findColorInRegionFuzzy(13821437, 98, 242, 509, 246, 513)
-        x = findColorInRegionFuzzy(13821437, 98, 242, 509, 246, 513)
+        x,y = findColorInRegionFuzzy(13821437, 98, 242, 509, 246, 513)
         if x > 0 then
           mSleep(600)
           click(x, y)
@@ -4190,8 +4003,7 @@ function zrw()
       end
       mSleep(11000)
       while true do
-        y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
-        x = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
+        x,y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
         if x > 0 then
           mSleep(300)
           click(x, y)
@@ -4222,8 +4034,7 @@ function zrw()
       if not (x > 0) then
         mSleep(300)
         wifi()
-        y = findColorInRegionFuzzy(6710886, 100, 264, 989, 270, 995)
-        x = findColorInRegionFuzzy(6710886, 100, 264, 989, 270, 995)
+        x,y = findColorInRegionFuzzy(6710886, 100, 264, 989, 270, 995)
         if x > 0 then
           click(x, y)
           mSleep(1000)
@@ -4282,8 +4093,7 @@ function zrw()
         while true do
           k = k + 1
           if k ~= 4 then
-            y = findColorInRegion(16053492, 316, 554, 320, 558)
-            x = findColorInRegion(16053492, 316, 554, 320, 558)
+            x,y = findColorInRegion(16053492, 316, 554, 320, 558)
             if x > 0 then
               mSleep(500)
               click(x, y)
@@ -4315,20 +4125,17 @@ function zrw()
     mSleep(4000)
     repeat
       while true do
-        y = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
-        x = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
+        x,y = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
         if not (x > 0) then
           wifi()
-          y = findColorInRegionFuzzy(16730488, 90, 624, 290, 632, 400)
-          x = findColorInRegionFuzzy(16730488, 90, 624, 290, 632, 400)
+          x,y = findColorInRegionFuzzy(16730488, 90, 624, 290, 632, 400)
           if x > 0 then
             mSleep(4000)
             break
           end
           mouse(560, 400, 100, 400, 5)
           mSleep(400)
-          y = findColorInRegionFuzzy(6710886, 70, 47, 302, 176, 343)
-          x = findColorInRegionFuzzy(6710886, 70, 47, 302, 176, 343)
+          x,y = findColorInRegionFuzzy(6710886, 70, 47, 302, 176, 343)
           if x > 0 then
             x = x + 10
             y = y + 10
@@ -4345,16 +4152,14 @@ function zrw()
             repeat
               xx = math.random(51, 550)
               yy = math.random(460, 700)
-              y = findColorInRegionFuzzy(15658734, 90, xx, yy, xx, yy)
-              x = findColorInRegionFuzzy(15658734, 90, xx, yy, xx, yy)
+              x,y = findColorInRegionFuzzy(15658734, 90, xx, yy, xx, yy)
             until not (x > 0)
             click(xx, yy)
             mSleep(1500)
           end
           k = 0
           while true do
-            y = findColorInRegionFuzzy(16730488, 95, 624, 290, 632, 400)
-            x = findColorInRegionFuzzy(16730488, 95, 624, 290, 632, 400)
+            x,y = findColorInRegionFuzzy(16730488, 95, 624, 290, 632, 400)
             k = k + 1
             if k == 15 then
               mouse(300, 1000, 300, 150, 20)
@@ -4366,8 +4171,7 @@ function zrw()
             if k ~= 40 then
               wifi()
               mSleep(300)
-              y = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
-              x = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
+              x,y = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
               if x > 0 then
                 break
               end
@@ -4406,15 +4210,13 @@ function zrw()
     appRun("com.sevenga.tsxk.ios")
     while true do
       mSleep(300)
-      y = findColorInRegionFuzzy(3047387, 90, 530, 782, 536, 788)
-      x = findColorInRegionFuzzy(3047387, 90, 530, 782, 536, 788)
+      x,y = findColorInRegionFuzzy(3047387, 90, 530, 782, 536, 788)
       if x > 0 then
         mSleep(300)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
-      x = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
+      x,y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
       if x > 0 then
         mSleep(500)
         break
@@ -4441,8 +4243,7 @@ function zrw()
     inputText("@sina.com")
     mSleep(600)
     while true do
-      y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
-      x = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
+      x,y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
       if x > 0 then
         mSleep(500)
         click(x, y)
@@ -4454,22 +4255,19 @@ function zrw()
     end
     while true do
       mSleep(300)
-      y = findColorInRegionFuzzy(4493559, 90, 312, 647, 312, 647)
-      x = findColorInRegionFuzzy(4493559, 90, 312, 647, 312, 647)
+      x,y = findColorInRegionFuzzy(4493559, 90, 312, 647, 312, 647)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(600)
       end
-      y = findColorInRegionFuzzy(15628046, 85, 290, 1030, 300, 1040)
-      x = findColorInRegionFuzzy(15628046, 85, 290, 1030, 300, 1040)
+      x,y = findColorInRegionFuzzy(15628046, 85, 290, 1030, 300, 1040)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(300)
       end
-      y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
-      x = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
+      x,y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
       if x > 0 then
         mSleep(800)
         break
@@ -4481,8 +4279,7 @@ function zrw()
       mSleep(1000)
     end
     while true do
-      y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
-      x = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
+      x,y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
       if x > 0 then
         mSleep(800)
         click(502, 948)
@@ -4493,190 +4290,163 @@ function zrw()
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(3320343, 95, 207, 1004, 211, 1008)
-      x = findColorInRegionFuzzy(3320343, 95, 207, 1004, 211, 1008)
+      x,y = findColorInRegionFuzzy(3320343, 95, 207, 1004, 211, 1008)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16737792, 95, 316, 962, 320, 966)
-      x = findColorInRegionFuzzy(16737792, 95, 316, 962, 320, 966)
+      x,y = findColorInRegionFuzzy(16737792, 95, 316, 962, 320, 966)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16766317, 95, 301, 959, 305, 963)
-      x = findColorInRegionFuzzy(16766317, 95, 301, 959, 305, 963)
+      x,y = findColorInRegionFuzzy(16766317, 95, 301, 959, 305, 963)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16571743, 95, 188, 1109, 192, 1113)
-      x = findColorInRegionFuzzy(16571743, 95, 188, 1109, 192, 1113)
+      x,y = findColorInRegionFuzzy(16571743, 95, 188, 1109, 192, 1113)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16446872, 95, 288, 492, 292, 496)
-      x = findColorInRegionFuzzy(16446872, 95, 288, 492, 292, 496)
+      x,y = findColorInRegionFuzzy(16446872, 95, 288, 492, 292, 496)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16768339, 95, 559, 208, 563, 212)
-      x = findColorInRegionFuzzy(16768339, 95, 559, 208, 563, 212)
+      x,y = findColorInRegionFuzzy(16768339, 95, 559, 208, 563, 212)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16777123, 95, 315, 1082, 319, 1086)
-      x = findColorInRegionFuzzy(16777123, 95, 315, 1082, 319, 1086)
+      x,y = findColorInRegionFuzzy(16777123, 95, 315, 1082, 319, 1086)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(15834896, 95, 520, 383, 524, 387)
-      x = findColorInRegionFuzzy(15834896, 95, 520, 383, 524, 387)
+      x,y = findColorInRegionFuzzy(15834896, 95, 520, 383, 524, 387)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
-      x = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
+      x,y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(15632401, 95, 481, 393, 485, 397)
-      x = findColorInRegionFuzzy(15632401, 95, 481, 393, 485, 397)
+      x,y = findColorInRegionFuzzy(15632401, 95, 481, 393, 485, 397)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
-      x = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
+      x,y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16642949, 95, 188, 1104, 192, 1108)
-      x = findColorInRegionFuzzy(16642949, 95, 188, 1104, 192, 1108)
+      x,y = findColorInRegionFuzzy(16642949, 95, 188, 1104, 192, 1108)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(13303806, 95, 51, 346, 55, 350)
-      x = findColorInRegionFuzzy(13303806, 95, 51, 346, 55, 350)
+      x,y = findColorInRegionFuzzy(13303806, 95, 51, 346, 55, 350)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16503360, 95, 528, 204, 532, 208)
-      x = findColorInRegionFuzzy(16503360, 95, 528, 204, 532, 208)
+      x,y = findColorInRegionFuzzy(16503360, 95, 528, 204, 532, 208)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16774144, 95, 319, 1080, 313, 1084)
-      x = findColorInRegionFuzzy(16774144, 95, 319, 1080, 313, 1084)
+      x,y = findColorInRegionFuzzy(16774144, 95, 319, 1080, 313, 1084)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(9109487, 95, 543, 353, 547, 357)
-      x = findColorInRegionFuzzy(9109487, 95, 543, 353, 547, 357)
+      x,y = findColorInRegionFuzzy(9109487, 95, 543, 353, 547, 357)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(13419703, 95, 555, 321, 559, 325)
-      x = findColorInRegionFuzzy(13419703, 95, 555, 321, 559, 325)
+      x,y = findColorInRegionFuzzy(13419703, 95, 555, 321, 559, 325)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16767336, 95, 383, 911, 387, 915)
-      x = findColorInRegionFuzzy(16767336, 95, 383, 911, 387, 915)
+      x,y = findColorInRegionFuzzy(16767336, 95, 383, 911, 387, 915)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16313975, 95, 61, 1105, 65, 1109)
-      x = findColorInRegionFuzzy(16313975, 95, 61, 1105, 65, 1109)
+      x,y = findColorInRegionFuzzy(16313975, 95, 61, 1105, 65, 1109)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16446720, 95, 64, 766, 68, 770)
-      x = findColorInRegionFuzzy(16446720, 95, 64, 766, 68, 770)
+      x,y = findColorInRegionFuzzy(16446720, 95, 64, 766, 68, 770)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(15630352, 95, 534, 205, 538, 209)
-      x = findColorInRegionFuzzy(15630352, 95, 534, 205, 538, 209)
+      x,y = findColorInRegionFuzzy(15630352, 95, 534, 205, 538, 209)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16764006, 95, 308, 695, 312, 699)
-      x = findColorInRegionFuzzy(16764006, 95, 308, 695, 312, 699)
+      x,y = findColorInRegionFuzzy(16764006, 95, 308, 695, 312, 699)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(8912878, 95, 543, 614, 547, 618)
-      x = findColorInRegionFuzzy(8912878, 95, 543, 614, 547, 618)
+      x,y = findColorInRegionFuzzy(8912878, 95, 543, 614, 547, 618)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(14146774, 95, 575, 603, 579, 607)
-      x = findColorInRegionFuzzy(14146774, 95, 575, 603, 579, 607)
+      x,y = findColorInRegionFuzzy(14146774, 95, 575, 603, 579, 607)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(4321023, 95, 417, 623, 421, 627)
-      x = findColorInRegionFuzzy(4321023, 95, 417, 623, 421, 627)
+      x,y = findColorInRegionFuzzy(4321023, 95, 417, 623, 421, 627)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(65535, 95, 198, 610, 202, 614)
-      x = findColorInRegionFuzzy(65535, 95, 198, 610, 202, 614)
+      x,y = findColorInRegionFuzzy(65535, 95, 198, 610, 202, 614)
       if x > 0 then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16764723, 95, 506, 977, 510, 981)
-      x = findColorInRegionFuzzy(16764723, 95, 506, 977, 510, 981)
+      x,y = findColorInRegionFuzzy(16764723, 95, 506, 977, 510, 981)
       if x > 0 then
         mSleep(200)
         click(x, y)
@@ -4733,15 +4503,13 @@ function zrw()
       k = k + 1
       if not (10 < k) then
         wifi()
-        y = findColorInRegion(31487, 328, 642, 334, 648)
-        x = findColorInRegion(31487, 328, 642, 334, 648)
+        x,y = findColorInRegion(31487, 328, 642, 334, 648)
         if x > 0 then
           mSleep(500)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(16280926, 90, 247, 86, 253, 92)
-        x = findColorInRegionFuzzy(16280926, 90, 247, 86, 253, 92)
+        x,y = findColorInRegionFuzzy(16280926, 90, 247, 86, 253, 92)
         if x > 0 then
           mSleep(500)
           break
@@ -4756,8 +4524,7 @@ function zrw()
           while true do
             xx = math.random(48, 603)
             yy = math.random(395, 895)
-            y = findColorInRegion(16777215, xx, yy, xx, yy)
-            x = findColorInRegion(16777215, xx, yy, xx, yy)
+            x,y = findColorInRegion(16777215, xx, yy, xx, yy)
             if x > 0 then
               click(x, y)
               mSleep(3500)
@@ -4767,8 +4534,7 @@ function zrw()
           mouse(300, 950, 300, 230, 10)
           mSleep(3000)
           while true do
-            y = findColorInRegion(31487, 53, 79, 59, 85)
-            x = findColorInRegion(31487, 53, 79, 59, 85)
+            x,y = findColorInRegion(31487, 53, 79, 59, 85)
             if x > 0 then
               click(x, y)
               mSleep(1000)
@@ -4789,72 +4555,62 @@ function zrw()
     while true do
       mSleep(800)
       wifi()
-      y = findColorInRegionFuzzy(4751113, 85, 122, 500, 122, 500)
-      x = findColorInRegionFuzzy(4751113, 85, 122, 500, 122, 500)
+      x,y = findColorInRegionFuzzy(4751113, 85, 122, 500, 122, 500)
       if x > 0 then
         mSleep(300)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(5789398, 85, 606, 77, 612, 83)
-      x = findColorInRegionFuzzy(5789398, 85, 606, 77, 612, 83)
+      x,y = findColorInRegionFuzzy(5789398, 85, 606, 77, 612, 83)
       if x > 0 then
         mSleep(300)
         click(x, y)
         mSleep(800)
       else
       end
-      y = findColorInRegionFuzzy(4554243, 90, 167, 611, 171, 615)
-      x = findColorInRegionFuzzy(4554243, 90, 167, 611, 171, 615)
+      x,y = findColorInRegionFuzzy(4554243, 90, 167, 611, 171, 615)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(5366525, 90, 479, 70, 483, 74)
-      x = findColorInRegionFuzzy(5366525, 90, 479, 70, 483, 74)
+      x,y = findColorInRegionFuzzy(5366525, 90, 479, 70, 483, 74)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(4488195, 90, 49, 528, 53, 532)
-      x = findColorInRegionFuzzy(4488195, 90, 49, 528, 53, 532)
+      x,y = findColorInRegionFuzzy(4488195, 90, 49, 528, 53, 532)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(41934, 90, 74, 967, 68, 971)
-      x = findColorInRegionFuzzy(41934, 90, 74, 967, 68, 971)
+      x,y = findColorInRegionFuzzy(41934, 90, 74, 967, 68, 971)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(9792309, 90, 43, 969, 47, 973)
-      x = findColorInRegionFuzzy(9792309, 90, 43, 969, 47, 973)
+      x,y = findColorInRegionFuzzy(9792309, 90, 43, 969, 47, 973)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(4949743, 90, 402, 554, 406, 558)
-      x = findColorInRegionFuzzy(4949743, 90, 402, 554, 406, 558)
+      x,y = findColorInRegionFuzzy(4949743, 90, 402, 554, 406, 558)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(11356644, 379, 292, 383, 296)
-      x = findColorInRegionFuzzy(11356644, 379, 292, 383, 296)
+      x,y = findColorInRegionFuzzy(11356644, 379, 292, 383, 296)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(16772118, 90, 203, 293, 207, 297)
-      x = findColorInRegionFuzzy(16772118, 90, 203, 293, 207, 297)
+      x,y = findColorInRegionFuzzy(16772118, 90, 203, 293, 207, 297)
       if x > 0 then
         mSleep(500)
         click(94, 270)
@@ -4877,74 +4633,63 @@ function zrw()
           click(x, y)
           mSleep(1100)
         end
-        y = findColorInRegionFuzzy(1133318, 90, 133, 456, 137, 460)
-        x = findColorInRegionFuzzy(1133318, 90, 133, 456, 137, 460)
+        x,y = findColorInRegionFuzzy(1133318, 90, 133, 456, 137, 460)
         if x > 0 then
           mSleep(500)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(299735, 90, 363, 550, 367, 554)
-        x = findColorInRegionFuzzy(299735, 90, 363, 550, 367, 554)
+        x,y = findColorInRegionFuzzy(299735, 90, 363, 550, 367, 554)
         if x > 0 then
           mSleep(500)
           click(404, 559)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(14827508, 90, 175, 509, 179, 513)
-        x = findColorInRegionFuzzy(14827508, 90, 175, 509, 179, 513)
+        x,y = findColorInRegionFuzzy(14827508, 90, 175, 509, 179, 513)
         if x > 0 then
           mSleep(500)
           click(38, 594)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(3180978, 90, 442, 479, 446, 483)
-        x = findColorInRegionFuzzy(3180978, 90, 442, 479, 446, 483)
+        x,y = findColorInRegionFuzzy(3180978, 90, 442, 479, 446, 483)
         if x > 0 then
           mSleep(500)
           click(160, 546)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(1460588, 90, 429, 285, 433, 289)
-        x = findColorInRegionFuzzy(1460588, 90, 429, 285, 433, 289)
+        x,y = findColorInRegionFuzzy(1460588, 90, 429, 285, 433, 289)
         if x > 0 then
           mSleep(500)
           click(58, 576)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(9756140, 90, 32, 982, 36, 986)
-        x = findColorInRegionFuzzy(9756140, 90, 32, 982, 36, 986)
+        x,y = findColorInRegionFuzzy(9756140, 90, 32, 982, 36, 986)
         if x > 0 then
           mSleep(500)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(2138621, 90, 151, 199, 155, 203)
-        x = findColorInRegionFuzzy(2138621, 90, 151, 199, 155, 203)
+        x,y = findColorInRegionFuzzy(2138621, 90, 151, 199, 155, 203)
         if x > 0 then
           mSleep(500)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(12480234, 90, 385, 297, 389, 301)
-        x = findColorInRegionFuzzy(12480234, 90, 385, 297, 389, 301)
+        x,y = findColorInRegionFuzzy(12480234, 90, 385, 297, 389, 301)
         if x > 0 then
           mSleep(500)
           click(94, 287)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(233941, 90, 368, 552, 372, 556)
-        x = findColorInRegionFuzzy(233941, 90, 368, 552, 372, 556)
+        x,y = findColorInRegionFuzzy(233941, 90, 368, 552, 372, 556)
         if x > 0 then
           mSleep(500)
           click(401, 557)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(14550534, 90, 433, 750, 437, 754)
-        x = findColorInRegionFuzzy(14550534, 90, 433, 750, 437, 754)
+        x,y = findColorInRegionFuzzy(14550534, 90, 433, 750, 437, 754)
         if x > 0 then
-          y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
-          x = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
+          x,y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
           if x > 0 then
             mSleep(500)
             click(x, y)
@@ -4956,8 +4701,7 @@ function zrw()
       end
     end
     while true do
-      y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
-      x = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
+      x,y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
       if x > 0 then
         mSleep(500)
         click(x, y)
@@ -4976,8 +4720,7 @@ function zrw()
     appRun("com.sogou.map.app.Map")
     mSleep(4000)
     while true do
-      y = findColorInRegionFuzzy(15309356, 90, 125, 315, 125, 315)
-      x = findColorInRegionFuzzy(15309356, 90, 125, 315, 125, 315)
+      x,y = findColorInRegionFuzzy(15309356, 90, 125, 315, 125, 315)
       if not (x > 0) then
         wifi()
         y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗地图身边.bmp", 85, 70, 1073, 142, 1114)
@@ -4995,8 +4738,7 @@ function zrw()
     while true do
       wifi()
       mSleep(300)
-      y = findColorInRegionFuzzy(15309356, 90, 125, 315, 125, 315)
-      x = findColorInRegionFuzzy(15309356, 90, 125, 315, 125, 315)
+      x,y = findColorInRegionFuzzy(15309356, 90, 125, 315, 125, 315)
       if x > 0 then
         mSleep(500)
         break
@@ -5005,8 +4747,7 @@ function zrw()
     for _FORV_3_ = 1, tb do
       while true do
         wifi()
-        y = findColorInRegionFuzzy(15309356, 90, 123, 312, 123, 312)
-        x = findColorInRegionFuzzy(15309356, 90, 123, 312, 123, 312)
+        x,y = findColorInRegionFuzzy(15309356, 90, 123, 312, 123, 312)
         if x > 0 then
           break
         end
@@ -5093,8 +4834,7 @@ function zrw()
     while true do
       mSleep(300)
       wifi()
-      y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
-      x = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
+      x,y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
       if x > 0 then
         _UPVALUE0_.x1 = 1
       else
@@ -5114,8 +4854,7 @@ function zrw()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
-      x = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
+      x,y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
       if x > 0 then
         mSleep(600)
         break
@@ -5143,8 +4882,7 @@ function zrw()
     end
     while true do
       wifi()
-      y = findColorInRegionFuzzy(945089, 85, 445, 1069, 449, 1073)
-      x = findColorInRegionFuzzy(945089, 85, 445, 1069, 449, 1073)
+      x,y = findColorInRegionFuzzy(945089, 85, 445, 1069, 449, 1073)
       if x > 0 then
         mSleep(1000)
         break
@@ -5170,8 +4908,7 @@ function zrw()
           mSleep(3000)
           break
         end
-        y = findColorInRegionFuzzy(15073298, 90, 218, 256, 329, 1002)
-        x = findColorInRegionFuzzy(15073298, 90, 218, 256, 329, 1002)
+        x,y = findColorInRegionFuzzy(15073298, 90, 218, 256, 329, 1002)
         if x > 0 then
           mSleep(300)
           click(x, y)
@@ -5208,8 +4945,7 @@ function zrw()
     wifi()
     for _FORV_3_ = 1, 4 do
       wifi()
-      y = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
-      x = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
+      x,y = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
       if not (x > 0) then
         _UPVALUE0_.touchDown(1, 500, 500)
         mSleep(200)
@@ -5224,8 +4960,7 @@ function zrw()
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
-      x = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
+      x,y = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
       if x > 0 then
         mSleep(2500)
         break
@@ -5245,8 +4980,7 @@ function zrw()
       mSleep(2500)
       while true do
         mSleep(800)
-        y = findColorInRegionFuzzy(7644416, 90, 45, 83, 45, 85)
-        x = findColorInRegionFuzzy(7644416, 90, 45, 83, 45, 85)
+        x,y = findColorInRegionFuzzy(7644416, 90, 45, 83, 45, 85)
         if x > 0 then
           break
         end
@@ -5280,8 +5014,7 @@ function zrw()
       wifi()
       repeat
         _UPVALUE0_.y1 = math.random(200, 965)
-        y = findColorInRegionFuzzy(10754074, 96, 100, _UPVALUE0_.y1, 100, _UPVALUE0_.y1)
-        x = findColorInRegionFuzzy(10754074, 96, 100, _UPVALUE0_.y1, 100, _UPVALUE0_.y1)
+        x,y = findColorInRegionFuzzy(10754074, 96, 100, _UPVALUE0_.y1, 100, _UPVALUE0_.y1)
       until not (x > 0)
       click(200, _UPVALUE0_.y1)
       mSleep(3000)
@@ -5336,8 +5069,7 @@ function zrw()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(16739328, 90, 319, 961, 319, 961)
-      x = findColorInRegionFuzzy(16739328, 90, 319, 961, 319, 961)
+      x,y = findColorInRegionFuzzy(16739328, 90, 319, 961, 319, 961)
       if x > 0 then
         mSleep(200)
         click(x, y)
@@ -5362,8 +5094,7 @@ function zrw()
         _UPVALUE0_.x2 = x + 5
         _UPVALUE0_.y1 = y - 5
         _UPVALUE0_.y2 = y + 5
-        y = findColorInRegionFuzzy(5789784, 95, _UPVALUE0_.x1, _UPVALUE0_.y1, _UPVALUE0_.x2, _UPVALUE0_.y2)
-        x = findColorInRegionFuzzy(5789784, 95, _UPVALUE0_.x1, _UPVALUE0_.y1, _UPVALUE0_.x2, _UPVALUE0_.y2)
+        x,y = findColorInRegionFuzzy(5789784, 95, _UPVALUE0_.x1, _UPVALUE0_.y1, _UPVALUE0_.x2, _UPVALUE0_.y2)
         if x > 0 then
           click(x, y)
           mSleep(5000)
@@ -5399,8 +5130,7 @@ function zrw()
     k = 0
     while true do
       while true do
-        y = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
-        x = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
+        x,y = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
         if not (x > 0) then
           wifi()
           mSleep(500)
@@ -5447,8 +5177,7 @@ function zrw()
         k = 0
       end
       mSleep(500)
-      y = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
-      x = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
+      x,y = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
       if x > 0 then
         click(x, y)
         mSleep(5000)
@@ -5479,8 +5208,7 @@ function zrw()
     mSleep(1000)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(6869358, 80, 369, 1089, 369, 1089)
-      x = findColorInRegionFuzzy(6869358, 80, 369, 1089, 369, 1089)
+      x,y = findColorInRegionFuzzy(6869358, 80, 369, 1089, 369, 1089)
       if x > 0 then
         mSleep(3500)
         break
@@ -5495,8 +5223,7 @@ function zrw()
       mSleep(3100)
       mSleep(8000)
       while true do
-        y = findColorInRegionFuzzy(4504524, 80, 63, 76, 69, 82)
-        x = findColorInRegionFuzzy(4504524, 80, 63, 76, 69, 82)
+        x,y = findColorInRegionFuzzy(4504524, 80, 63, 76, 69, 82)
         if x > 0 then
           click(75, 81)
           mSleep(1000)
@@ -5513,8 +5240,7 @@ function zrw()
     appRun("com.babytree.pregnancy")
     mSleep(1000)
     while true do
-      y = findColorInRegionFuzzy(16733051, 85, 73, 81, 73, 81)
-      x = findColorInRegionFuzzy(16733051, 85, 73, 81, 73, 81)
+      x,y = findColorInRegionFuzzy(16733051, 85, 73, 81, 73, 81)
       if x > 0 then
         mSleep(800)
         break
@@ -5523,30 +5249,26 @@ function zrw()
       mSleep(500)
     end
     while true do
-      y = findColorInRegionFuzzy(16759436, 85, 155, 727, 155, 727)
-      x = findColorInRegionFuzzy(16759436, 85, 155, 727, 155, 727)
+      x,y = findColorInRegionFuzzy(16759436, 85, 155, 727, 155, 727)
       if x > 0 then
         mSleep(200)
         click(155, 727)
         mSleep(500)
       end
       mSleep(300)
-      y = findColorInRegion(31487, 435, 644, 443, 652)
-      x = findColorInRegion(31487, 435, 644, 443, 652)
+      x,y = findColorInRegion(31487, 435, 644, 443, 652)
       if x > 0 then
         mSleep(300)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(6693169, 85, 313, 55, 313, 55)
-      x = findColorInRegionFuzzy(6693169, 85, 313, 55, 313, 55)
+      x,y = findColorInRegionFuzzy(6693169, 85, 313, 55, 313, 55)
       if x > 0 then
         mSleep(200)
         click(173, 74)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(16733051, 85, 63, 1070, 63, 1070)
-      x = findColorInRegionFuzzy(16733051, 85, 63, 1070, 63, 1070)
+      x,y = findColorInRegionFuzzy(16733051, 85, 63, 1070, 63, 1070)
       if x > 0 then
         mSleep(2000)
         break
@@ -5565,8 +5287,7 @@ function zrw()
     mSleep(1500)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(4753883, 95, 159, 76, 159, 76)
-      x = findColorInRegionFuzzy(4753883, 95, 159, 76, 159, 76)
+      x,y = findColorInRegionFuzzy(4753883, 95, 159, 76, 159, 76)
       if x > 0 then
         mSleep(1500)
         break
@@ -5576,14 +5297,12 @@ function zrw()
     end
     while true do
       wifi()
-      y = findColorInRegionFuzzy(4951000, 95, 203, 541, 203, 541)
-      x = findColorInRegionFuzzy(4951000, 95, 203, 541, 203, 541)
+      x,y = findColorInRegionFuzzy(4951000, 95, 203, 541, 203, 541)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       else
-        y = findColorInRegionFuzzy(4687835, 95, 504, 1077, 510, 1083)
-        x = findColorInRegionFuzzy(4687835, 95, 504, 1077, 510, 1083)
+        x,y = findColorInRegionFuzzy(4687835, 95, 504, 1077, 510, 1083)
         if x > 0 then
           break
         end
@@ -5612,8 +5331,7 @@ function zrw()
     mSleep(4000)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
-      x = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
+      x,y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
       if not (x > 0) then
         wifi()
         y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猫眼电影选择城市.bmp", 85, 246, 61, 328, 103)
@@ -5627,8 +5345,7 @@ function zrw()
         while true do
           xx = math.random(83, 525)
           yy = math.random(508, 743)
-          y = findColorInRegion(16777215, xx, yy, xx, yy)
-          x = findColorInRegion(16777215, xx, yy, xx, yy)
+          x,y = findColorInRegion(16777215, xx, yy, xx, yy)
           if x > 0 then
             click(x, y)
             mSleep(4000)
@@ -5644,8 +5361,7 @@ function zrw()
           while true do
             xx = math.random(83, 525)
             yy = math.random(508, 743)
-            y = findColorInRegion(16777215, xx, yy, xx, yy)
-            x = findColorInRegion(16777215, xx, yy, xx, yy)
+            x,y = findColorInRegion(16777215, xx, yy, xx, yy)
             if x > 0 then
               click(x, y)
               mSleep(4000)
@@ -5658,8 +5374,7 @@ function zrw()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
-      x = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
+      x,y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
       if x > 0 then
         break
       end
@@ -5675,8 +5390,7 @@ function zrw()
       mouse(300, 950, 300, 300, 10)
       mSleep(2000)
       while true do
-        y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
-        x = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
+        x,y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
         if x > 0 then
           break
         end
@@ -5696,8 +5410,7 @@ function zrw()
       mouse(300, 950, 300, 300, 10)
       mSleep(2000)
       while true do
-        y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
-        x = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
+        x,y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
         if x > 0 then
           break
         end
@@ -5718,20 +5431,17 @@ function zrw()
     mSleep(4000)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
-      x = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
+      x,y = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
       if not (x > 0) then
         if _UPVALUE0_.appRunning("com.baidu.map") then
         else
           appRun("com.baidu.map")
         end
         wifi()
-        y = findColorInRegion(6710886, 615, 11, 621, 17)
-        x = findColorInRegion(6710886, 615, 11, 621, 17)
+        x,y = findColorInRegion(6710886, 615, 11, 621, 17)
         if x > 0 then
         else
-          y = findColorInRegionFuzzy(16461357, 90, 309, 1046, 309, 1046)
-          x = findColorInRegionFuzzy(16461357, 90, 309, 1046, 309, 1046)
+          x,y = findColorInRegionFuzzy(16461357, 90, 309, 1046, 309, 1046)
         end
         if x > 0 then
           click(x, y)
@@ -5748,29 +5458,25 @@ function zrw()
       if k ~= 20 then
         mSleep(500)
         wifi()
-        y = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
-        x = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
+        x,y = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
         if x > 0 then
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(15765590, 95, 42, 168, 599, 452)
-        x = findColorInRegionFuzzy(15765590, 95, 42, 168, 599, 452)
+        x,y = findColorInRegionFuzzy(15765590, 95, 42, 168, 599, 452)
         if x > 0 then
           x = x + 10
           y = y + 10
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(35580, 90, 527, 86, 533, 92)
-        x = findColorInRegionFuzzy(35580, 90, 527, 86, 533, 92)
+        x,y = findColorInRegionFuzzy(35580, 90, 527, 86, 533, 92)
         if x > 0 then
           mSleep(2500)
           break
         end
         mSleep(2500)
-        y = findColorInRegionFuzzy(3224640, 90, 45, 780, 51, 855)
-        x = findColorInRegionFuzzy(3224640, 90, 45, 780, 51, 855)
+        x,y = findColorInRegionFuzzy(3224640, 90, 45, 780, 51, 855)
         if x > 0 then
           y = math.random(280, 970)
           click(200, y)
@@ -5787,8 +5493,7 @@ function zrw()
             click(53, 90)
             mSleep(800)
           else
-            y = findColorInRegionFuzzy(7566195, 90, 588, 970, 594, 976)
-            x = findColorInRegionFuzzy(7566195, 90, 588, 970, 594, 976)
+            x,y = findColorInRegionFuzzy(7566195, 90, 588, 970, 594, 976)
             if x > 0 then
               click(x, y)
               mSleep(500)
@@ -5805,30 +5510,26 @@ function zrw()
           if k ~= 20 then
             mSleep(500)
             wifi()
-            y = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
-            x = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
+            x,y = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(15765590, 95, 42, 168, 599, 452)
-            x = findColorInRegionFuzzy(15765590, 95, 42, 168, 599, 452)
+            x,y = findColorInRegionFuzzy(15765590, 95, 42, 168, 599, 452)
             if x > 0 then
               x = x + 10
               y = y + 10
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(35580, 90, 527, 86, 533, 92)
-            x = findColorInRegionFuzzy(35580, 90, 527, 86, 533, 92)
+            x,y = findColorInRegionFuzzy(35580, 90, 527, 86, 533, 92)
             if x > 0 then
               mSleep(2500)
               break
             end
             wifi()
             mSleep(2500)
-            y = findColorInRegionFuzzy(3224640, 90, 45, 780, 51, 855)
-            x = findColorInRegionFuzzy(3224640, 90, 45, 780, 51, 855)
+            x,y = findColorInRegionFuzzy(3224640, 90, 45, 780, 51, 855)
             if x > 0 then
               y = math.random(280, 970)
               click(200, y)
@@ -5879,8 +5580,7 @@ function zrw()
           click(x, y)
           mSleep(700)
         end
-        y = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
-        x = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
+        x,y = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
         if x > 0 then
           mSleep(800)
           y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
@@ -5939,8 +5639,7 @@ function zrw()
         k = k + 1
         if k ~= 30 then
           mSleep(600)
-          y = findColorInRegion(31487, 559, 1105, 559, 1105)
-          x = findColorInRegion(31487, 559, 1105, 559, 1105)
+          x,y = findColorInRegion(31487, 559, 1105, 559, 1105)
           if x > 0 then
             click(x, y)
             mSleep(1000)
@@ -5958,8 +5657,7 @@ function zrw()
             mSleep(1000)
           end
           wifi()
-          y = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
-          x = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
+          x,y = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
           if x > 0 then
             k = k + 1
             if not (3 > k) then
@@ -5968,8 +5666,7 @@ function zrw()
             end
           end
           while true do
-            y = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
-            x = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
+            x,y = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
             if x > 0 then
               mSleep(1000)
               break
@@ -5978,32 +5675,28 @@ function zrw()
           end
           click(61, 988)
           mSleep(6000)
-          y = findColorInRegion(31487, 467, 649, 473, 655)
-          x = findColorInRegion(31487, 467, 649, 473, 655)
+          x,y = findColorInRegion(31487, 467, 649, 473, 655)
           if x > 0 then
             click(x, y)
             mSleep(9000)
           end
           click(39, 85)
           mSleep(2000)
-          y = findColorInRegion(31487, 467, 649, 473, 655)
-          x = findColorInRegion(31487, 467, 649, 473, 655)
+          x,y = findColorInRegion(31487, 467, 649, 473, 655)
           if x > 0 then
             click(x, y)
             mSleep(9000)
           end
           click(234, 846)
           mSleep(6000)
-          y = findColorInRegion(31487, 467, 649, 473, 655)
-          x = findColorInRegion(31487, 467, 649, 473, 655)
+          x,y = findColorInRegion(31487, 467, 649, 473, 655)
           if x > 0 then
             click(x, y)
             mSleep(9000)
           end
           click(39, 85)
           mSleep(2000)
-          y = findColorInRegion(31487, 467, 649, 473, 655)
-          x = findColorInRegion(31487, 467, 649, 473, 655)
+          x,y = findColorInRegion(31487, 467, 649, 473, 655)
           if x > 0 then
             click(x, y)
             mSleep(9000)
@@ -6028,8 +5721,7 @@ function zrw()
     mSleep(800)
     while true do
       wifi()
-      y = findColorInRegion(16760576, 82, 796, 82, 796)
-      x = findColorInRegion(16760576, 82, 796, 82, 796)
+      x,y = findColorInRegion(16760576, 82, 796, 82, 796)
       if x > 0 then
         click(x, y)
         mSleep(1500)
@@ -6041,13 +5733,11 @@ function zrw()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(5592405, 90, 115, 453, 125, 463)
-      x = findColorInRegionFuzzy(5592405, 90, 115, 453, 125, 463)
+      x,y = findColorInRegionFuzzy(5592405, 90, 115, 453, 125, 463)
       if x > 0 then
         click(x, y)
       end
-      y = findColorInRegion(16629293, 347, 563, 347, 563)
-      x = findColorInRegion(16629293, 347, 563, 347, 563)
+      x,y = findColorInRegion(16629293, 347, 563, 347, 563)
       if x > 0 then
         mSleep(1190)
         break
@@ -6085,25 +5775,21 @@ function zrw()
     while true do
       mSleep(400)
       wifi()
-      y = findColorInRegion(16629293, 347, 563, 347, 563)
-      x = findColorInRegion(16629293, 347, 563, 347, 563)
+      x,y = findColorInRegion(16629293, 347, 563, 347, 563)
       if x > 0 then
         click(x, y)
         while true do
-          y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
-          x = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
+          x,y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
           if x > 0 then
             break
           end
         end
         repeat
-          y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
-          x = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
+          x,y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
         until not (x > 0)
         mSleep(1600)
       end
-      y = findColorInRegion(16629293, 347, 563, 347, 563)
-      x = findColorInRegion(16629293, 347, 563, 347, 563)
+      x,y = findColorInRegion(16629293, 347, 563, 347, 563)
       if x > 0 then
         click(496, 348)
         mSleep(800)
@@ -6130,8 +5816,7 @@ function zrw()
         end
         mSleep(800)
       else
-        y = findColorInRegionFuzzy(959481, 90, 560, 77, 566, 83)
-        x = findColorInRegionFuzzy(959481, 90, 560, 77, 566, 83)
+        x,y = findColorInRegionFuzzy(959481, 90, 560, 77, 566, 83)
         if x > 0 then
           mSleep(1000)
           break
@@ -6142,8 +5827,7 @@ function zrw()
       for _FORV_3_ = 1, tb do
         click(581, 87)
         mSleep(2000)
-        y = findColorInRegionFuzzy(959481, 90, 415, 166, 424, 182)
-        x = findColorInRegionFuzzy(959481, 90, 415, 166, 424, 182)
+        x,y = findColorInRegionFuzzy(959481, 90, 415, 166, 424, 182)
         if x > 0 then
           break
         end
@@ -6168,8 +5852,7 @@ function zrw()
         while true do
           click(51, 89)
           mSleep(1500)
-          y = findColorInRegionFuzzy(959481, 95, 160, 73, 172, 85)
-          x = findColorInRegionFuzzy(959481, 95, 160, 73, 172, 85)
+          x,y = findColorInRegionFuzzy(959481, 95, 160, 73, 172, 85)
           if x > 0 then
             break
           end
@@ -6188,21 +5871,17 @@ function zrw()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegion(2697513, 191, 523, 446, 656)
-      x = findColorInRegion(2697513, 191, 523, 446, 656)
+      x,y = findColorInRegion(2697513, 191, 523, 446, 656)
       if x > 0 then
         mSleep(1000)
         _UPVALUE0_.x1 = x + 2
         _UPVALUE0_.x2 = x + 4
         yy = y
-        y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
-        x = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
         if x > 0 then
-          y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
           if x > 0 then
-            y = findColorInRegion(16777215, 443, 518, 449, 524)
-            x = findColorInRegion(16777215, 443, 518, 449, 524)
+            x,y = findColorInRegion(16777215, 443, 518, 449, 524)
             if x > 0 then
               click(x, y)
             end
@@ -6224,21 +5903,17 @@ function zrw()
     end
     for _FORV_3_ = 1, tb do
       wifi()
-      y = findColorInRegion(2697513, 191, 523, 446, 656)
-      x = findColorInRegion(2697513, 191, 523, 446, 656)
+      x,y = findColorInRegion(2697513, 191, 523, 446, 656)
       if x > 0 then
         mSleep(1000)
         _UPVALUE0_.x1 = x + 2
         _UPVALUE0_.x2 = x + 4
         yy = y
-        y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
-        x = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
         if x > 0 then
-          y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
           if x > 0 then
-            y = findColorInRegion(16777215, 443, 518, 449, 524)
-            x = findColorInRegion(16777215, 443, 518, 449, 524)
+            x,y = findColorInRegion(16777215, 443, 518, 449, 524)
             if x > 0 then
               click(x, y)
             end
@@ -6261,8 +5936,7 @@ function zrw()
           mSleep(1000)
         end
         yy = math.random(250, 1080)
-        y = findColorInRegionFuzzy(16777215, 80, 80, yy, 80, yy)
-        x = findColorInRegionFuzzy(16777215, 80, 80, yy, 80, yy)
+        x,y = findColorInRegionFuzzy(16777215, 80, 80, yy, 80, yy)
       until not (x > 0)
       click(80, yy)
       mSleep(4000)
@@ -6271,21 +5945,17 @@ function zrw()
       mouse(300, 900, 300, 300, 15)
       mSleep(2000)
       while true do
-        y = findColorInRegion(2697513, 191, 523, 446, 656)
-        x = findColorInRegion(2697513, 191, 523, 446, 656)
+        x,y = findColorInRegion(2697513, 191, 523, 446, 656)
         if x > 0 then
           mSleep(1000)
           _UPVALUE0_.x1 = x + 2
           _UPVALUE0_.x2 = x + 4
           yy = y
-          y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
           if x > 0 then
-            y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
-            x = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+            x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
             if x > 0 then
-              y = findColorInRegion(16777215, 443, 518, 449, 524)
-              x = findColorInRegion(16777215, 443, 518, 449, 524)
+              x,y = findColorInRegion(16777215, 443, 518, 449, 524)
               if x > 0 then
                 click(x, y)
               end
@@ -6318,18 +5988,15 @@ function zrw()
     mSleep(4000)
     k = 0
     while true do
-      y = findColorInRegion(7033663, 77, 1062, 81, 1066)
-      x = findColorInRegion(7033663, 77, 1062, 81, 1066)
+      x,y = findColorInRegion(7033663, 77, 1062, 81, 1066)
       if not (x > 0) then
         k = k + 1
         if k ~= 20 then
           wifi()
-          y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
-          x = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
+          x,y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
           if x > 0 then
           else
-            y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
-            x = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
+            x,y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
           end
           if x > 0 then
             mSleep(500)
@@ -6338,12 +6005,10 @@ function zrw()
           mousekk(600, 500, 100, 500, 10)
           mSleep(800)
           while true do
-            y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
-            x = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
+            x,y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
             if x > 0 then
             else
-              y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
-              x = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
+              x,y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
             end
             if x > 0 then
               click(x, y)
@@ -6353,8 +6018,7 @@ function zrw()
           while true do
             wifi()
             mSleep(555)
-            y = findColorInRegion(7033663, 77, 1062, 81, 1066)
-            x = findColorInRegion(7033663, 77, 1062, 81, 1066)
+            x,y = findColorInRegion(7033663, 77, 1062, 81, 1066)
             if x > 0 then
               mSleep(4000)
               break
@@ -6370,8 +6034,7 @@ function zrw()
               wifi()
               xx = math.random(30, 580)
               yy = math.random(200, 900)
-              y = findColorInRegionFuzzy(16249832, 85, xx, yy, xx, yy)
-              x = findColorInRegionFuzzy(16249832, 85, xx, yy, xx, yy)
+              x,y = findColorInRegionFuzzy(16249832, 85, xx, yy, xx, yy)
             until not (x > 0)
             click(xx, yy)
             mSleep(5000)
@@ -6380,8 +6043,7 @@ function zrw()
             mouse(300, 900, 300, 300, 18)
             mSleep(2000)
             while true do
-              y = findColorInRegionFuzzy(7033663, 95, 113, 82, 119, 88)
-              x = findColorInRegionFuzzy(7033663, 95, 113, 82, 119, 88)
+              x,y = findColorInRegionFuzzy(7033663, 95, 113, 82, 119, 88)
               if x > 0 then
                 click(72, 84)
                 mSleep(1500)
@@ -6406,8 +6068,7 @@ function zrw()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegion(9342611, 580, 962, 586, 968)
-      x = findColorInRegion(9342611, 580, 962, 586, 968)
+      x,y = findColorInRegion(9342611, 580, 962, 586, 968)
       if x > 0 then
         mSleep(3000)
         break
@@ -6418,8 +6079,7 @@ function zrw()
         wifi()
         xx = math.random(220, 570)
         yy = math.random(440, 1100)
-        y = findColorInRegionFuzzy(16777215, 90, xx, yy, xx, yy)
-        x = findColorInRegionFuzzy(16777215, 90, xx, yy, xx, yy)
+        x,y = findColorInRegionFuzzy(16777215, 90, xx, yy, xx, yy)
       until not (x > 0)
       mSleep(4000)
     end
@@ -6435,8 +6095,7 @@ function zrw()
       else
         appRun("com.sina.sinanews")
       end
-      y = findColorInRegion(16075853, 71, 1077, 77, 1083)
-      x = findColorInRegion(16075853, 71, 1077, 77, 1083)
+      x,y = findColorInRegion(16075853, 71, 1077, 77, 1083)
       if x > 0 then
         mSleep(5000)
         break
@@ -6450,8 +6109,7 @@ function zrw()
       click(x, y)
       mSleep(4000)
       wifi()
-      y = findColorInRegion(0, 127, 86, 127, 86)
-      x = findColorInRegion(0, 127, 86, 127, 86)
+      x,y = findColorInRegion(0, 127, 86, 127, 86)
       if x > 0 then
         for _FORV_7_ = 1, 3 do
           mouse(550, 500, 80, 500, 10)
@@ -6465,8 +6123,7 @@ function zrw()
       end
       while true do
         _FOR_()
-        y = findColorInRegion(16075853, 71, 1077, 77, 1083)
-        x = findColorInRegion(16075853, 71, 1077, 77, 1083)
+        x,y = findColorInRegion(16075853, 71, 1077, 77, 1083)
         if x > 0 then
           break
         end
@@ -6495,8 +6152,7 @@ function zrw()
       end
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
-      x = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
+      x,y = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
       if x > 0 then
         mSleep(3000)
         mouse(300, 900, 300, 500, 20)
@@ -6509,8 +6165,7 @@ function zrw()
       repeat
         xx = math.random(35, 560)
         yy = math.random(210, 995)
-        y = findColorInRegionFuzzy(16777215, 90, xx, yy, xx, yy)
-        x = findColorInRegionFuzzy(16777215, 90, xx, yy, xx, yy)
+        x,y = findColorInRegionFuzzy(16777215, 90, xx, yy, xx, yy)
       until not (x > 0)
       click(xx, yy)
       mSleep(4000)
@@ -6534,8 +6189,7 @@ function zrw()
       end
       while true do
         mSleep(500)
-        y = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
-        x = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
+        x,y = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
         if x > 0 then
           break
         end
@@ -6551,8 +6205,7 @@ function zrw()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(16330543, 90, 320, 923, 320, 923)
-      x = findColorInRegionFuzzy(16330543, 90, 320, 923, 320, 923)
+      x,y = findColorInRegionFuzzy(16330543, 90, 320, 923, 320, 923)
       if x > 0 then
         click(x, y)
         mSleep(1000)
@@ -6562,15 +6215,13 @@ function zrw()
       mSleep(600)
     end
     while true do
-      y = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
-      x = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
+      x,y = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
       if x > 0 then
         click(561, 307)
         mSleep(800)
       end
       wifi()
-      y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
-      x = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
+      x,y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
       if x > 0 then
         mSleep(1800)
         break
@@ -6578,8 +6229,7 @@ function zrw()
       click(64, 1070)
       mSleep(800)
     end
-    y = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
-    x = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
+    x,y = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
     if x > 0 then
       click(561, 307)
       mSleep(800)
@@ -6595,8 +6245,7 @@ function zrw()
     click(48, 82)
     mSleep(2500)
     while true do
-      y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
-      x = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
+      x,y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
       if x > 0 then
         mSleep(1800)
         break
@@ -6608,16 +6257,14 @@ function zrw()
       repeat
         xx = math.random(82, 596)
         yy = math.random(306, 860)
-        y = findColorInRegionFuzzy(14931914, 80, xx, yy, xx, yy)
-        x = findColorInRegionFuzzy(14931914, 80, xx, yy, xx, yy)
+        x,y = findColorInRegionFuzzy(14931914, 80, xx, yy, xx, yy)
       until not (x > 0)
       click(xx, yy)
       mSleep(4000)
       mousekk(300, 950, 300, 180, 20)
       mSleep(2000)
       while true do
-        y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
-        x = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
+        x,y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
         if x > 0 then
           break
         end
@@ -6636,13 +6283,11 @@ function zrw()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
-      x = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
+      x,y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
       if not (x > 0) then
         mousekk(580, 500, 80, 500, 20)
         mSleep(500)
-        y = findColorInRegionFuzzy(1827035, 95, 304, 771, 310, 777)
-        x = findColorInRegionFuzzy(1827035, 95, 304, 771, 310, 777)
+        x,y = findColorInRegionFuzzy(1827035, 95, 304, 771, 310, 777)
         if x > 0 then
           click(x, y)
           mSleep(1500)
@@ -6652,8 +6297,7 @@ function zrw()
     end
     while true do
       wifi()
-      y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
-      x = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
+      x,y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
       if x > 0 then
         mSleep(2000)
         mousekk(300, 950, 30, 300, 20)
@@ -6676,8 +6320,7 @@ function zrw()
       repeat
         xx = math.random(22, 279)
         yy = math.random(152, 1000)
-        y = findColorInRegionFuzzy(16185078, 85, xx, yy, xx, yy)
-        x = findColorInRegionFuzzy(16185078, 85, xx, yy, xx, yy)
+        x,y = findColorInRegionFuzzy(16185078, 85, xx, yy, xx, yy)
       until not (x > 0)
       click(xx, yy)
       mSleep(4000)
@@ -6701,8 +6344,7 @@ function zrw()
       end
       mSleep(8000)
       while true do
-        y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
-        x = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
+        x,y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
         if x > 0 then
           break
         end
@@ -6715,8 +6357,7 @@ function zrw()
     repeat
       xx = math.random(56, 587)
       yy = math.random(216, 926)
-      y = findColorInRegionFuzzy(16053751, 85, xx, yy, xx, yy)
-      x = findColorInRegionFuzzy(16053751, 85, xx, yy, xx, yy)
+      x,y = findColorInRegionFuzzy(16053751, 85, xx, yy, xx, yy)
     until not (x > 0)
     click(xx, yy)
     mSleep(4000)
@@ -6750,12 +6391,10 @@ function zrw()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegion(16711680, 56, 1132, 212, 1135)
-      x = findColorInRegion(16711680, 56, 1132, 212, 1135)
+      x,y = findColorInRegion(16711680, 56, 1132, 212, 1135)
       if not (x > 0) then
         wifi()
-        y = findColorInRegionFuzzy(11456796, 90, 361, 852, 361, 852)
-        x = findColorInRegionFuzzy(11456796, 90, 361, 852, 361, 852)
+        x,y = findColorInRegionFuzzy(11456796, 90, 361, 852, 361, 852)
         if x > 0 then
           click(x, y)
           mSleep(5000)
@@ -6763,8 +6402,7 @@ function zrw()
         end
         mousekk(600, 500, 100, 500, 10)
         mSleep(700)
-        y = findColorInRegionFuzzy(657930, 90, 18, 1086, 18, 1086)
-        x = findColorInRegionFuzzy(657930, 90, 18, 1086, 18, 1086)
+        x,y = findColorInRegionFuzzy(657930, 90, 18, 1086, 18, 1086)
         if x > 0 then
           click(x, y)
           mSleep(500)
@@ -6773,8 +6411,7 @@ function zrw()
     end
     while true do
       wifi()
-      y = findColorInRegion(16711680, 56, 1132, 212, 1135)
-      x = findColorInRegion(16711680, 56, 1132, 212, 1135)
+      x,y = findColorInRegion(16711680, 56, 1132, 212, 1135)
       if x > 0 then
         mSleep(3500)
         break
@@ -6795,14 +6432,12 @@ function zrw()
       mSleep(3500)
       while true do
         wifi()
-        y = findColorInRegion(31487, 307, 624, 313, 630)
-        x = findColorInRegion(31487, 307, 624, 313, 630)
+        x,y = findColorInRegion(31487, 307, 624, 313, 630)
         if x > 0 then
           click(x, y)
           mSleep(2000)
         end
-        y = findColorInRegion(16711680, 56, 1132, 212, 1135)
-        x = findColorInRegion(16711680, 56, 1132, 212, 1135)
+        x,y = findColorInRegion(16711680, 56, 1132, 212, 1135)
         if x > 0 then
           mSleep(2000)
           break
@@ -6827,14 +6462,12 @@ function zrw()
       mSleep(3500)
       while true do
         wifi()
-        y = findColorInRegion(31487, 307, 624, 313, 630)
-        x = findColorInRegion(31487, 307, 624, 313, 630)
+        x,y = findColorInRegion(31487, 307, 624, 313, 630)
         if x > 0 then
           click(x, y)
           mSleep(2000)
         end
-        y = findColorInRegion(16711680, 56, 1132, 212, 1135)
-        x = findColorInRegion(16711680, 56, 1132, 212, 1135)
+        x,y = findColorInRegion(16711680, 56, 1132, 212, 1135)
         if x > 0 then
           mSleep(2000)
           break
@@ -6855,24 +6488,19 @@ function zrw()
     k = 0
     while true do
       wifi()
-      y = findColorInRegion(2697513, 199, 530, 432, 635)
-      x = findColorInRegion(2697513, 199, 530, 432, 635)
+      x,y = findColorInRegion(2697513, 199, 530, 432, 635)
       if x > 0 then
         _UPVALUE0_.x1 = x + 1
         _UPVALUE0_.x2 = x + 3
         _UPVALUE0_.x3 = x + 5
         yy = y
-        y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
-        x = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
         if x > 0 then
-          y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
           if x > 0 then
-            y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
-            x = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
+            x,y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
             if x > 0 then
-              y = findColorInRegion(16777215, 444, 518, 449, 523)
-              x = findColorInRegion(16777215, 444, 518, 449, 523)
+              x,y = findColorInRegion(16777215, 444, 518, 449, 523)
               if x > 0 then
                 click(x, y)
                 mSleep(800)
@@ -6913,24 +6541,19 @@ function zrw()
     mSleep(2500)
     while true do
       wifi()
-      y = findColorInRegion(2697513, 199, 530, 432, 635)
-      x = findColorInRegion(2697513, 199, 530, 432, 635)
+      x,y = findColorInRegion(2697513, 199, 530, 432, 635)
       if x > 0 then
         _UPVALUE0_.x1 = x + 1
         _UPVALUE0_.x2 = x + 3
         _UPVALUE0_.x3 = x + 5
         yy = y
-        y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
-        x = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
         if x > 0 then
-          y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
           if x > 0 then
-            y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
-            x = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
+            x,y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
             if x > 0 then
-              y = findColorInRegion(16777215, 444, 518, 449, 523)
-              x = findColorInRegion(16777215, 444, 518, 449, 523)
+              x,y = findColorInRegion(16777215, 444, 518, 449, 523)
               if x > 0 then
                 click(x, y)
                 mSleep(800)
@@ -6939,8 +6562,7 @@ function zrw()
           end
         end
       end
-      y = findColorInRegion(31487, 307, 624, 313, 630)
-      x = findColorInRegion(31487, 307, 624, 313, 630)
+      x,y = findColorInRegion(31487, 307, 624, 313, 630)
       if x > 0 then
         click(x, y)
         mSleep(2000)
@@ -6963,8 +6585,7 @@ function zrw()
       y = math.random(288, 536)
       click(x, y)
       mSleep(4000)
-      y = findColorInRegionFuzzy(4802889, 90, 457, 82, 457, 82)
-      x = findColorInRegionFuzzy(4802889, 90, 457, 82, 457, 82)
+      x,y = findColorInRegionFuzzy(4802889, 90, 457, 82, 457, 82)
       if x > 0 then
         click(x, y)
         mSleep(1000)
@@ -6974,8 +6595,7 @@ function zrw()
       y = math.random(160, 1000)
       click(200, y)
       mSleep(4000)
-      y = findColorInRegion(31487, 307, 624, 313, 630)
-      x = findColorInRegion(31487, 307, 624, 313, 630)
+      x,y = findColorInRegion(31487, 307, 624, 313, 630)
       if x > 0 then
         click(x, y)
         mSleep(2000)
@@ -6988,24 +6608,19 @@ function zrw()
       mSleep(2500)
       while true do
         wifi()
-        y = findColorInRegion(2697513, 199, 530, 432, 635)
-        x = findColorInRegion(2697513, 199, 530, 432, 635)
+        x,y = findColorInRegion(2697513, 199, 530, 432, 635)
         if x > 0 then
           _UPVALUE0_.x1 = x + 1
           _UPVALUE0_.x2 = x + 3
           _UPVALUE0_.x3 = x + 5
           yy = y
-          y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
           if x > 0 then
-            y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
-            x = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+            x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
             if x > 0 then
-              y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
-              x = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
+              x,y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
               if x > 0 then
-                y = findColorInRegion(16777215, 444, 518, 449, 523)
-                x = findColorInRegion(16777215, 444, 518, 449, 523)
+                x,y = findColorInRegion(16777215, 444, 518, 449, 523)
                 if x > 0 then
                   click(x, y)
                   mSleep(800)
@@ -7014,8 +6629,7 @@ function zrw()
             end
           end
         end
-        y = findColorInRegion(31487, 307, 624, 313, 630)
-        x = findColorInRegion(31487, 307, 624, 313, 630)
+        x,y = findColorInRegion(31487, 307, 624, 313, 630)
         if x > 0 then
           click(x, y)
           mSleep(2000)
@@ -7061,8 +6675,7 @@ function zrw()
       repeat
         xx = math.random(47, 580)
         yy = math.random(190, 980)
-        y = findColorInRegionFuzzy(15856113, 80, xx, yy, xx, yy)
-        x = findColorInRegionFuzzy(15856113, 80, xx, yy, xx, yy)
+        x,y = findColorInRegionFuzzy(15856113, 80, xx, yy, xx, yy)
       until not (x > 0)
       click(xx, yy)
       mSleep(4000)
@@ -7104,8 +6717,7 @@ function zrw()
     appRun("com.elong.app")
     mSleep(4000)
     while true do
-      y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
-      x = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
+      x,y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
       if x > 0 then
         mSleep(3000)
         break
@@ -7116,8 +6728,7 @@ function zrw()
     click(400, 155)
     mSleep(4500)
     while true do
-      y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
-      x = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
+      x,y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
       if x > 0 then
         break
       end
@@ -7131,15 +6742,13 @@ function zrw()
       k = k + 1
       if k ~= 20 then
         yy = math.random(390, 1000)
-        y = findColorInRegionFuzzy(16119285, 95, 100, yy, 100, yy)
-        x = findColorInRegionFuzzy(16119285, 95, 100, yy, 100, yy)
+        x,y = findColorInRegionFuzzy(16119285, 95, 100, yy, 100, yy)
         click(100, yy)
         mSleep(4800)
       end
     until not (x > 0)
     while true do
-      y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
-      x = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
+      x,y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
       if x > 0 then
         break
       end
@@ -7166,14 +6775,12 @@ function zrw()
         while true do
           wifi()
           mSleep(500)
-          y = findColorInRegionFuzzy(373717, 90, 231, 919, 237, 925)
-          x = findColorInRegionFuzzy(373717, 90, 231, 919, 237, 925)
+          x,y = findColorInRegionFuzzy(373717, 90, 231, 919, 237, 925)
           if x > 0 then
             click(x, y)
             mSleep(1000)
           end
-          y = findColorInRegionFuzzy(2105902, 90, 38, 202, 44, 208)
-          x = findColorInRegionFuzzy(2105902, 90, 38, 202, 44, 208)
+          x,y = findColorInRegionFuzzy(2105902, 90, 38, 202, 44, 208)
           if x > 0 then
             mSleep(2000)
             do break end
@@ -7190,41 +6797,35 @@ function zrw()
             mSleep(900)
             while true do
               mSleep(500)
-              y = findColorInRegionFuzzy(373717, 96, 221, 443, 221, 443)
-              x = findColorInRegionFuzzy(373717, 96, 221, 443, 221, 443)
+              x,y = findColorInRegionFuzzy(373717, 96, 221, 443, 221, 443)
               if x > 0 then
                 click(x, y)
                 mSleep(1299)
               end
-              y = findColorInRegion(31487, 314, 641, 320, 647)
-              x = findColorInRegion(31487, 314, 641, 320, 647)
+              x,y = findColorInRegion(31487, 314, 641, 320, 647)
               if x > 0 then
                 click(x, y)
                 mSleep(1199)
                 click(41, 82)
                 mSleep(1200)
               end
-              y = findColorInRegionFuzzy(31487, 100, 406, 551, 572, 688)
-              x = findColorInRegionFuzzy(31487, 100, 406, 551, 572, 688)
+              x,y = findColorInRegionFuzzy(31487, 100, 406, 551, 572, 688)
               if x > 0 then
                 click(x, y)
                 mSleep(1299)
               end
-              y = findColorInRegionFuzzy(373717, 96, 238, 996, 238, 996)
-              x = findColorInRegionFuzzy(373717, 96, 238, 996, 238, 996)
+              x,y = findColorInRegionFuzzy(373717, 96, 238, 996, 238, 996)
               if x > 0 then
                 click(x, y)
                 mSleep(999)
               end
               wifi()
-              y = findColorInRegion(31487, 221, 663, 227, 669)
-              x = findColorInRegion(31487, 221, 663, 227, 669)
+              x,y = findColorInRegion(31487, 221, 663, 227, 669)
               if x > 0 then
                 click(x, y)
                 mSleep(999)
               end
-              y = findColorInRegionFuzzy(5263961, 96, 316, 665, 322, 671)
-              x = findColorInRegionFuzzy(5263961, 96, 316, 665, 322, 671)
+              x,y = findColorInRegionFuzzy(5263961, 96, 316, 665, 322, 671)
               if x > 0 then
                 click(x, y)
                 mSleep(3399)
@@ -7237,8 +6838,7 @@ function zrw()
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(2105902, 96, 178, 92, 178, 92)
-      x = findColorInRegionFuzzy(2105902, 96, 178, 92, 178, 92)
+      x,y = findColorInRegionFuzzy(2105902, 96, 178, 92, 178, 92)
       if x > 0 then
         mSleep(2500)
         break
@@ -7279,11 +6879,9 @@ function zrw()
     repeat
       while true do
         wifi()
-        y = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
-        x = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
+        x,y = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
         if not (x > 0) then
-          y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
-          x = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
+          x,y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
           if x > 0 then
             _UPVALUE0_.x1 = x
             _UPVALUE0_.y1 = y
@@ -7295,12 +6893,10 @@ function zrw()
           mSleep(700)
           repeat
             while true do
-              y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
-              x = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
+              x,y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
               wifi()
               mSleep(500)
-              y = findColorInRegion(31487, 609, 420, 615, 626)
-              x = findColorInRegion(31487, 609, 420, 615, 626)
+              x,y = findColorInRegion(31487, 609, 420, 615, 626)
               if x > 0 then
                 mSleep(1500)
                 break
@@ -7312,10 +6908,8 @@ function zrw()
             while true do
               wifi()
               mSleep(500)
-              y = findColorInRegion(31487, 609, 420, 615, 626)
-              x = findColorInRegion(31487, 609, 420, 615, 626)
-              y = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
-              x = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
+              x,y = findColorInRegion(31487, 609, 420, 615, 626)
+              x,y = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
               if x > 0 then
                 mSleep(1500)
                 break
@@ -7332,15 +6926,13 @@ function zrw()
         wifi()
         xx = math.random(72, 614)
         yy = math.random(299, 989)
-        y = findColorInRegionFuzzy(16777215, 70, xx, yy, xx, yy)
-        x = findColorInRegionFuzzy(16777215, 70, xx, yy, xx, yy)
+        x,y = findColorInRegionFuzzy(16777215, 70, xx, yy, xx, yy)
       until not (x > 0)
       click(xx, yy)
       mSleep(4000)
       while true do
         wifi()
-        y = findColorInRegionFuzzy(5618467, 95, 70, 1080, 76, 1086)
-        x = findColorInRegionFuzzy(5618467, 95, 70, 1080, 76, 1086)
+        x,y = findColorInRegionFuzzy(5618467, 95, 70, 1080, 76, 1086)
         if x > 0 then
           mSleep(3000)
           break
@@ -7371,8 +6963,7 @@ function zrw()
       repeat
         xx = math.random(69, 571)
         yy = math.random(95, 974)
-        y = findColorInRegion(16777215, xx, yy, xx, yy)
-        x = findColorInRegion(16777215, xx, yy, xx, yy)
+        x,y = findColorInRegion(16777215, xx, yy, xx, yy)
       until not (x > 0)
       click(xx, yy)
       mSleep(4000)
@@ -7400,28 +6991,24 @@ function gamez()
     appRun("com.cocoentertainment.jifengyongzhezhuan")
     mSleep(6000)
     while true do
-      y = findColorInRegion(31487, 187, 695, 193, 701)
-      x = findColorInRegion(31487, 187, 695, 193, 701)
+      x,y = findColorInRegion(31487, 187, 695, 193, 701)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(12940834, 90, 270, 417, 276, 423)
-      x = findColorInRegionFuzzy(12940834, 90, 270, 417, 276, 423)
+      x,y = findColorInRegionFuzzy(12940834, 90, 270, 417, 276, 423)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
       mSleep(500)
-      y = findColorInRegionFuzzy(14125092, 80, 154, 470, 160, 572)
-      x = findColorInRegionFuzzy(14125092, 80, 154, 470, 160, 572)
+      x,y = findColorInRegionFuzzy(14125092, 80, 154, 470, 160, 572)
       if x > 0 then
         y = y + 6
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(6658311, 80, 167, 736, 173, 742)
-      x = findColorInRegionFuzzy(6658311, 80, 167, 736, 173, 742)
+      x,y = findColorInRegionFuzzy(6658311, 80, 167, 736, 173, 742)
       if x > 0 then
         mSleep(1600)
         break
@@ -7442,14 +7029,12 @@ function gamez()
     mSleep(1000)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(6658311, 80, 167, 736, 173, 742)
-      x = findColorInRegionFuzzy(6658311, 80, 167, 736, 173, 742)
+      x,y = findColorInRegionFuzzy(6658311, 80, 167, 736, 173, 742)
       if x > 0 then
         click(x, y)
         mSleep(1500)
       end
-      y = findColorInRegionFuzzy(16035264, 80, 361, 816, 367, 823)
-      x = findColorInRegionFuzzy(16035264, 80, 361, 816, 367, 823)
+      x,y = findColorInRegionFuzzy(16035264, 80, 361, 816, 367, 823)
       if x > 0 then
         mSleep(200)
         click(146, 815)
@@ -7465,8 +7050,7 @@ function gamez()
         click(469, 70)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(16687620, 85, 562, 543, 568, 549)
-      x = findColorInRegionFuzzy(16687620, 85, 562, 543, 568, 549)
+      x,y = findColorInRegionFuzzy(16687620, 85, 562, 543, 568, 549)
       if x > 0 then
         mSleep(500)
         ab = math.random(1, 6)
@@ -7490,24 +7074,20 @@ function gamez()
         end
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(12744465, 80, 183, 528, 189, 535)
-      x = findColorInRegionFuzzy(12744465, 80, 183, 528, 189, 535)
+      x,y = findColorInRegionFuzzy(12744465, 80, 183, 528, 189, 535)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(16008993, 90, 585, 749, 591, 755)
-      x = findColorInRegionFuzzy(16008993, 90, 585, 749, 591, 755)
+      x,y = findColorInRegionFuzzy(16008993, 90, 585, 749, 591, 755)
       if x > 0 then
-        y = findColorInRegion(16777215, 144, 624, 150, 630)
-        x = findColorInRegion(16777215, 144, 624, 150, 630)
+        x,y = findColorInRegion(16777215, 144, 624, 150, 630)
         if x > 0 then
           click(x, y)
           mSleep(1000)
         end
       end
-      y = findColorInRegionFuzzy(16776960, 80, 524, 482, 530, 488)
-      x = findColorInRegionFuzzy(16776960, 80, 524, 482, 530, 488)
+      x,y = findColorInRegionFuzzy(16776960, 80, 524, 482, 530, 488)
       if x > 0 then
         mSleep(1200)
         break
@@ -7516,8 +7096,7 @@ function gamez()
     repeat
       mSleep(500)
       xx = math.random(90, 573)
-      y = findColorInRegionFuzzy(460035, 80, xx, 939, xx, 939)
-      x = findColorInRegionFuzzy(460035, 80, xx, 939, xx, 939)
+      x,y = findColorInRegionFuzzy(460035, 80, xx, 939, xx, 939)
     until not (x > 0)
     click(xx, 939)
     mSleep(2500)
@@ -7529,8 +7108,7 @@ function gamez()
         click(425, 707)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(14521904, 80, 113, 513, 119, 519)
-      x = findColorInRegionFuzzy(14521904, 80, 113, 513, 119, 519)
+      x,y = findColorInRegionFuzzy(14521904, 80, 113, 513, 119, 519)
       if x > 0 then
         click(x, y)
         mSleep(3500)
@@ -7538,67 +7116,57 @@ function gamez()
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(16772980, 80, 562, 1020, 568, 1026)
-      x = findColorInRegionFuzzy(16772980, 80, 562, 1020, 568, 1026)
+      x,y = findColorInRegionFuzzy(16772980, 80, 562, 1020, 568, 1026)
       if x > 0 then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(7171437, 80, 2, 387, 8, 393)
-      x = findColorInRegionFuzzy(7171437, 80, 2, 387, 8, 393)
+      x,y = findColorInRegionFuzzy(7171437, 80, 2, 387, 8, 393)
       if x > 0 then
         break
       end
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(7171437, 85, 2, 387, 8, 393)
-      x = findColorInRegionFuzzy(7171437, 85, 2, 387, 8, 393)
+      x,y = findColorInRegionFuzzy(7171437, 85, 2, 387, 8, 393)
       if x > 0 then
         x = x + 20
         click(x, y)
         mSleep(600)
       end
-      y = findColorInRegionFuzzy(16777215, 90, 603, 1106, 609, 1112)
-      x = findColorInRegionFuzzy(16777215, 90, 603, 1106, 609, 1112)
+      x,y = findColorInRegionFuzzy(16777215, 90, 603, 1106, 609, 1112)
       if x > 0 then
         y = y - 40
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(14514944, 80, 340, 561, 346, 567)
-      x = findColorInRegionFuzzy(14514944, 80, 340, 561, 346, 567)
+      x,y = findColorInRegionFuzzy(14514944, 80, 340, 561, 346, 567)
       if x > 0 then
         y = y + 50
         click(x, y)
         mSleep(1500)
       end
-      y = findColorInRegionFuzzy(8421494, 80, 326, 729, 332, 735)
-      x = findColorInRegionFuzzy(8421494, 80, 326, 729, 332, 735)
+      x,y = findColorInRegionFuzzy(8421494, 80, 326, 729, 332, 735)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(10083830, 80, 446, 237, 452, 243)
-      x = findColorInRegionFuzzy(10083830, 80, 446, 237, 452, 243)
+      x,y = findColorInRegionFuzzy(10083830, 80, 446, 237, 452, 243)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(13139732, 80, 162, 693, 168, 699)
-      x = findColorInRegionFuzzy(13139732, 80, 162, 693, 168, 699)
+      x,y = findColorInRegionFuzzy(13139732, 80, 162, 693, 168, 699)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(14387247, 80, 173, 511, 179, 517)
-      x = findColorInRegionFuzzy(14387247, 80, 173, 511, 179, 517)
+      x,y = findColorInRegionFuzzy(14387247, 80, 173, 511, 179, 517)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(16777215, 95, 141, 1100, 147, 1105)
-      x = findColorInRegionFuzzy(16777215, 95, 141, 1100, 147, 1105)
+      x,y = findColorInRegionFuzzy(16777215, 95, 141, 1100, 147, 1105)
       if x > 0 then
         mSleep(1000)
         break
@@ -7615,20 +7183,17 @@ function gamez()
       end
       click(92, 1043)
       mSleep(400)
-      y = findColorInRegionFuzzy(16777215, 95, 141, 1100, 147, 1105)
-      x = findColorInRegionFuzzy(16777215, 95, 141, 1100, 147, 1105)
+      x,y = findColorInRegionFuzzy(16777215, 95, 141, 1100, 147, 1105)
     until not (x > 0)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(7171437, 85, 2, 387, 8, 393)
-      x = findColorInRegionFuzzy(7171437, 85, 2, 387, 8, 393)
+      x,y = findColorInRegionFuzzy(7171437, 85, 2, 387, 8, 393)
       if x > 0 then
         x = x + 20
         click(x, y)
         mSleep(600)
       end
-      y = findColorInRegionFuzzy(14518309, 80, 71, 510, 77, 516)
-      x = findColorInRegionFuzzy(14518309, 80, 71, 510, 77, 516)
+      x,y = findColorInRegionFuzzy(14518309, 80, 71, 510, 77, 516)
       if x > 0 then
         mSleep(300)
         click(x, y)
@@ -7637,8 +7202,7 @@ function gamez()
       end
     end
     while true do
-      y = findColorInRegionFuzzy(16777215, 90, 603, 1106, 609, 1112)
-      x = findColorInRegionFuzzy(16777215, 90, 603, 1106, 609, 1112)
+      x,y = findColorInRegionFuzzy(16777215, 90, 603, 1106, 609, 1112)
       if x > 0 then
         y = y - 40
         click(x, y)
@@ -7657,8 +7221,7 @@ function gamez()
     mSleep(4000)
     k = 0
     while true do
-      y = findColorInRegion(31487, 120, 651, 126, 657)
-      x = findColorInRegion(31487, 120, 651, 126, 657)
+      x,y = findColorInRegion(31487, 120, 651, 126, 657)
       if x > 0 then
         click(x, y)
         mSleep(1000)
@@ -7667,15 +7230,13 @@ function gamez()
       if k ~= 80 then
         wifi()
         mSleep(500)
-        y = findColorInRegionFuzzy(8369956, 90, 268, 389, 274, 395)
-        x = findColorInRegionFuzzy(8369956, 90, 268, 389, 274, 395)
+        x,y = findColorInRegionFuzzy(8369956, 90, 268, 389, 274, 395)
         if x > 0 then
           mSleep(200)
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(8173091, 90, 210, 506, 216, 512)
-        x = findColorInRegionFuzzy(8173091, 90, 210, 506, 216, 512)
+        x,y = findColorInRegionFuzzy(8173091, 90, 210, 506, 216, 512)
         if x > 0 then
           mSleep(1200)
           click(214, 307)
@@ -7716,31 +7277,26 @@ function gamez()
           k = k + 1
           if k ~= 360 then
             wifi()
-            y = findColorInRegionFuzzy(8173091, 90, 210, 506, 216, 512)
-            x = findColorInRegionFuzzy(8173091, 90, 210, 506, 216, 512)
+            x,y = findColorInRegionFuzzy(8173091, 90, 210, 506, 216, 512)
             if x > 0 then
               mSleep(200)
               click(x, y)
               mSleep(3000)
             end
-            y = findColorInRegion(31487, 311, 661, 317, 667)
-            x = findColorInRegion(31487, 311, 661, 317, 667)
+            x,y = findColorInRegion(31487, 311, 661, 317, 667)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             else
-              y = findColorInRegionFuzzy(1858459, 90, 227, 105, 233, 111)
-              x = findColorInRegionFuzzy(1858459, 90, 227, 105, 233, 111)
+              x,y = findColorInRegionFuzzy(1858459, 90, 227, 105, 233, 111)
               if not (x > 0) then
-                y = findColorInRegionFuzzy(146762, 90, 266, 678, 274, 685)
-                x = findColorInRegionFuzzy(146762, 90, 266, 678, 274, 685)
+                x,y = findColorInRegionFuzzy(146762, 90, 266, 678, 274, 685)
                 if x > 0 then
                   mSleep(200)
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(124159, 90, 193, 1004, 199, 1010)
-                x = findColorInRegionFuzzy(124159, 90, 193, 1004, 199, 1010)
+                x,y = findColorInRegionFuzzy(124159, 90, 193, 1004, 199, 1010)
                 if x > 0 then
                   mSleep(200)
                   click(328, 962)
@@ -7749,20 +7305,17 @@ function gamez()
                 end
                 while true do
                   mSleep(600)
-                  y = findColorInRegion(16777215, 312, 44, 318, 50)
-                  x = findColorInRegion(16777215, 312, 44, 318, 50)
+                  x,y = findColorInRegion(16777215, 312, 44, 318, 50)
                   if x > 0 then
                     click(x, y)
                     mSleep(4000)
                   end
-                  y = findColorInRegionFuzzy(58879, 95, 357, 710, 363, 716)
-                  x = findColorInRegionFuzzy(58879, 95, 357, 710, 363, 716)
+                  x,y = findColorInRegionFuzzy(58879, 95, 357, 710, 363, 716)
                   if x > 0 then
                     click(309, 693)
                     mSleep(3000)
                   end
-                  y = findColorInRegionFuzzy(7014941, 90, 626, 684, 632, 690)
-                  x = findColorInRegionFuzzy(7014941, 90, 626, 684, 632, 690)
+                  x,y = findColorInRegionFuzzy(7014941, 90, 626, 684, 632, 690)
                   if x > 0 then
                     mSleep(1500)
                     break
@@ -7778,8 +7331,7 @@ function gamez()
                   k = k + 1
                   if k ~= 40 then
                     mSleep(500)
-                    y = findColorInRegionFuzzy(15792382, 95, 524, 503, 530, 509)
-                    x = findColorInRegionFuzzy(15792382, 95, 524, 503, 530, 509)
+                    x,y = findColorInRegionFuzzy(15792382, 95, 524, 503, 530, 509)
                     if x > 0 then
                       click(526, 509)
                       mSleep(2500)
@@ -7812,61 +7364,51 @@ function gamez()
           if k ~= 90 then
             wifi()
             mSleep(500)
-            y = findColorInRegionFuzzy(16777215, 95, 233, 688, 240, 694)
-            x = findColorInRegionFuzzy(16777215, 95, 233, 688, 240, 694)
+            x,y = findColorInRegionFuzzy(16777215, 95, 233, 688, 240, 694)
             if x > 0 then
               mSleep(200)
               click(x, y)
               mSleep(2200)
             end
-            y = findColorInRegionFuzzy(16777215, 95, 115, 1058, 121, 1064)
-            x = findColorInRegionFuzzy(16777215, 95, 115, 1058, 121, 1064)
+            x,y = findColorInRegionFuzzy(16777215, 95, 115, 1058, 121, 1064)
             if x > 0 then
               mSleep(200)
               click(x, y)
               mSleep(2200)
             end
-            y = findColorInRegionFuzzy(15193438, 90, 576, 1059, 580, 1063)
-            x = findColorInRegionFuzzy(15193438, 90, 576, 1059, 580, 1063)
+            x,y = findColorInRegionFuzzy(15193438, 90, 576, 1059, 580, 1063)
             if x > 0 then
               mSleep(200)
               click(x, y)
               mSleep(2200)
             end
-            y = findColorInRegionFuzzy(29374, 90, 228, 520, 234, 526)
-            x = findColorInRegionFuzzy(29374, 90, 228, 520, 234, 526)
+            x,y = findColorInRegionFuzzy(29374, 90, 228, 520, 234, 526)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegion(31487, 185, 418, 194, 427)
-            x = findColorInRegion(31487, 185, 418, 194, 427)
+            x,y = findColorInRegion(31487, 185, 418, 194, 427)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegion(31487, 249, 418, 255, 424)
-            x = findColorInRegion(31487, 249, 418, 255, 424)
+            x,y = findColorInRegion(31487, 249, 418, 255, 424)
             if x > 0 then
               click(x, y)
               mSleep(2000)
             else
-              y = findColorInRegionFuzzy(3748154, 90, 138, 763, 144, 769)
-              x = findColorInRegionFuzzy(3748154, 90, 138, 763, 144, 769)
+              x,y = findColorInRegionFuzzy(3748154, 90, 138, 763, 144, 769)
               if x > 0 then
                 mSleep(200)
                 click(x, y)
                 mSleep(2200)
               end
-              y = findColorInRegionFuzzy(16777215, 100, 571, 514, 575, 519)
-              x = findColorInRegionFuzzy(16777215, 100, 571, 514, 575, 519)
+              x,y = findColorInRegionFuzzy(16777215, 100, 571, 514, 575, 519)
               if x > 0 then
                 mSleep(3600)
-                y = findColorInRegionFuzzy(16777215, 100, 569, 552, 573, 556)
-                x = findColorInRegionFuzzy(16777215, 100, 569, 552, 573, 556)
+                x,y = findColorInRegionFuzzy(16777215, 100, 569, 552, 573, 556)
                 if x > 0 then
-                  y = findColorInRegionFuzzy(16777215, 100, 569, 579, 573, 583)
-                  x = findColorInRegionFuzzy(16777215, 100, 569, 579, 573, 583)
+                  x,y = findColorInRegionFuzzy(16777215, 100, 569, 579, 573, 583)
                   if x > 0 then
                     do break end
                     do break end
@@ -7881,8 +7423,7 @@ function gamez()
                 k = k + 1
                 if k ~= 80 then
                   mSleep(500)
-                  y = findColorInRegionFuzzy(31942, 90, 40, 931, 46, 937)
-                  x = findColorInRegionFuzzy(31942, 90, 40, 931, 46, 937)
+                  x,y = findColorInRegionFuzzy(31942, 90, 40, 931, 46, 937)
                   if x > 0 then
                     mSleep(2000)
                     break
@@ -7906,14 +7447,12 @@ function gamez()
               end
               while true do
                 mSleep(500)
-                y = findColorInRegionFuzzy(31942, 90, 40, 931, 46, 937)
-                x = findColorInRegionFuzzy(31942, 90, 40, 931, 46, 937)
+                x,y = findColorInRegionFuzzy(31942, 90, 40, 931, 46, 937)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(226249, 90, 227, 522, 233, 528)
-                x = findColorInRegionFuzzy(226249, 90, 227, 522, 233, 528)
+                x,y = findColorInRegionFuzzy(226249, 90, 227, 522, 233, 528)
                 if x > 0 then
                   click(x, y)
                   mSleep(2500)
@@ -7922,8 +7461,7 @@ function gamez()
                   k = k + 1
                 end
                 if k ~= 12 then
-                  y = findColorInRegionFuzzy(54015, 85, 380, 550, 395, 565)
-                  x = findColorInRegionFuzzy(54015, 85, 380, 550, 395, 565)
+                  x,y = findColorInRegionFuzzy(54015, 85, 380, 550, 395, 565)
                 elseif x > 0 then
                   break
                 end
@@ -7943,81 +7481,68 @@ function gamez()
     appRun("com.locojoy.ilovedota-chs")
     mSleep(5000)
     while true do
-      y = findColorInRegionFuzzy(14135362, 90, 193, 414, 199, 420)
-      x = findColorInRegionFuzzy(14135362, 90, 193, 414, 199, 420)
+      x,y = findColorInRegionFuzzy(14135362, 90, 193, 414, 199, 420)
       if x > 0 then
         click(101, 555)
         mSleep(800)
       end
       mSleep(500)
-      y = findColorInRegionFuzzy(1771528, 90, 10, 355, 20, 365)
-      x = findColorInRegionFuzzy(1771528, 90, 10, 355, 20, 365)
+      x,y = findColorInRegionFuzzy(1771528, 90, 10, 355, 20, 365)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(15718981, 90, 430, 857, 437, 863)
-      x = findColorInRegionFuzzy(15718981, 90, 430, 857, 437, 863)
+      x,y = findColorInRegionFuzzy(15718981, 90, 430, 857, 437, 863)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16632622, 90, 605, 1003, 611, 1009)
-      x = findColorInRegionFuzzy(16632622, 90, 605, 1003, 611, 1009)
+      x,y = findColorInRegionFuzzy(16632622, 90, 605, 1003, 611, 1009)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16766774, 90, 38, 898, 44, 904)
-      x = findColorInRegionFuzzy(16766774, 90, 38, 898, 44, 904)
+      x,y = findColorInRegionFuzzy(16766774, 90, 38, 898, 44, 904)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(14695958, 90, 475, 470, 481, 476)
-      x = findColorInRegionFuzzy(14695958, 90, 475, 470, 481, 476)
+      x,y = findColorInRegionFuzzy(14695958, 90, 475, 470, 481, 476)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(10038561, 90, 225, 382, 231, 388)
-      x = findColorInRegionFuzzy(10038561, 90, 225, 382, 231, 388)
+      x,y = findColorInRegionFuzzy(10038561, 90, 225, 382, 231, 388)
       if x > 0 then
         _UPVALUE0_.mouse(171, 865, 171, 300, 10)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(3415056, 90, 107, 269, 113, 275)
-      x = findColorInRegionFuzzy(3415056, 90, 107, 269, 113, 275)
+      x,y = findColorInRegionFuzzy(3415056, 90, 107, 269, 113, 275)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(11313788, 90, 456, 485, 462, 491)
-      x = findColorInRegionFuzzy(11313788, 90, 456, 485, 462, 491)
+      x,y = findColorInRegionFuzzy(11313788, 90, 456, 485, 462, 491)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(24717, 90, 71, 893, 77, 899)
-      x = findColorInRegionFuzzy(24717, 90, 71, 893, 77, 899)
+      x,y = findColorInRegionFuzzy(24717, 90, 71, 893, 77, 899)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16755456, 159, 851, 165, 857)
-      x = findColorInRegionFuzzy(16755456, 159, 851, 165, 857)
+      x,y = findColorInRegionFuzzy(16755456, 159, 851, 165, 857)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(86906, 90, 38, 881, 44, 887)
-      x = findColorInRegionFuzzy(86906, 90, 38, 881, 44, 887)
+      x,y = findColorInRegionFuzzy(86906, 90, 38, 881, 44, 887)
       if x > 0 then
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(3555220, 90, 478, 484, 484, 490)
-      x = findColorInRegionFuzzy(3555220, 90, 478, 484, 484, 490)
+      x,y = findColorInRegionFuzzy(3555220, 90, 478, 484, 484, 490)
       if x > 0 then
         click(205, 569)
         mSleep(3000)
@@ -8035,26 +7560,22 @@ function gamez()
     mSleep(3500)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(16702236, 85, 311, 667, 317, 673)
-      x = findColorInRegionFuzzy(16702236, 85, 311, 667, 317, 673)
+      x,y = findColorInRegionFuzzy(16702236, 85, 311, 667, 317, 673)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(16768512, 85, 160, 742, 166, 748)
-      x = findColorInRegionFuzzy(16768512, 85, 160, 742, 166, 748)
+      x,y = findColorInRegionFuzzy(16768512, 85, 160, 742, 166, 748)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(12048114, 90, 318, 659, 318, 659)
-      x = findColorInRegionFuzzy(12048114, 90, 318, 659, 318, 659)
+      x,y = findColorInRegionFuzzy(12048114, 90, 318, 659, 318, 659)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
-      x = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
+      x,y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
       if x > 0 then
         mSleep(1500)
         break
@@ -8110,26 +7631,22 @@ function gamez()
     mSleep(1200)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
-      x = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
+      x,y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
       if x > 0 then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16757504, 85, 306, 1025, 312, 1031)
-      x = findColorInRegionFuzzy(16757504, 85, 306, 1025, 312, 1031)
+      x,y = findColorInRegionFuzzy(16757504, 85, 306, 1025, 312, 1031)
       if x > 0 then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16702236, 85, 281, 656, 287, 662)
-      x = findColorInRegionFuzzy(16702236, 85, 281, 656, 287, 662)
+      x,y = findColorInRegionFuzzy(16702236, 85, 281, 656, 287, 662)
       if x > 0 then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16773457, 85, 225, 84, 231, 90)
-      x = findColorInRegionFuzzy(16773457, 85, 225, 84, 231, 90)
+      x,y = findColorInRegionFuzzy(16773457, 85, 225, 84, 231, 90)
       if x > 0 then
         mSleep(1500)
         break
@@ -8145,30 +7662,26 @@ function gamez()
     mSleep(700)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(16763947, 85, 315, 1042, 321, 1047)
-      x = findColorInRegionFuzzy(16763947, 85, 315, 1042, 321, 1047)
+      x,y = findColorInRegionFuzzy(16763947, 85, 315, 1042, 321, 1047)
       if x > 0 then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
-      x = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
+      x,y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
       if x > 0 then
         mSleep(1000)
         break
       end
     end
     while true do
-      y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
-      x = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
+      x,y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
       if x > 0 then
         click(x, y)
         mSleep(2200)
         click(318, 1039)
         mSleep(5000)
       end
-      y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
-      x = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
+      x,y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
       if x > 0 then
         mSleep(500)
         break
@@ -8176,21 +7689,18 @@ function gamez()
     end
     while true do
       mSleep(600)
-      y = findColorInRegionFuzzy(16777215, 90, 550, 1038, 556, 1044)
-      x = findColorInRegionFuzzy(16777215, 90, 550, 1038, 556, 1044)
+      x,y = findColorInRegionFuzzy(16777215, 90, 550, 1038, 556, 1044)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
-      x = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
+      x,y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
       if x > 0 then
         y = y + 20
         click(x, y)
         mSleep(600)
       end
-      y = findColorInRegionFuzzy(10485585, 90, 317, 676, 323, 682)
-      x = findColorInRegionFuzzy(10485585, 90, 317, 676, 323, 682)
+      x,y = findColorInRegionFuzzy(10485585, 90, 317, 676, 323, 682)
       if x > 0 then
         click(x, y)
         mSleep(3000)
@@ -8218,22 +7728,19 @@ function gamez()
           click(234, 567)
           mSleep(3000)
         end
-        y = findColorInRegionFuzzy(14548992, 95, 547, 923, 553, 929)
-        x = findColorInRegionFuzzy(14548992, 95, 547, 923, 553, 929)
+        x,y = findColorInRegionFuzzy(14548992, 95, 547, 923, 553, 929)
         if x > 0 then
           mSleep(400)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(4369969, 90, 270, 269, 276, 275)
-        x = findColorInRegionFuzzy(4369969, 90, 270, 269, 276, 275)
+        x,y = findColorInRegionFuzzy(4369969, 90, 270, 269, 276, 275)
         if x > 0 then
           mSleep(300)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(2751232, 85, 200, 672, 208, 680)
-        x = findColorInRegionFuzzy(2751232, 85, 200, 672, 208, 680)
+        x,y = findColorInRegionFuzzy(2751232, 85, 200, 672, 208, 680)
         if x > 0 then
           if not (k < 9) then
             do break end
@@ -8246,8 +7753,7 @@ function gamez()
     mSleep(200)
     while true do
       mSleep(300)
-      y = findColorInRegionFuzzy(4376377, 85, 115, 524, 121, 530)
-      x = findColorInRegionFuzzy(4376377, 85, 115, 524, 121, 530)
+      x,y = findColorInRegionFuzzy(4376377, 85, 115, 524, 121, 530)
       if x > 0 then
         mSleep(300)
         break
@@ -8256,8 +7762,7 @@ function gamez()
     click(395, 593)
     while true do
       mSleep(300)
-      y = findColorInRegion(16777215, 366, 106, 366, 106)
-      x = findColorInRegion(16777215, 366, 106, 366, 106)
+      x,y = findColorInRegion(16777215, 366, 106, 366, 106)
       if x > 0 then
         mSleep(500)
         break
@@ -8271,8 +7776,7 @@ function gamez()
     click(314, 545)
     while true do
       mSleep(300)
-      y = findColorInRegion(16777215, 366, 106, 366, 106)
-      x = findColorInRegion(16777215, 366, 106, 366, 106)
+      x,y = findColorInRegion(16777215, 366, 106, 366, 106)
       if x > 0 then
         mSleep(500)
         break
@@ -8285,8 +7789,7 @@ function gamez()
     click(252, 600)
     while true do
       mSleep(300)
-      y = findColorInRegion(16777215, 366, 106, 366, 106)
-      x = findColorInRegion(16777215, 366, 106, 366, 106)
+      x,y = findColorInRegion(16777215, 366, 106, 366, 106)
       if x > 0 then
         mSleep(500)
         break
@@ -8300,22 +7803,19 @@ function gamez()
     mSleep(300)
     while true do
       mSleep(300)
-      y = findColorInRegionFuzzy(4376377, 85, 115, 524, 121, 530)
-      x = findColorInRegionFuzzy(4376377, 85, 115, 524, 121, 530)
+      x,y = findColorInRegionFuzzy(4376377, 85, 115, 524, 121, 530)
       if x > 0 then
         mSleep(500)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(2752256, 88, 281, 717, 287, 723)
-      x = findColorInRegionFuzzy(2752256, 88, 281, 717, 287, 723)
+      x,y = findColorInRegionFuzzy(2752256, 88, 281, 717, 287, 723)
       if x > 0 then
         mSleep(300)
         click(344, 821)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(4902713, 80, 49, 826, 49, 826)
-      x = findColorInRegionFuzzy(4902713, 80, 49, 826, 49, 826)
+      x,y = findColorInRegionFuzzy(4902713, 80, 49, 826, 49, 826)
       if x > 0 then
         mSleep(300)
         break
@@ -8327,15 +7827,13 @@ function gamez()
     mSleep(800)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(4902713, 80, 49, 826, 49, 826)
-      x = findColorInRegionFuzzy(4902713, 80, 49, 826, 49, 826)
+      x,y = findColorInRegionFuzzy(4902713, 80, 49, 826, 49, 826)
       if x > 0 then
         mSleep(300)
         click(x, y)
         mSleep(1000)
       else
-        y = findColorInRegionFuzzy(13021753, 90, 55, 553, 61, 559)
-        x = findColorInRegionFuzzy(13021753, 90, 55, 553, 61, 559)
+        x,y = findColorInRegionFuzzy(13021753, 90, 55, 553, 61, 559)
         if x > 0 then
           mSleep(500)
           break
@@ -8362,8 +7860,7 @@ function gamez()
         click(46, 561)
       end
       mSleep(1000)
-      y = findColorInRegionFuzzy(7061190, 90, 341, 548, 351, 557)
-      x = findColorInRegionFuzzy(7061190, 90, 341, 548, 351, 557)
+      x,y = findColorInRegionFuzzy(7061190, 90, 341, 548, 351, 557)
       if x > 0 then
         mSleep(1500)
         click(264, 443)
@@ -8384,14 +7881,12 @@ function gamez()
     mSleep(8000)
     while true do
       mSleep(600)
-      y = findColorInRegionFuzzy(11887929, 90, 535, 931, 541, 937)
-      x = findColorInRegionFuzzy(11887929, 90, 535, 931, 541, 937)
+      x,y = findColorInRegionFuzzy(11887929, 90, 535, 931, 541, 937)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegion(15229969, 291, 483, 297, 489)
-      x = findColorInRegion(15229969, 291, 483, 297, 489)
+      x,y = findColorInRegion(15229969, 291, 483, 297, 489)
       if x > 0 then
         click(x, y)
         mSleep(1000)
@@ -8400,14 +7895,12 @@ function gamez()
     end
     while true do
       mSleep(600)
-      y = findColorInRegionFuzzy(16243621, 90, 297, 662, 303, 668)
-      x = findColorInRegionFuzzy(16243621, 90, 297, 662, 303, 668)
+      x,y = findColorInRegionFuzzy(16243621, 90, 297, 662, 303, 668)
       if x > 0 then
         click(126, 546)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(15714089, 90, 36, 666, 42, 672)
-      x = findColorInRegionFuzzy(15714089, 90, 36, 666, 42, 672)
+      x,y = findColorInRegionFuzzy(15714089, 90, 36, 666, 42, 672)
       if x > 0 then
         mSleep(2000)
         break
@@ -8428,16 +7921,14 @@ function gamez()
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(15710794, 90, 33, 1037, 39, 1043)
-      x = findColorInRegionFuzzy(15710794, 90, 33, 1037, 39, 1043)
+      x,y = findColorInRegionFuzzy(15710794, 90, 33, 1037, 39, 1043)
       if x > 0 then
         click(36, 679)
         mSleep(1000)
         click(x, y)
         mSleep(4000)
       end
-      y = findColorInRegionFuzzy(10284899, 90, 526, 25, 533, 31)
-      x = findColorInRegionFuzzy(10284899, 90, 526, 25, 533, 31)
+      x,y = findColorInRegionFuzzy(10284899, 90, 526, 25, 533, 31)
       if x > 0 then
         mSleep(5000)
         break
@@ -8454,16 +7945,14 @@ function gamez()
     mSleep(8000)
     while true do
       mSleep(700)
-      y = findColorInRegionFuzzy(2729554, 90, 318, 649, 324, 655)
-      x = findColorInRegionFuzzy(2729554, 90, 318, 649, 324, 655)
+      x,y = findColorInRegionFuzzy(2729554, 90, 318, 649, 324, 655)
       if x > 0 then
         mSleep(2000)
         break
       end
     end
     while true do
-      y = findColorInRegionFuzzy(2729554, 90, 318, 649, 324, 655)
-      x = findColorInRegionFuzzy(2729554, 90, 318, 649, 324, 655)
+      x,y = findColorInRegionFuzzy(2729554, 90, 318, 649, 324, 655)
       if x > 0 then
         click(x, y)
         mSleep(2000)
@@ -8738,21 +8227,18 @@ function appopen()
 end
 function rwnn()
   rw = 0
-  y = findColorInRegion(31487, 300, 630, 330, 678)
-  x = findColorInRegion(31487, 300, 630, 330, 678)
+  x,y = findColorInRegion(31487, 300, 630, 330, 678)
   if 0 < x then
     click(x, y)
     mSleep(1000)
     while true do
       inow()
-      y = findColorInRegionFuzzy(13027014, 90, 545, 324, 545, 324)
-      x = findColorInRegionFuzzy(13027014, 90, 545, 324, 545, 324)
+      x,y = findColorInRegionFuzzy(13027014, 90, 545, 324, 545, 324)
       if 0 < x then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegion(16203135, 628, 140, 628, 180)
-      x = findColorInRegion(16203135, 628, 140, 628, 180)
+      x,y = findColorInRegion(16203135, 628, 140, 628, 180)
       if 0 < x then
         break
       end
@@ -8770,8 +8256,7 @@ function zrwopen()
     while true do
       wifi()
       mSleep(500)
-      y = findColorInRegion(12452353, 70, 193, 215, 199)
-      x = findColorInRegion(12452353, 70, 193, 215, 199)
+      x,y = findColorInRegion(12452353, 70, 193, 215, 199)
       if 0 < x then
         b = b + 1
         if not (b < 8) then
@@ -8800,8 +8285,7 @@ function zrwopen()
           mSleep(1000)
         end
         mSleep(900)
-        y = findColorInRegionFuzzy(16749127, 85, 314, 694, 316, 696)
-        x = findColorInRegionFuzzy(16749127, 85, 314, 694, 316, 696)
+        x,y = findColorInRegionFuzzy(16749127, 85, 314, 694, 316, 696)
         if 0 < x then
           mSleep(500)
           break
@@ -8829,8 +8313,7 @@ function zrwopen()
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(16750674, 85, 215, 474, 215, 474)
-            x = findColorInRegionFuzzy(16750674, 85, 215, 474, 215, 474)
+            x,y = findColorInRegionFuzzy(16750674, 85, 215, 474, 215, 474)
             if 0 < x then
               click(x, y)
               mSleep(1000)
@@ -8899,38 +8382,32 @@ function zrwopen()
                   click(562, 1090)
                   mSleep(1500)
                 end
-                y = findColorInRegionFuzzy(15651374, 90, 570, 1061, 576, 1067)
-                x = findColorInRegionFuzzy(15651374, 90, 570, 1061, 576, 1067)
+                x,y = findColorInRegionFuzzy(15651374, 90, 570, 1061, 576, 1067)
                 if 0 < x then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(12512816, 90, 579, 1084, 585, 1090)
-                x = findColorInRegionFuzzy(12512816, 90, 579, 1084, 585, 1090)
+                x,y = findColorInRegionFuzzy(12512816, 90, 579, 1084, 585, 1090)
                 if 0 < x then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(1211071, 90, 88, 798, 94, 804)
-                x = findColorInRegionFuzzy(1211071, 90, 88, 798, 94, 804)
+                x,y = findColorInRegionFuzzy(1211071, 90, 88, 798, 94, 804)
                 if 0 < x then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(13177876, 90, 451, 216, 457, 222)
-                x = findColorInRegionFuzzy(13177876, 90, 451, 216, 457, 222)
+                x,y = findColorInRegionFuzzy(13177876, 90, 451, 216, 457, 222)
                 if 0 < x then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(2277350, 90, 44, 435, 48, 439)
-                x = findColorInRegionFuzzy(2277350, 90, 44, 435, 48, 439)
+                x,y = findColorInRegionFuzzy(2277350, 90, 44, 435, 48, 439)
                 if 0 < x then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findColorInRegionFuzzy(13406003, 90, 317, 1100, 323, 1105)
-                x = findColorInRegionFuzzy(13406003, 90, 317, 1100, 323, 1105)
+                x,y = findColorInRegionFuzzy(13406003, 90, 317, 1100, 323, 1105)
                 if 0 < x then
                   mSleep(300)
                   click(x, y)
@@ -8960,22 +8437,19 @@ function zrwopen()
       k = k + 1
       if k ~= 100 then
         mSleep(500)
-        y = findColorInRegionFuzzy(14011054, 90, 596, 556, 600, 560)
-        x = findColorInRegionFuzzy(14011054, 90, 596, 556, 600, 560)
+        x,y = findColorInRegionFuzzy(14011054, 90, 596, 556, 600, 560)
         if 0 < x then
           mSleep(300)
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(3394297, 90, 424, 718, 424, 718)
-        x = findColorInRegionFuzzy(3394297, 90, 424, 718, 424, 718)
+        x,y = findColorInRegionFuzzy(3394297, 90, 424, 718, 424, 718)
         if 0 < x then
           mSleep(300)
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
-        x = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
+        x,y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
         if 0 < x then
           mSleep(500)
           break
@@ -8999,14 +8473,12 @@ function zrwopen()
           mSleep(600)
           click(199, 933)
           mSleep(1500)
-          y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
-          x = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
+          x,y = findColorInRegionFuzzy(15687262, 90, 507, 564, 507, 564)
           if 0 < x then
             click(x, y)
             mSleep(1000)
           end
-          y = findColorInRegion(31487, 397, 574, 403, 580)
-          x = findColorInRegion(31487, 397, 574, 403, 580)
+          x,y = findColorInRegion(31487, 397, 574, 403, 580)
           if 0 < x then
             click(x, y)
             mSleep(2000)
@@ -9017,14 +8489,12 @@ function zrwopen()
               click(519, 104)
             end
           else
-            y = findColorInRegionFuzzy(12338751, 90, 590, 230, 592, 232)
-            x = findColorInRegionFuzzy(12338751, 90, 590, 230, 592, 232)
+            x,y = findColorInRegionFuzzy(12338751, 90, 590, 230, 592, 232)
             if 0 < x then
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(3235699, 95, 110, 128, 112, 130)
-            x = findColorInRegionFuzzy(3235699, 95, 110, 128, 112, 130)
+            x,y = findColorInRegionFuzzy(3235699, 95, 110, 128, 112, 130)
             if 0 < x then
               y = math.random(1, 4)
               if y == 1 then
@@ -9049,20 +8519,17 @@ function zrwopen()
               end
               mSleep(900)
             end
-            y = findColorInRegionFuzzy(10106170, 90, 600, 119, 602, 121)
-            x = findColorInRegionFuzzy(10106170, 90, 600, 119, 602, 121)
+            x,y = findColorInRegionFuzzy(10106170, 90, 600, 119, 602, 121)
             if 0 < x then
               click(x, y)
               mSleep(1000)
             end
-            y = findColorInRegionFuzzy(12274496, 91, 421, 570, 427, 576)
-            x = findColorInRegionFuzzy(12274496, 91, 421, 570, 427, 576)
+            x,y = findColorInRegionFuzzy(12274496, 91, 421, 570, 427, 576)
             if 0 < x then
               click(x, y)
               mSleep(2000)
             end
-            y = findColorInRegionFuzzy(3432822, 90, 146, 588, 152, 594)
-            x = findColorInRegionFuzzy(3432822, 90, 146, 588, 152, 594)
+            x,y = findColorInRegionFuzzy(3432822, 90, 146, 588, 152, 594)
             if 0 < x then
               click(x, y)
               mSleep(1000)
@@ -9075,8 +8542,7 @@ function zrwopen()
                 mSleep(1000)
                 click(595, 159)
                 mSleep(1000)
-                y = findColorInRegionFuzzy(10828860, 95, 429, 553, 425, 559)
-                x = findColorInRegionFuzzy(10828860, 95, 429, 553, 425, 559)
+                x,y = findColorInRegionFuzzy(10828860, 95, 429, 553, 425, 559)
                 if 0 < x then
                   click(x, y)
                   mSleep(1000)
@@ -9090,8 +8556,7 @@ function zrwopen()
                 end
               end
             end
-            y = findColorInRegionFuzzy(10631996, 90, 590, 53, 594, 57)
-            x = findColorInRegionFuzzy(10631996, 90, 590, 53, 594, 57)
+            x,y = findColorInRegionFuzzy(10631996, 90, 590, 53, 594, 57)
             if 0 < x then
               click(x, y)
               mSleep(1000)
@@ -9138,13 +8603,11 @@ function zrwopen()
         appRun("com.51fanli.fanli")
       end
       wifi()
-      y = findColorInRegionFuzzy(8963840, 98, 381, 1075, 381, 1075)
-      x = findColorInRegionFuzzy(8963840, 98, 381, 1075, 381, 1075)
+      x,y = findColorInRegionFuzzy(8963840, 98, 381, 1075, 381, 1075)
       if 0 < x then
         break
       end
-      y = findColorInRegionFuzzy(2536704, 98, 220, 891, 220, 891)
-      x = findColorInRegionFuzzy(2536704, 98, 220, 891, 220, 891)
+      x,y = findColorInRegionFuzzy(2536704, 98, 220, 891, 220, 891)
       if 0 < x then
         mSleep(600)
         click(x, y)
@@ -9157,35 +8620,30 @@ function zrwopen()
     while true do
       mSleep(1000)
       wifi()
-      y = findColorInRegion(31487, 307, 625, 313, 631)
-      x = findColorInRegion(31487, 307, 625, 313, 631)
+      x,y = findColorInRegion(31487, 307, 625, 313, 631)
       if 0 < x then
         mSleep(300)
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(7895160, 90, 474, 497, 480, 503)
-      x = findColorInRegionFuzzy(7895160, 90, 474, 497, 480, 503)
+      x,y = findColorInRegionFuzzy(7895160, 90, 474, 497, 480, 503)
       if 0 < x then
         mSleep(600)
         click(x, y)
       end
-      y = findColorInRegionFuzzy(8963840, 90, 381, 1075, 381, 1075)
-      x = findColorInRegionFuzzy(8963840, 90, 381, 1075, 381, 1075)
-      if 0 < x then
-        mSleep(600)
-        click(x, y)
-        mSleep(900)
-      end
-      y = findColorInRegionFuzzy(16739857, 90, 518, 172, 518, 172)
-      x = findColorInRegionFuzzy(16739857, 90, 518, 172, 518, 172)
+      x,y = findColorInRegionFuzzy(8963840, 90, 381, 1075, 381, 1075)
       if 0 < x then
         mSleep(600)
         click(x, y)
         mSleep(900)
       end
-      y = findColorInRegionFuzzy(3983369, 80, 215, 569, 215, 569)
-      x = findColorInRegionFuzzy(3983369, 80, 215, 569, 215, 569)
+      x,y = findColorInRegionFuzzy(16739857, 90, 518, 172, 518, 172)
+      if 0 < x then
+        mSleep(600)
+        click(x, y)
+        mSleep(900)
+      end
+      x,y = findColorInRegionFuzzy(3983369, 80, 215, 569, 215, 569)
       if 0 < x then
         mSleep(800)
         break
@@ -9234,8 +8692,7 @@ function zrwopen()
     mSleep(600)
     b = _UPVALUE0_.pass
     while true do
-      y = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
-      x = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
+      x,y = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
       if 0 < x then
         mSleep(200)
         click(x, y)
@@ -9285,14 +8742,12 @@ function zrwopen()
           a = _UPVALUE0_.string.format("%s%s", a, s)
         else
           mSleep(300)
-          y = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
-          x = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
+          x,y = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
           if 0 < x then
             mSleep(400)
             break
           end
-          y = findColorInRegionFuzzy(12983838, 98, 239, 887, 239, 887)
-          x = findColorInRegionFuzzy(12983838, 98, 239, 887, 239, 887)
+          x,y = findColorInRegionFuzzy(12983838, 98, 239, 887, 239, 887)
           if 0 < x then
             mSleep(400)
             break
@@ -9302,8 +8757,7 @@ function zrwopen()
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(5789784, 95, 41, 84, 41, 84)
-      x = findColorInRegionFuzzy(5789784, 95, 41, 84, 41, 84)
+      x,y = findColorInRegionFuzzy(5789784, 95, 41, 84, 41, 84)
       if 0 < x then
         click(x, y)
         mSleep(1000)
@@ -9349,8 +8803,7 @@ function zrwopen()
       end
       wifi()
       mSleep(500)
-      y = findColorInRegionFuzzy(16545056, 70, 318, 1008, 318, 1008)
-      x = findColorInRegionFuzzy(16545056, 70, 318, 1008, 318, 1008)
+      x,y = findColorInRegionFuzzy(16545056, 70, 318, 1008, 318, 1008)
       if 0 < x then
         mSleep(300)
         click(x, y)
@@ -9370,14 +8823,12 @@ function zrwopen()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegion(31487, 448, 677, 454, 683)
-      x = findColorInRegion(31487, 448, 677, 454, 683)
+      x,y = findColorInRegion(31487, 448, 677, 454, 683)
       if 0 < x then
         mSleep(500)
         click(x, y)
       end
-      y = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
-      x = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
+      x,y = findColorInRegionFuzzy(12852251, 90, 212, 91, 212, 91)
       if 0 < x then
         mSleep(1000)
         break
@@ -9404,8 +8855,7 @@ function zrwopen()
         click(43, 1095)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(13904940, 90, 76, 1088, 82, 1094)
-      x = findColorInRegionFuzzy(13904940, 90, 76, 1088, 82, 1094)
+      x,y = findColorInRegionFuzzy(13904940, 90, 76, 1088, 82, 1094)
       if 0 < x then
         mSleep(1000)
         break
@@ -9427,23 +8877,19 @@ function zrwopen()
     appRun("com.dianping.dpscope")
     mSleep(4000)
     while true do
-      y = findColorInRegionFuzzy(16745472, 90, 301, 934, 307, 940)
-      x = findColorInRegionFuzzy(16745472, 90, 301, 934, 307, 940)
+      x,y = findColorInRegionFuzzy(16745472, 90, 301, 934, 307, 940)
       if 0 < x then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegion(31487, 330, 619, 487, 684)
-      x = findColorInRegion(31487, 330, 619, 487, 684)
+      x,y = findColorInRegion(31487, 330, 619, 487, 684)
       if 0 < x then
         click(x, y)
       end
       wifi()
-      y = findColorInRegionFuzzy(16744448, 80, 40, 51, 40, 51)
-      x = findColorInRegionFuzzy(16744448, 80, 40, 51, 40, 51)
+      x,y = findColorInRegionFuzzy(16744448, 80, 40, 51, 40, 51)
       if not (0 < x) then
-        y = findColorInRegion(31487, 614, 314, 620, 320)
-        x = findColorInRegion(31487, 614, 314, 620, 320)
+        x,y = findColorInRegion(31487, 614, 314, 620, 320)
         if 0 < x then
           mSleep(2500)
           break
@@ -9484,8 +8930,7 @@ function zrwopen()
           mSleep(500)
         end
         wifi()
-        y = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
-        x = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
+        x,y = findColorInRegionFuzzy(16753995, 90, 92, 173, 92, 173)
         if 0 < x then
           mSleep(1200)
           break
@@ -9505,16 +8950,14 @@ function zrwopen()
     while true do
       k = k + 1
       mSleep(500)
-      y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
-      x = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
+      x,y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
       if 0 < x then
         mSleep(300)
         click(x, y)
         k = 5
         mSleep(800)
       end
-      y = findColorInRegion(31487, 441, 722, 447, 728)
-      x = findColorInRegion(31487, 441, 722, 447, 728)
+      x,y = findColorInRegion(31487, 441, 722, 447, 728)
       if 0 < x then
         mSleep(500)
         click(x, y)
@@ -9544,8 +8987,7 @@ function zrwopen()
       click(450, y)
       while true do
         mSleep(500)
-        y = findColorInRegionFuzzy(13821437, 98, 242, 509, 246, 513)
-        x = findColorInRegionFuzzy(13821437, 98, 242, 509, 246, 513)
+        x,y = findColorInRegionFuzzy(13821437, 98, 242, 509, 246, 513)
         if 0 < x then
           mSleep(600)
           click(x, y)
@@ -9553,8 +8995,7 @@ function zrwopen()
       end
       mSleep(11000)
       while true do
-        y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
-        x = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
+        x,y = findColorInRegionFuzzy(7960953, 98, 568, 50, 574, 56)
         if 0 < x then
           mSleep(300)
           click(x, y)
@@ -9582,8 +9023,7 @@ function zrwopen()
     while true do
       mSleep(300)
       wifi()
-      y = findColorInRegionFuzzy(6710886, 100, 264, 989, 270, 995)
-      x = findColorInRegionFuzzy(6710886, 100, 264, 989, 270, 995)
+      x,y = findColorInRegionFuzzy(6710886, 100, 264, 989, 270, 995)
       if 0 < x then
         click(x, y)
         mSleep(1000)
@@ -9611,8 +9051,7 @@ function zrwopen()
     repeat
       while true do
         wifi()
-        y = findColorInRegionFuzzy(16730488, 90, 624, 290, 632, 400)
-        x = findColorInRegionFuzzy(16730488, 90, 624, 290, 632, 400)
+        x,y = findColorInRegionFuzzy(16730488, 90, 624, 290, 632, 400)
         if 0 < x then
           mSleep(4000)
           break
@@ -9620,8 +9059,7 @@ function zrwopen()
         mouse(560, 400, 100, 400, 5)
         mSleep(400)
       end
-      y = findColorInRegionFuzzy(6710886, 70, 47, 302, 176, 343)
-      x = findColorInRegionFuzzy(6710886, 70, 47, 302, 176, 343)
+      x,y = findColorInRegionFuzzy(6710886, 70, 47, 302, 176, 343)
       if 0 < x then
         x = x + 10
         y = y + 10
@@ -9638,16 +9076,14 @@ function zrwopen()
         repeat
           _UPVALUE0_.xx = math.random(51, 550)
           _UPVALUE0_.yy = math.random(460, 700)
-          y = findColorInRegionFuzzy(15658734, 90, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
-          x = findColorInRegionFuzzy(15658734, 90, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
+          x,y = findColorInRegionFuzzy(15658734, 90, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
         until not (0 < x)
         click(_UPVALUE0_.xx, _UPVALUE0_.yy)
         mSleep(1500)
       end
       k = 0
       while true do
-        y = findColorInRegionFuzzy(16730488, 95, 624, 290, 632, 400)
-        x = findColorInRegionFuzzy(16730488, 95, 624, 290, 632, 400)
+        x,y = findColorInRegionFuzzy(16730488, 95, 624, 290, 632, 400)
         k = k + 1
         if k == 15 then
           mouse(300, 1000, 300, 150, 20)
@@ -9658,8 +9094,7 @@ function zrwopen()
         end
         wifi()
         mSleep(300)
-        y = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
-        x = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
+        x,y = findColorInRegionFuzzy(16730488, 80, 75, 1078, 75, 1078)
         if 0 < x then
           mSleep(1000)
           break
@@ -9677,15 +9112,13 @@ function zrwopen()
     mSleep(4000)
     while true do
       mSleep(300)
-      y = findColorInRegionFuzzy(3047387, 90, 530, 782, 536, 788)
-      x = findColorInRegionFuzzy(3047387, 90, 530, 782, 536, 788)
+      x,y = findColorInRegionFuzzy(3047387, 90, 530, 782, 536, 788)
       if 0 < x then
         mSleep(300)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
-      x = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
+      x,y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
       if 0 < x then
         mSleep(500)
         break
@@ -9712,8 +9145,7 @@ function zrwopen()
     inputText("@sina.com")
     mSleep(600)
     while true do
-      y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
-      x = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
+      x,y = findColorInRegionFuzzy(4493559, 90, 318, 790, 318, 790)
       if 0 < x then
         mSleep(500)
         click(x, y)
@@ -9725,22 +9157,19 @@ function zrwopen()
     end
     while true do
       mSleep(300)
-      y = findColorInRegionFuzzy(4493559, 90, 312, 647, 312, 647)
-      x = findColorInRegionFuzzy(4493559, 90, 312, 647, 312, 647)
+      x,y = findColorInRegionFuzzy(4493559, 90, 312, 647, 312, 647)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(600)
       end
-      y = findColorInRegionFuzzy(15628046, 85, 290, 1030, 300, 1040)
-      x = findColorInRegionFuzzy(15628046, 85, 290, 1030, 300, 1040)
+      x,y = findColorInRegionFuzzy(15628046, 85, 290, 1030, 300, 1040)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(300)
       end
-      y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
-      x = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
+      x,y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
       if 0 < x then
         mSleep(800)
         break
@@ -9752,8 +9181,7 @@ function zrwopen()
       mSleep(1000)
     end
     while true do
-      y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
-      x = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
+      x,y = findColorInRegionFuzzy(16164182, 90, 303, 1062, 309, 1068)
       if 0 < x then
         mSleep(800)
         click(502, 948)
@@ -9764,190 +9192,163 @@ function zrwopen()
     end
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(3320343, 95, 207, 1004, 211, 1008)
-      x = findColorInRegionFuzzy(3320343, 95, 207, 1004, 211, 1008)
+      x,y = findColorInRegionFuzzy(3320343, 95, 207, 1004, 211, 1008)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16737792, 95, 316, 962, 320, 966)
-      x = findColorInRegionFuzzy(16737792, 95, 316, 962, 320, 966)
+      x,y = findColorInRegionFuzzy(16737792, 95, 316, 962, 320, 966)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16766317, 95, 301, 959, 305, 963)
-      x = findColorInRegionFuzzy(16766317, 95, 301, 959, 305, 963)
+      x,y = findColorInRegionFuzzy(16766317, 95, 301, 959, 305, 963)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16571743, 95, 188, 1109, 192, 1113)
-      x = findColorInRegionFuzzy(16571743, 95, 188, 1109, 192, 1113)
+      x,y = findColorInRegionFuzzy(16571743, 95, 188, 1109, 192, 1113)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16446872, 95, 288, 492, 292, 496)
-      x = findColorInRegionFuzzy(16446872, 95, 288, 492, 292, 496)
+      x,y = findColorInRegionFuzzy(16446872, 95, 288, 492, 292, 496)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16768339, 95, 559, 208, 563, 212)
-      x = findColorInRegionFuzzy(16768339, 95, 559, 208, 563, 212)
+      x,y = findColorInRegionFuzzy(16768339, 95, 559, 208, 563, 212)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16777123, 95, 315, 1082, 319, 1086)
-      x = findColorInRegionFuzzy(16777123, 95, 315, 1082, 319, 1086)
+      x,y = findColorInRegionFuzzy(16777123, 95, 315, 1082, 319, 1086)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(15834896, 95, 520, 383, 524, 387)
-      x = findColorInRegionFuzzy(15834896, 95, 520, 383, 524, 387)
+      x,y = findColorInRegionFuzzy(15834896, 95, 520, 383, 524, 387)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
-      x = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
+      x,y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(15632401, 95, 481, 393, 485, 397)
-      x = findColorInRegionFuzzy(15632401, 95, 481, 393, 485, 397)
+      x,y = findColorInRegionFuzzy(15632401, 95, 481, 393, 485, 397)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
-      x = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
+      x,y = findColorInRegionFuzzy(16765547, 95, 414, 766, 418, 770)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16642949, 95, 188, 1104, 192, 1108)
-      x = findColorInRegionFuzzy(16642949, 95, 188, 1104, 192, 1108)
+      x,y = findColorInRegionFuzzy(16642949, 95, 188, 1104, 192, 1108)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(13303806, 95, 51, 346, 55, 350)
-      x = findColorInRegionFuzzy(13303806, 95, 51, 346, 55, 350)
+      x,y = findColorInRegionFuzzy(13303806, 95, 51, 346, 55, 350)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16503360, 95, 528, 204, 532, 208)
-      x = findColorInRegionFuzzy(16503360, 95, 528, 204, 532, 208)
+      x,y = findColorInRegionFuzzy(16503360, 95, 528, 204, 532, 208)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16774144, 95, 319, 1080, 313, 1084)
-      x = findColorInRegionFuzzy(16774144, 95, 319, 1080, 313, 1084)
+      x,y = findColorInRegionFuzzy(16774144, 95, 319, 1080, 313, 1084)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(9109487, 95, 543, 353, 547, 357)
-      x = findColorInRegionFuzzy(9109487, 95, 543, 353, 547, 357)
+      x,y = findColorInRegionFuzzy(9109487, 95, 543, 353, 547, 357)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(13419703, 95, 555, 321, 559, 325)
-      x = findColorInRegionFuzzy(13419703, 95, 555, 321, 559, 325)
+      x,y = findColorInRegionFuzzy(13419703, 95, 555, 321, 559, 325)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16767336, 95, 383, 911, 387, 915)
-      x = findColorInRegionFuzzy(16767336, 95, 383, 911, 387, 915)
+      x,y = findColorInRegionFuzzy(16767336, 95, 383, 911, 387, 915)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16313975, 95, 61, 1105, 65, 1109)
-      x = findColorInRegionFuzzy(16313975, 95, 61, 1105, 65, 1109)
+      x,y = findColorInRegionFuzzy(16313975, 95, 61, 1105, 65, 1109)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16446720, 95, 64, 766, 68, 770)
-      x = findColorInRegionFuzzy(16446720, 95, 64, 766, 68, 770)
+      x,y = findColorInRegionFuzzy(16446720, 95, 64, 766, 68, 770)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(15630352, 95, 534, 205, 538, 209)
-      x = findColorInRegionFuzzy(15630352, 95, 534, 205, 538, 209)
+      x,y = findColorInRegionFuzzy(15630352, 95, 534, 205, 538, 209)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16764006, 95, 308, 695, 312, 699)
-      x = findColorInRegionFuzzy(16764006, 95, 308, 695, 312, 699)
+      x,y = findColorInRegionFuzzy(16764006, 95, 308, 695, 312, 699)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(8912878, 95, 543, 614, 547, 618)
-      x = findColorInRegionFuzzy(8912878, 95, 543, 614, 547, 618)
+      x,y = findColorInRegionFuzzy(8912878, 95, 543, 614, 547, 618)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(14146774, 95, 575, 603, 579, 607)
-      x = findColorInRegionFuzzy(14146774, 95, 575, 603, 579, 607)
+      x,y = findColorInRegionFuzzy(14146774, 95, 575, 603, 579, 607)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(4321023, 95, 417, 623, 421, 627)
-      x = findColorInRegionFuzzy(4321023, 95, 417, 623, 421, 627)
+      x,y = findColorInRegionFuzzy(4321023, 95, 417, 623, 421, 627)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(65535, 95, 198, 610, 202, 614)
-      x = findColorInRegionFuzzy(65535, 95, 198, 610, 202, 614)
+      x,y = findColorInRegionFuzzy(65535, 95, 198, 610, 202, 614)
       if 0 < x then
         mSleep(200)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(16764723, 95, 506, 977, 510, 981)
-      x = findColorInRegionFuzzy(16764723, 95, 506, 977, 510, 981)
+      x,y = findColorInRegionFuzzy(16764723, 95, 506, 977, 510, 981)
       if 0 < x then
         mSleep(200)
         click(x, y)
@@ -9991,72 +9392,62 @@ function zrwopen()
     while true do
       mSleep(800)
       wifi()
-      y = findColorInRegionFuzzy(4751113, 85, 122, 500, 122, 500)
-      x = findColorInRegionFuzzy(4751113, 85, 122, 500, 122, 500)
+      x,y = findColorInRegionFuzzy(4751113, 85, 122, 500, 122, 500)
       if 0 < x then
         mSleep(300)
         click(x, y)
         mSleep(800)
       end
-      y = findColorInRegionFuzzy(5789398, 85, 606, 77, 612, 83)
-      x = findColorInRegionFuzzy(5789398, 85, 606, 77, 612, 83)
+      x,y = findColorInRegionFuzzy(5789398, 85, 606, 77, 612, 83)
       if 0 < x then
         mSleep(300)
         click(x, y)
         mSleep(800)
       else
       end
-      y = findColorInRegionFuzzy(4554243, 90, 167, 611, 171, 615)
-      x = findColorInRegionFuzzy(4554243, 90, 167, 611, 171, 615)
+      x,y = findColorInRegionFuzzy(4554243, 90, 167, 611, 171, 615)
       if 0 < x then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(5366525, 90, 479, 70, 483, 74)
-      x = findColorInRegionFuzzy(5366525, 90, 479, 70, 483, 74)
+      x,y = findColorInRegionFuzzy(5366525, 90, 479, 70, 483, 74)
       if 0 < x then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(4488195, 90, 49, 528, 53, 532)
-      x = findColorInRegionFuzzy(4488195, 90, 49, 528, 53, 532)
+      x,y = findColorInRegionFuzzy(4488195, 90, 49, 528, 53, 532)
       if 0 < x then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(41934, 90, 74, 967, 68, 971)
-      x = findColorInRegionFuzzy(41934, 90, 74, 967, 68, 971)
+      x,y = findColorInRegionFuzzy(41934, 90, 74, 967, 68, 971)
       if 0 < x then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(9792309, 90, 43, 969, 47, 973)
-      x = findColorInRegionFuzzy(9792309, 90, 43, 969, 47, 973)
+      x,y = findColorInRegionFuzzy(9792309, 90, 43, 969, 47, 973)
       if 0 < x then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(4949743, 90, 402, 554, 406, 558)
-      x = findColorInRegionFuzzy(4949743, 90, 402, 554, 406, 558)
+      x,y = findColorInRegionFuzzy(4949743, 90, 402, 554, 406, 558)
       if 0 < x then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(11356644, 379, 292, 383, 296)
-      x = findColorInRegionFuzzy(11356644, 379, 292, 383, 296)
+      x,y = findColorInRegionFuzzy(11356644, 379, 292, 383, 296)
       if 0 < x then
         mSleep(500)
         click(x, y)
         mSleep(500)
       end
-      y = findColorInRegionFuzzy(16772118, 90, 203, 293, 207, 297)
-      x = findColorInRegionFuzzy(16772118, 90, 203, 293, 207, 297)
+      x,y = findColorInRegionFuzzy(16772118, 90, 203, 293, 207, 297)
       if 0 < x then
         mSleep(500)
         click(94, 270)
@@ -10079,74 +9470,63 @@ function zrwopen()
           click(x, y)
           mSleep(1100)
         end
-        y = findColorInRegionFuzzy(1133318, 90, 133, 456, 137, 460)
-        x = findColorInRegionFuzzy(1133318, 90, 133, 456, 137, 460)
+        x,y = findColorInRegionFuzzy(1133318, 90, 133, 456, 137, 460)
         if 0 < x then
           mSleep(500)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(299735, 90, 363, 550, 367, 554)
-        x = findColorInRegionFuzzy(299735, 90, 363, 550, 367, 554)
+        x,y = findColorInRegionFuzzy(299735, 90, 363, 550, 367, 554)
         if 0 < x then
           mSleep(500)
           click(404, 559)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(14827508, 90, 175, 509, 179, 513)
-        x = findColorInRegionFuzzy(14827508, 90, 175, 509, 179, 513)
+        x,y = findColorInRegionFuzzy(14827508, 90, 175, 509, 179, 513)
         if 0 < x then
           mSleep(500)
           click(38, 594)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(3180978, 90, 442, 479, 446, 483)
-        x = findColorInRegionFuzzy(3180978, 90, 442, 479, 446, 483)
+        x,y = findColorInRegionFuzzy(3180978, 90, 442, 479, 446, 483)
         if 0 < x then
           mSleep(500)
           click(160, 546)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(1460588, 90, 429, 285, 433, 289)
-        x = findColorInRegionFuzzy(1460588, 90, 429, 285, 433, 289)
+        x,y = findColorInRegionFuzzy(1460588, 90, 429, 285, 433, 289)
         if 0 < x then
           mSleep(500)
           click(58, 576)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(9756140, 90, 32, 982, 36, 986)
-        x = findColorInRegionFuzzy(9756140, 90, 32, 982, 36, 986)
+        x,y = findColorInRegionFuzzy(9756140, 90, 32, 982, 36, 986)
         if 0 < x then
           mSleep(500)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(2138621, 90, 151, 199, 155, 203)
-        x = findColorInRegionFuzzy(2138621, 90, 151, 199, 155, 203)
+        x,y = findColorInRegionFuzzy(2138621, 90, 151, 199, 155, 203)
         if 0 < x then
           mSleep(500)
           click(x, y)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(12480234, 90, 385, 297, 389, 301)
-        x = findColorInRegionFuzzy(12480234, 90, 385, 297, 389, 301)
+        x,y = findColorInRegionFuzzy(12480234, 90, 385, 297, 389, 301)
         if 0 < x then
           mSleep(500)
           click(94, 287)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(233941, 90, 368, 552, 372, 556)
-        x = findColorInRegionFuzzy(233941, 90, 368, 552, 372, 556)
+        x,y = findColorInRegionFuzzy(233941, 90, 368, 552, 372, 556)
         if 0 < x then
           mSleep(500)
           click(401, 557)
           mSleep(500)
         end
-        y = findColorInRegionFuzzy(14550534, 90, 433, 750, 437, 754)
-        x = findColorInRegionFuzzy(14550534, 90, 433, 750, 437, 754)
+        x,y = findColorInRegionFuzzy(14550534, 90, 433, 750, 437, 754)
         if 0 < x then
-          y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
-          x = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
+          x,y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
           if 0 < x then
             mSleep(500)
             click(x, y)
@@ -10158,8 +9538,7 @@ function zrwopen()
       end
     end
     while true do
-      y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
-      x = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
+      x,y = findColorInRegionFuzzy(15546152, 90, 579, 1002, 583, 1006)
       if 0 < x then
         mSleep(500)
         click(x, y)
@@ -10201,8 +9580,7 @@ function zrwopen()
     while true do
       mSleep(300)
       wifi()
-      y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
-      x = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
+      x,y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
       if 0 < x then
         _UPVALUE0_.x1 = 1
       else
@@ -10222,8 +9600,7 @@ function zrwopen()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
-      x = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
+      x,y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
       if 0 < x then
         mSleep(1000)
         break
@@ -10253,8 +9630,7 @@ function zrwopen()
     wifi()
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
-      x = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
+      x,y = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
       if 0 < x then
         mSleep(1000)
         break
@@ -10292,8 +9668,7 @@ function zrwopen()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(16739328, 90, 319, 961, 319, 961)
-      x = findColorInRegionFuzzy(16739328, 90, 319, 961, 319, 961)
+      x,y = findColorInRegionFuzzy(16739328, 90, 319, 961, 319, 961)
       if 0 < x then
         mSleep(200)
         click(x, y)
@@ -10359,8 +9734,7 @@ function zrwopen()
         k = 0
       end
       mSleep(500)
-      y = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
-      x = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
+      x,y = findColorInRegionFuzzy(2144937, 85, 75, 1072, 79, 1076)
       if 0 < x then
         click(x, y)
         mSleep(1000)
@@ -10378,8 +9752,7 @@ function zrwopen()
     mSleep(1000)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(6869358, 80, 369, 1089, 369, 1089)
-      x = findColorInRegionFuzzy(6869358, 80, 369, 1089, 369, 1089)
+      x,y = findColorInRegionFuzzy(6869358, 80, 369, 1089, 369, 1089)
       if 0 < x then
         mSleep(1500)
         break
@@ -10397,8 +9770,7 @@ function zrwopen()
     appRun("com.babytree.pregnancy")
     mSleep(4000)
     while true do
-      y = findColorInRegionFuzzy(16733051, 85, 73, 81, 73, 81)
-      x = findColorInRegionFuzzy(16733051, 85, 73, 81, 73, 81)
+      x,y = findColorInRegionFuzzy(16733051, 85, 73, 81, 73, 81)
       if 0 < x then
         mSleep(800)
         break
@@ -10417,8 +9789,7 @@ function zrwopen()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(4753883, 95, 159, 76, 159, 76)
-      x = findColorInRegionFuzzy(4753883, 95, 159, 76, 159, 76)
+      x,y = findColorInRegionFuzzy(4753883, 95, 159, 76, 159, 76)
       if 0 < x then
         mSleep(1500)
         break
@@ -10450,8 +9821,7 @@ function zrwopen()
     while true do
       _UPVALUE0_.xx = math.random(83, 525)
       _UPVALUE0_.yy = math.random(508, 743)
-      y = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
-      x = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
+      x,y = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
       if 0 < x then
         click(x, y)
         mSleep(4000)
@@ -10467,8 +9837,7 @@ function zrwopen()
       while true do
         _UPVALUE0_.xx = math.random(83, 525)
         _UPVALUE0_.yy = math.random(508, 743)
-        y = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
-        x = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
+        x,y = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
         if 0 < x then
           click(x, y)
           mSleep(2000)
@@ -10479,8 +9848,7 @@ function zrwopen()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
-      x = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
+      x,y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
       if 0 < x then
         break
       end
@@ -10502,12 +9870,10 @@ function zrwopen()
         appRun("com.baidu.map")
       end
       wifi()
-      y = findColorInRegion(6710886, 615, 11, 621, 17)
-      x = findColorInRegion(6710886, 615, 11, 621, 17)
+      x,y = findColorInRegion(6710886, 615, 11, 621, 17)
       if 0 < x then
       else
-        y = findColorInRegionFuzzy(16461357, 90, 309, 1046, 309, 1046)
-        x = findColorInRegionFuzzy(16461357, 90, 309, 1046, 309, 1046)
+        x,y = findColorInRegionFuzzy(16461357, 90, 309, 1046, 309, 1046)
       end
       if 0 < x then
         click(x, y)
@@ -10536,8 +9902,7 @@ function zrwopen()
         click(x, y)
         mSleep(700)
       end
-      y = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
-      x = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
+      x,y = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
       if 0 < x then
         mSleep(800)
         y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
@@ -10596,8 +9961,7 @@ function zrwopen()
       k = k + 1
       if k ~= 30 then
         mSleep(600)
-        y = findColorInRegion(31487, 559, 1105, 559, 1105)
-        x = findColorInRegion(31487, 559, 1105, 559, 1105)
+        x,y = findColorInRegion(31487, 559, 1105, 559, 1105)
         if 0 < x then
           click(x, y)
           mSleep(1000)
@@ -10615,8 +9979,7 @@ function zrwopen()
           mSleep(1000)
         end
         wifi()
-        y = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
-        x = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
+        x,y = findColorInRegionFuzzy(3619395, 95, 129, 1085, 129, 1085)
         if 0 < x then
           k = k + 1
           if not (k < 3) then
@@ -10638,8 +10001,7 @@ function zrwopen()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegion(16760576, 82, 796, 82, 796)
-      x = findColorInRegion(16760576, 82, 796, 82, 796)
+      x,y = findColorInRegion(16760576, 82, 796, 82, 796)
       if 0 < x then
         click(x, y)
         mSleep(1500)
@@ -10651,13 +10013,11 @@ function zrwopen()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(5592405, 90, 115, 453, 125, 463)
-      x = findColorInRegionFuzzy(5592405, 90, 115, 453, 125, 463)
+      x,y = findColorInRegionFuzzy(5592405, 90, 115, 453, 125, 463)
       if 0 < x then
         click(x, y)
       end
-      y = findColorInRegion(16629293, 347, 563, 347, 563)
-      x = findColorInRegion(16629293, 347, 563, 347, 563)
+      x,y = findColorInRegion(16629293, 347, 563, 347, 563)
       if 0 < x then
         mSleep(1190)
         break
@@ -10695,25 +10055,21 @@ function zrwopen()
     while true do
       mSleep(400)
       wifi()
-      y = findColorInRegion(16629293, 347, 563, 347, 563)
-      x = findColorInRegion(16629293, 347, 563, 347, 563)
+      x,y = findColorInRegion(16629293, 347, 563, 347, 563)
       if 0 < x then
         click(x, y)
         while true do
-          y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
-          x = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
+          x,y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
           if 0 < x then
             break
           end
         end
         repeat
-          y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
-          x = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
+          x,y = findColorInRegionFuzzy(3355443, 95, 320, 427, 326, 433)
         until not (0 < x)
         mSleep(1600)
       end
-      y = findColorInRegion(16629293, 347, 563, 347, 563)
-      x = findColorInRegion(16629293, 347, 563, 347, 563)
+      x,y = findColorInRegion(16629293, 347, 563, 347, 563)
       if 0 < x then
         click(496, 348)
         mSleep(800)
@@ -10740,8 +10096,7 @@ function zrwopen()
         end
         mSleep(800)
       else
-        y = findColorInRegionFuzzy(959481, 90, 560, 77, 566, 83)
-        x = findColorInRegionFuzzy(959481, 90, 560, 77, 566, 83)
+        x,y = findColorInRegionFuzzy(959481, 90, 560, 77, 566, 83)
         if 0 < x then
           mSleep(1000)
           break
@@ -10760,21 +10115,17 @@ function zrwopen()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegion(2697513, 191, 523, 446, 656)
-      x = findColorInRegion(2697513, 191, 523, 446, 656)
+      x,y = findColorInRegion(2697513, 191, 523, 446, 656)
       if 0 < x then
         mSleep(1000)
         _UPVALUE0_.x1 = x + 2
         _UPVALUE0_.x2 = x + 4
         _UPVALUE0_.yy = y
-        y = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
-        x = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
+        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
         if 0 < x then
-          y = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
           if 0 < x then
-            y = findColorInRegion(16777215, 443, 518, 449, 524)
-            x = findColorInRegion(16777215, 443, 518, 449, 524)
+            x,y = findColorInRegion(16777215, 443, 518, 449, 524)
             if 0 < x then
               click(x, y)
             end
@@ -10808,12 +10159,10 @@ function zrwopen()
       k = k + 1
       if k ~= 20 then
         wifi()
-        y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
-        x = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
+        x,y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
         if 0 < x then
         else
-          y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
-          x = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
+          x,y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
         end
         if 0 < x then
           mSleep(500)
@@ -10822,12 +10171,10 @@ function zrwopen()
         mousekk(600, 500, 100, 500, 10)
         mSleep(800)
         while true do
-          y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
-          x = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
+          x,y = findColorInRegionFuzzy(16550953, 90, 310, 948, 310, 948)
           if 0 < x then
           else
-            y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
-            x = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
+            x,y = findColorInRegionFuzzy(16750080, 90, 310, 948, 310, 948)
           end
           if 0 < x then
             click(x, y)
@@ -10837,8 +10184,7 @@ function zrwopen()
         while true do
           wifi()
           mSleep(555)
-          y = findColorInRegion(7033663, 77, 1062, 81, 1066)
-          x = findColorInRegion(7033663, 77, 1062, 81, 1066)
+          x,y = findColorInRegion(7033663, 77, 1062, 81, 1066)
           if 0 < x then
             break
           end
@@ -10857,8 +10203,7 @@ function zrwopen()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegion(16723285, 580, 68, 586, 74)
-      x = findColorInRegion(16723285, 580, 68, 586, 74)
+      x,y = findColorInRegion(16723285, 580, 68, 586, 74)
       if 0 < x then
         mSleep(2000)
         break
@@ -10876,8 +10221,7 @@ function zrwopen()
       else
         appRun("com.sina.sinanews")
       end
-      y = findColorInRegion(16075853, 71, 1077, 77, 1083)
-      x = findColorInRegion(16075853, 71, 1077, 77, 1083)
+      x,y = findColorInRegion(16075853, 71, 1077, 77, 1083)
       if 0 < x then
         mSleep(5000)
         break
@@ -10895,26 +10239,22 @@ function zrwopen()
     mSleep(4000)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(16702236, 85, 311, 667, 317, 673)
-      x = findColorInRegionFuzzy(16702236, 85, 311, 667, 317, 673)
+      x,y = findColorInRegionFuzzy(16702236, 85, 311, 667, 317, 673)
       if 0 < x then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(16768512, 85, 160, 742, 166, 748)
-      x = findColorInRegionFuzzy(16768512, 85, 160, 742, 166, 748)
+      x,y = findColorInRegionFuzzy(16768512, 85, 160, 742, 166, 748)
       if 0 < x then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(12048114, 90, 318, 659, 318, 659)
-      x = findColorInRegionFuzzy(12048114, 90, 318, 659, 318, 659)
+      x,y = findColorInRegionFuzzy(12048114, 90, 318, 659, 318, 659)
       if 0 < x then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
-      x = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
+      x,y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
       if 0 < x then
         mSleep(1500)
         break
@@ -10970,26 +10310,22 @@ function zrwopen()
     mSleep(1200)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
-      x = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
+      x,y = findColorInRegionFuzzy(16768512, 85, 322, 733, 328, 739)
       if 0 < x then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16757504, 85, 306, 1025, 312, 1031)
-      x = findColorInRegionFuzzy(16757504, 85, 306, 1025, 312, 1031)
+      x,y = findColorInRegionFuzzy(16757504, 85, 306, 1025, 312, 1031)
       if 0 < x then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16702236, 85, 281, 656, 287, 662)
-      x = findColorInRegionFuzzy(16702236, 85, 281, 656, 287, 662)
+      x,y = findColorInRegionFuzzy(16702236, 85, 281, 656, 287, 662)
       if 0 < x then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16773457, 85, 225, 84, 231, 90)
-      x = findColorInRegionFuzzy(16773457, 85, 225, 84, 231, 90)
+      x,y = findColorInRegionFuzzy(16773457, 85, 225, 84, 231, 90)
       if 0 < x then
         mSleep(1500)
         break
@@ -11005,30 +10341,26 @@ function zrwopen()
     mSleep(700)
     while true do
       mSleep(500)
-      y = findColorInRegionFuzzy(16763947, 85, 315, 1042, 321, 1047)
-      x = findColorInRegionFuzzy(16763947, 85, 315, 1042, 321, 1047)
+      x,y = findColorInRegionFuzzy(16763947, 85, 315, 1042, 321, 1047)
       if 0 < x then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
-      x = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
+      x,y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
       if 0 < x then
         mSleep(1000)
         break
       end
     end
     while true do
-      y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
-      x = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
+      x,y = findColorInRegionFuzzy(16777215, 90, 517, 913, 523, 919)
       if 0 < x then
         click(x, y)
         mSleep(2200)
         click(318, 1039)
         mSleep(5000)
       end
-      y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
-      x = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
+      x,y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
       if 0 < x then
         mSleep(500)
         break
@@ -11036,21 +10368,18 @@ function zrwopen()
     end
     while true do
       mSleep(600)
-      y = findColorInRegionFuzzy(16777215, 90, 550, 1038, 556, 1044)
-      x = findColorInRegionFuzzy(16777215, 90, 550, 1038, 556, 1044)
+      x,y = findColorInRegionFuzzy(16777215, 90, 550, 1038, 556, 1044)
       if 0 < x then
         click(x, y)
         mSleep(1000)
       end
-      y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
-      x = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
+      x,y = findColorInRegionFuzzy(11240735, 90, 290, 783, 296, 789)
       if 0 < x then
         y = y + 20
         click(x, y)
         mSleep(600)
       end
-      y = findColorInRegionFuzzy(10485585, 90, 317, 676, 323, 682)
-      x = findColorInRegionFuzzy(10485585, 90, 317, 676, 323, 682)
+      x,y = findColorInRegionFuzzy(10485585, 90, 317, 676, 323, 682)
       if 0 < x then
         click(x, y)
         mSleep(3000)
@@ -11069,8 +10398,7 @@ function zrwopen()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
-      x = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
+      x,y = findColorInRegionFuzzy(16534090, 90, 5, 87, 5, 87)
       if 0 < x then
         mSleep(3000)
         break
@@ -11088,8 +10416,7 @@ function zrwopen()
     while true do
       mSleep(500)
       wifi()
-      y = findColorInRegionFuzzy(16330543, 90, 320, 923, 320, 923)
-      x = findColorInRegionFuzzy(16330543, 90, 320, 923, 320, 923)
+      x,y = findColorInRegionFuzzy(16330543, 90, 320, 923, 320, 923)
       if 0 < x then
         click(x, y)
         mSleep(1000)
@@ -11099,15 +10426,13 @@ function zrwopen()
       mSleep(600)
     end
     while true do
-      y = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
-      x = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
+      x,y = findColorInRegionFuzzy(15269888, 95, 391, 429, 391, 429)
       if 0 < x then
         click(561, 307)
         mSleep(800)
       end
       wifi()
-      y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
-      x = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
+      x,y = findColorInRegionFuzzy(16762894, 90, 64, 1070, 64, 1070)
       if 0 < x then
         mSleep(1800)
         break
@@ -11128,8 +10453,7 @@ function zrwopen()
       wifi()
       mousekk(580, 500, 80, 500, 20)
       mSleep(500)
-      y = findColorInRegionFuzzy(1827035, 95, 304, 771, 310, 777)
-      x = findColorInRegionFuzzy(1827035, 95, 304, 771, 310, 777)
+      x,y = findColorInRegionFuzzy(1827035, 95, 304, 771, 310, 777)
       if 0 < x then
         click(x, y)
         mSleep(1500)
@@ -11138,8 +10462,7 @@ function zrwopen()
     end
     while true do
       wifi()
-      y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
-      x = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
+      x,y = findColorInRegionFuzzy(9737364, 95, 560, 1091, 566, 1097)
       if 0 < x then
         mSleep(2000)
         mousekk(300, 950, 30, 300, 20)
@@ -11158,8 +10481,7 @@ function zrwopen()
     mSleep(4000)
     while true do
       wifi()
-      y = findColorInRegionFuzzy(11456796, 90, 361, 852, 361, 852)
-      x = findColorInRegionFuzzy(11456796, 90, 361, 852, 361, 852)
+      x,y = findColorInRegionFuzzy(11456796, 90, 361, 852, 361, 852)
       if 0 < x then
         click(x, y)
         mSleep(5000)
@@ -11168,16 +10490,14 @@ function zrwopen()
       mousekk(600, 500, 100, 500, 10)
       mSleep(700)
     end
-    y = findColorInRegionFuzzy(657930, 90, 18, 1086, 18, 1086)
-    x = findColorInRegionFuzzy(657930, 90, 18, 1086, 18, 1086)
+    x,y = findColorInRegionFuzzy(657930, 90, 18, 1086, 18, 1086)
     if 0 < x then
       click(x, y)
       mSleep(500)
     end
     while true do
       wifi()
-      y = findColorInRegion(16711680, 56, 1132, 212, 1135)
-      x = findColorInRegion(16711680, 56, 1132, 212, 1135)
+      x,y = findColorInRegion(16711680, 56, 1132, 212, 1135)
       if 0 < x then
         mSleep(1500)
         break
@@ -11221,30 +10541,24 @@ function zrwopen()
     mousekk(300, 950, 300, 250, 20)
     mSleep(2500)
     while true do
-      y = findColorInRegion(31487, 307, 624, 313, 630)
-      x = findColorInRegion(31487, 307, 624, 313, 630)
+      x,y = findColorInRegion(31487, 307, 624, 313, 630)
       if 0 < x then
         click(x, y)
         mSleep(2000)
       end
-      y = findColorInRegion(2697513, 199, 530, 432, 635)
-      x = findColorInRegion(2697513, 199, 530, 432, 635)
+      x,y = findColorInRegion(2697513, 199, 530, 432, 635)
       if 0 < x then
         _UPVALUE0_.x1 = x + 1
         _UPVALUE0_.x2 = x + 3
         _UPVALUE0_.x3 = x + 5
         _UPVALUE0_.yy = y
-        y = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
-        x = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
+        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
         if 0 < x then
-          y = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
-          x = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
+          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
           if 0 < x then
-            y = findColorInRegion(2697513, _UPVALUE0_.x3, _UPVALUE0_.yy, _UPVALUE0_.x3, _UPVALUE0_.yy)
-            x = findColorInRegion(2697513, _UPVALUE0_.x3, _UPVALUE0_.yy, _UPVALUE0_.x3, _UPVALUE0_.yy)
+            x,y = findColorInRegion(2697513, _UPVALUE0_.x3, _UPVALUE0_.yy, _UPVALUE0_.x3, _UPVALUE0_.yy)
             if 0 < x then
-              y = findColorInRegion(16777215, 444, 518, 449, 523)
-              x = findColorInRegion(16777215, 444, 518, 449, 523)
+              x,y = findColorInRegion(16777215, 444, 518, 449, 523)
               if 0 < x then
                 click(x, y)
                 mSleep(800)
@@ -11303,8 +10617,7 @@ function zrwopen()
     appRun("com.elong.app")
     mSleep(4000)
     while true do
-      y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
-      x = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
+      x,y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
       if 0 < x then
         mSleep(3000)
         break
@@ -11315,8 +10628,7 @@ function zrwopen()
     click(400, 150)
     mSleep(4400)
     while true do
-      y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
-      x = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
+      x,y = findColorInRegionFuzzy(11298766, 90, 606, 1102, 612, 1108)
       if 0 < x then
         break
       end
@@ -11336,14 +10648,12 @@ function zrwopen()
       while true do
         wifi()
         mSleep(500)
-        y = findColorInRegionFuzzy(373717, 90, 231, 919, 237, 925)
-        x = findColorInRegionFuzzy(373717, 90, 231, 919, 237, 925)
+        x,y = findColorInRegionFuzzy(373717, 90, 231, 919, 237, 925)
         if 0 < x then
           click(x, y)
           mSleep(1000)
         end
-        y = findColorInRegionFuzzy(2105902, 90, 38, 202, 44, 208)
-        x = findColorInRegionFuzzy(2105902, 90, 38, 202, 44, 208)
+        x,y = findColorInRegionFuzzy(2105902, 90, 38, 202, 44, 208)
         if 0 < x then
           mSleep(2000)
           do break end
@@ -11360,40 +10670,34 @@ function zrwopen()
           mSleep(900)
           while true do
             mSleep(500)
-            y = findColorInRegionFuzzy(373717, 96, 221, 443, 221, 443)
-            x = findColorInRegionFuzzy(373717, 96, 221, 443, 221, 443)
+            x,y = findColorInRegionFuzzy(373717, 96, 221, 443, 221, 443)
             if 0 < x then
               click(x, y)
               mSleep(1299)
             end
-            y = findColorInRegion(31487, 314, 641, 320, 647)
-            x = findColorInRegion(31487, 314, 641, 320, 647)
+            x,y = findColorInRegion(31487, 314, 641, 320, 647)
             if 0 < x then
               click(x, y)
               mSleep(1199)
               click(41, 82)
               mSleep(1200)
             end
-            y = findColorInRegionFuzzy(373717, 96, 238, 996, 238, 996)
-            x = findColorInRegionFuzzy(373717, 96, 238, 996, 238, 996)
+            x,y = findColorInRegionFuzzy(373717, 96, 238, 996, 238, 996)
             if 0 < x then
               click(x, y)
               mSleep(999)
             end
-            y = findColorInRegionFuzzy(31487, 100, 406, 551, 572, 688)
-            x = findColorInRegionFuzzy(31487, 100, 406, 551, 572, 688)
+            x,y = findColorInRegionFuzzy(31487, 100, 406, 551, 572, 688)
             if 0 < x then
               click(x, y)
               mSleep(1299)
             end
-            y = findColorInRegion(31487, 221, 663, 227, 669)
-            x = findColorInRegion(31487, 221, 663, 227, 669)
+            x,y = findColorInRegion(31487, 221, 663, 227, 669)
             if 0 < x then
               click(x, y)
               mSleep(999)
             end
-            y = findColorInRegionFuzzy(5263961, 96, 316, 665, 322, 671)
-            x = findColorInRegionFuzzy(5263961, 96, 316, 665, 322, 671)
+            x,y = findColorInRegionFuzzy(5263961, 96, 316, 665, 322, 671)
             if 0 < x then
               click(x, y)
               mSleep(3399)
@@ -11418,8 +10722,7 @@ function zrwopen()
       while true do
         _UPVALUE0_.inow()
         wifi()
-        y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
-        x = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
+        x,y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
         if 0 < x then
           _UPVALUE0_.x1 = x
           _UPVALUE0_.y1 = y
@@ -11433,12 +10736,10 @@ function zrwopen()
       repeat
         while true do
           _UPVALUE0_.inow()
-          y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
-          x = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
+          x,y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
           wifi()
           mSleep(500)
-          y = findColorInRegion(31487, 609, 420, 615, 626)
-          x = findColorInRegion(31487, 609, 420, 615, 626)
+          x,y = findColorInRegion(31487, 609, 420, 615, 626)
           if 0 < x then
             mSleep(1500)
             break
@@ -11451,10 +10752,8 @@ function zrwopen()
           wifi()
           _UPVALUE0_.inow()
           mSleep(500)
-          y = findColorInRegion(31487, 609, 420, 615, 626)
-          x = findColorInRegion(31487, 609, 420, 615, 626)
-          y = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
-          x = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
+          x,y = findColorInRegion(31487, 609, 420, 615, 626)
+          x,y = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
           if 0 < x then
             mSleep(1500)
             break
@@ -11488,8 +10787,7 @@ function zrwopen()
   end
 end
 function overtf()
-  y = findColorInRegion(16203135, 628, 140, 628, 180)
-  x = findColorInRegion(16203135, 628, 140, 628, 180)
+  x,y = findColorInRegion(16203135, 628, 140, 628, 180)
   if x > 0 then
   else
     appRun("com.taofen8.TfClient")
@@ -11516,12 +10814,10 @@ function overtf()
       mSleep(800)
     end
     inow()
-    y = findColorInRegionFuzzy(5395026, 90, 31, 83, 37, 89)
-    x = findColorInRegionFuzzy(5395026, 90, 31, 83, 37, 89)
+    x,y = findColorInRegionFuzzy(5395026, 90, 31, 83, 37, 89)
     if x > 0 then
     else
-      y = findColorInRegionFuzzy(10724259, 90, 37, 80, 43, 86)
-      x = findColorInRegionFuzzy(10724259, 90, 37, 80, 43, 86)
+      x,y = findColorInRegionFuzzy(10724259, 90, 37, 80, 43, 86)
     end
     if x > 0 then
       click(40, 84)
@@ -11537,8 +10833,7 @@ function overtf()
   end
   while true do
     inow()
-    y = findColorInRegionFuzzy(16197752, 90, 573, 1091, 579, 1097)
-    x = findColorInRegionFuzzy(16197752, 90, 573, 1091, 579, 1097)
+    x,y = findColorInRegionFuzzy(16197752, 90, 573, 1091, 579, 1097)
     if x > 0 then
       break
     end
