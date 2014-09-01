@@ -1,4 +1,4 @@
-UI = {
+UI = { -- {{{
   {
     "DropList{路由|VPN|3G}",
     "ip",
@@ -199,15 +199,15 @@ UI = {
     "ap16",
     "墨迹天气:"
   }
-}
-function click(_ARG_0_, _ARG_1_)
+} --}}}
+function click(_ARG_0_, _ARG_1_) --{{{
   do
     touchDown(0, _ARG_0_, _ARG_1_)
     mSleep(100)
     touchUp(0)
   end
-end
-function idtime()
+end --}}}
+function idtime() --{{{
   if time ~= -1 then
     --tt = os.date("*t", time)
     --nowtime = tt.year * 1000000 + tt.month * 10000 + tt.day * 100 + tt.hour
@@ -294,8 +294,8 @@ function idtime()
     notifyMessage("硬件不对，没有授权")
     ov = 1
   end
-end
-function mouse(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_)
+end --}}}
+function mouse(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_) --{{{
   do
     x3 = 0
     y3 = 0
@@ -333,8 +333,8 @@ function mouse(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_)
     touchUp(1)
     mSleep(100)
   end
-end
-function mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_)
+end --}}}
+function mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_) --{{{
   do
     x3 = 0
     y3 = 0
@@ -372,8 +372,8 @@ function mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_)
     touchUp(1)
     mSleep(100)
   end
-end
-function enmsim()
+end --}}}
+function enmsim() --{{{
   if ip == "3G" or ip == "VPN" then
     appRun("com.apple.Preferences")
     mSleep(1000)
@@ -722,8 +722,8 @@ function enmsim()
         end
     end
   end
-end
-function gjcfz()
+end --}}}
+function gjcfz() --{{{
   keyDown("HOME")
   mSleep(50)
   keyUp("HOME")
@@ -757,16 +757,16 @@ function gjcfz()
   mSleep(50)
   keyUp("HOME")
   mSleep(1200)
-end
-function inow()
+end --}}}
+function inow() --{{{
   y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我知道了.bmp", 90, 245, 480, 300, 1000)
   x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我知道了.bmp", 90, 245, 480, 300, 1000)
   if x > 0 then
     click(x, y)
     mSleep(1000)
   end
-end
-function wifi()
+end --}}}
+function wifi() --{{{
   x,y = findColorInRegion(31487, 130, 410, 500, 780)
   if x > 0 then
     x,y = findColorInRegion(31487, 317, 500, 323, 750)
@@ -904,8 +904,8 @@ function wifi()
     end
   else
   end
-end
-function ddqc1()
+end --}}}
+function ddqc1() --{{{
   while true do
     mSleep(500)
     x,y = findColorInRegionFuzzy(15221275, 85, 132, 222, 170, 387)
@@ -914,8 +914,8 @@ function ddqc1()
       break
     end
   end
-end
-function sjen(_ARG_0_)
+end --}}}
+function sjen(_ARG_0_) --{{{
   do
     a = ""
     for _FORV_4_ = 1, _ARG_0_ do
@@ -1002,8 +1002,8 @@ function sjen(_ARG_0_)
       a = string.format("%s%s", a, e)
     end
   end
-end
-function sjsz(_ARG_0_)
+end --}}}
+function sjsz(_ARG_0_) --{{{
   do
     s = ""
     for _FORV_4_ = 1, _ARG_0_ do
@@ -1012,8 +1012,8 @@ function sjsz(_ARG_0_)
       s = string.format("%s%s", s, x)
     end
   end
-end
-function wttxt()
+end --}}}
+function wttxt() --{{{
   io.open("/var/touchelf/use.txt", "a"):write(a)
   io.open("/var/touchelf/use.txt", "a"):write(",")
   io.open("/var/touchelf/use.txt", "a"):write(b)
@@ -1021,8 +1021,8 @@ function wttxt()
   io.open("/var/touchelf/use.txt", "a"):write(c)
   io.open("/var/touchelf/use.txt", "a"):write("\r\n")
   io.open("/var/touchelf/use.txt", "a"):close()
-end
-function reustxt()
+end --}}}
+function reustxt() --{{{
   while true do
     file_zhanghao = io.open("/var/touchelf/scripts/use.txt", "r")
     kaishigeshu = io.open("/var/touchelf/scripts/读取到的第几行.txt", "r")
@@ -1048,22 +1048,22 @@ function reustxt()
   geshu = kshs + i - 1
   hangshujilu(geshu)
   xinxi = file_zhanghao:read()
-end
-function hangshujilu(_ARG_0_)
+end --}}}
+function hangshujilu(_ARG_0_) --{{{
   do
     file = io.open("/var/touchelf/scripts/读取到的第几行.txt", "w")
     file:write(_ARG_0_)
     file:close()
   end
-end
-function hangshujilu1(_ARG_0_)
+end --}}}
+function hangshujilu1(_ARG_0_) --{{{
   do
     file = io.open("/var/touchelf/scripts/读取到的第几行.txt", "w")
     file:write(_ARG_0_)
     file:close()
   end
-end
-function srac()
+end --}}}
+function srac() --{{{
   while true do
     y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文换行.bmp", 95, 506, 1043, 638, 1134)
     x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文换行.bmp", 95, 506, 1043, 638, 1134)
@@ -1082,8 +1082,8 @@ function srac()
       mSleep(500)
     end
   end
-end
-function srac1()
+end --}}}
+function srac1() --{{{
   while true do
     y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HONE左退格.bmp", 85, 483, 46, 559, 168)
     x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HONE左退格.bmp", 85, 483, 46, 559, 168)
@@ -1097,8 +1097,8 @@ function srac1()
       mSleep(1200)
     end
   end
-end
-function IG()
+end --}}}
+function IG() --{{{
   appRun("org.ioshack.iGrimace")
   mSleep(2000)
   k = 0
@@ -1214,8 +1214,8 @@ function IG()
       mSleep(1500)
     end
   end
-end
-function web()
+end --}}}
+function web() --{{{
   mSleep(500)
   k = 0
   h1 = 0
@@ -1338,8 +1338,8 @@ function web()
       end
     end
   until h1 ~= 0
-end
-function tf()
+end --}}}
+function tf() --{{{
   appRun("com.taofen8.TfClient")
   mSleep(1000)
   k = 0
@@ -1569,8 +1569,8 @@ function tf()
       end
     end
   end
-end
-function openrw()
+end --}}}
+function openrw() --{{{
   x,y = findColorInRegion(16203135, 628, 140, 628, 180)
   if x > 0 then
   else
@@ -1753,8 +1753,8 @@ function openrw()
     end
   end
   inow()
-end
-function tfrw()
+end --}}}
+function tfrw() --{{{
   while true do
     y1 = 1100
     while true do
@@ -2488,8 +2488,8 @@ function tfrw()
       break
     end
   end
-end
-function inzfb()
+end --}}}
+function inzfb() --{{{
   while true do
     inow()
     y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 90, 505, 152, 535, 329)
@@ -2558,11 +2558,11 @@ function inzfb()
     click(65, 1088)
     mSleep(1000)
   end
-end
-function _FOR_()
+end --}}}
+function _FOR_() --{{{
   mSleep(50)
-end
-function main()
+end --}}}
+function main() --{{{
   idtime()
   if ov ~= 1 then
     fl5 = 0
@@ -2669,8 +2669,8 @@ function main()
       end
     until ch ~= "无限循环"
   end
-end
-function zrw()
+end --}}}
+function zrw() --{{{
   if u0 == 1 then
     u0 = 2
     appRun("cn.ishengsheng.xingjiabi")
@@ -6985,8 +6985,8 @@ function zrw()
     keyUp("HOME")
     mSleep(3500)
   end
-end
-function gamez()
+end --}}}
+function gamez() --{{{
   if u40 == 1 then
     u40 = 2
     appRun("com.cocoentertainment.jifengyongzhezhuan")
@@ -7965,8 +7965,8 @@ function gamez()
     keyUp("HOME")
     mSleep(4500)
   end
-end
-function appopen()
+end --}}}
+function appopen() --{{{
   u0 = 2
   u1 = 2
   u2 = 2
@@ -8225,8 +8225,8 @@ function appopen()
   if ap63 == "开启" then
     u63 = 0
   end
-end
-function rwnn()
+end --}}}
+function rwnn() --{{{
   rw = 0
   x,y = findColorInRegion(31487, 300, 630, 330, 678)
   if 0 < x then
@@ -8247,8 +8247,8 @@ function rwnn()
     end
     rw = 1
   end
-end
-function zrwopen()
+end --}}}
+function zrwopen() --{{{
   if u1 == 1 then
     u1 = 1
     appRun("com.netease.news")
@@ -10786,8 +10786,8 @@ function zrwopen()
     keyUp("HOME")
     mSleep(3500)
   end
-end
-function overtf()
+end --}}}
+function overtf() --{{{
   x,y = findColorInRegion(16203135, 628, 140, 628, 180)
   if x > 0 then
   else
@@ -10843,4 +10843,4 @@ function overtf()
   end
   hon = hx * 1000
   mSleep(hon)
-end
+end --}}}
