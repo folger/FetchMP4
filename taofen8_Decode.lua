@@ -209,17 +209,18 @@ function click(_ARG_0_, _ARG_1_)
 end
 function idtime()
   if time ~= -1 then
-    tt = os.date("*t", time)
-    nowtime = tt.year * 1000000 + tt.month * 10000 + tt.day * 100 + tt.hour
-    if nowtime < 2014082616 then
-      ov = 0
-    else
-      notifyMessage("脚本已经过期")
-      notifyMessage("脚本已经过期")
-      notifyMessage("脚本已经过期")
-      notifyMessage("脚本已经过期")
-      ov = 1
-    end
+    --tt = os.date("*t", time)
+    --nowtime = tt.year * 1000000 + tt.month * 10000 + tt.day * 100 + tt.hour
+    --if nowtime < 2014082616 then
+      --ov = 0
+    --else
+      --notifyMessage("脚本已经过期")
+      --notifyMessage("脚本已经过期")
+      --notifyMessage("脚本已经过期")
+      --notifyMessage("脚本已经过期")
+      --ov = 1
+    --end
+    ov = 0
   else
     notifyMessage("请连接网络")
   end
