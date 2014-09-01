@@ -103,10 +103,10 @@ class Fetcher(QThread):
                         fails.append(name + '---' + str(e))
                 else:
                     names.append(filename)
+                self.setrange.emit(0, 0)
                 if self.stop:
                     break
 
-            self.setrange.emit(0, 0)
             if len(names) == len(https):
                 self.title.emit('Joining ...')
                 cmd = [get_abs_file_path('MP4Box')]
