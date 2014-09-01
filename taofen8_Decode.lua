@@ -443,6 +443,11 @@ function enmsim() --{{{
           click(x1, y1)
         end
         mSleep(2000)
+		x,y = findImage("/var/touchelf/scripts/yclm/NoSimCard.bmp")
+        if x ~= -1 and y ~= -1 then
+		  click(x+240, y+150)
+		  mSleep(2000)
+        end
       end
     else
       x,y = findColorInRegionFuzzy(31487, 95, 51, 572, 57, 578)
@@ -759,8 +764,7 @@ function gjcfz() --{{{
   mSleep(1200)
 end --}}}
 function inow() --{{{
-  y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我知道了.bmp", 90, 245, 480, 300, 1000)
-  x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我知道了.bmp", 90, 245, 480, 300, 1000)
+  x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我知道了.bmp", 90, 245, 480, 300, 1000)
   if x > 0 then
     click(x, y)
     mSleep(1000)
@@ -774,64 +778,55 @@ function wifi() --{{{
       click(x, y)
       mSleep(400)
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 80, 432, 633, 481, 682)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 80, 432, 633, 481, 682)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 80, 432, 633, 481, 682)
       if x > 0 then
         mSleep(300)
         click(x, y)
         mSleep(300)
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/当前位置好.bmp", 80, 430, 627, 476, 668)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/当前位置好.bmp", 80, 430, 627, 476, 668)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/当前位置好.bmp", 80, 430, 627, 476, 668)
         if x > 0 then
           mSleep(300)
           click(x, y)
           mSleep(300)
         else
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 80, 432, 677, 482, 719)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 80, 432, 677, 482, 719)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 80, 432, 677, 482, 719)
           if x > 0 then
             mSleep(300)
             click(x, y)
             mSleep(300)
           else
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好1.bmp", 80, 427, 635, 483, 697)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好1.bmp", 80, 427, 635, 483, 697)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好1.bmp", 80, 427, 635, 483, 697)
             if x > 0 then
               mSleep(300)
               click(x, y)
               mSleep(300)
             else
-              y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/忽略.bmp", 60, 135, 616, 228, 683)
-              x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/忽略.bmp", 60, 135, 616, 228, 683)
+              x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/忽略.bmp", 60, 135, 616, 228, 683)
               if x > 0 then
                 mSleep(300)
                 click(x, y)
                 mSleep(300)
               else
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/升级取消.bmp", 75, 401, 600, 468, 795)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/升级取消.bmp", 75, 401, 600, 468, 795)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/升级取消.bmp", 75, 401, 600, 468, 795)
                 if x > 0 then
                   mSleep(300)
                   click(x, y)
                   mSleep(300)
                 else
-                  y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/横OK.bmp", 70, 402, 544, 442, 600)
-                  x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/横OK.bmp", 70, 402, 544, 442, 600)
+                  x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/横OK.bmp", 70, 402, 544, 442, 600)
                   if x > 0 then
                     mSleep(300)
                     click(x, y)
                     mSleep(300)
                   else
-                    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众确定.bmp", 70, 143, 646, 196, 690)
-                    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众确定.bmp", 70, 143, 646, 196, 690)
+                    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众确定.bmp", 70, 143, 646, 196, 690)
                     if x > 0 then
                       mSleep(300)
                       click(x, y)
                       mSleep(300)
                     else
-                      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/麦克疯好.bmp", 80, 423, 605, 480, 655)
-                      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/麦克疯好.bmp", 80, 423, 605, 480, 655)
+                      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/麦克疯好.bmp", 80, 423, 605, 480, 655)
                       if x > 0 then
                         mSleep(300)
                         click(x, y)
@@ -842,8 +837,7 @@ function wifi() --{{{
                           click(x, y)
                           mSleep(800)
                         end
-                        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 262, 615, 369, 664)
-                        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 262, 615, 369, 664)
+                        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 262, 615, 369, 664)
                         if x > 0 then
                           mSleep(300)
                           click(x, y)
@@ -853,36 +847,31 @@ function wifi() --{{{
                           click(x, y)
                           mSleep(2000)
                         else
-                          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/女神好.bmp", 90, 439, 678, 474, 715)
-                          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/女神好.bmp", 90, 439, 678, 474, 715)
+                          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/女神好.bmp", 90, 439, 678, 474, 715)
                           if x > 0 then
                             mSleep(300)
                             click(x, y)
                             mSleep(300)
                           else
-                            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/切换.bmp", 80, 414, 619, 491, 674)
-                            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/切换.bmp", 80, 414, 619, 491, 674)
+                            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/切换.bmp", 80, 414, 619, 491, 674)
                             if x > 0 then
                               mSleep(300)
                               click(x, y)
                               mSleep(300)
                             else
-                              y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/取消.bmp", 80, 100, 550, 510, 780)
-                              x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/取消.bmp", 80, 100, 550, 510, 780)
+                              x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/取消.bmp", 80, 100, 550, 510, 780)
                               if x > 0 then
                                 mSleep(300)
                                 click(x, y)
                                 mSleep(300)
                               else
-                                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/wifi好.bmp", 90, 130, 525, 500, 780)
-                                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/wifi好.bmp", 90, 130, 525, 500, 780)
+                                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/wifi好.bmp", 90, 130, 525, 500, 780)
                                 if x > 0 then
                                   mSleep(300)
                                   click(x, y)
                                   mSleep(300)
                                 end
-                                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/微微奖励提示OK.bmp", 70, 300, 500, 400, 700)
-                                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/微微奖励提示OK.bmp", 70, 300, 500, 400, 700)
+                                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/微微奖励提示OK.bmp", 70, 300, 500, 400, 700)
                                 if x > 0 then
                                   mSleep(300)
                                   click(x, y)
@@ -1065,18 +1054,15 @@ function hangshujilu1(_ARG_0_) --{{{
 end --}}}
 function srac() --{{{
   while true do
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文换行.bmp", 95, 506, 1043, 638, 1134)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文换行.bmp", 95, 506, 1043, 638, 1134)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文换行.bmp", 95, 506, 1043, 638, 1134)
     if x > 0 then
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文GO.bmp", 95, 506, 1043, 638, 1134)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文GO.bmp", 95, 506, 1043, 638, 1134)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/英文GO.bmp", 95, 506, 1043, 638, 1134)
     end
     if x > 0 then
       break
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/切换输入法.bmp", 80, 1, 1041, 176, 1133)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/切换输入法.bmp", 80, 1, 1041, 176, 1133)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/切换输入法.bmp", 80, 1, 1041, 176, 1133)
     if x > 0 then
       click(x, y)
       mSleep(500)
@@ -1085,13 +1071,11 @@ function srac() --{{{
 end --}}}
 function srac1() --{{{
   while true do
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HONE左退格.bmp", 85, 483, 46, 559, 168)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HONE左退格.bmp", 85, 483, 46, 559, 168)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HONE左退格.bmp", 85, 483, 46, 559, 168)
     if x > 0 then
       break
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HOME左地球.bmp", 85, 412, 839, 633, 1126)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HOME左地球.bmp", 85, 412, 839, 633, 1126)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/HOME左地球.bmp", 85, 412, 839, 633, 1126)
     if x > 0 then
       click(x, y)
       mSleep(1200)
@@ -1156,6 +1140,7 @@ function IG() --{{{
       if 0 < x then
         click(49, 83)
         mSleep(500)
+		break
       end
     end
     mSleep(1500)
@@ -1172,8 +1157,7 @@ function IG() --{{{
         end
       end
     until k ~= 8
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/IG全选.bmp", 90, 548, 66, 624, 101)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/IG全选.bmp", 90, 548, 66, 624, 101)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/IG全选.bmp", 90, 548, 66, 624, 101)
     if 0 < x then
       click(592, 81)
       mSleep(500)
@@ -1184,6 +1168,7 @@ function IG() --{{{
       if 0 < x then
         click(49, 83)
         mSleep(500)
+		break
       end
     end
   end
@@ -1212,6 +1197,7 @@ function IG() --{{{
       mSleep(200)
       click(x, y)
       mSleep(1500)
+	  break
     end
   end
 end --}}}
@@ -1247,12 +1233,10 @@ function web() --{{{
             if k ~= 20 then
               rwnn()
               if rw ~= 1 then
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbweb错1.bmp", 90, 0, 131, 35, 175)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbweb错1.bmp", 90, 0, 131, 35, 175)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbweb错1.bmp", 90, 0, 131, 35, 175)
                 if 0 < x then
                 else
-                  y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbweb错.bmp", 90, 0, 131, 35, 151)
-                  x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbweb错.bmp", 90, 0, 131, 35, 151)
+                  x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbweb错.bmp", 90, 0, 131, 35, 151)
                 end
                 if 0 < x then
                   mSleep(600)
@@ -1264,12 +1248,10 @@ function web() --{{{
                   mSleep(500)
                   break
                 end
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/没安装云朵.bmp", 90, 549, 304, 616, 360)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/没安装云朵.bmp", 90, 549, 304, 616, 360)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/没安装云朵.bmp", 90, 549, 304, 616, 360)
                 if 0 < x then
                 else
-                  y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/免费.bmp", 90, 512, 278, 613, 359)
-                  x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/免费.bmp", 90, 512, 278, 613, 359)
+                  x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/免费.bmp", 90, 512, 278, 613, 359)
                 end
                 if 0 < x then
                   xx = x + 5
@@ -1291,8 +1273,7 @@ function web() --{{{
                       click(x, y)
                       mSleep(1000)
                     end
-                    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/正在下载中.bmp", 95, 566, 318, 600, 347)
-                    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/正在下载中.bmp", 95, 566, 318, 600, 347)
+                    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/正在下载中.bmp", 95, 566, 318, 600, 347)
                     if 0 < x then
                       break
                     end
@@ -1313,8 +1294,7 @@ function web() --{{{
                       mSleep(1000)
                     end
                     mSleep(500)
-                    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/打开.bmp", 95, 480, 240, 660, 399)
-                    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/打开.bmp", 95, 480, 240, 660, 399)
+                    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/打开.bmp", 95, 480, 240, 660, 399)
                     if 0 < x then
                       mSleep(1000)
                       break
@@ -1356,19 +1336,16 @@ function tf() --{{{
       mSleep(1000)
     end
     wifi()
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
     if 0 < x then
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
     end
     if 0 < x then
       click(597, 171)
       mSleep(800)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/淘粉吧主页.bmp", 80, 14, 40, 140, 112)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/淘粉吧主页.bmp", 80, 14, 40, 140, 112)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/淘粉吧主页.bmp", 80, 14, 40, 140, 112)
     if 0 < x then
       break
     end
@@ -1393,32 +1370,27 @@ function tf() --{{{
     end
     wifi()
     mSleep(500)
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
     if 0 < x then
       mSleep(1000)
       mouse(300, 180, 300, 1000, 25)
       mSleep(4000)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 90, 76, 451, 182, 486)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 90, 76, 451, 182, 486)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 90, 76, 451, 182, 486)
     if 0 < x then
       click(x, y)
       mSleep(500)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
     if 0 < x then
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
     end
     if 0 < x then
       click(597, 171)
       mSleep(800)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
     if 0 < x then
       mSleep(1000)
       break
@@ -1454,12 +1426,10 @@ function tf() --{{{
           mSleep(2500)
         end
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
       if 0 < x then
         mSleep(1000)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb登陆框.bmp", 90, 83, 253, 170, 404)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb登陆框.bmp", 90, 83, 253, 170, 404)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb登陆框.bmp", 90, 83, 253, 170, 404)
         if 0 < x then
           click(298, 286)
           mSleep(1800)
@@ -1472,44 +1442,36 @@ function tf() --{{{
           click(599, 1094)
         end
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
       if 0 < x then
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
       end
       if 0 < x then
         click(597, 171)
         mSleep(800)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb继续.bmp", 80, 280, 525, 370, 682)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb继续.bmp", 80, 280, 525, 370, 682)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb继续.bmp", 80, 280, 525, 370, 682)
       if 0 < x then
         click(x, y)
         mSleep(5000)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb授权.bmp", 80, 280, 490, 335, 645)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb授权.bmp", 80, 280, 490, 335, 645)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb授权.bmp", 80, 280, 490, 335, 645)
       if 0 < x then
         click(x, y)
         mSleep(5000)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
       if 0 < x then
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
       end
       if 0 < x then
         mSleep(2300)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
         if 0 < x then
         else
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
         end
         if 0 < x then
           click(x, y)
@@ -1525,31 +1487,26 @@ function tf() --{{{
         mSleep(800)
       end
       inow()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
       if 0 < x then
         click(318, 663)
         mSleep(2000)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
       if 0 < x then
         click(x, y)
         mSleep(500)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
       if 0 < x then
         mSleep(1000)
         mouse(300, 180, 300, 1000, 25)
         mSleep(4000)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
       if 0 < x then
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
       end
       if 0 < x then
         mSleep(800)
@@ -1597,11 +1554,9 @@ function openrw() --{{{
     end
     x,y = findColorInRegionFuzzy(15876889, 85, 252, 698, 252, 698)
     if x > 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/空帐号.bmp", 90, 158, 380, 242, 403)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/空帐号.bmp", 90, 158, 380, 242, 403)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/空帐号.bmp", 90, 158, 380, 242, 403)
       if x > 0 then
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/帐号出现.bmp", 90, 298, 590, 317, 676)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/帐号出现.bmp", 90, 298, 590, 317, 676)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/帐号出现.bmp", 90, 298, 590, 317, 676)
         if x > 0 then
           mSleep(1100)
           click(231, 396)
@@ -1616,38 +1571,31 @@ function openrw() --{{{
         end
       end
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
     if x > 0 then
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
     end
     if x > 0 then
       click(597, 171)
       mSleep(800)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/授权.bmp", 80, 401, 1027, 538, 1105)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/授权.bmp", 80, 401, 1027, 538, 1105)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/授权.bmp", 80, 401, 1027, 538, 1105)
     if x > 0 then
       click(x, y)
       mSleep(800)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
     if x > 0 then
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
     end
     if x > 0 then
       mSleep(2000)
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
       if x > 0 then
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
       end
       if x > 0 then
         click(x, y)
@@ -1663,31 +1611,26 @@ function openrw() --{{{
       mSleep(800)
     end
     inow()
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
     if x > 0 then
       click(318, 663)
       mSleep(2000)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
     if x > 0 then
       click(x, y)
       mSleep(500)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
     if x > 0 then
       mSleep(1000)
       mouse(300, 180, 300, 1000, 25)
       mSleep(4000)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
     if x > 0 then
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
     end
     if x > 0 then
       mSleep(800)
@@ -1814,8 +1757,7 @@ function tfrw() --{{{
       end
     end
     if u0 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb性价比.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb性价比.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb性价比.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u0 = 1
@@ -1827,8 +1769,7 @@ function tfrw() --{{{
       end
     end
     if u1 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb网易新闻.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb网易新闻.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb网易新闻.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u1 = 1
@@ -1840,8 +1781,7 @@ function tfrw() --{{{
       end
     end
     if u2 == 0 then
-      y = findImageInRegionFuzzy("", 90, 0, 1037, 576, 1113)
-      x = findImageInRegionFuzzy("", 90, 0, 1037, 576, 1113)
+      x,y = findImageInRegionFuzzy("", 90, 0, 1037, 576, 1113)
       if x > 0 then
         click(x, y)
         u2 = 1
@@ -1853,8 +1793,7 @@ function tfrw() --{{{
       end
     end
     if u3 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u3 = 1
@@ -1866,8 +1805,7 @@ function tfrw() --{{{
       end
     end
     if u4 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb美啦美妆.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb美啦美妆.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb美啦美妆.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u4 = 1
@@ -1879,8 +1817,7 @@ function tfrw() --{{{
       end
     end
     if u5 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u5 = 1
@@ -1892,8 +1829,7 @@ function tfrw() --{{{
       end
     end
     if u6 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb随手记.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb随手记.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb随手记.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u6 = 1
@@ -1905,8 +1841,7 @@ function tfrw() --{{{
       end
     end
     if u7 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb携程.bmp", 80, 115, 127, 220, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb携程.bmp", 80, 115, 127, 220, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb携程.bmp", 80, 115, 127, 220, 1130)
       if x > 0 then
         y = y + 35
         click(x, y)
@@ -1919,8 +1854,7 @@ function tfrw() --{{{
       end
     end
     if u8 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb三剑豪.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb三剑豪.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb三剑豪.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u8 = 1
@@ -1932,8 +1866,7 @@ function tfrw() --{{{
       end
     end
     if u9 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u9 = 1
@@ -1945,8 +1878,7 @@ function tfrw() --{{{
       end
     end
     if u10 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u10 = 1
@@ -1959,8 +1891,7 @@ function tfrw() --{{{
     end
     inow()
     if u11 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb大众点评.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb大众点评.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb大众点评.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u11 = 1
@@ -1972,8 +1903,7 @@ function tfrw() --{{{
       end
     end
     if u12 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u12 = 1
@@ -1985,8 +1915,7 @@ function tfrw() --{{{
       end
     end
     if u13 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb今日头条.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb今日头条.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb今日头条.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u13 = 1
@@ -1998,8 +1927,7 @@ function tfrw() --{{{
       end
     end
     if u14 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb百度糯米.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb百度糯米.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb百度糯米.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u14 = 1
@@ -2011,8 +1939,7 @@ function tfrw() --{{{
       end
     end
     if u15 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u15 = 1
@@ -2024,8 +1951,7 @@ function tfrw() --{{{
       end
     end
     if u16 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb墨迹天气.bmp", 80, 115, 127, 220, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb墨迹天气.bmp", 80, 115, 127, 220, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb墨迹天气.bmp", 80, 115, 127, 220, 1130)
       if x > 0 then
         click(x, y)
         u16 = 1
@@ -2037,8 +1963,7 @@ function tfrw() --{{{
       end
     end
     if u17 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u17 = 1
@@ -2050,8 +1975,7 @@ function tfrw() --{{{
       end
     end
     if u18 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb搜狗地图.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb搜狗地图.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb搜狗地图.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u18 = 1
@@ -2063,8 +1987,7 @@ function tfrw() --{{{
       end
     end
     if u19 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u19 = 1
@@ -2076,8 +1999,7 @@ function tfrw() --{{{
       end
     end
     if u20 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb好豆菜谱.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb好豆菜谱.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb好豆菜谱.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u20 = 1
@@ -2090,8 +2012,7 @@ function tfrw() --{{{
     end
     inow()
     if u21 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u22 = 1
@@ -2103,8 +2024,7 @@ function tfrw() --{{{
       end
     end
     if u22 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u22 = 1
@@ -2116,8 +2036,7 @@ function tfrw() --{{{
       end
     end
     if u23 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb美团.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb美团.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb美团.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u23 = 1
@@ -2129,8 +2048,7 @@ function tfrw() --{{{
       end
     end
     if u24 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u24 = 1
@@ -2142,8 +2060,7 @@ function tfrw() --{{{
       end
     end
     if u25 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u25 = 1
@@ -2155,8 +2072,7 @@ function tfrw() --{{{
       end
     end
     if u26 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u26 = 1
@@ -2168,8 +2084,7 @@ function tfrw() --{{{
       end
     end
     if u27 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb猫眼电影.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb猫眼电影.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb猫眼电影.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u27 = 1
@@ -2181,8 +2096,7 @@ function tfrw() --{{{
       end
     end
     if u28 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb百度地图.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb百度地图.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb百度地图.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u28 = 1
@@ -2194,8 +2108,7 @@ function tfrw() --{{{
       end
     end
     if u29 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb挖财.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb挖财.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb挖财.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u29 = 1
@@ -2207,8 +2120,7 @@ function tfrw() --{{{
       end
     end
     if u30 == 0 then
-      y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u30 = 1
@@ -2221,8 +2133,7 @@ function tfrw() --{{{
     end
     inow()
     if u31 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb途牛旅游字.bmp", 90, 118, 127, 169, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb途牛旅游字.bmp", 90, 118, 127, 169, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb途牛旅游字.bmp", 90, 118, 127, 169, 1130)
       if x > 0 then
         click(x, y)
         u31 = 1
@@ -2234,8 +2145,7 @@ function tfrw() --{{{
       end
     end
     if u32 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb豆果美食.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb豆果美食.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb豆果美食.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u32 = 1
@@ -2247,8 +2157,7 @@ function tfrw() --{{{
       end
     end
     if u34 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb新浪新闻.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb新浪新闻.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb新浪新闻.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u34 = 1
@@ -2260,8 +2169,7 @@ function tfrw() --{{{
       end
     end
     if u35 == 6 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb放开那三国.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb放开那三国.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb放开那三国.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u35 = 1
@@ -2273,8 +2181,7 @@ function tfrw() --{{{
       end
     end
     if u36 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbzaker.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbzaker.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tbzaker.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u36 = 1
@@ -2286,8 +2193,7 @@ function tfrw() --{{{
       end
     end
     if u37 == 6 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb彩票宝.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb彩票宝.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb彩票宝.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u37 = 1
@@ -2299,8 +2205,7 @@ function tfrw() --{{{
       end
     end
     if u38 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb虾米音乐.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb虾米音乐.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb虾米音乐.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u38 = 1
@@ -2312,8 +2217,7 @@ function tfrw() --{{{
       end
     end
     if u39 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb国美在线.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb国美在线.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb国美在线.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u39 = 1
@@ -2325,8 +2229,7 @@ function tfrw() --{{{
       end
     end
     if u40 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb疾风勇者传.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb疾风勇者传.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb疾风勇者传.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u40 = 1
@@ -2339,8 +2242,7 @@ function tfrw() --{{{
     end
     inow()
     if u41 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb同程.bmp", 80, 115, 127, 220, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb同程.bmp", 80, 115, 127, 220, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb同程.bmp", 80, 115, 127, 220, 1130)
       if x > 0 then
         y = y + 35
         click(x, y)
@@ -2353,8 +2255,7 @@ function tfrw() --{{{
       end
     end
     if u42 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb驴妈妈旅游.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb驴妈妈旅游.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb驴妈妈旅游.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u42 = 1
@@ -2366,8 +2267,7 @@ function tfrw() --{{{
       end
     end
     if u43 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb艺龙.bmp", 80, 115, 127, 200, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb艺龙.bmp", 80, 115, 127, 200, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb艺龙.bmp", 80, 115, 127, 200, 1130)
       if x > 0 then
         y = y + 35
         click(x, y)
@@ -2380,8 +2280,7 @@ function tfrw() --{{{
       end
     end
     if u44 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb变形金刚.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb变形金刚.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb变形金刚.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u44 = 1
@@ -2393,8 +2292,7 @@ function tfrw() --{{{
       end
     end
     if u45 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb暗黑战神.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb暗黑战神.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb暗黑战神.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u45 = 1
@@ -2407,8 +2305,7 @@ function tfrw() --{{{
     end
     inow()
     if u47 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb悄悄.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb悄悄.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb悄悄.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u47 = 1
@@ -2420,8 +2317,7 @@ function tfrw() --{{{
       end
     end
     if u48 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb赶集.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb赶集.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb赶集.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u48 = 1
@@ -2433,8 +2329,7 @@ function tfrw() --{{{
       end
     end
     if u49 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb酷酷爱魔兽.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb酷酷爱魔兽.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb酷酷爱魔兽.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u49 = 1
@@ -2446,8 +2341,7 @@ function tfrw() --{{{
       end
     end
     if u50 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb功夫西游.bmp", 80, 20, 127, 108, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb功夫西游.bmp", 80, 20, 127, 108, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb功夫西游.bmp", 80, 20, 127, 108, 1130)
       if x > 0 then
         click(x, y)
         u50 = 1
@@ -2459,12 +2353,10 @@ function tfrw() --{{{
       end
     end
     if u51 == 0 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb去哪儿2.bmp", 80, 115, 127, 220, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb去哪儿2.bmp", 80, 115, 127, 220, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb去哪儿2.bmp", 80, 115, 127, 220, 1130)
       if x > 0 then
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb去哪儿.bmp", 80, 115, 127, 220, 1130)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb去哪儿.bmp", 80, 115, 127, 220, 1130)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb去哪儿.bmp", 80, 115, 127, 220, 1130)
       end
       if x > 0 then
         y = y + 35
@@ -2482,8 +2374,7 @@ function tfrw() --{{{
     mouse(300, 950, 300, 150, 20)
     mSleep(700)
     inow()
-    y = findImageInRegionFuzzy("/aa.bmp", 90, 38, 847, 72, 929)
-    x = findImageInRegionFuzzy("/aa.bmp", 90, 38, 847, 72, 929)
+    x,y = findImageInRegionFuzzy("/aa.bmp", 90, 38, 847, 72, 929)
     if x > 0 then
       break
     end
@@ -2492,8 +2383,7 @@ end --}}}
 function inzfb() --{{{
   while true do
     inow()
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 90, 505, 152, 535, 329)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 90, 505, 152, 535, 329)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 90, 505, 152, 535, 329)
     if x > 0 then
       click(44, 84)
       mSleep(1000)
@@ -2516,8 +2406,7 @@ function inzfb() --{{{
     mSleep(500)
     k = k + 1
     if k ~= 12 then
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚记录.bmp", 85, 30, 600, 90, 1000)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚记录.bmp", 85, 30, 600, 90, 1000)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚记录.bmp", 85, 30, 600, 90, 1000)
       if x > 0 then
         mSleep(500)
         inow()
@@ -2676,8 +2565,7 @@ function zrw() --{{{
     appRun("cn.ishengsheng.xingjiabi")
     mSleep(4000)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/性价比首页.bmp", 85, 36, 1095, 71, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/性价比首页.bmp", 85, 36, 1095, 71, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/性价比首页.bmp", 85, 36, 1095, 71, 1130)
       if not (x > 0) then
         mSleep(500)
         x,y = findColorInRegion(31487, 140, 788, 148, 794)
@@ -2702,8 +2590,7 @@ function zrw() --{{{
       end
     end
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/性价比首页.bmp", 85, 36, 1095, 71, 1130)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/性价比首页.bmp", 85, 36, 1095, 71, 1130)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/性价比首页.bmp", 85, 36, 1095, 71, 1130)
       if x > 0 then
         mSleep(3000)
         break
@@ -2781,8 +2668,7 @@ function zrw() --{{{
     while true do
       k = k + 1
       if k ~= 180 then
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认1.bmp", 90, 273, 636, 360, 679)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认1.bmp", 90, 273, 636, 360, 679)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认1.bmp", 90, 273, 636, 360, 679)
         if x > 0 then
           click(x, y)
           mSleep(1000)
@@ -2810,8 +2696,7 @@ function zrw() --{{{
           k = k + 1
           if k ~= 100 then
             mSleep(900)
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
             if x > 0 then
               click(x, y)
               mSleep(1000)
@@ -2821,20 +2706,17 @@ function zrw() --{{{
               click(x, y)
               mSleep(1000)
             end
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/FM登陆游戏.bmp", 90, 229, 475, 418, 522)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/FM登陆游戏.bmp", 90, 229, 475, 418, 522)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/FM登陆游戏.bmp", 90, 229, 475, 418, 522)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             end
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm进入游戏.bmp", 90, 256, 863, 381, 894)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm进入游戏.bmp", 90, 256, 863, 381, 894)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm进入游戏.bmp", 90, 256, 863, 381, 894)
             if x > 0 then
               click(x, y)
               mSleep(1000)
             end
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
             if x > 0 then
               mSleep(2100)
               click(288, 529)
@@ -2842,8 +2724,7 @@ function zrw() --{{{
               break
             end
             jm = 0
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm队标.bmp", 90, 90, 227, 152, 288)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm队标.bmp", 90, 90, 227, 152, 288)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm队标.bmp", 90, 90, 227, 152, 288)
             if x > 0 then
               jm = jm + 1
               if jm == 1 then
@@ -2860,21 +2741,18 @@ function zrw() --{{{
               mSleep(500)
               k = k + 1
               if k ~= 180 then
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
                 if x > 0 then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
                 if x > 0 then
                   mSleep(2100)
                   click(288, 529)
                   mSleep(1500)
                 end
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm输入队伍名称.bmp", 90, 297, 391, 371, 434)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm输入队伍名称.bmp", 90, 297, 391, 371, 434)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm输入队伍名称.bmp", 90, 297, 391, 371, 434)
                 if x > 0 then
                   click(195, 411)
                   mSleep(2100)
@@ -3080,8 +2958,7 @@ function zrw() --{{{
     appRun("com.meilapp.meila")
     mSleep(4000)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
       if x > 0 then
         mSleep(4000)
         break
@@ -3108,8 +2985,7 @@ function zrw() --{{{
       mousekk(300, 950, 300, 200, 25)
       mSleep(3000)
       while true do
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
         if x > 0 then
           mSleep(2000)
           break
@@ -3232,8 +3108,7 @@ function zrw() --{{{
           click(x, y)
           mSleep(800)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反复注册，邮箱重复.bmp", 90, 171, 453, 448, 576)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反复注册，邮箱重复.bmp", 90, 171, 453, 448, 576)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反复注册，邮箱重复.bmp", 90, 171, 453, 448, 576)
         if x > 0 then
           mSleep(300)
           click(317, 646)
@@ -3255,8 +3130,7 @@ function zrw() --{{{
           _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", a, s)
           _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", _UPVALUE0_.c, _UPVALUE0_.d)
         else
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
           if x > 0 then
             mSleep(300)
             click(322, 644)
@@ -3333,8 +3207,7 @@ function zrw() --{{{
     while true do
       mSleep(400)
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
       if x > 0 then
         mSleep(2000)
         break
@@ -3356,8 +3229,7 @@ function zrw() --{{{
         mSleep(2000)
       end
       while true do
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
         if x > 0 then
           break
         end
@@ -3392,8 +3264,7 @@ function zrw() --{{{
           mousekk(300, 900, 300, 200, 20)
           mSleep(1500)
           while true do
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/记一笔回.bmp", 85, 93, 69, 120, 96)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/记一笔回.bmp", 85, 93, 69, 120, 96)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/记一笔回.bmp", 85, 93, 69, 120, 96)
             if x > 0 then
               click(x, y)
               mSleep(1500)
@@ -3404,8 +3275,7 @@ function zrw() --{{{
           mSleep(2000)
         end
         while true do
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
           if x > 0 then
             break
           end
@@ -3648,8 +3518,7 @@ function zrw() --{{{
     while true do
       wifi()
       mSleep(300)
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
       if x > 0 then
         click(43, 1095)
         mSleep(1000)
@@ -3660,8 +3529,7 @@ function zrw() --{{{
         break
       end
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
     if x > 0 then
       click(43, 1095)
       mSleep(1000)
@@ -3671,8 +3539,7 @@ function zrw() --{{{
     for _FORV_3_ = 1, tb do
       mouse(300, 800, 300, 290, 20)
       mSleep(1500)
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
       if x > 0 then
         click(43, 1095)
         mSleep(1000)
@@ -3680,8 +3547,7 @@ function zrw() --{{{
       y = math.random(265, 792)
       click(90, y)
       mSleep(5000)
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
       if x > 0 then
         click(43, 1095)
         mSleep(1000)
@@ -3691,8 +3557,7 @@ function zrw() --{{{
       mouse(300, 900, 300, 290, 20)
       mSleep(4000)
       while true do
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狐新闻左下返回.bmp", 90, 11, 1066, 72, 1122)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狐新闻左下返回.bmp", 90, 11, 1066, 72, 1122)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狐新闻左下返回.bmp", 90, 11, 1066, 72, 1122)
         if x > 0 then
           click(43, 1095)
           mSleep(1000)
@@ -3733,8 +3598,7 @@ function zrw() --{{{
           end
           mouse(550, 400, 100, 400, 10)
           mSleep(500)
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众GPS.bmp", 85, 28, 230, 117, 280)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众GPS.bmp", 85, 28, 230, 117, 280)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众GPS.bmp", 85, 28, 230, 117, 280)
           if x > 0 then
           else
             click(83, 256)
@@ -3745,8 +3609,7 @@ function zrw() --{{{
           y = math.random(380, 1100)
           click(70, y)
           mSleep(3000)
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
           if x > 0 then
             mSleep(200)
             click(x, y)
@@ -3762,8 +3625,7 @@ function zrw() --{{{
           k = k + 1
           if not (20 < k) then
             mSleep(500)
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
             if x > 0 then
               mSleep(200)
               click(x, y)
@@ -3778,16 +3640,14 @@ function zrw() --{{{
               break
             end
             mSleep(300)
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
             if x > 0 then
               mSleep(300)
               click(x, y)
               mSleep(500)
             end
             mSleep(3000)
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
             if x > 0 then
               while true do
                 x,y = findColorInRegion(31487, 330, 619, 487, 684)
@@ -3806,8 +3666,7 @@ function zrw() --{{{
                         click(x, y)
                       end
                       wifi()
-                      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-                      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+                      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
                       if x > 0 then
                         mSleep(300)
                         click(x, y)
@@ -3816,8 +3675,7 @@ function zrw() --{{{
                       mouse(300, 900, 300, 280, 15)
                       mSleep(2000)
                       wifi()
-                      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
-                      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
+                      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众没有找到.bmp", 85, 67, 311, 105, 345)
                       if not (x > 0) then
                         x,y = findColorInRegionFuzzy(16750084, 90, 220, 220, 230, 1080)
                         if x > 0 then
@@ -3834,8 +3692,7 @@ function zrw() --{{{
                             click(x, y)
                           end
                           wifi()
-                          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-                          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+                          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
                           if x > 0 then
                             mSleep(300)
                             click(x, y)
@@ -3848,8 +3705,7 @@ function zrw() --{{{
                             click(x, y)
                           end
                           wifi()
-                          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-                          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+                          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
                           if x > 0 then
                             mSleep(300)
                             click(x, y)
@@ -3908,8 +3764,7 @@ function zrw() --{{{
               end
               mouse(300, 850, 300, 300, 20)
               mSleep(800)
-              y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/查看更多团购.bmp", 85, 244, 920, 297, 1034)
-              x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/查看更多团购.bmp", 85, 244, 920, 297, 1034)
+              x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/查看更多团购.bmp", 85, 244, 920, 297, 1034)
               if x > 0 then
                 click(x, y)
                 mSleep(3500)
@@ -3973,8 +3828,7 @@ function zrw() --{{{
         k = 5
         mSleep(800)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
       if x > 0 then
         if not (10 > k) then
           do break end
@@ -4011,8 +3865,7 @@ function zrw() --{{{
           k = 5
           mSleep(800)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
         if x > 0 then
           break
         end
@@ -4030,8 +3883,7 @@ function zrw() --{{{
     appRun("com.ss.iphone.article.Explore")
     mSleep(4000)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
       if not (x > 0) then
         mSleep(300)
         wifi()
@@ -4044,8 +3896,7 @@ function zrw() --{{{
       end
     end
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
       if x > 0 then
         mSleep(2000)
         break
@@ -4066,8 +3917,7 @@ function zrw() --{{{
     mouse(300, 900, 300, 150, 5)
     mSleep(3000)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条返回.bmp", 85, 11, 65, 52, 106)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条返回.bmp", 85, 11, 65, 52, 106)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条返回.bmp", 85, 11, 65, 52, 106)
       if x > 0 then
         click(38, 82)
         mSleep(2000)
@@ -4101,8 +3951,7 @@ function zrw() --{{{
               mSleep(800)
             end
             while true do
-              y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条返回.bmp", 85, 11, 65, 52, 106)
-              x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条返回.bmp", 85, 11, 65, 52, 106)
+              x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条返回.bmp", 85, 11, 65, 52, 106)
               if x > 0 then
                 click(38, 82)
                 mSleep(2000)
@@ -4143,8 +3992,7 @@ function zrw() --{{{
             click(x, y)
             mSleep(500)
           else
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 251, 587, 380, 653)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 251, 587, 380, 653)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 251, 587, 380, 653)
             if x > 0 then
               mSleep(300)
               click(x, y)
@@ -4189,8 +4037,7 @@ function zrw() --{{{
                 mSleep(3000)
                 mouse(300, 900, 300, 250, 10)
                 mSleep(4000)
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/糯米返回.bmp", 70, 7, 52, 61, 111)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/糯米返回.bmp", 70, 7, 52, 61, 111)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/糯米返回.bmp", 70, 7, 52, 61, 111)
                 if x > 0 then
                   click(33, 83)
                   mSleep(1000)
@@ -4467,12 +4314,10 @@ function zrw() --{{{
     appRun("com.moji.MojiWeather")
     mSleep(4000)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/墨迹下拉菜单.bmp", 50, 243, 141, 411, 210)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/墨迹下拉菜单.bmp", 50, 243, 141, 411, 210)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/墨迹下拉菜单.bmp", 50, 243, 141, 411, 210)
       if not (x > 0) then
         wifi()
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/开启墨迹之旅.bmp", 80, 194, 996, 452, 1058)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/开启墨迹之旅.bmp", 80, 194, 996, 452, 1058)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/开启墨迹之旅.bmp", 80, 194, 996, 452, 1058)
         if x > 0 then
           mSleep(500)
           click(x, y)
@@ -4490,8 +4335,7 @@ function zrw() --{{{
       if 8 < k then
       end
       mSleep(500)
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/墨迹下拉菜单.bmp", 50, 243, 141, 411, 210)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/墨迹下拉菜单.bmp", 50, 243, 141, 411, 210)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/墨迹下拉菜单.bmp", 50, 243, 141, 411, 210)
       if x > 0 then
         mSleep(1500)
         click(x, y)
@@ -4617,8 +4461,7 @@ function zrw() --{{{
         click(94, 270)
         mSleep(500)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大太棒了.bmp", 85, 538, 199, 599, 322)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大太棒了.bmp", 85, 538, 199, 599, 322)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大太棒了.bmp", 85, 538, 199, 599, 322)
       if x > 0 then
         mSleep(1100)
         break
@@ -4627,8 +4470,7 @@ function zrw() --{{{
     while true do
       while true do
         mSleep(800)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大打勾.bmp", 80, 27, 380, 466, 635)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大打勾.bmp", 80, 27, 380, 466, 635)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大打勾.bmp", 80, 27, 380, 466, 635)
         if x > 0 then
           mSleep(500)
           click(x, y)
@@ -4724,8 +4566,7 @@ function zrw() --{{{
       x,y = findColorInRegionFuzzy(15309356, 90, 125, 315, 125, 315)
       if not (x > 0) then
         wifi()
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗地图身边.bmp", 85, 70, 1073, 142, 1114)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗地图身边.bmp", 85, 70, 1073, 142, 1114)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗地图身边.bmp", 85, 70, 1073, 142, 1114)
         if x > 0 then
           mSleep(2500)
           click(x, y)
@@ -4785,8 +4626,7 @@ function zrw() --{{{
               _UPVALUE0_.k1 = _UPVALUE0_.k1 + 1
             end
             mSleep(500)
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗返回.bmp", 90, 28, 58, 72, 104)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗返回.bmp", 90, 28, 58, 72, 104)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗返回.bmp", 90, 28, 58, 72, 104)
             if x > 0 then
               mSleep(2500)
               mouse(300, 1100, 300, 770, 8)
@@ -4796,8 +4636,7 @@ function zrw() --{{{
               break
             end
             while true do
-              y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗返回.bmp", 90, 28, 58, 72, 104)
-              x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗返回.bmp", 90, 28, 58, 72, 104)
+              x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗返回.bmp", 90, 28, 58, 72, 104)
               if x > 0 then
                 mSleep(200)
                 click(55, 85)
@@ -4839,8 +4678,7 @@ function zrw() --{{{
       if x > 0 then
         _UPVALUE0_.x1 = 1
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
       end
       if x > 0 then
         if _UPVALUE0_.x1 == 0 then
@@ -4874,8 +4712,7 @@ function zrw() --{{{
     y = math.random(330, 950)
     click(250, y)
     mSleep(5000)
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
     if x > 0 then
       mSleep(200)
       click(40, 82)
@@ -4891,8 +4728,7 @@ function zrw() --{{{
       click(446, 1078)
       mSleep(800)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
     if x > 0 then
       mSleep(200)
       click(40, 82)
@@ -4902,8 +4738,7 @@ function zrw() --{{{
       while true do
         wifi()
         mSleep(300)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价大全暂无.bmp", 90, 125, 371, 459, 420)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价大全暂无.bmp", 90, 125, 371, 459, 420)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价大全暂无.bmp", 90, 125, 371, 459, 420)
         if x > 0 then
           mouse(300, 300, 300, 800, 10)
           mSleep(3000)
@@ -4921,8 +4756,7 @@ function zrw() --{{{
       mSleep(2500)
       while true do
         wifi()
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价返回按钮.bmp", 90, 13, 52, 75, 110)
         if x > 0 then
           mSleep(200)
           click(40, 82)
@@ -5001,8 +4835,7 @@ function zrw() --{{{
     mSleep(4000)
     while true do
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
       if x > 0 then
         mSleep(4000)
         break
@@ -5024,8 +4857,7 @@ function zrw() --{{{
       mouse(300, 900, 300, 200, 15)
       mSleep(2000)
       while true do
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
         if x > 0 then
           mSleep(500)
           break
@@ -5049,8 +4881,7 @@ function zrw() --{{{
       mouse(300, 900, 300, 200, 15)
       mSleep(2000)
       while true do
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
         if x > 0 then
           mSleep(500)
           break
@@ -5110,8 +4941,7 @@ function zrw() --{{{
       mouse(300, 300, 300, 900, 15)
       mSleep(2000)
       while true do
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猎豹返回.bmp", 90, 28, 1057, 88, 1116)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猎豹返回.bmp", 90, 28, 1057, 88, 1116)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猎豹返回.bmp", 90, 28, 1057, 88, 1116)
         if x > 0 then
           mSleep(200)
           click(64, 1092)
@@ -5139,8 +4969,7 @@ function zrw() --{{{
           else
             appRun("com.meituan.imeituan")
           end
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
           if x > 0 then
             mSleep(500)
             click(x, y)
@@ -5151,8 +4980,7 @@ function zrw() --{{{
             mSleep(1000)
             break
           end
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美团定位城市.bmp", 85, 21, 228, 159, 271)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美团定位城市.bmp", 85, 21, 228, 159, 271)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美团定位城市.bmp", 85, 21, 228, 159, 271)
           if x > 0 then
             k = k + 1
             if k < 4 then
@@ -5335,8 +5163,7 @@ function zrw() --{{{
       x,y = findColorInRegionFuzzy(15151143, 90, 105, 1076, 105, 1076)
       if not (x > 0) then
         wifi()
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猫眼电影选择城市.bmp", 85, 246, 61, 328, 103)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猫眼电影选择城市.bmp", 85, 246, 61, 328, 103)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猫眼电影选择城市.bmp", 85, 246, 61, 328, 103)
         if x > 0 then
           mSleep(2800)
           break
@@ -5353,8 +5180,7 @@ function zrw() --{{{
             break
           end
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
         if x > 0 then
           mSleep(500)
           click(x, y)
@@ -5488,8 +5314,7 @@ function zrw() --{{{
         mouse(300, 900, 300, 300, 17)
         mSleep(1000)
         while true do
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/百度返回.bmp", 85, 15, 57, 81, 119)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/百度返回.bmp", 85, 15, 57, 81, 119)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/百度返回.bmp", 85, 15, 57, 81, 119)
           if x > 0 then
             click(53, 90)
             mSleep(800)
@@ -5540,8 +5365,7 @@ function zrw() --{{{
             wifi()
             mSleep(4000)
             wifi()
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/百度到这去.bmp", 90, 433, 319, 511, 404)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/百度到这去.bmp", 90, 433, 319, 511, 404)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/百度到这去.bmp", 90, 433, 319, 511, 404)
             if x > 0 then
               click(x, y)
               mSleep(2000)
@@ -5574,8 +5398,7 @@ function zrw() --{{{
     if _UPVALUE0_.fl29 == 0 then
       while true do
         mSleep(500)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
         if x > 0 then
           mSleep(300)
           click(x, y)
@@ -5584,8 +5407,7 @@ function zrw() --{{{
         x,y = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
         if x > 0 then
           mSleep(800)
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
           if x > 0 then
             mSleep(300)
             click(x, y)
@@ -5596,8 +5418,7 @@ function zrw() --{{{
           break
         end
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
       if x > 0 then
         mSleep(300)
         click(x, y)
@@ -5645,14 +5466,12 @@ function zrw() --{{{
             click(x, y)
             mSleep(1000)
           end
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续注册.bmp", 60, 112, 633, 265, 725)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续注册.bmp", 60, 112, 633, 265, 725)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续注册.bmp", 60, 112, 633, 265, 725)
           if x > 0 then
             click(x, y)
             mSleep(1000)
           end
-          y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/挖财确定.bmp", 60, 269, 634, 374, 689)
-          x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/挖财确定.bmp", 60, 269, 634, 374, 689)
+          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/挖财确定.bmp", 60, 269, 634, 374, 689)
           if x > 0 then
             click(x, y)
             mSleep(1000)
@@ -5889,14 +5708,12 @@ function zrw() --{{{
           end
         end
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
       if x > 0 then
         click(x, y)
         mSleep(1000)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
       if x > 0 then
         mSleep(6500)
         break
@@ -5921,8 +5738,7 @@ function zrw() --{{{
           end
         end
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
       if x > 0 then
         click(x, y)
         mSleep(1000)
@@ -5930,8 +5746,7 @@ function zrw() --{{{
       mouse(300, 800, 300, 500, 20)
       mSleep(1800)
       repeat
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
         if x > 0 then
           click(x, y)
           mSleep(1000)
@@ -5963,14 +5778,12 @@ function zrw() --{{{
             end
           end
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
         if x > 0 then
           click(x, y)
           mSleep(1000)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
         if x > 0 then
           break
         end
@@ -6332,8 +6145,7 @@ function zrw() --{{{
       click(xx, yy)
       mSleep(1500)
       while true do
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续播放.bmp", 65, 448, 636, 500, 696)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续播放.bmp", 65, 448, 636, 500, 696)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续播放.bmp", 65, 448, 636, 500, 696)
         if x > 0 then
           click(x, y)
           mSleep(900)
@@ -6369,8 +6181,7 @@ function zrw() --{{{
     click(xx, yy)
     mSleep(1500)
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续播放.bmp", 65, 448, 636, 500, 696)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续播放.bmp", 65, 448, 636, 500, 696)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续播放.bmp", 65, 448, 636, 500, 696)
       if x > 0 then
         click(x, y)
         mSleep(900)
@@ -6517,12 +6328,10 @@ function zrw() --{{{
         k = 0
       end
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页2.bmp", 80, 48, 1099, 87, 1132)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页2.bmp", 80, 48, 1099, 87, 1132)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页2.bmp", 80, 48, 1099, 87, 1132)
       if x > 0 then
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 80, 49, 1097, 86, 1132)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 80, 49, 1097, 86, 1132)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 80, 49, 1097, 86, 1132)
       end
       if x > 0 then
         mSleep(4000)
@@ -6568,8 +6377,7 @@ function zrw() --{{{
         click(x, y)
         mSleep(2000)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
       if x > 0 then
         mSleep(1000)
         break
@@ -6635,8 +6443,7 @@ function zrw() --{{{
           click(x, y)
           mSleep(2000)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
         if x > 0 then
           mSleep(1000)
           break
@@ -6663,8 +6470,7 @@ function zrw() --{{{
         k = 0
       end
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
       if x > 0 then
         mSleep(4500)
         break
@@ -6689,15 +6495,13 @@ function zrw() --{{{
       mSleep(3500)
       while true do
         wifi()
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/打开.bmp", 95, 480, 240, 660, 399)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/打开.bmp", 95, 480, 240, 660, 399)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/打开.bmp", 95, 480, 240, 660, 399)
         if x > 0 then
           mSleep(1000)
           appRun("com.Lvmama.Lvmama")
           mSleep(3000)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
         if x > 0 then
           break
         end
@@ -6953,8 +6757,7 @@ function zrw() --{{{
     mSleep(4000)
     while true do
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
       if x > 0 then
         mSleep(3000)
         break
@@ -6970,8 +6773,7 @@ function zrw() --{{{
       mSleep(4000)
       while true do
         wifi()
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
         if x > 0 then
           break
         end
@@ -7722,8 +7524,7 @@ function gamez() --{{{
       while true do
         k = k + 1
         mSleep(400)
-        y = _UPVALUE0_.findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我是少侠资源更新.bmp", 85, 231, 421, 424, 691)
-        x = _UPVALUE0_.findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我是少侠资源更新.bmp", 85, 231, 421, 424, 691)
+        x,y = _UPVALUE0_.findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我是少侠资源更新.bmp", 85, 231, 421, 424, 691)
         if x > 0 then
           mSleep(1000)
           click(234, 567)
@@ -8279,8 +8080,7 @@ function zrwopen() --{{{
     while true do
       k = k + 1
       if k ~= 180 then
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认1.bmp", 90, 273, 636, 360, 679)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认1.bmp", 90, 273, 636, 360, 679)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认1.bmp", 90, 273, 636, 360, 679)
         if 0 < x then
           click(x, y)
           mSleep(1000)
@@ -8308,8 +8108,7 @@ function zrwopen() --{{{
           k = k + 1
           if k ~= 100 then
             mSleep(900)
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
             if 0 < x then
               click(x, y)
               mSleep(1000)
@@ -8319,20 +8118,17 @@ function zrwopen() --{{{
               click(x, y)
               mSleep(1000)
             end
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/FM登陆游戏.bmp", 90, 229, 475, 418, 522)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/FM登陆游戏.bmp", 90, 229, 475, 418, 522)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/FM登陆游戏.bmp", 90, 229, 475, 418, 522)
             if 0 < x then
               click(x, y)
               mSleep(1000)
             end
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm进入游戏.bmp", 90, 256, 863, 381, 894)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm进入游戏.bmp", 90, 256, 863, 381, 894)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm进入游戏.bmp", 90, 256, 863, 381, 894)
             if 0 < x then
               click(x, y)
               mSleep(1000)
             end
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
             if 0 < x then
               mSleep(2100)
               click(288, 529)
@@ -8340,8 +8136,7 @@ function zrwopen() --{{{
               break
             end
             jm = 0
-            y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm队标.bmp", 90, 90, 227, 152, 288)
-            x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm队标.bmp", 90, 90, 227, 152, 288)
+            x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm队标.bmp", 90, 90, 227, 152, 288)
             if 0 < x then
               jm = jm + 1
               if jm == 1 then
@@ -8358,21 +8153,18 @@ function zrwopen() --{{{
               mSleep(500)
               k = k + 1
               if k ~= 180 then
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm确认.bmp", 90, 266, 630, 366, 686)
                 if 0 < x then
                   click(x, y)
                   mSleep(1000)
                 end
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm美女.bmp", 90, 414, 676, 544, 802)
                 if 0 < x then
                   mSleep(2100)
                   click(288, 529)
                   mSleep(1500)
                 end
-                y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm输入队伍名称.bmp", 90, 297, 391, 371, 434)
-                x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm输入队伍名称.bmp", 90, 297, 391, 371, 434)
+                x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/fm输入队伍名称.bmp", 90, 297, 391, 371, 434)
                 if 0 < x then
                   click(195, 411)
                   mSleep(2100)
@@ -8579,8 +8371,7 @@ function zrwopen() --{{{
     mSleep(4000)
     while true do
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美啦主页.bmp", 85, 45, 53, 118, 135)
       if 0 < x then
         mSleep(1000)
         break
@@ -8699,8 +8490,7 @@ function zrwopen() --{{{
         click(x, y)
         mSleep(800)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反复注册，邮箱重复.bmp", 90, 171, 453, 448, 576)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反复注册，邮箱重复.bmp", 90, 171, 453, 448, 576)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反复注册，邮箱重复.bmp", 90, 171, 453, 448, 576)
       if 0 < x then
         mSleep(300)
         click(317, 646)
@@ -8722,8 +8512,7 @@ function zrwopen() --{{{
         _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", a, s)
         _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", _UPVALUE0_.c, _UPVALUE0_.d)
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
         if 0 < x then
           mSleep(300)
           click(322, 644)
@@ -8778,8 +8567,7 @@ function zrwopen() --{{{
     while true do
       mSleep(400)
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/流水.bmp", 90, 111, 1095, 161, 1125)
       if 0 < x then
         mSleep(1000)
         break
@@ -8850,8 +8638,7 @@ function zrwopen() --{{{
     while true do
       wifi()
       mSleep(300)
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
       if 0 < x then
         click(43, 1095)
         mSleep(1000)
@@ -8862,8 +8649,7 @@ function zrwopen() --{{{
         break
       end
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说.bmp", 60, 104, 621, 198, 679)
     if 0 < x then
       click(43, 1095)
       mSleep(1000)
@@ -8897,8 +8683,7 @@ function zrwopen() --{{{
         end
         mousekk(550, 400, 100, 400, 10)
         mSleep(500)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众GPS.bmp", 85, 28, 230, 117, 280)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众GPS.bmp", 85, 28, 230, 117, 280)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/大众GPS.bmp", 85, 28, 230, 117, 280)
         if 0 < x then
         else
           click(83, 256)
@@ -8909,8 +8694,7 @@ function zrwopen() --{{{
         y = math.random(380, 1100)
         click(70, y)
         mSleep(3000)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
         if 0 < x then
           mSleep(200)
           click(x, y)
@@ -8923,8 +8707,7 @@ function zrwopen() --{{{
       k = k + 1
       if not (k > 20) then
         mSleep(500)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/以后再说大众.bmp", 90, 79, 594, 567, 693)
         if 0 < x then
           mSleep(200)
           click(x, y)
@@ -8965,8 +8748,7 @@ function zrwopen() --{{{
         k = 5
         mSleep(800)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
       if 0 < x then
         if not (k < 10) then
           do break end
@@ -9003,8 +8785,7 @@ function zrwopen() --{{{
           k = 5
           mSleep(800)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/领刀币.bmp", 80, 115, 975, 238, 1027)
         if 0 < x then
           break
         end
@@ -9032,8 +8813,7 @@ function zrwopen() --{{{
       end
     end
     while true do
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/今日头条界面.bmp", 90, 200, 51, 434, 117)
       if 0 < x then
         mSleep(1000)
         break
@@ -9067,8 +8847,7 @@ function zrwopen() --{{{
         click(x, y)
         mSleep(500)
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 251, 587, 380, 653)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 251, 587, 380, 653)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 80, 251, 587, 380, 653)
         if 0 < x then
           mSleep(300)
           click(x, y)
@@ -9370,8 +9149,7 @@ function zrwopen() --{{{
     mSleep(4000)
     while true do
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/开启墨迹之旅.bmp", 80, 194, 996, 452, 1058)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/开启墨迹之旅.bmp", 80, 194, 996, 452, 1058)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/开启墨迹之旅.bmp", 80, 194, 996, 452, 1058)
       if 0 < x then
         mSleep(500)
         click(x, y)
@@ -9454,8 +9232,7 @@ function zrwopen() --{{{
         click(94, 270)
         mSleep(500)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大太棒了.bmp", 85, 538, 199, 599, 322)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大太棒了.bmp", 85, 538, 199, 599, 322)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大太棒了.bmp", 85, 538, 199, 599, 322)
       if 0 < x then
         mSleep(1100)
         break
@@ -9464,8 +9241,7 @@ function zrwopen() --{{{
     while true do
       while true do
         mSleep(800)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大打勾.bmp", 80, 27, 380, 466, 635)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大打勾.bmp", 80, 27, 380, 466, 635)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/特大打勾.bmp", 80, 27, 380, 466, 635)
         if 0 < x then
           mSleep(500)
           click(x, y)
@@ -9559,8 +9335,7 @@ function zrwopen() --{{{
     mSleep(4000)
     while true do
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗地图身边.bmp", 85, 70, 1073, 142, 1114)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗地图身边.bmp", 85, 70, 1073, 142, 1114)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗地图身边.bmp", 85, 70, 1073, 142, 1114)
       if 0 < x then
         mSleep(1500)
         break
@@ -9585,8 +9360,7 @@ function zrwopen() --{{{
       if 0 < x then
         _UPVALUE0_.x1 = 1
       else
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
       end
       if 0 < x then
         if _UPVALUE0_.x1 == 0 then
@@ -9648,8 +9422,7 @@ function zrwopen() --{{{
     mSleep(4000)
     while true do
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/新浪体育主页三杆.bmp", 90, 25, 57, 78, 117)
       if 0 < x then
         mSleep(1000)
         break
@@ -9697,8 +9470,7 @@ function zrwopen() --{{{
         else
           appRun("com.meituan.imeituan")
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
         if 0 < x then
           mSleep(500)
           click(x, y)
@@ -9709,8 +9481,7 @@ function zrwopen() --{{{
           mSleep(1000)
           break
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美团定位城市.bmp", 85, 21, 228, 159, 271)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美团定位城市.bmp", 85, 21, 228, 159, 271)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/美团定位城市.bmp", 85, 21, 228, 159, 271)
         if 0 < x then
           k = k + 1
           if k < 4 then
@@ -9810,8 +9581,7 @@ function zrwopen() --{{{
     while true do
       mSleep(500)
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猫眼电影选择城市.bmp", 85, 246, 61, 328, 103)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猫眼电影选择城市.bmp", 85, 246, 61, 328, 103)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/猫眼电影选择城市.bmp", 85, 246, 61, 328, 103)
       if 0 < x then
         mSleep(2800)
         break
@@ -9829,8 +9599,7 @@ function zrwopen() --{{{
         break
       end
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/知道了.bmp", 75, 253, 594, 369, 659)
     if 0 < x then
       mSleep(500)
       click(x, y)
@@ -9896,8 +9665,7 @@ function zrwopen() --{{{
     mSleep(4000)
     while true do
       mSleep(500)
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
       if 0 < x then
         mSleep(300)
         click(x, y)
@@ -9906,8 +9674,7 @@ function zrwopen() --{{{
       x,y = findColorInRegionFuzzy(16760832, 95, 420, 800, 420, 800)
       if 0 < x then
         mSleep(800)
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
         if 0 < x then
           mSleep(300)
           click(x, y)
@@ -9918,8 +9685,7 @@ function zrwopen() --{{{
         break
       end
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
     if 0 < x then
       mSleep(300)
       click(x, y)
@@ -9967,14 +9733,12 @@ function zrwopen() --{{{
           click(x, y)
           mSleep(1000)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续注册.bmp", 60, 112, 633, 265, 725)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续注册.bmp", 60, 112, 633, 265, 725)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/继续注册.bmp", 60, 112, 633, 265, 725)
         if 0 < x then
           click(x, y)
           mSleep(1000)
         end
-        y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/挖财确定.bmp", 60, 269, 634, 374, 689)
-        x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/挖财确定.bmp", 60, 269, 634, 374, 689)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/挖财确定.bmp", 60, 269, 634, 374, 689)
         if 0 < x then
           click(x, y)
           mSleep(1000)
@@ -10133,14 +9897,12 @@ function zrwopen() --{{{
           end
         end
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/上海.bmp", 55, 143, 500, 542, 788)
       if 0 < x then
         click(x, y)
         mSleep(1000)
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/途牛旅游首页电话.bmp", 90, 576, 58, 619, 104)
       if 0 < x then
         mSleep(6500)
         break
@@ -10523,8 +10285,7 @@ function zrwopen() --{{{
         k = 0
       end
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
       if 0 < x then
         mSleep(4000)
         break
@@ -10568,8 +10329,7 @@ function zrwopen() --{{{
           end
         end
       end
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/同程首页.bmp", 90, 49, 1097, 86, 1132)
       if 0 < x then
         mSleep(1000)
         break
@@ -10599,8 +10359,7 @@ function zrwopen() --{{{
         k = 0
       end
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/驴妈首页.bmp", 90, 48, 1087, 86, 1131)
       if 0 < x then
         mSleep(1500)
         break
@@ -10773,8 +10532,7 @@ function zrwopen() --{{{
     mSleep(4000)
     while true do
       wifi()
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/去哪儿首页.bmp", 80, 290, 1096, 324, 1133)
       if 0 < x then
         mSleep(2000)
         break
@@ -10803,12 +10561,10 @@ function overtf() --{{{
       k = 0
     end
     wifi()
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
     if x > 0 then
     else
-      y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
-      x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取.bmp", 60, 242, 778, 296, 828)
     end
     if x > 0 then
       click(597, 171)
@@ -10824,8 +10580,7 @@ function overtf() --{{{
       click(40, 84)
       mSleep(2000)
     end
-    y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/淘粉吧主页.bmp", 80, 14, 40, 140, 112)
-    x = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/淘粉吧主页.bmp", 80, 14, 40, 140, 112)
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/淘粉吧主页.bmp", 80, 14, 40, 140, 112)
     if x > 0 then
       mSleep(3500)
       break
