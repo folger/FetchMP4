@@ -367,6 +367,7 @@ function mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_) --{{{
       if x3 ~= 1 or y3 ~= 1 then
         mSleep(_ARG_4_)
         touchMove(1, xx, yy)
+		break
       end
     end
     touchUp(1)
@@ -442,7 +443,7 @@ function enmsim() --{{{
           mSleep(5000)
           click(x1, y1)
         end
-        mSleep(2000)
+        mSleep(2500)
 		x,y = findImage("/var/touchelf/scripts/yclm/NoSimCard.bmp")
         if x ~= -1 and y ~= -1 then
 		  click(x+240, y+150)
@@ -1040,16 +1041,16 @@ function reustxt() --{{{
 end --}}}
 function hangshujilu(_ARG_0_) --{{{
   do
-    file = io.open("/var/touchelf/scripts/读取到的第几行.txt", "w")
-    file:write(_ARG_0_)
-    file:close()
+    ff = io.open("/var/touchelf/scripts/读取到的第几行.txt", "w")
+    ff:write(_ARG_0_)
+    ff:close()
   end
 end --}}}
 function hangshujilu1(_ARG_0_) --{{{
   do
-    file = io.open("/var/touchelf/scripts/读取到的第几行.txt", "w")
-    file:write(_ARG_0_)
-    file:close()
+    ff = io.open("/var/touchelf/scripts/读取到的第几行.txt", "w")
+    ff:write(_ARG_0_)
+    ff:close()
   end
 end --}}}
 function srac() --{{{
@@ -1334,6 +1335,7 @@ function tf() --{{{
     if 0 < x then
       click(x, y)
       mSleep(1000)
+	  break
     end
     wifi()
     x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖2.bmp", 60, 242, 778, 296, 828)
@@ -1344,6 +1346,7 @@ function tf() --{{{
     if 0 < x then
       click(597, 171)
       mSleep(800)
+	  break
     end
     x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/淘粉吧主页.bmp", 80, 14, 40, 140, 112)
     if 0 < x then
