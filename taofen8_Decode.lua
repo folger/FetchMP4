@@ -342,38 +342,36 @@ function mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_) --{{{
     touchDown(1, _ARG_0_, _ARG_1_)
     xx = _ARG_0_
     yy = _ARG_1_
-    --while true do
-      --if _ARG_2_ < _ARG_0_ and x3 == 0 then
-        --xx = xx - 30
-        --if _ARG_2_ > xx then
-          --x3 = 1
-        --end
-      --elseif x3 == 0 then
-        --xx = xx + 30
-        --if _ARG_2_ < xx then
-          --x3 = 1
-        --end
-      --end
-      --if _ARG_3_ < _ARG_1_ and y3 == 0 then
-        --yy = yy - 30
-        --if _ARG_3_ > yy then
-          --y3 = 1
-        --end
-      --elseif y3 == 0 then
-        --yy = yy + 30
-        --if _ARG_3_ < yy then
-          --y3 = 1
-        --end
-      --end
-      --if x3 ~= 1 or y3 ~= 1 then
-        --mSleep(_ARG_4_)
-        --touchMove(1, xx, yy)
-		--break
-      --end
-    --end
-	mSleep(_ARG_4_)
-	touchMove(1, _ARG_2_, _ARG_3_)
-    mSleep(100)
+    while true do
+      if _ARG_2_ < _ARG_0_ and x3 == 0 then
+        xx = xx - 30
+        if _ARG_2_ > xx then
+          x3 = 1
+        end
+      elseif x3 == 0 then
+        xx = xx + 30
+        if _ARG_2_ < xx then
+          x3 = 1
+        end
+      end
+      if _ARG_3_ < _ARG_1_ and y3 == 0 then
+        yy = yy - 30
+        if _ARG_3_ > yy then
+          y3 = 1
+        end
+      elseif y3 == 0 then
+        yy = yy + 30
+        if _ARG_3_ < yy then
+          y3 = 1
+        end
+      end
+      if x3 ~= 1 or y3 ~= 1 then
+        mSleep(_ARG_4_)
+        touchMove(1, xx, yy)
+      else
+        break
+      end
+    end
     touchUp(1)
     mSleep(100)
   end
@@ -1026,13 +1024,17 @@ function reustxt() --{{{
       kshs = 1
     else
       kshs0 = kaishigeshu:read()
+      kaishigeshu:close()
       kshs = kshs0 + 1
     end
     for _FORV_3_ = 1, kshs do
       xinxi = file_zhanghao:read()
     end
+    file_zhanghao:close()
     if _FOR_ == "无限循环" and xinxi == nil then
       hangshujilu(0)
+    else
+      break
     end
   end
   i = 1
@@ -1041,14 +1043,10 @@ function reustxt() --{{{
   b = string.sub(xinxi, douhao1 + 1)
   geshu = kshs + i - 1
   hangshujilu(geshu)
-  xinxi = file_zhanghao:read()
+  --xinxi = file_zhanghao:read()
 end --}}}
 function hangshujilu(_ARG_0_) --{{{
-  do
-    ff = io.open("/var/touchelf/scripts/读取到的第几行.txt", "w")
-    ff:write(_ARG_0_)
-    ff:close()
-  end
+  hangshujilu1(_ARG_0_)
 end --}}}
 function hangshujilu1(_ARG_0_) --{{{
   do
