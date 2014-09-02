@@ -296,43 +296,44 @@ function idtime() --{{{
   end
 end --}}}
 function mouse(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_) --{{{
-  do
-    x3 = 0
-    y3 = 0
-    touchDown(1, _ARG_0_, _ARG_1_)
-    xx = _ARG_0_
-    yy = _ARG_1_
-    while true do
-      if _ARG_2_ < _ARG_0_ and x3 == 0 then
-        xx = xx - 10
-        if _ARG_2_ > xx then
-          x3 = 1
-        end
-      elseif x3 == 0 then
-        xx = xx + 10
-        if _ARG_2_ < xx then
-          x3 = 1
-        end
-      end
-      if _ARG_3_ < _ARG_1_ and y3 == 0 then
-        yy = yy - 10
-        if _ARG_3_ > yy then
-          y3 = 1
-        end
-      elseif y3 == 0 then
-        yy = yy + 10
-        if _ARG_3_ < yy then
-          y3 = 1
-        end
-      end
-      if x3 ~= 1 or y3 ~= 1 then
-        mSleep(_ARG_4_)
-        touchMove(1, xx, yy)
-      end
-    end
-    touchUp(1)
-    mSleep(100)
-  end
+  --do
+    --x3 = 0
+    --y3 = 0
+    --touchDown(1, _ARG_0_, _ARG_1_)
+    --xx = _ARG_0_
+    --yy = _ARG_1_
+    --while true do
+      --if _ARG_2_ < _ARG_0_ and x3 == 0 then
+        --xx = xx - 10
+        --if _ARG_2_ > xx then
+          --x3 = 1
+        --end
+      --elseif x3 == 0 then
+        --xx = xx + 10
+        --if _ARG_2_ < xx then
+          --x3 = 1
+        --end
+      --end
+      --if _ARG_3_ < _ARG_1_ and y3 == 0 then
+        --yy = yy - 10
+        --if _ARG_3_ > yy then
+          --y3 = 1
+        --end
+      --elseif y3 == 0 then
+        --yy = yy + 10
+        --if _ARG_3_ < yy then
+          --y3 = 1
+        --end
+      --end
+      --if x3 ~= 1 or y3 ~= 1 then
+        --mSleep(_ARG_4_)
+        --touchMove(1, xx, yy)
+      --end
+    --end
+    --touchUp(1)
+    --mSleep(100)
+  --end
+  mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_)
 end --}}}
 function mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_) --{{{
   do
@@ -341,35 +342,38 @@ function mousekk(_ARG_0_, _ARG_1_, _ARG_2_, _ARG_3_, _ARG_4_) --{{{
     touchDown(1, _ARG_0_, _ARG_1_)
     xx = _ARG_0_
     yy = _ARG_1_
-    while true do
-      if _ARG_2_ < _ARG_0_ and x3 == 0 then
-        xx = xx - 30
-        if _ARG_2_ > xx then
-          x3 = 1
-        end
-      elseif x3 == 0 then
-        xx = xx + 30
-        if _ARG_2_ < xx then
-          x3 = 1
-        end
-      end
-      if _ARG_3_ < _ARG_1_ and y3 == 0 then
-        yy = yy - 30
-        if _ARG_3_ > yy then
-          y3 = 1
-        end
-      elseif y3 == 0 then
-        yy = yy + 30
-        if _ARG_3_ < yy then
-          y3 = 1
-        end
-      end
-      if x3 ~= 1 or y3 ~= 1 then
-        mSleep(_ARG_4_)
-        touchMove(1, xx, yy)
-		break
-      end
-    end
+    --while true do
+      --if _ARG_2_ < _ARG_0_ and x3 == 0 then
+        --xx = xx - 30
+        --if _ARG_2_ > xx then
+          --x3 = 1
+        --end
+      --elseif x3 == 0 then
+        --xx = xx + 30
+        --if _ARG_2_ < xx then
+          --x3 = 1
+        --end
+      --end
+      --if _ARG_3_ < _ARG_1_ and y3 == 0 then
+        --yy = yy - 30
+        --if _ARG_3_ > yy then
+          --y3 = 1
+        --end
+      --elseif y3 == 0 then
+        --yy = yy + 30
+        --if _ARG_3_ < yy then
+          --y3 = 1
+        --end
+      --end
+      --if x3 ~= 1 or y3 ~= 1 then
+        --mSleep(_ARG_4_)
+        --touchMove(1, xx, yy)
+		--break
+      --end
+    --end
+	mSleep(_ARG_4_)
+	touchMove(1, _ARG_2_, _ARG_3_)
+    mSleep(100)
     touchUp(1)
     mSleep(100)
   end
