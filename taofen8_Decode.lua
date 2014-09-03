@@ -1416,118 +1416,117 @@ function tf() --{{{
   k1 = 0
   klkl = 0
   while true do
-    while true do
-      mSleep(300)
-      k = k + 1
-      if k == 45 then
-        k = 0
-        x,y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
-        if 0 < x then
-        else
-          x,y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
-        end
-        if 0 < x then
-          click(x, y)
-          mSleep(2500)
-        end
-      end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
-      if 0 < x then
-        mSleep(1000)
-        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb登陆框.bmp", 90, 83, 253, 170, 404)
-        if 0 < x then
-          click(298, 286)
-          mSleep(1800)
-          inputText(a)
-          mSleep(900)
-          click(284, 374)
-          mSleep(1800)
-          inputText(b)
-          mSleep(800)
-          click(599, 1094)
-        end
-      end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
+    mSleep(300)
+    k = k + 1
+    if k == 45 then
+      k = 0
+      x,y = findColorInRegionFuzzy(10724259, 85, 37, 81, 43, 87)
       if 0 < x then
       else
-        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
+        x,y = findColorInRegionFuzzy(11250603, 85, 41, 81, 47, 87)
       end
       if 0 < x then
-        click(597, 171)
+        click(x, y)
+        mSleep(2500)
+      end
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登陆并授权.bmp", 90, 260, 450, 390, 580)
+    if 0 < x then
+      mSleep(1000)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb登陆框.bmp", 90, 83, 253, 170, 404)
+      if 0 < x then
+        click(298, 286)
+        mSleep(1800)
+        inputText(a)
+        mSleep(900)
+        click(284, 374)
+        mSleep(1800)
+        inputText(b)
         mSleep(800)
+        click(599, 1094)
       end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb继续.bmp", 80, 280, 525, 370, 682)
-      if 0 < x then
-        click(x, y)
-        mSleep(5000)
-      end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb授权.bmp", 80, 280, 490, 335, 645)
-      if 0 < x then
-        click(x, y)
-        mSleep(5000)
-      end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登记领奖.bmp", 80, 242, 778, 296, 828)
+    if 0 < x then
+    else
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/登录领取2.bmp", 80, 242, 778, 296, 828)
+    end
+    if 0 < x then
+      click(597, 171)
+      mSleep(800)
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb继续.bmp", 80, 280, 525, 370, 682)
+    if 0 < x then
+      click(x, y)
+      mSleep(5000)
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb授权.bmp", 80, 280, 490, 335, 645)
+    if 0 < x then
+      click(x, y)
+      mSleep(5000)
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示.bmp", 80, 67, 417, 113, 469)
+    if 0 < x then
+    else
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
+    end
+    if 0 < x then
+      mSleep(2300)
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
       if 0 < x then
       else
-        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb温馨提示2.bmp", 80, 67, 417, 113, 469)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
       end
-      if 0 < x then
-        mSleep(2300)
-        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚.bmp", 80, 209, 685, 500, 760)
-        if 0 < x then
-        else
-          x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/粉赚2.bmp", 80, 209, 685, 500, 760)
-        end
-        if 0 < x then
-          click(x, y)
-          mSleep(800)
-        else
-          click(571, 175)
-          mSleep(800)
-        end
-      end
-      x,y = findColorInRegion(16203135, 295, 843, 295, 843)
       if 0 < x then
         click(x, y)
         mSleep(800)
-      end
-      inow()
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
-      if 0 < x then
-        click(318, 663)
-        mSleep(2000)
-      end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
-      if 0 < x then
-        click(x, y)
-        mSleep(500)
-      end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
-      if 0 < x then
-        mSleep(1000)
-        mouse(300, 180, 300, 1000, 25)
-        mSleep(4000)
-      end
-      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
-      if 0 < x then
+        break
       else
-        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
-      end
-      if 0 < x then
+        click(571, 175)
         mSleep(800)
-        do break end
-        if klkl == 0 then
-          klkl = 1
-        end
-        if zzfb == "开启" then
-          if zfb == "" then
-            for _FORV_3_ = 1, 5 do
-              notifyMessage("打开自动绑定。可是没设置支付宝帐号")
-            end
-            _FOR_()
+      end
+    end
+    x,y = findColorInRegion(16203135, 295, 843, 295, 843)
+    if 0 < x then
+      click(x, y)
+      mSleep(800)
+    end
+    inow()
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb查询失败.bmp", 80, 238, 456, 326, 501)
+    if 0 < x then
+      click(318, 663)
+      mSleep(2000)
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/签到授奖.bmp", 80, 76, 451, 182, 486)
+    if 0 < x then
+      click(x, y)
+      mSleep(500)
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb加载失败.bmp", 80, 140, 580, 206, 680)
+    if 0 < x then
+      mSleep(1000)
+      mouse(300, 180, 300, 1000, 25)
+      mSleep(4000)
+    end
+    x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标.bmp", 80, 505, 152, 535, 329)
+    if 0 < x then
+    else
+      x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/tb人民币标2.bmp", 80, 505, 152, 535, 329)
+    end
+    if 0 < x then
+      mSleep(800)
+      do break end
+      if klkl == 0 then
+        klkl = 1
+      end
+      if zzfb == "开启" then
+        if zfb == "" then
+          for _FORV_3_ = 1, 5 do
+            notifyMessage("打开自动绑定。可是没设置支付宝帐号")
           end
-          inzfb()
+          _FOR_()
         end
+        inzfb()
       end
     end
   end
@@ -2535,6 +2534,7 @@ function main() --{{{
     --end
     repeat
       _FOR_()
+      appopen()
       keyDown("HOME")
       mSleep(150)
       keyUp("HOME")
