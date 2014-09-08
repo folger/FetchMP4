@@ -2965,8 +2965,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(4000)
   end
-  if _UPVALUE0_.u4 == 1 then
-    _UPVALUE0_.u4 = 2
+  if u4 == 1 then
+    u4 = 2
     appRun("com.meilapp.meila")
     mSleep(4000)
     while true do
@@ -3013,13 +3013,13 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2500)
   end
-  if _UPVALUE0_.u5 == 1 then
-    _UPVALUE0_.u5 = 2
+  if u5 == 1 then
+    u5 = 2
     appRun("com.51fanli.fanli")
     mSleep(3000)
     while true do
       mSleep(400)
-      if _UPVALUE0_.appRunning("com.51fanli.fanli") then
+      if appRunning("com.51fanli.fanli") then
       else
         appRun("com.51fanli.fanli")
       end
@@ -3038,7 +3038,7 @@ function zrw() --{{{
       mouse(550, 400, 120, 400, 3)
       mSleep(300)
     end
-    if _UPVALUE0_.fl5 == 0 then
+    if fl5 == 0 then
       while true do
         mSleep(1000)
         wifi()
@@ -3077,26 +3077,26 @@ function zrw() --{{{
       sjsz(4)
       inputText(a)
       inputText(s)
-      _UPVALUE0_.n = math.random(1, 5)
-      if _UPVALUE0_.n == 1 then
+      n = math.random(1, 5)
+      if n == 1 then
         inputText("@sohu.com")
       end
-      if _UPVALUE0_.n == 2 then
+      if n == 2 then
         inputText("@163.com")
       end
-      if _UPVALUE0_.n == 3 then
+      if n == 3 then
         inputText("@sina.com")
       end
-      if _UPVALUE0_.n == 4 then
+      if n == 4 then
         inputText("@qq.com")
       end
-      if _UPVALUE0_.n == 5 then
+      if n == 5 then
         inputText("@yeah.com")
       end
       mSleep(600)
-      _UPVALUE0_.d = "@sohu.com"
-      _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", a, s)
-      _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", _UPVALUE0_.c, _UPVALUE0_.d)
+      d = "@sohu.com"
+      c = string.format("%s%s", a, s)
+      c = string.format("%s%s", c, d)
       click(149, 376)
       mSleep(800)
       sjen(7)
@@ -3104,7 +3104,7 @@ function zrw() --{{{
       inputText(a)
       inputText(s)
       mSleep(600)
-      a = _UPVALUE0_.string.format("%s%s", a, s)
+      a = string.format("%s%s", a, s)
       click(146, 464)
       mSleep(800)
       sjen(10)
@@ -3112,7 +3112,7 @@ function zrw() --{{{
       inputText(a)
       inputText(s)
       mSleep(600)
-      b = _UPVALUE0_.pass
+      b = pass
       while true do
         x,y = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
         if x > 0 then
@@ -3138,9 +3138,9 @@ function zrw() --{{{
           inputText(s)
           inputText("@sohu.com")
           mSleep(600)
-          _UPVALUE0_.d = "@sohu.com"
-          _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", a, s)
-          _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", _UPVALUE0_.c, _UPVALUE0_.d)
+          d = "@sohu.com"
+          c = string.format("%s%s", a, s)
+          c = string.format("%s%s", c, d)
         else
           x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
           if x > 0 then
@@ -3159,7 +3159,7 @@ function zrw() --{{{
             inputText(a)
             inputText(s)
             mSleep(600)
-            a = _UPVALUE0_.string.format("%s%s", a, s)
+            a = string.format("%s%s", a, s)
           else
             mSleep(300)
             x,y = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
@@ -3192,8 +3192,8 @@ function zrw() --{{{
         wifi()
         x = math.random(87, 550)
         y = math.random(280, 1050)
-        _UPVALUE0_.c = _UPVALUE0_.getColor(x, y)
-      until _UPVALUE0_.c ~= "0xF3F3F3"
+        c = getColor(x, y)
+      until c ~= "0xF3F3F3"
       click(x, y)
       mSleep(7000)
       wifi()
@@ -3206,14 +3206,14 @@ function zrw() --{{{
       mouse(300, 850, 300, 500, 20)
       mSleep(1500)
     end
-    _UPVALUE0_[_FOR_] = 1
+    --_UPVALUE0_[_FOR_] = 1
     keyDown("HOME")
     mSleep(150)
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u6 == 1 then
-    _UPVALUE0_.u6 = 2
+  if u6 == 1 then
+    u6 = 2
     appRun("com.kingdee.MyMoney")
     mSleep(3000)
     while true do
@@ -3296,8 +3296,8 @@ function zrw() --{{{
         end
         click(261, 492)
         mSleep(2500)
-        _UPVALUE0_.e = math.random(2, 4)
-        for _FORV_3_ = 1, _UPVALUE0_.e do
+        e = math.random(2, 4)
+        for _FORV_3_ = 1, e do
           x = math.random(130, 460)
           y = math.random(770, 1010)
           click(x, y)
@@ -3313,8 +3313,8 @@ function zrw() --{{{
       end
     until not (x > 0)
   end
-  if _UPVALUE0_.u7 == 1 then
-    _UPVALUE0_.u7 = 2
+  if u7 == 1 then
+    u7 = 2
     appRun("ctrip.com")
     mSleep(4000)
     k = 0
@@ -3367,8 +3367,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u9 == 1 then
-    _UPVALUE0_.u9 = 2
+  if u9 == 1 then
+    u9 = 2
     appRun("com.v1.cai")
     mSleep(4000)
     while true do
@@ -3410,7 +3410,7 @@ function zrw() --{{{
           break
         end
       end
-      if _UPVALUE0_.fl9 == 0 and _FORV_3_ == 2 then
+      if fl9 == 0 and _FORV_3_ == 2 then
         while true do
           x,y = findColorInRegionFuzzy(16690205, 85, 173, 369, 173, 369)
           if x > 0 then
@@ -3429,14 +3429,14 @@ function zrw() --{{{
         end
         click(239, 197)
         mSleep(800)
-        _UPVALUE0_.yi = math.random(6, 10)
-        _UPVALUE0_.yi = math.random(6, 10)
-        _UPVALUE0_.yi = math.random(6, 10)
-        sjen(_UPVALUE0_.yi)
+        yi = math.random(6, 10)
+        yi = math.random(6, 10)
+        yi = math.random(6, 10)
+        sjen(yi)
         sjsz(2)
-        sjen(_UPVALUE0_.yi)
+        sjen(yi)
         sjsz(2)
-        sjen(_UPVALUE0_.yi)
+        sjen(yi)
         sjsz(2)
         inputText(a)
         inputText(s)
@@ -3523,8 +3523,8 @@ function zrw() --{{{
     mSleep(1110)
     mSleep(2000)
   end
-  if _UPVALUE0_.u10 == 1 then
-    _UPVALUE0_.u10 = 2
+  if u10 == 1 then
+    u10 = 2
     appRun("com.sohu.newspaper")
     mSleep(4000)
     while true do
@@ -3581,8 +3581,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u11 == 1 then
-    _UPVALUE0_.u11 = 2
+  if u11 == 1 then
+    u11 = 2
     appRun("com.dianping.dpscope")
     mSleep(4000)
     while true do
@@ -3819,8 +3819,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u12 == 1 then
-    _UPVALUE0_.u12 = 2
+  if u12 == 1 then
+    u12 = 2
     appRun("com.jianheng.dota2video")
     k = 0
     while true do
@@ -3851,8 +3851,8 @@ function zrw() --{{{
     for _FORV_3_ = 1, tb do
       click(116, 482)
       mSleep(500)
-      _UPVALUE0_.t = math.random(2, 4)
-      for _FORV_7_ = 1, _UPVALUE0_.t do
+      t = math.random(2, 4)
+      for _FORV_7_ = 1, t do
         y = math.random(510, 760)
         mouse(138, 830, 138, y, 15)
         mSleep(600)
@@ -3890,8 +3890,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u13 == 1 then
-    _UPVALUE0_.u13 = 2
+  if u13 == 1 then
+    u13 = 2
     appRun("com.ss.iphone.article.Explore")
     mSleep(4000)
     while true do
@@ -3981,8 +3981,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u14 == 1 then
-    _UPVALUE0_.u14 = 2
+  if u14 == 1 then
+    u14 = 2
     appRun("com.renren-inc.nuomi")
     mSleep(4000)
     repeat
@@ -4065,8 +4065,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u15 == 1 then
-    _UPVALUE0_.u15 = 2
+  if u15 == 1 then
+    u15 = 2
     appRun("com.sevenga.tsxk.ios")
     while true do
       mSleep(300)
@@ -4321,8 +4321,8 @@ function zrw() --{{{
     mSleep(1110)
     mSleep(3000)
   end
-  if _UPVALUE0_.u16 == 1 then
-    _UPVALUE0_.u16 = 2
+  if u16 == 1 then
+    u16 = 2
     appRun("com.moji.MojiWeather")
     mSleep(4000)
     while true do
@@ -4405,8 +4405,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u17 == 1 then
-    _UPVALUE0_.u17 = 2
+  if u17 == 1 then
+    u17 = 2
     appRun("com.socialquantum2.cityint")
     mSleep(2000)
     while true do
@@ -4570,8 +4570,8 @@ function zrw() --{{{
     mSleep(1110)
     mSleep(3000)
   end
-  if _UPVALUE0_.u18 == 1 then
-    _UPVALUE0_.u18 = 2
+  if u18 == 1 then
+    u18 = 2
     appRun("com.sogou.map.app.Map")
     mSleep(4000)
     while true do
@@ -4608,7 +4608,7 @@ function zrw() --{{{
         click(82, 1091)
         mSleep(1200)
       end
-      _UPVALUE0_.k1 = 0
+      k1 = 0
       while true do
         k = math.random(1, 3)
         if k == 1 then
@@ -4633,9 +4633,9 @@ function zrw() --{{{
         k = 0
         while true do
           k = k + 1
-          if _UPVALUE0_.k1 ~= 3 then
+          if k1 ~= 3 then
             if 10 < k then
-              _UPVALUE0_.k1 = _UPVALUE0_.k1 + 1
+              k1 = k1 + 1
             end
             mSleep(500)
             x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/搜狗返回.bmp", 90, 28, 58, 72, 104)
@@ -4678,22 +4678,22 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u19 == 1 then
-    _UPVALUE0_.u19 = 2
+  if u19 == 1 then
+    u19 = 2
     appRun("com.bitauto.carquote")
     mSleep(4000)
-    _UPVALUE0_.x1 = 0
+    x1 = 0
     while true do
       mSleep(300)
       wifi()
       x,y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
       if x > 0 then
-        _UPVALUE0_.x1 = 1
+        x1 = 1
       else
         x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
       end
       if x > 0 then
-        if _UPVALUE0_.x1 == 0 then
+        if x1 == 0 then
           mSleep(300)
           click(x, y)
         end
@@ -4785,8 +4785,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u20 == 1 then
-    _UPVALUE0_.u20 = 2
+  if u20 == 1 then
+    u20 = 2
     appRun("com.haodou.cookbook")
     mSleep(4000)
     wifi()
@@ -4794,11 +4794,11 @@ function zrw() --{{{
       wifi()
       x,y = findColorInRegionFuzzy(7644416, 90, 48, 82, 52, 86)
       if not (x > 0) then
-        _UPVALUE0_.touchDown(1, 500, 500)
+        touchDown(1, 500, 500)
         mSleep(200)
-        _UPVALUE0_.touchMove(1, 200, 500)
+        touchMove(1, 200, 500)
         mSleep(200)
-        _UPVALUE0_.touchUp(1)
+        touchUp(1)
         mSleep(700)
         click(303, 1020)
         mSleep(2500)
@@ -4841,8 +4841,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u21 == 1 then
-    _UPVALUE0_.u21 = 2
+  if u21 == 1 then
+    u21 = 2
     appRun("cn.com.sina.newssports")
     mSleep(4000)
     while true do
@@ -4859,10 +4859,10 @@ function zrw() --{{{
     for _FORV_3_ = 1, 2 do
       wifi()
       repeat
-        _UPVALUE0_.y1 = math.random(200, 965)
-        x,y = findColorInRegionFuzzy(10754074, 96, 100, _UPVALUE0_.y1, 100, _UPVALUE0_.y1)
+        y1 = math.random(200, 965)
+        x,y = findColorInRegionFuzzy(10754074, 96, 100, y1, 100, y1)
       until not (x > 0)
-      click(200, _UPVALUE0_.y1)
+      click(200, y1)
       mSleep(3000)
       mouse(300, 900, 300, 200, 15)
       mSleep(2000)
@@ -4907,8 +4907,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u22 == 1 then
-    _UPVALUE0_.u22 = 2
+  if u22 == 1 then
+    u22 = 2
     appRun("com.ijinshan.ksmobilebrowser")
     mSleep(4000)
     while true do
@@ -4934,11 +4934,11 @@ function zrw() --{{{
       while true do
         x = math.random(283, 582)
         y = math.random(170, 1000)
-        _UPVALUE0_.x1 = x - 5
-        _UPVALUE0_.x2 = x + 5
-        _UPVALUE0_.y1 = y - 5
-        _UPVALUE0_.y2 = y + 5
-        x,y = findColorInRegionFuzzy(5789784, 95, _UPVALUE0_.x1, _UPVALUE0_.y1, _UPVALUE0_.x2, _UPVALUE0_.y2)
+        x1 = x - 5
+        x2 = x + 5
+        y1 = y - 5
+        y2 = y + 5
+        x,y = findColorInRegionFuzzy(5789784, 95, x1, y1, x2, y2)
         if x > 0 then
           click(x, y)
           mSleep(5000)
@@ -4966,8 +4966,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u23 == 1 then
-    _UPVALUE0_.u23 = 2
+  if u23 == 1 then
+    u23 = 2
     appRun("com.meituan.imeituan")
     mSleep(4000)
     k = 0
@@ -4977,7 +4977,7 @@ function zrw() --{{{
         if not (x > 0) then
           wifi()
           mSleep(500)
-          if _UPVALUE0_.appRunning("com.meituan.imeituan") then
+          if appRunning("com.meituan.imeituan") then
           else
             appRun("com.meituan.imeituan")
           end
@@ -5043,8 +5043,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u24 == 1 then
-    _UPVALUE0_.u24 = 2
+  if u24 == 1 then
+    u24 = 2
     appRun("com.tencent.microvision")
     mSleep(1000)
     while true do
@@ -5076,8 +5076,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u25 == 1 then
-    _UPVALUE0_.u25 = 2
+  if u25 == 1 then
+    u25 = 2
     appRun("com.babytree.pregnancy")
     mSleep(1000)
     while true do
@@ -5122,8 +5122,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u26 == 1 then
-    _UPVALUE0_.u26 = 2
+  if u26 == 1 then
+    u26 = 2
     appRun("com.openet.gtgj")
     mSleep(1500)
     while true do
@@ -5166,8 +5166,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u27 == 1 then
-    _UPVALUE0_.u27 = 2
+  if u27 == 1 then
+    u27 = 2
     appRun("com.meituan.imovie")
     mSleep(4000)
     while true do
@@ -5264,15 +5264,15 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u28 == 1 then
-    _UPVALUE0_.u28 = 2
+  if u28 == 1 then
+    u28 = 2
     appRun("com.baidu.map")
     mSleep(4000)
     while true do
       mSleep(500)
       x,y = findColorInRegionFuzzy(14839133, 90, 58, 1078, 58, 1078)
       if not (x > 0) then
-        if _UPVALUE0_.appRunning("com.baidu.map") then
+        if appRunning("com.baidu.map") then
         else
           appRun("com.baidu.map")
         end
@@ -5403,11 +5403,11 @@ function zrw() --{{{
     mSleep(2000)
     wifi()
   end
-  if _UPVALUE0_.u29 == 1 then
-    _UPVALUE0_.u29 = 2
+  if u29 == 1 then
+    u29 = 2
     appRun("com.hangzhoucaimi.wacai")
     mSleep(4000)
-    if _UPVALUE0_.fl29 == 0 then
+    if fl29 == 0 then
       while true do
         mSleep(500)
         x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/好.bmp", 70, 432, 633, 481, 682)
@@ -5439,33 +5439,33 @@ function zrw() --{{{
       click(91, 511)
       mSleep(1200)
       mSleep(300)
-      _UPVALUE0_.n = math.random(5, 10)
-      sjen(_UPVALUE0_.n)
-      _UPVALUE0_.n = math.random(2, 6)
-      sjsz(_UPVALUE0_.n)
+      n = math.random(5, 10)
+      sjen(n)
+      n = math.random(2, 6)
+      sjsz(n)
       inputText(a)
       inputText(s)
-      _UPVALUE0_.n = math.random(1, 5)
-      if _UPVALUE0_.n == 1 then
+      n = math.random(1, 5)
+      if n == 1 then
         inputText("@sohu.com")
       end
-      if _UPVALUE0_.n == 2 then
+      if n == 2 then
         inputText("@163.com")
       end
-      if _UPVALUE0_.n == 3 then
+      if n == 3 then
         inputText("@sina.com")
       end
-      if _UPVALUE0_.n == 4 then
+      if n == 4 then
         inputText("@qq.com")
       end
-      if _UPVALUE0_.n == 5 then
+      if n == 5 then
         inputText("@yeah.com")
       end
       mSleep(800)
       click(80, 601)
       mSleep(800)
-      _UPVALUE0_.n = math.random(6, 10)
-      sjen(_UPVALUE0_.n)
+      n = math.random(6, 10)
+      sjen(n)
       inputText(a)
       mSleep(800)
       k = 0
@@ -5547,8 +5547,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u30 == 1 then
-    _UPVALUE0_.u30 = 2
+  if u30 == 1 then
+    u30 = 2
     appRun("com.Mofunsky.EnglishMofunShow")
     mSleep(800)
     while true do
@@ -5575,33 +5575,33 @@ function zrw() --{{{
         break
       end
     end
-    _UPVALUE0_.n = math.random(9, 14)
-    sjen(_UPVALUE0_.n)
+    n = math.random(9, 14)
+    sjen(n)
     inputText(a)
     mSleep(800)
     click(153, 354)
     mSleep(800)
-    _UPVALUE0_.n = math.random(5, 10)
-    sjen(_UPVALUE0_.n)
-    _UPVALUE0_.n = math.random(2, 6)
-    sjsz(_UPVALUE0_.n)
+    n = math.random(5, 10)
+    sjen(n)
+    n = math.random(2, 6)
+    sjsz(n)
     inputText(a)
     inputText(s)
-    _UPVALUE0_.n = math.random(1, 3)
-    if _UPVALUE0_.n == 1 then
+    n = math.random(1, 3)
+    if n == 1 then
       inputText("@sohu.com")
     end
-    if _UPVALUE0_.n == 2 then
+    if n == 2 then
       inputText("@163.com")
     end
-    if _UPVALUE0_.n == 3 then
+    if n == 3 then
       inputText("@sina.com")
     end
     mSleep(800)
     click(149, 461)
     mSleep(800)
-    _UPVALUE0_.n = math.random(7, 10)
-    sjen(_UPVALUE0_.n)
+    n = math.random(7, 10)
+    sjen(n)
     inputText(a)
     mSleep(800)
     while true do
@@ -5630,20 +5630,20 @@ function zrw() --{{{
           mSleep(200)
           click(602, 982)
         end
-        _UPVALUE0_.n = math.random(7, 10)
-        sjen(_UPVALUE0_.n)
-        _UPVALUE0_.n = math.random(2, 6)
-        sjsz(_UPVALUE0_.n)
+        n = math.random(7, 10)
+        sjen(n)
+        n = math.random(2, 6)
+        sjsz(n)
         inputText(a)
         inputText(s)
-        _UPVALUE0_.n = math.random(1, 3)
-        if _UPVALUE0_.n == 1 then
+        n = math.random(1, 3)
+        if n == 1 then
           inputText("@sohu.com")
         end
-        if _UPVALUE0_.n == 2 then
+        if n == 2 then
           inputText("@163.com")
         end
-        if _UPVALUE0_.n == 3 then
+        if n == 3 then
           inputText("@sina.com")
         end
         mSleep(800)
@@ -5670,17 +5670,17 @@ function zrw() --{{{
         repeat
           x = math.random(82, 460)
           y = math.random(170, 1050)
-          _UPVALUE0_.c = _UPVALUE0_.getColor(x, y)
-        until _UPVALUE0_.c ~= "0xFFFFFF"
+          c = getColor(x, y)
+        until c ~= "0xFFFFFF"
         click(x, y)
         mSleep(5000)
         repeat
           y = math.random(430, 1000)
-          _UPVALUE0_.c = _UPVALUE0_.getColor(x, y)
-        until _UPVALUE0_.c ~= "0xFFFFFF"
-        _UPVALUE0_.yt = math.random(8000, 15000)
+          c = getColor(x, y)
+        until c ~= "0xFFFFFF"
+        yt = math.random(8000, 15000)
         click(100, y)
-        mSleep(_UPVALUE0_.yt)
+        mSleep(yt)
         while true do
           click(51, 89)
           mSleep(1500)
@@ -5696,8 +5696,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u31 == 1 then
-    _UPVALUE0_.u31 = 2
+  if u31 == 1 then
+    u31 = 2
     appRun("com.tuniu.app")
     mSleep(4000)
     while true do
@@ -5706,12 +5706,12 @@ function zrw() --{{{
       x,y = findColorInRegion(2697513, 191, 523, 446, 656)
       if x > 0 then
         mSleep(1000)
-        _UPVALUE0_.x1 = x + 2
-        _UPVALUE0_.x2 = x + 4
+        x1 = x + 2
+        x2 = x + 4
         yy = y
-        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, x1, yy, x1, yy)
         if x > 0 then
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, x2, yy, x2, yy)
           if x > 0 then
             x,y = findColorInRegion(16777215, 443, 518, 449, 524)
             if x > 0 then
@@ -5736,12 +5736,12 @@ function zrw() --{{{
       x,y = findColorInRegion(2697513, 191, 523, 446, 656)
       if x > 0 then
         mSleep(1000)
-        _UPVALUE0_.x1 = x + 2
-        _UPVALUE0_.x2 = x + 4
+        x1 = x + 2
+        x2 = x + 4
         yy = y
-        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, x1, yy, x1, yy)
         if x > 0 then
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, x2, yy, x2, yy)
           if x > 0 then
             x,y = findColorInRegion(16777215, 443, 518, 449, 524)
             if x > 0 then
@@ -5776,12 +5776,12 @@ function zrw() --{{{
         x,y = findColorInRegion(2697513, 191, 523, 446, 656)
         if x > 0 then
           mSleep(1000)
-          _UPVALUE0_.x1 = x + 2
-          _UPVALUE0_.x2 = x + 4
+          x1 = x + 2
+          x2 = x + 4
           yy = y
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+          x,y = findColorInRegion(2697513, x1, yy, x1, yy)
           if x > 0 then
-            x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+            x,y = findColorInRegion(2697513, x2, yy, x2, yy)
             if x > 0 then
               x,y = findColorInRegion(16777215, 443, 518, 449, 524)
               if x > 0 then
@@ -5808,8 +5808,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u32 == 1 then
-    _UPVALUE0_.u32 = 2
+  if u32 == 1 then
+    u32 = 2
     appRun("com.douguo.FreeRecipes")
     mSleep(4000)
     k = 0
@@ -5887,8 +5887,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u33 == 1 then
-    _UPVALUE0_.u33 = 2
+  if u33 == 1 then
+    u33 = 2
     appRun("com.aicai.aicaipiao")
     mSleep(1000)
     while true do
@@ -5910,14 +5910,14 @@ function zrw() --{{{
       mSleep(4000)
     end
   end
-  if _UPVALUE0_[_FOR_] == 1 then
-    _UPVALUE0_.u34 = 2
+  if u34 == 1 then
+    u34 = 2
     appRun("com.sina.sinanews")
     mSleep(4000)
     while true do
       mSleep(500)
       wifi()
-      if _UPVALUE0_.appRunning("com.sina.sinanews") then
+      if appRunning("com.sina.sinanews") then
       else
         appRun("com.sina.sinanews")
       end
@@ -5964,8 +5964,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u36 == 1 then
-    _UPVALUE0_.u36 = 2
+  if u36 == 1 then
+    u36 = 2
     appRun("cn.zaker.iphone")
     mSleep(4000)
     k = 0
@@ -6024,8 +6024,8 @@ function zrw() --{{{
       end
     end
   end
-  if _UPVALUE0_[_FOR_] == 1 then
-    _UPVALUE0_.u37 = 2
+  if u37 == 1 then
+    u37 = 2
     appRun("com.feiLi.caiPiaoBao")
     mSleep(2000)
     while true do
@@ -6103,8 +6103,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u38 == 1 then
-    _UPVALUE0_.u38 = 2
+  if u38 == 1 then
+    u38 = 2
     appRun("com.xiami.spark")
     mSleep(4000)
     while true do
@@ -6209,8 +6209,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u39 == 1 then
-    _UPVALUE0_.u39 = 2
+  if u39 == 1 then
+    u39 = 2
     appRun("com.gome.gomeEShop")
     mSleep(4000)
     while true do
@@ -6305,8 +6305,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u41 == 1 then
-    _UPVALUE0_.u41 = 2
+  if u41 == 1 then
+    u41 = 2
     appRun("com.tongcheng.iphone")
     mSleep(4000)
     k = 0
@@ -6314,15 +6314,15 @@ function zrw() --{{{
       wifi()
       x,y = findColorInRegion(2697513, 199, 530, 432, 635)
       if x > 0 then
-        _UPVALUE0_.x1 = x + 1
-        _UPVALUE0_.x2 = x + 3
-        _UPVALUE0_.x3 = x + 5
+        x1 = x + 1
+        x2 = x + 3
+        x3 = x + 5
         yy = y
-        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, x1, yy, x1, yy)
         if x > 0 then
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, x2, yy, x2, yy)
           if x > 0 then
-            x,y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
+            x,y = findColorInRegion(2697513, x3, yy, x3, yy)
             if x > 0 then
               x,y = findColorInRegion(16777215, 444, 518, 449, 523)
               if x > 0 then
@@ -6365,15 +6365,15 @@ function zrw() --{{{
       wifi()
       x,y = findColorInRegion(2697513, 199, 530, 432, 635)
       if x > 0 then
-        _UPVALUE0_.x1 = x + 1
-        _UPVALUE0_.x2 = x + 3
-        _UPVALUE0_.x3 = x + 5
+        x1 = x + 1
+        x2 = x + 3
+        x3 = x + 5
         yy = y
-        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+        x,y = findColorInRegion(2697513, x1, yy, x1, yy)
         if x > 0 then
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+          x,y = findColorInRegion(2697513, x2, yy, x2, yy)
           if x > 0 then
-            x,y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
+            x,y = findColorInRegion(2697513, x3, yy, x3, yy)
             if x > 0 then
               x,y = findColorInRegion(16777215, 444, 518, 449, 523)
               if x > 0 then
@@ -6431,15 +6431,15 @@ function zrw() --{{{
         wifi()
         x,y = findColorInRegion(2697513, 199, 530, 432, 635)
         if x > 0 then
-          _UPVALUE0_.x1 = x + 1
-          _UPVALUE0_.x2 = x + 3
-          _UPVALUE0_.x3 = x + 5
+          x1 = x + 1
+          x2 = x + 3
+          x3 = x + 5
           yy = y
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x1, yy, _UPVALUE0_.x1, yy)
+          x,y = findColorInRegion(2697513, x1, yy, x1, yy)
           if x > 0 then
-            x,y = findColorInRegion(2697513, _UPVALUE0_.x2, yy, _UPVALUE0_.x2, yy)
+            x,y = findColorInRegion(2697513, x2, yy, x2, yy)
             if x > 0 then
-              x,y = findColorInRegion(2697513, _UPVALUE0_.x3, yy, _UPVALUE0_.x3, yy)
+              x,y = findColorInRegion(2697513, x3, yy, x3, yy)
               if x > 0 then
                 x,y = findColorInRegion(16777215, 444, 518, 449, 523)
                 if x > 0 then
@@ -6469,8 +6469,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u42 == 1 then
-    _UPVALUE0_.u42 = 2
+  if u42 == 1 then
+    u42 = 2
     appRun("com.Lvmama.Lvmama")
     mSleep(4000)
     k = 0
@@ -6529,8 +6529,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u43 == 1 then
-    _UPVALUE0_.u43 = 2
+  if u43 == 1 then
+    u43 = 2
     appRun("com.elong.app")
     mSleep(4000)
     while true do
@@ -6583,11 +6583,11 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u47 == 1 then
-    _UPVALUE0_.u47 = 2
+  if u47 == 1 then
+    u47 = 2
     appRun("com.kaka.secret")
     mSleep(4000)
-    if _UPVALUE0_.fl47 == 0 then
+    if fl47 == 0 then
       while true do
         while true do
           wifi()
@@ -6689,8 +6689,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u48 == 1 then
-    _UPVALUE0_.u48 = 2
+  if u48 == 1 then
+    u48 = 2
     appRun("com.ganji.life")
     mSleep(4000)
     repeat
@@ -6700,10 +6700,10 @@ function zrw() --{{{
         if not (x > 0) then
           x,y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
           if x > 0 then
-            _UPVALUE0_.x1 = x
-            _UPVALUE0_.y1 = y
+            x1 = x
+            y1 = y
             mSleep(2200)
-            click(_UPVALUE0_.x1, _UPVALUE0_.y1)
+            click(x1, y1)
             mSleep(2000)
             break
           end
@@ -6763,8 +6763,8 @@ function zrw() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u51 == 1 then
-    _UPVALUE0_.u51 = 2
+  if u51 == 1 then
+    u51 = 2
     appRun("com.qunar.iphoneclient8")
     mSleep(4000)
     while true do
@@ -7291,8 +7291,8 @@ function gamez() --{{{
     keyUp("HOME")
     mSleep(4000)
   end
-  if _UPVALUE0_.u46 == 1 then
-    _UPVALUE0_.u46 = 2
+  if u46 == 1 then
+    u46 = 2
     appRun("com.locojoy.ilovedota-chs")
     mSleep(5000)
     while true do
@@ -7329,7 +7329,7 @@ function gamez() --{{{
       end
       x,y = findColorInRegionFuzzy(10038561, 90, 225, 382, 231, 388)
       if x > 0 then
-        _UPVALUE0_.mouse(171, 865, 171, 300, 10)
+        mouse(171, 865, 171, 300, 10)
         mSleep(800)
       end
       x,y = findColorInRegionFuzzy(3415056, 90, 107, 269, 113, 275)
@@ -7369,8 +7369,8 @@ function gamez() --{{{
     keyUp("HOME")
     mSleep(4000)
   end
-  if _UPVALUE0_.u35 == 1 then
-    _UPVALUE0_.u35 = 2
+  if u35 == 1 then
+    u35 = 2
     appRun("com.babeltime.fknsg")
     mSleep(3500)
     while true do
@@ -7527,8 +7527,8 @@ function gamez() --{{{
     keyUp("HOME")
     mSleep(4000)
   end
-  if _UPVALUE0_.u8 == 1 then
-    _UPVALUE0_.u8 = 2
+  if u8 == 1 then
+    u8 = 2
     while true do
       appRun("com.windplay.threeswordsmen2")
       mSleep(10000)
@@ -7536,7 +7536,7 @@ function gamez() --{{{
       while true do
         k = k + 1
         mSleep(400)
-        x,y = _UPVALUE0_.findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我是少侠资源更新.bmp", 85, 231, 421, 424, 691)
+        x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/我是少侠资源更新.bmp", 85, 231, 421, 424, 691)
         if x > 0 then
           mSleep(1000)
           click(234, 567)
@@ -7689,8 +7689,8 @@ function gamez() --{{{
     keyUp("HOME")
     mSleep(4500)
   end
-  if _UPVALUE0_.u49 == 1 then
-    _UPVALUE0_.u49 = 2
+  if u49 == 1 then
+    u49 = 2
     appRun("com.u9time.coolms")
     mSleep(8000)
     while true do
@@ -7753,8 +7753,8 @@ function gamez() --{{{
     keyUp("HOME")
     mSleep(4500)
   end
-  if _UPVALUE0_.u50 == 1 then
-    _UPVALUE0_.u50 = 1
+  if u50 == 1 then
+    u50 = 1
     appRun("net.giantmobile.gfxy")
     mSleep(8000)
     while true do
@@ -8476,9 +8476,9 @@ function zrwopen() --{{{
       inputText("@yeah.com")
     end
     mSleep(600)
-    _UPVALUE0_.d = "@sohu.com"
-    _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", a, s)
-    _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", _UPVALUE0_.c, _UPVALUE0_.d)
+    d = "@sohu.com"
+    c = string.format("%s%s", a, s)
+    c = string.format("%s%s", c, d)
     click(149, 376)
     mSleep(800)
     sjen(7)
@@ -8486,7 +8486,7 @@ function zrwopen() --{{{
     inputText(a)
     inputText(s)
     mSleep(600)
-    a = _UPVALUE0_.string.format("%s%s", a, s)
+    a = string.format("%s%s", a, s)
     click(146, 464)
     mSleep(800)
     sjen(10)
@@ -8494,7 +8494,7 @@ function zrwopen() --{{{
     inputText(a)
     inputText(s)
     mSleep(600)
-    b = _UPVALUE0_.pass
+    b = pass
     while true do
       x,y = findColorInRegionFuzzy(3917321, 85, 256, 572, 256, 572)
       if 0 < x then
@@ -8520,9 +8520,9 @@ function zrwopen() --{{{
         inputText(s)
         inputText("@sohu.com")
         mSleep(600)
-        _UPVALUE0_.d = "@sohu.com"
-        _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", a, s)
-        _UPVALUE0_.c = _UPVALUE0_.string.format("%s%s", _UPVALUE0_.c, _UPVALUE0_.d)
+        d = "@sohu.com"
+        c = string.format("%s%s", a, s)
+        c = string.format("%s%s", c, d)
       else
         x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/反利用户名被使用.bmp", 90, 172, 507, 453, 582)
         if 0 < x then
@@ -8541,7 +8541,7 @@ function zrwopen() --{{{
           inputText(a)
           inputText(s)
           mSleep(600)
-          a = _UPVALUE0_.string.format("%s%s", a, s)
+          a = string.format("%s%s", a, s)
         else
           mSleep(300)
           x,y = findColorInRegionFuzzy(12666427, 98, 330, 893, 330, 893)
@@ -8566,14 +8566,14 @@ function zrwopen() --{{{
       end
     end
     mSleep(1000)
-    _UPVALUE0_.fl5 = 1
+    fl5 = 1
     keyDown("HOME")
     mSleep(150)
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u6 == 1 then
-    _UPVALUE0_.u6 = 1
+  if u6 == 1 then
+    u6 = 1
     appRun("com.kingdee.MyMoney")
     mSleep(4000)
     while true do
@@ -8591,8 +8591,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u7 == 1 then
-    _UPVALUE0_.u7 = 1
+  if u7 == 1 then
+    u7 = 1
     appRun("ctrip.com")
     mSleep(4000)
     k = 0
@@ -8618,8 +8618,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u9 == 1 then
-    _UPVALUE0_.u9 = 1
+  if u9 == 1 then
+    u9 = 1
     appRun("com.v1.cai")
     mSleep(4000)
     while true do
@@ -8643,8 +8643,8 @@ function zrwopen() --{{{
     mSleep(1110)
     mSleep(2000)
   end
-  if _UPVALUE0_.u10 == 1 then
-    _UPVALUE0_.u10 = 1
+  if u10 == 1 then
+    u10 = 1
     appRun("com.sohu.newspaper")
     mSleep(4000)
     while true do
@@ -8671,8 +8671,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u11 == 1 then
-    _UPVALUE0_.u11 = 1
+  if u11 == 1 then
+    u11 = 1
     appRun("com.dianping.dpscope")
     mSleep(4000)
     while true do
@@ -8739,8 +8739,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u12 == 10 then
-    _UPVALUE0_.u12 = 1
+  if u12 == 10 then
+    u12 = 1
     appRun("com.jianheng.dota2video")
     k = 0
     while true do
@@ -8768,11 +8768,11 @@ function zrwopen() --{{{
         end
       end
     end
-    for _FORV_3_ = 1, _UPVALUE0_.tb do
+    for _FORV_3_ = 1, tb do
       click(116, 482)
       mSleep(500)
-      _UPVALUE0_.t = math.random(2, 4)
-      for _FORV_7_ = 1, _UPVALUE0_.t do
+      t = math.random(2, 4)
+      for _FORV_7_ = 1, t do
         y = math.random(510, 760)
         mouse(138, 830, 138, y, 15)
         mSleep(600)
@@ -8810,8 +8810,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u13 == 1 then
-    _UPVALUE0_.u13 = 1
+  if u13 == 1 then
+    u13 = 1
     appRun("com.ss.iphone.article.Explore")
     mSleep(4000)
     while true do
@@ -8837,8 +8837,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u14 == 1 then
-    _UPVALUE0_.u14 = 1
+  if u14 == 1 then
+    u14 = 1
     appRun("com.renren-inc.nuomi")
     mSleep(4000)
     repeat
@@ -8866,11 +8866,11 @@ function zrwopen() --{{{
           mSleep(1500)
         end
         repeat
-          _UPVALUE0_.xx = math.random(51, 550)
-          _UPVALUE0_.yy = math.random(460, 700)
-          x,y = findColorInRegionFuzzy(15658734, 90, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
+          xx = math.random(51, 550)
+          yy = math.random(460, 700)
+          x,y = findColorInRegionFuzzy(15658734, 90, xx, yy, xx, yy)
         until not (0 < x)
-        click(_UPVALUE0_.xx, _UPVALUE0_.yy)
+        click(xx, yy)
         mSleep(1500)
       end
       k = 0
@@ -8898,8 +8898,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u15 == 10 then
-    _UPVALUE0_.u15 = 1
+  if u15 == 10 then
+    u15 = 1
     appRun("com.sevenga.tsxk.ios")
     mSleep(4000)
     while true do
@@ -9155,8 +9155,8 @@ function zrwopen() --{{{
     mSleep(1110)
     mSleep(3000)
   end
-  if _UPVALUE0_.u16 == 1 then
-    _UPVALUE0_.u16 = 1
+  if u16 == 1 then
+    u16 = 1
     appRun("com.moji.MojiWeather")
     mSleep(4000)
     while true do
@@ -9176,8 +9176,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u17 == 10 then
-    _UPVALUE0_.u17 = 1
+  if u17 == 10 then
+    u17 = 1
     appRun("com.socialquantum2.cityint")
     mSleep(2000)
     while true do
@@ -9341,8 +9341,8 @@ function zrwopen() --{{{
     mSleep(1110)
     mSleep(3000)
   end
-  if _UPVALUE0_.u18 == 1 then
-    _UPVALUE0_.u18 = 1
+  if u18 == 1 then
+    u18 = 1
     appRun("com.sogou.map.app.Map")
     mSleep(4000)
     while true do
@@ -9360,22 +9360,22 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u19 == 1 then
-    _UPVALUE0_.u19 = 1
+  if u19 == 1 then
+    u19 = 1
     appRun("com.bitauto.carquote")
     mSleep(4000)
-    _UPVALUE0_.x1 = 0
+    x1 = 0
     while true do
       mSleep(300)
       wifi()
       x,y = findColorInRegionFuzzy(16268592, 95, 609, 1063, 609, 1063)
       if 0 < x then
-        _UPVALUE0_.x1 = 1
+        x1 = 1
       else
         x,y = findImageInRegionFuzzy("/var/touchelf/scripts/yclm/汽车报价马上体验.bmp", 90, 246, 973, 397, 1029)
       end
       if 0 < x then
-        if _UPVALUE0_.x1 == 0 then
+        if x1 == 0 then
           mSleep(300)
           click(x, y)
         end
@@ -9398,18 +9398,18 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u20 == 1 then
-    _UPVALUE0_.u20 = 1
+  if u20 == 1 then
+    u20 = 1
     appRun("com.haodou.cookbook")
     mSleep(4000)
     wifi()
     for _FORV_3_ = 1, 4 do
       wifi()
-      _UPVALUE0_.touchDown(1, 500, 500)
+      touchDown(1, 500, 500)
       mSleep(200)
-      _UPVALUE0_.touchMove(1, 200, 500)
+      touchMove(1, 200, 500)
       mSleep(200)
-      _UPVALUE0_.touchUp(1)
+      touchUp(1)
       mSleep(700)
     end
     click(303, 1020)
@@ -9428,8 +9428,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u21 == 1 then
-    _UPVALUE0_.u21 = 1
+  if u21 == 1 then
+    u21 = 1
     appRun("cn.com.sina.newssports")
     mSleep(4000)
     while true do
@@ -9448,8 +9448,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u22 == 1 then
-    _UPVALUE0_.u22 = 1
+  if u22 == 1 then
+    u22 = 1
     appRun("com.ijinshan.ksmobilebrowser")
     mSleep(4000)
     while true do
@@ -9469,8 +9469,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u23 == 1 then
-    _UPVALUE0_.u23 = 1
+  if u23 == 1 then
+    u23 = 1
     appRun("com.meituan.imeituan")
     mSleep(4000)
     k = 0
@@ -9530,8 +9530,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u24 == 1 then
-    _UPVALUE0_.u24 = 1
+  if u24 == 1 then
+    u24 = 1
     appRun("com.tencent.microvision")
     mSleep(1000)
     while true do
@@ -9549,8 +9549,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u25 == 1 then
-    _UPVALUE0_.u25 = 1
+  if u25 == 1 then
+    u25 = 1
     appRun("com.babytree.pregnancy")
     mSleep(4000)
     while true do
@@ -9567,8 +9567,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u26 == 1 then
-    _UPVALUE0_.u26 = 1
+  if u26 == 1 then
+    u26 = 1
     appRun("com.openet.gtgj")
     mSleep(4000)
     while true do
@@ -9586,8 +9586,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u27 == 1 then
-    _UPVALUE0_.u27 = 1
+  if u27 == 1 then
+    u27 = 1
     appRun("com.meituan.imovie")
     mSleep(4000)
     while true do
@@ -9602,9 +9602,9 @@ function zrwopen() --{{{
       mSleep(400)
     end
     while true do
-      _UPVALUE0_.xx = math.random(83, 525)
-      _UPVALUE0_.yy = math.random(508, 743)
-      x,y = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
+      xx = math.random(83, 525)
+      yy = math.random(508, 743)
+      x,y = findColorInRegion(16777215, xx, yy, xx, yy)
       if 0 < x then
         click(x, y)
         mSleep(4000)
@@ -9617,9 +9617,9 @@ function zrwopen() --{{{
       click(x, y)
       mSleep(3500)
       while true do
-        _UPVALUE0_.xx = math.random(83, 525)
-        _UPVALUE0_.yy = math.random(508, 743)
-        x,y = findColorInRegion(16777215, _UPVALUE0_.xx, _UPVALUE0_.yy, _UPVALUE0_.xx, _UPVALUE0_.yy)
+        xx = math.random(83, 525)
+        yy = math.random(508, 743)
+        x,y = findColorInRegion(16777215, xx, yy, xx, yy)
         if 0 < x then
           click(x, y)
           mSleep(2000)
@@ -9641,8 +9641,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u28 == 1 then
-    _UPVALUE0_.u28 = 1
+  if u28 == 1 then
+    u28 = 1
     appRun("com.baidu.map")
     mSleep(4000)
     while true do
@@ -9671,8 +9671,8 @@ function zrwopen() --{{{
     mSleep(2000)
     wifi()
   end
-  if _UPVALUE0_.u29 == 1 then
-    _UPVALUE0_.u29 = 1
+  if u29 == 1 then
+    u29 = 1
     appRun("com.hangzhoucaimi.wacai")
     mSleep(4000)
     while true do
@@ -9766,14 +9766,14 @@ function zrwopen() --{{{
         end
       end
     end
-    _UPVALUE0_.fl29 = 1
+    fl29 = 1
     keyDown("HOME")
     mSleep(150)
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u30 == 1 then
-    _UPVALUE0_.u30 = 1
+  if u30 == 1 then
+    u30 = 1
     appRun("com.Mofunsky.EnglishMofunShow")
     mSleep(4000)
     while true do
@@ -9885,8 +9885,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u31 == 1 then
-    _UPVALUE0_.u31 = 1
+  if u31 == 1 then
+    u31 = 1
     appRun("com.tuniu.app")
     mSleep(4000)
     while true do
@@ -9895,12 +9895,12 @@ function zrwopen() --{{{
       x,y = findColorInRegion(2697513, 191, 523, 446, 656)
       if 0 < x then
         mSleep(1000)
-        _UPVALUE0_.x1 = x + 2
-        _UPVALUE0_.x2 = x + 4
-        _UPVALUE0_.yy = y
-        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
+        x1 = x + 2
+        x2 = x + 4
+        yy = y
+        x,y = findColorInRegion(2697513, x1, yy, x1, yy)
         if 0 < x then
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
+          x,y = findColorInRegion(2697513, x2, yy, x2, yy)
           if 0 < x then
             x,y = findColorInRegion(16777215, 443, 518, 449, 524)
             if 0 < x then
@@ -9925,8 +9925,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u32 == 1 then
-    _UPVALUE0_.u32 = 1
+  if u32 == 1 then
+    u32 = 1
     appRun("com.douguo.FreeRecipes")
     mSleep(4000)
     k = 0
@@ -9971,8 +9971,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u33 == 1 then
-    _UPVALUE0_.u33 = 1
+  if u33 == 1 then
+    u33 = 1
     appRun("com.aicai.aicaipiao")
     mSleep(4000)
     while true do
@@ -9985,8 +9985,8 @@ function zrwopen() --{{{
       end
     end
   end
-  if _UPVALUE0_.u34 == 1 then
-    _UPVALUE0_.u34 = 1
+  if u34 == 1 then
+    u34 = 1
     appRun("com.sina.sinanews")
     mSleep(4000)
     while true do
@@ -10008,8 +10008,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u35 == 1 then
-    _UPVALUE0_.u35 = 1
+  if u35 == 1 then
+    u35 = 1
     appRun("com.babeltime.fknsg")
     mSleep(4000)
     while true do
@@ -10166,8 +10166,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(4000)
   end
-  if _UPVALUE0_.u36 == 1 then
-    _UPVALUE0_.u36 = 1
+  if u36 == 1 then
+    u36 = 1
     appRun("cn.zaker.iphone")
     mSleep(4000)
     while true do
@@ -10184,8 +10184,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u37 == 1 then
-    _UPVALUE0_.u37 = 1
+  if u37 == 1 then
+    u37 = 1
     appRun("com.feiLi.caiPiaoBao")
     mSleep(4000)
     while true do
@@ -10220,8 +10220,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u38 == 1 then
-    _UPVALUE0_.u38 = 1
+  if u38 == 1 then
+    u38 = 1
     appRun("com.xiami.spark")
     mSleep(4000)
     while true do
@@ -10250,8 +10250,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(2000)
   end
-  if _UPVALUE0_.u39 == 1 then
-    _UPVALUE0_.u39 = 1
+  if u39 == 1 then
+    u39 = 1
     appRun("com.gome.gomeEShop")
     mSleep(4000)
     while true do
@@ -10284,8 +10284,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u41 == 1 then
-    _UPVALUE0_.u41 = 1
+  if u41 == 1 then
+    u41 = 1
     appRun("com.tongcheng.iphone")
     mSleep(4000)
     k = 0
@@ -10322,15 +10322,15 @@ function zrwopen() --{{{
       end
       x,y = findColorInRegion(2697513, 199, 530, 432, 635)
       if 0 < x then
-        _UPVALUE0_.x1 = x + 1
-        _UPVALUE0_.x2 = x + 3
-        _UPVALUE0_.x3 = x + 5
-        _UPVALUE0_.yy = y
-        x,y = findColorInRegion(2697513, _UPVALUE0_.x1, _UPVALUE0_.yy, _UPVALUE0_.x1, _UPVALUE0_.yy)
+        x1 = x + 1
+        x2 = x + 3
+        x3 = x + 5
+        yy = y
+        x,y = findColorInRegion(2697513, x1, yy, x1, yy)
         if 0 < x then
-          x,y = findColorInRegion(2697513, _UPVALUE0_.x2, _UPVALUE0_.yy, _UPVALUE0_.x2, _UPVALUE0_.yy)
+          x,y = findColorInRegion(2697513, x2, yy, x2, yy)
           if 0 < x then
-            x,y = findColorInRegion(2697513, _UPVALUE0_.x3, _UPVALUE0_.yy, _UPVALUE0_.x3, _UPVALUE0_.yy)
+            x,y = findColorInRegion(2697513, x3, yy, x3, yy)
             if 0 < x then
               x,y = findColorInRegion(16777215, 444, 518, 449, 523)
               if 0 < x then
@@ -10358,8 +10358,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(3000)
   end
-  if _UPVALUE0_.u42 == 1 then
-    _UPVALUE0_.u42 = 1
+  if u42 == 1 then
+    u42 = 1
     appRun("com.Lvmama.Lvmama")
     mSleep(4000)
     k = 0
@@ -10384,8 +10384,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(3000)
   end
-  if _UPVALUE0_.u43 == 1 then
-    _UPVALUE0_.u43 = 1
+  if u43 == 1 then
+    u43 = 1
     appRun("com.elong.app")
     mSleep(4000)
     while true do
@@ -10412,8 +10412,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u47 == 1 then
-    _UPVALUE0_.u47 = 1
+  if u47 == 1 then
+    u47 = 1
     appRun("com.kaka.secret")
     mSleep(4000)
     while true do
@@ -10480,26 +10480,26 @@ function zrwopen() --{{{
       end
     end
     mSleep(2000)
-    _UPVALUE0_.fl47 = 1
+    fl47 = 1
     keyDown("HOME")
     mSleep(150)
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u48 == 1 then
-    _UPVALUE0_.u48 = 1
+  if u48 == 1 then
+    u48 = 1
     appRun("com.ganji.life")
     mSleep(4000)
     repeat
       while true do
-        _UPVALUE0_.inow()
+        inow()
         wifi()
         x,y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
         if 0 < x then
-          _UPVALUE0_.x1 = x
-          _UPVALUE0_.y1 = y
+          x1 = x
+          y1 = y
           mSleep(2200)
-          click(_UPVALUE0_.x1, _UPVALUE0_.y1)
+          click(x1, y1)
           mSleep(2000)
           break
         end
@@ -10507,7 +10507,7 @@ function zrwopen() --{{{
       end
       repeat
         while true do
-          _UPVALUE0_.inow()
+          inow()
           x,y = findColorInRegionFuzzy(5618466, 90, 236, 1062, 236, 1062)
           wifi()
           mSleep(500)
@@ -10522,7 +10522,7 @@ function zrwopen() --{{{
         mSleep(3000)
         while true do
           wifi()
-          _UPVALUE0_.inow()
+          inow()
           mSleep(500)
           x,y = findColorInRegion(31487, 609, 420, 615, 626)
           x,y = findColorInRegionFuzzy(5618467, 80, 70, 1080, 76, 1086)
@@ -10538,8 +10538,8 @@ function zrwopen() --{{{
     keyUp("HOME")
     mSleep(3500)
   end
-  if _UPVALUE0_.u51 == 1 then
-    _UPVALUE0_.u51 = 1
+  if u51 == 1 then
+    u51 = 1
     appRun("com.qunar.iphoneclient8")
     mSleep(4000)
     while true do
