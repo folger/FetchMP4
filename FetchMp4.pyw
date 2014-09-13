@@ -153,7 +153,7 @@ class Fetcher(QThread):
         return [s.replace('&amp;', '&') for s in ss]
 
     def getQQ(self, page_source):
-        return re.findall(r'http://\d+\.\d+\.\d+\.\d+/[\w.]+qq\.com/\w+\.p202\.\d+\.mp4\?vkey=[^<]+',
+        return re.findall(r'http://\d+\.\d+\.\d+\.\d+/[\w.]+qq\.com/\w+\.p1202\.\d+\.mp4\?vkey=[^<]+',
                           page_source)
 
     def getCNTV(self, page_source):
