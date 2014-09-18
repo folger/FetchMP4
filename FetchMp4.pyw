@@ -4,7 +4,6 @@ import sys
 import os
 import re
 import subprocess
-from time import sleep
 from urllib.request import urlretrieve
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
@@ -13,10 +12,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 
 import inspect
+
+
 def get_abs_file_path(f):
     return os.path.join(os.path.dirname(inspect.getfile(inspect.currentframe())), f)
 
-class StopFetch(Exception): pass
+
+class StopFetch(Exception):
+    pass
+
 
 class Fetcher(QThread):
     title = pyqtSignal(str)
@@ -135,6 +139,8 @@ class Fetcher(QThread):
             return self.getSohu
         if url.find('www.letvxia.com') > 0:
             return self.getLeTV
+        if url.find('www.wasu.cn') > 0:
+            return self.getHuaShu
 
     def progressHook(self, count, blocksize, totalsize):
         if self.stop:
@@ -173,9 +179,15 @@ class Fetcher(QThread):
         return ss[count:2*count]
 
     def getLeTV(self, page_source):
-        ss = re.findall('http://g3.letv.cn/\d+/\d+/\d+/letv-uts/\d+/[^.]+.mp4[^<]+')
+        ss = re.findall('http://g3.letv.cn/\d+/\d+/\d+/letv-uts/\d+/[^.]+.mp4[^<]+',
+                        page_source)
         s = ss[0]
         return [s.replace('&amp;', '&')]
+
+    def getHuaShu(self, page_source):
+        return re.findall('http://vodipad.wasu.cn/[^.]+.mp4[^<]+',
+                          page_source)
+
 
 class MP4Fetcher(QDialog):
     stop = pyqtSignal()
@@ -227,7 +239,7 @@ class MP4Fetcher(QDialog):
             fetcher.text = self.edit.toPlainText()
             fetcher.start()
         else:
-            if QMessageBox.warning(self, '', 'Stop ?', QMessageBox.Ok|QMessageBox.Cancel) == QMessageBox.Ok:
+            if QMessageBox.warning(self, '', 'Stop ?', QMessageBox.Ok | QMessageBox.Cancel) == QMessageBox.Ok:
                 self.btnFetch.setEnabled(False)
                 self.stop.emit()
 
