@@ -47,6 +47,9 @@ class Fetcher(QThread):
         driver = webdriver.Chrome(get_abs_file_path('chromedriver'))
         self.enable.emit(False)
         for index, url in enumerate(urls):
+            if self.stop:
+                break
+
             url = url.lstrip()
             if len(url) == 0:
                 continue
@@ -83,10 +86,11 @@ class Fetcher(QThread):
                 http, title = f.split('">')
                 titles.append(title)
                 https.append(http)
-            mtitle = re.search(r'\D+(\d+)', titles[0])
-            if not mtitle:
-                continue
-            episode = mtitle.group(1)
+            #mtitle = re.search(r'\D+(\d+)', titles[0])
+            #if not mtitle:
+                #continue
+            #episode = mtitle.group(1)
+            episode = str(21 + index)
 
             names = []
             for subindex, http in enumerate(https):
