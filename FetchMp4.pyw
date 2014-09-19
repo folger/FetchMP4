@@ -10,6 +10,7 @@ from PyQt4.QtCore import *
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
+from shutil import copyfile
 
 import inspect
 
@@ -86,11 +87,11 @@ class Fetcher(QThread):
                 http, title = f.split('">')
                 titles.append(title)
                 https.append(http)
-            #mtitle = re.search(r'\D+(\d+)', titles[0])
-            #if not mtitle:
-                #continue
-            #episode = mtitle.group(1)
-            episode = str(21 + index)
+            mtitle = re.search(r'\D+(\d+)', titles[0])
+            if not mtitle:
+                continue
+            episode = mtitle.group(1)
+            #episode = str(27 + index)
 
             names = []
             for subindex, http in enumerate(https):
@@ -117,12 +118,16 @@ class Fetcher(QThread):
 
             if len(names) == len(https):
                 self.title.emit('Joining ...')
-                cmd = [get_abs_file_path('MP4Box')]
-                for name in names:
-                    cmd += ['-force-cat', '-cat', name]
-                cmd.append('-new')
-                cmd.append(os.path.join(mp4Path, '{}.mp4'.format(episode)))
-                subprocess.call(cmd)
+                filedes = os.path.join(mp4Path, '{}.mp4'.format(episode))
+                if len(names) == 1:
+                    copyfile(names[0], filedes)
+                else:
+                    cmd = [get_abs_file_path('MP4Box')]
+                    for name in names:
+                        cmd += ['-force-cat', '-cat', name]
+                    cmd.append('-new')
+                    cmd.append(filedes)
+                    subprocess.call(cmd)
             if self.stop:
                 break
 
