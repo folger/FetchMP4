@@ -87,11 +87,13 @@ class Fetcher(QThread):
                 http, title = f.split('">')
                 titles.append(title)
                 https.append(http)
-            mtitle = re.search(r'\D+(\d+)', titles[0])
-            if not mtitle:
+            digits = re.findall(r'\d+', os.path.splitext(titles[0])[0])
+            if len(digits) == 0:
                 continue
-            episode = mtitle.group(1)
-            #episode = str(27 + index)
+            if len(digits) > 1:
+                episode = digits[-2]
+            else:
+                episode = str(10000 + index)
 
             names = []
             for subindex, http in enumerate(https):
