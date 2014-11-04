@@ -181,13 +181,14 @@ class Fetcher(QThread):
         ss = re.findall(r'http://(?:\d+\.\d+\.\d+\.\d+|sohu\.soooner\.com|newflv\.sohu\.ccgslb\.net)[^<]+',
                         page_source)
         nn = len(ss)
-        if nn % 4 == 0:
-            count = nn // 4
-        elif nn % 3 == 0:
+        if nn % 3 == 0:
             count = nn // 3
+        elif nn % 4 == 0:
+            count = nn // 4
         else:
             count = nn // 2
-        return ss[count:2*count]
+        #return ss[count:2*count]
+        return ss[0:count]
 
     def getLeTV(self, page_source):
         ss = re.findall('http://g3.letv.cn/\d+/\d+/\d+/letv-uts/\d+/[^.]+.mp4[^<]+',
