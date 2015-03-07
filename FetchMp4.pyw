@@ -178,7 +178,7 @@ class Fetcher(QThread):
                           page_source)
 
     def getSohu(self, page_source):
-        ss = re.findall(r'http://(?:\d+\.\d+\.\d+\.\d+|sohu\.soooner\.com|newflv\.sohu\.ccgslb\.net)[^<]+',
+        ss = re.findall(r'http://(?:\d+\.\d+\.\d+\.\d+|sohu\.soooner\.com|newflv\.sohu\.ccgslb\.net|sohu\.vodnew\.lxdns\.com)[^<]+',
                         page_source)
         nn = len(ss)
         if nn % 3 == 0:
