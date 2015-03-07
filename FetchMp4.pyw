@@ -120,7 +120,7 @@ class Fetcher(QThread):
 
             if len(names) == len(https):
                 self.title.emit('Joining ...')
-                filedes = os.path.join(mp4Path, '{}.mp4'.format(episode))
+                filedes = os.path.join(mp4Path, '{}{}.mp4'.format(self.filename, episode))
                 if len(names) == 1:
                     copyfile(names[0], filedes)
                 else:
@@ -222,13 +222,20 @@ class MP4Fetcher(QDialog):
         self.isFetch = True
 
     def createFetchGroup(self):
-        label = QLabel('Paste url(with http) line by line into box, then press Fetch')
-        self.edit = QTextEdit()
+        name = QLabel('File Name')
+        self.nameText = QLineEdit()
         self.btnFetch = QPushButton('Fetch')
         self.connect(self.btnFetch, SIGNAL('clicked()'), self.fetch)
+        layoutTopRight = QHBoxLayout()
+        layoutTopRight.addWidget(self.btnFetch)
+        layoutTopRight.addWidget(name)
+        layoutTopRight.addWidget(self.nameText)
+
+        label = QLabel('Paste url(with http) line by line into box, then press Fetch')
+        self.edit = QTextEdit()
         layout = QGridLayout()
         layout.addWidget(label, 0, 0)
-        layout.addWidget(self.btnFetch, 0, 1, Qt.AlignRight)
+        layout.addLayout(layoutTopRight, 0, 1, Qt.AlignRight)
         layout.addWidget(self.edit, 1, 0, 1, -1)
         return layout
 
@@ -249,6 +256,7 @@ class MP4Fetcher(QDialog):
             fetcher.enable.connect(self.enableAll)
             fetcher.error.connect(self.errorReport)
             fetcher.text = self.edit.toPlainText()
+            fetcher.filename = self.nameText.text()
             fetcher.start()
         else:
             if QMessageBox.warning(self, '', 'Stop ?', QMessageBox.Ok | QMessageBox.Cancel) == QMessageBox.Ok:
