@@ -2,3 +2,5 @@ chromedriver*
 libgpac.dll
 MediaInfo.dll
 MP4Box*
+__pycache__/
+log.txt

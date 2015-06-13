@@ -13,6 +13,7 @@ from selenium.common.exceptions import TimeoutException
 from shutil import copyfile
 
 import inspect
+import parse_mp4
 
 
 def get_abs_file_path(f):
@@ -45,7 +46,7 @@ class Fetcher(QThread):
         except KeyError as e:
             self.error.emit('Fatal Error', 'Need to define both MP4_FETCH_PATH and MP4_PATH environment variable')
             return
-        driver = webdriver.Chrome(get_abs_file_path('chromedriver'))
+        #driver = webdriver.Chrome(get_abs_file_path('chromedriver'))
         self.enable.emit(False)
         for index, url in enumerate(urls):
             if self.stop:
@@ -56,45 +57,51 @@ class Fetcher(QThread):
                 continue
 
             self.title.emit('({}/{}) Fetching download addresses'.format(index+1, len(urls)))
-            driver.get('http://www.flvxz.com/?url=' + url)
+            #driver.get('http://www.flvxz.com/?url=' + url)
 
-            def waitCheck(the_driver):
-                result = the_driver.find_element_by_id('result')
-                return result and result.find_element_by_tag_name('span')
+            #def waitCheck(the_driver):
+                #result = the_driver.find_element_by_id('result')
+                #return result and result.find_element_by_tag_name('span')
 
-            try:
-                WebDriverWait(driver, 10).until(waitCheck)
-            except TimeoutException:
-                fails.append('Timeout to fectch: ' + url)
-                continue
+            #try:
+                #WebDriverWait(driver, 10).until(waitCheck)
+            #except TimeoutException:
+                #fails.append('Timeout to fectch: ' + url)
+                #continue
 
-            if self.stop:
-                break
-            page_source = driver.page_source
+            #if self.stop:
+                #break
+            #page_source = driver.page_source
 
-            getter = self.makeGetter(url)
-            if getter is None:
-                fails.append('URL not supported yet: ' + url)
-                continue
-            files = getter(page_source)
-            if len(files) == 0:
-                fails.append('No valid file addesses found : ' + url)
-                continue
+            #getter = self.makeGetter(url)
+            #if getter is None:
+                #fails.append('URL not supported yet: ' + url)
+                #continue
+            #files = getter(page_source)
+            #if len(files) == 0:
+                #fails.append('No valid file addesses found : ' + url)
+                #continue
 
-            titles = []
-            https = []
-            for i, f in enumerate(files):
-                http, title = f.split('">')
-                titles.append(title)
-                https.append(http)
-            digits = re.findall(r'\d+', os.path.splitext(titles[0])[0])
-            if len(digits) == 0:
-                continue
-            if len(digits) > 1:
-                episode = digits[-2]
-            else:
-                episode = str(10000 + index)
-
+            #titles = []
+            #https = []
+            #for i, f in enumerate(files):
+                #http, title = f.split('">')
+                #titles.append(title)
+                #https.append(http)
+            #digits = re.findall(r'\d+', os.path.splitext(titles[0])[0])
+            #if len(digits) == 0:
+                #continue
+            #if len(digits) > 1:
+                #episode = digits[-2]
+            #else:
+                #episode = str(10000 + index)
+            
+            title, https = parse_mp4.get(url, 'n')
+            with open('log.txt', 'a', encoding='utf-8') as flog:
+                print(title, file=flog)
+                for http in https:
+                    print(http, file=flog)
+            episode = re.findall('\d+', title)[-1]
             names = []
             for subindex, http in enumerate(https):
                 name = '{}.{:03d}.mp4'.format(episode, subindex+1)
@@ -102,7 +109,7 @@ class Fetcher(QThread):
                 if not os.path.exists(filename):
                     self.title.emit('({}/{}) {} ({}/{})'.format(index+1,
                                     len(urls),
-                                    titles[subindex],
+                                    title,
                                     subindex+1,
                                     len(https)))
                     try:
@@ -135,7 +142,7 @@ class Fetcher(QThread):
 
         if len(fails) > 0:
             self.error.emit('Files that fail', '\n'.join(fails))
-        driver.quit()
+        #driver.quit()
         self.enable.emit(True)
         self.title.emit('Stopped' if self.stop else 'All Done')
 
