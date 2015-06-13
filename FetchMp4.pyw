@@ -96,7 +96,7 @@ class Fetcher(QThread):
             #else:
                 #episode = str(10000 + index)
             
-            title, https = parse_mp4.get(url, 'n')
+            title, https = parse_mp4.get(url, self.res)
             with open('log.txt', 'a', encoding='utf-8') as flog:
                 print(title, file=flog)
                 for http in https:
@@ -127,7 +127,7 @@ class Fetcher(QThread):
 
             if len(names) == len(https):
                 self.title.emit('Joining ...')
-                filedes = os.path.join(mp4Path, '{}{}.mp4'.format(self.filename, episode))
+                filedes = os.path.join(mp4Path, '{}.mp4'.format(title))
                 if len(names) == 1:
                     copyfile(names[0], filedes)
                 else:
@@ -229,19 +229,23 @@ class MP4Fetcher(QDialog):
         self.isFetch = True
 
     def createFetchGroup(self):
-        name = QLabel('File Name')
-        self.nameText = QLineEdit()
+        resolutionLabel = QLabel('Resolution')
+        self.resolution = QComboBox()
+        self.resolution.addItems(['Normal', 'High', 'Super', 'Original'])
+
         self.btnFetch = QPushButton('Fetch')
         self.connect(self.btnFetch, SIGNAL('clicked()'), self.fetch)
         layoutTopRight = QHBoxLayout()
-        layoutTopRight.addWidget(self.btnFetch)
-        layoutTopRight.addWidget(name)
-        layoutTopRight.addWidget(self.nameText)
+        layoutTopRight.addWidget(resolutionLabel)
+        layoutTopRight.addWidget(self.resolution)
 
         label = QLabel('Paste url(with http) line by line into box, then press Fetch')
+        layoutTopLeft = QHBoxLayout()
+        layoutTopLeft.addWidget(label)
+        layoutTopLeft.addWidget(self.btnFetch)
         self.edit = QTextEdit()
         layout = QGridLayout()
-        layout.addWidget(label, 0, 0)
+        layout.addLayout(layoutTopLeft, 0, 0, Qt.AlignLeft)
         layout.addLayout(layoutTopRight, 0, 1, Qt.AlignRight)
         layout.addWidget(self.edit, 1, 0, 1, -1)
         return layout
@@ -263,7 +267,7 @@ class MP4Fetcher(QDialog):
             fetcher.enable.connect(self.enableAll)
             fetcher.error.connect(self.errorReport)
             fetcher.text = self.edit.toPlainText()
-            fetcher.filename = self.nameText.text()
+            fetcher.res = self.resolution.currentText()[0].lower()
             fetcher.start()
         else:
             if QMessageBox.warning(self, '', 'Stop ?', QMessageBox.Ok | QMessageBox.Cancel) == QMessageBox.Ok:
@@ -296,6 +300,11 @@ class MP4Fetcher(QDialog):
         QMessageBox.information(self, title, error)
         if title == 'Fatal Error':
             self.close()
+
+    def closeEvent(self, event):
+        if not self.isFetch:
+            QMessageBox.information(self, 'Cannot Quit', 'Please wait for fetching finish or click Stop button')
+            event.ignore()
 
 app = QApplication(sys.argv)
 dlg = MP4Fetcher()
