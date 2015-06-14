@@ -7,11 +7,10 @@ import subprocess
 from urllib.request import urlretrieve
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import TimeoutException
+#from selenium import webdriver
+#from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.common.exceptions import TimeoutException
 from shutil import copyfile
-
 import inspect
 import parse_mp4
 
@@ -96,6 +95,11 @@ class Fetcher(QThread):
             #else:
                 #episode = str(10000 + index)
             
+            mp4s = parse_mp4.get(url, self.res)
+            if mp4s is None:
+                self.error.emit('Error', 'Failed to parse url: {}'.format(url))
+                continue
+
             title, https = parse_mp4.get(url, self.res)
             with open('log.txt', 'a', encoding='utf-8') as flog:
                 print(title, file=flog)
