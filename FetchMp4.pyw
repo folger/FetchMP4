@@ -9,6 +9,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from shutil import copyfile
 import inspect
+import random
 import parse_mp4
 
 
@@ -63,7 +64,10 @@ class Fetcher(QThread):
                 print(title, file=flog)
                 for http in https:
                     print(http, file=flog)
-            episode = re.findall('\d+', title)[-1]
+            try:
+                episode = re.findall('\d+', title)[-1]
+            except IndexError:
+                episode = random.randint(10, 100000)
             names = []
             for subindex, http in enumerate(https):
                 name = '{}.{:03d}.mp4'.format(episode, subindex+1)
