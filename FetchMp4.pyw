@@ -7,9 +7,6 @@ import subprocess
 from urllib.request import urlretrieve
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
-#from selenium import webdriver
-#from selenium.webdriver.support.ui import WebDriverWait
-#from selenium.common.exceptions import TimeoutException
 from shutil import copyfile
 import inspect
 import parse_mp4
@@ -39,13 +36,13 @@ class Fetcher(QThread):
         fails = []
         urls = self.text.rstrip().split('\n')
 
+        fetchPath = get_abs_file_path('temp')
+        mp4Path = get_abs_file_path('Mp4')
         try:
-            fetchPath = os.environ['MP4_FETCH_PATH']
-            mp4Path = os.environ['MP4_PATH']
-        except KeyError as e:
-            self.error.emit('Fatal Error', 'Need to define both MP4_FETCH_PATH and MP4_PATH environment variable')
-            return
-        #driver = webdriver.Chrome(get_abs_file_path('chromedriver'))
+            os.makedirs(fetchPath)
+            os.makedirs(mp4Path)
+        except FileExistsError:
+            pass
         self.enable.emit(False)
         for index, url in enumerate(urls):
             if self.stop:
@@ -56,45 +53,6 @@ class Fetcher(QThread):
                 continue
 
             self.title.emit('({}/{}) Fetching download addresses'.format(index+1, len(urls)))
-            #driver.get('http://www.flvxz.com/?url=' + url)
-
-            #def waitCheck(the_driver):
-                #result = the_driver.find_element_by_id('result')
-                #return result and result.find_element_by_tag_name('span')
-
-            #try:
-                #WebDriverWait(driver, 10).until(waitCheck)
-            #except TimeoutException:
-                #fails.append('Timeout to fectch: ' + url)
-                #continue
-
-            #if self.stop:
-                #break
-            #page_source = driver.page_source
-
-            #getter = self.makeGetter(url)
-            #if getter is None:
-                #fails.append('URL not supported yet: ' + url)
-                #continue
-            #files = getter(page_source)
-            #if len(files) == 0:
-                #fails.append('No valid file addesses found : ' + url)
-                #continue
-
-            #titles = []
-            #https = []
-            #for i, f in enumerate(files):
-                #http, title = f.split('">')
-                #titles.append(title)
-                #https.append(http)
-            #digits = re.findall(r'\d+', os.path.splitext(titles[0])[0])
-            #if len(digits) == 0:
-                #continue
-            #if len(digits) > 1:
-                #episode = digits[-2]
-            #else:
-                #episode = str(10000 + index)
-            
             mp4s = parse_mp4.get(url, self.res)
             if mp4s is None:
                 self.error.emit('Error', 'Failed to parse url: {}'.format(url))
@@ -146,23 +104,8 @@ class Fetcher(QThread):
 
         if len(fails) > 0:
             self.error.emit('Files that fail', '\n'.join(fails))
-        #driver.quit()
         self.enable.emit(True)
         self.title.emit('Stopped' if self.stop else 'All Done')
-
-    def makeGetter(self, url):
-        if url.find('www.tudou.com') > 0 or url.find('v.youku.com') > 0:
-            return self.getTudou
-        if url.find('v.qq.com') > 0:
-            return self.getQQ
-        if url.find('tv.cntv.cn') > 0:
-            return self.getCNTV
-        if url.find('tv.sohu.com') > 0:
-            return self.getSohu
-        if url.find('www.letvxia.com') > 0:
-            return self.getLeTV
-        if url.find('www.wasu.cn') > 0:
-            return self.getHuaShu
 
     def progressHook(self, count, blocksize, totalsize):
         if self.stop:
@@ -172,44 +115,6 @@ class Fetcher(QThread):
 
     def setStop(self):
         self.stop = True
-
-    def getTudou(self, page_source):
-        ss = re.findall(r'http://(?:\d+\.\d+\.\d+\.\d+/mp4/|k.youku.com/player/getFlvPath/sid/\w+/st/mp4/fileid/)[^<]+',
-                        page_source)
-        if len(ss) > 1:
-            ss = ss[1:]
-        return [s.replace('&amp;', '&') for s in ss]
-
-    def getQQ(self, page_source):
-        return re.findall(r'http://\d+\.\d+\.\d+\.\d+/[\w.]+qq\.com/\w+\.p1202\.\d+\.mp4\?vkey=[^<]+',
-                          page_source)
-
-    def getCNTV(self, page_source):
-        return re.findall(r'http://vod\.cntv\.lxdns\.com/flash/mp4video\d+/TMS/\d+/\d+/\d+/\w+?h264818000nero_aac32-\d+\.mp4[^<]+',
-                          page_source)
-
-    def getSohu(self, page_source):
-        ss = re.findall(r'http://(?:\d+\.\d+\.\d+\.\d+|sohu\.soooner\.com|newflv\.sohu\.ccgslb\.net|sohu\.vodnew\.lxdns\.com)[^<]+',
-                        page_source)
-        nn = len(ss)
-        if nn % 3 == 0:
-            count = nn // 3
-        elif nn % 4 == 0:
-            count = nn // 4
-        else:
-            count = nn // 2
-        #return ss[count:2*count]
-        return ss[0:count]
-
-    def getLeTV(self, page_source):
-        ss = re.findall('http://g3.letv.cn/\d+/\d+/\d+/letv-uts/\d+/[^.]+.mp4[^<]+',
-                        page_source)
-        s = ss[0]
-        return [s.replace('&amp;', '&')]
-
-    def getHuaShu(self, page_source):
-        return re.findall('http://vodipad.wasu.cn/[^.]+.mp4[^<]+',
-                          page_source)
 
 
 class MP4Fetcher(QDialog):
