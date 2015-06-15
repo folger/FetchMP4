@@ -2,12 +2,19 @@
 
 import re
 import json
+import os
 
 
 def __read_data(url):
+    if os.path.isfile(url):
+        with open(url, 'rb') as f:
+            return f.read()
     from urllib.request import urlopen
-    with urlopen(url) as fp:
-        return fp.read()
+    try:
+        with urlopen(url) as fp:
+            return fp.read()
+    except Exception:
+        print(url)
 
 
 def __get_sohu(url, res):
