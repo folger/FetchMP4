@@ -11,6 +11,7 @@ from shutil import copyfile
 import inspect
 import parse_mp4
 import base64
+import platform
 
 
 def get_abs_file_path(f):
@@ -97,7 +98,7 @@ class Fetcher(QThread):
                 if len(names) == 1:
                     copyfile(names[0], filedes)
                 else:
-                    cmd = [get_abs_file_path('MP4Box')]
+                    cmd = [get_abs_file_path('MP4Box') if platform.system() == 'Windows' else 'MP4Box']
                     for name in names:
                         cmd += ['-force-cat', '-cat', name]
                     cmd.append('-new')
