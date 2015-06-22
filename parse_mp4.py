@@ -13,8 +13,8 @@ def __read_data(url):
     if os.path.isfile(url):
         with open(url, 'rb') as f:
             return f.read()
-        with urlopen(url) as fp:
-            return fp.read()
+    with urlopen(url) as fp:
+        return fp.read()
 
 
 def __get_sohu(url, res):
@@ -117,5 +117,5 @@ def get(url, res='h'):
     if func:
         try:
             return func(url, res)
-        except Exception:
-            pass
+        except Exception as e:
+            print(e)
