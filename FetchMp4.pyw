@@ -220,6 +220,8 @@ class MP4Fetcher(QDialog):
             QMessageBox.information(self, 'Cannot Quit', 'Please wait for fetching finish or click Stop button')
             event.ignore()
 
+    def reject(self): return self.close()
+
 app = QApplication(sys.argv)
 dlg = MP4Fetcher()
 dlg.show()
