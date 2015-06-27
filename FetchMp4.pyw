@@ -36,7 +36,9 @@ class Fetcher(QThread):
 
     def run(self):
         fails = []
-        urls = self.text.rstrip().split('\n')
+        urls = self.text.lstrip().rstrip().split('\n')
+        if len(urls) == 0:
+            return
 
         fetchPath = get_abs_file_path('temp')
         mp4Path = get_abs_file_path('Mp4')
@@ -45,22 +47,49 @@ class Fetcher(QThread):
             os.makedirs(mp4Path)
         except FileExistsError:
             pass
+
+        if not urls[0].startswith('http://'):
+            # assume it was formatted as follow, which is consistent with log.txt:
+            # title1
+            # http://1...1.mp4
+            # http://1...2.mp4
+            # http://1...3.mp4
+            # title2
+            # http://2...1.mp4
+            # http://2...2.mp4
+            # http://2...3.mp4
+            temp = []
+            for e in urls:
+                e = e.lstrip()
+                if len(e) == 0:
+                    continue
+                if e.startswith('http://'):
+                    temp[-1][1].append(e)
+                else:
+                    temp.append([e, []])
+            urls = temp
+
         self.enable.emit(False)
         for index, url in enumerate(urls):
             if self.stop:
                 break
 
-            url = url.lstrip()
-            if len(url) == 0:
-                continue
-
             self.title.emit('({}/{}) Fetching download addresses'.format(index+1, len(urls)))
-            mp4s = parse_mp4.get(url, self.res)
-            if mp4s is None:
-                self.error.emit('Error', 'Failed to parse url: {}'.format(url))
-                continue
 
-            title, https = parse_mp4.get(url, self.res)
+            if isinstance(url, str):
+                url = url.lstrip()
+                if len(url) == 0:
+                    continue
+
+                mp4s = parse_mp4.get(url, self.res)
+                if mp4s is None:
+                    self.error.emit('Error', 'Failed to parse url: {}'.format(url))
+                    continue
+
+                title, https = parse_mp4.get(url, self.res)
+            else:
+                title, https = url
+
             with open('log.txt', 'a', encoding='utf-8') as flog:
                 print(title, file=flog)
                 for http in https:
