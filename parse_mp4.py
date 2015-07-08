@@ -9,7 +9,7 @@ import base64
 from urllib.parse import quote
 
 
-def __read_data(url):
+def _read_data(url):
     if os.path.isfile(url):
         with open(url, 'rb') as f:
             return f.read()
@@ -17,7 +17,7 @@ def __read_data(url):
         return fp.read()
 
 
-def __get_sohu(url, res):
+def _get_sohu(url, res):
     def read_vid(vid):
         return __read_data('http://hot.vrs.sohu.com/vrs_flash.action?vid={}'.format(vid))
 
@@ -36,7 +36,7 @@ def __get_sohu(url, res):
         return mp4js['tvName'], mp4s
 
 
-def __get_youku(url, res): # resolution only support high for youku
+def _get_youku(url, res): # resolution only support high for youku
     def myEncoder(a, c):
         result = b''
         f = 0; h = 0; q = 0
@@ -87,7 +87,7 @@ def __get_youku(url, res): # resolution only support high for youku
     return data0['title'], mp4s
 
 
-def __get_qq(url, res):
+def _get_qq(url, res):
     vid = re.search(r'vid=(\w+)', url)
     if vid is None:
         vid = re.search(r'(\w+)\.html', url)
