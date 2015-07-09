@@ -48,7 +48,7 @@ class Fetcher(QThread):
         except FileExistsError:
             pass
 
-        if not urls[0].startswith('http://'):
+        if not urls[0].startswith('http://') and not os.path.isfile(urls[0]):
             # assume it was formatted as follow, which is consistent with log.txt:
             # title1
             # http://1...1.mp4

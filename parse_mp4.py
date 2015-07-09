@@ -9,6 +9,22 @@ import base64
 from urllib.parse import quote
 
 
+def get(url, res='h'):
+    """ res can be normal(n), high(h), super(s), or orginal(o) """
+    func = None
+    if url.find('sohu.com') > 0:
+        func = _get_sohu
+    elif url.find('youku.com') > 0:
+        func = _get_youku
+    elif url.find('qq.com') > 0:
+        func = _get_qq
+    if func:
+        try:
+            return func(url, res)
+        except Exception as e:
+            print(e)
+
+
 def _read_data(url):
     if os.path.isfile(url):
         with open(url, 'rb') as f:
@@ -19,10 +35,10 @@ def _read_data(url):
 
 def _get_sohu(url, res):
     def read_vid(vid):
-        return __read_data('http://hot.vrs.sohu.com/vrs_flash.action?vid={}'.format(vid))
+        return _read_data('http://hot.vrs.sohu.com/vrs_flash.action?vid={}'.format(vid))
 
     mapres = {'n': 'norVid', 'h': 'highVid', 's': 'superVid', 'o': 'oriVid'}
-    data = __read_data(url)
+    data = _read_data(url)
     if data:
         m = re.search(b'var vid="(\d+)"', data)
         data = read_vid(m.group(1).decode())
@@ -66,11 +82,11 @@ def _get_youku(url, res): # resolution only support high for youku
 
     m = re.search(r'id_(\w+)', url)
     vid = m.group(1)
-    data = __read_data('http://v.youku.com/player/getPlayList/VideoIDS/{}/Pf/4/ctype/12/ev/1'.format(vid))
+    data = _read_data('http://v.youku.com/player/getPlayList/VideoIDS/{}/Pf/4/ctype/12/ev/1'.format(vid))
     playlist = json.loads(data.decode())
     data0 = playlist['data'][0]
     ep, token, sid = getEp(vid, data0['ep'])
-    data = __read_data('http://pl.youku.com/playlist/m3u8?ctype=12&ep={0}&ev=1&keyframe=1&oip={1}&sid={2}&token={3}&type=mp4&vid={4}'\
+    data = _read_data('http://pl.youku.com/playlist/m3u8?ctype=12&ep={0}&ev=1&keyframe=1&oip={1}&sid={2}&token={3}&type=mp4&vid={4}'\
             .format(quote(ep),
             data0["ip"],
             sid.decode(),
@@ -92,7 +108,7 @@ def _get_qq(url, res):
     if vid is None:
         vid = re.search(r'(\w+)\.html', url)
     vid = vid.group(1)
-    data = __read_data('http://vv.video.qq.com/getinfo?vid={}&otype=json'.format(vid))
+    data = _read_data('http://vv.video.qq.com/getinfo?vid={}&otype=json'.format(vid))
     playlist = json.loads(data[data.find(b'{'):-1].decode())
     title = playlist['vl']['vi'][0]['ti']
 
@@ -103,19 +119,3 @@ def _get_qq(url, res):
         for s in root:
             if s.attrib['hd'] == resolution[res]:
                 return title, list(s[0].text.split('|'))
-
-
-def get(url, res='h'):
-    """ res can be normal(n), high(h), super(s), or orginal(o) """
-    func = None
-    if url.find('sohu.com') > 0:
-        func = __get_sohu
-    elif url.find('youku.com') > 0:
-        func = __get_youku
-    elif url.find('qq.com') > 0:
-        func = __get_qq
-    if func:
-        try:
-            return func(url, res)
-        except Exception as e:
-            print(e)
