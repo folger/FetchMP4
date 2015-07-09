@@ -9,7 +9,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from shutil import copyfile
 import inspect
-import parse_mp4
+import parsemp4
 import base64
 import platform
 
@@ -81,12 +81,12 @@ class Fetcher(QThread):
                 if len(url) == 0:
                     continue
 
-                mp4s = parse_mp4.get(url, self.res)
+                mp4s = parsemp4.get(url, self.res)
                 if mp4s is None:
                     self.error.emit('Error', 'Failed to parse url: {}'.format(url))
                     continue
 
-                title, https = parse_mp4.get(url, self.res)
+                title, https = parsemp4.get(url, self.res)
             else:
                 title, https = url
 
@@ -123,7 +123,8 @@ class Fetcher(QThread):
 
             if len(names) == len(https):
                 self.title.emit('Joining ...')
-                filedes = os.path.join(mp4Path, '{}.mp4'.format(title))
+                #filedes = os.path.join(mp4Path, '{}.mp4'.format(title))
+                filedes = os.path.join(mp4Path, '{}.mp4'.format(episode))
                 if len(names) == 1:
                     copyfile(names[0], filedes)
                 else:
@@ -249,7 +250,9 @@ class MP4Fetcher(QDialog):
             QMessageBox.information(self, 'Cannot Quit', 'Please wait for fetching finish or click Stop button')
             event.ignore()
 
-    def reject(self): return self.close()
+    def reject(self):
+        return self.close()
+
 
 app = QApplication(sys.argv)
 dlg = MP4Fetcher()

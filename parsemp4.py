@@ -24,14 +24,12 @@ def get(url, res='h'):
         except Exception as e:
             print(e)
 
-
 def _read_data(url):
     if os.path.isfile(url):
         with open(url, 'rb') as f:
             return f.read()
     with urlopen(url) as fp:
         return fp.read()
-
 
 def _get_sohu(url, res):
     def read_vid(vid):
@@ -50,7 +48,6 @@ def _get_sohu(url, res):
         for u in mp4js['su']:
             mp4s.append('http://data.vod.itc.cn/?prot=1&prod=flash&pt=1&new={}'.format(u))
         return mp4js['tvName'], mp4s
-
 
 def _get_youku(url, res): # resolution only support high for youku
     def myEncoder(a, c):
@@ -101,7 +98,6 @@ def _get_youku(url, res): # resolution only support high for youku
             if not mp4 in mp4s:
                 mp4s.append(mp4)
     return data0['title'], mp4s
-
 
 def _get_qq(url, res):
     vid = re.search(r'vid=(\w+)', url)
