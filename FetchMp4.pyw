@@ -15,7 +15,8 @@ import platform
 
 
 def get_abs_file_path(f):
-    return os.path.join(os.path.dirname(inspect.getfile(inspect.currentframe())), f)
+    return os.path.join(
+            os.path.dirname(inspect.getfile(inspect.currentframe())), f)
 
 
 class StopFetch(Exception):
@@ -49,7 +50,8 @@ class Fetcher(QThread):
             pass
 
         if not urls[0].startswith('http://') and not os.path.isfile(urls[0]):
-            # assume it was formatted as follow, which is consistent with log.txt:
+            # assume it was formatted as follow,
+            # which is consistent with log.txt:
             # title1
             # http://1...1.mp4
             # http://1...2.mp4
@@ -74,7 +76,8 @@ class Fetcher(QThread):
             if self.stop:
                 break
 
-            self.title.emit('({}/{}) Fetching download addresses'.format(index+1, len(urls)))
+            self.title.emit('({}/{}) Fetching download addresses'
+                            .format(index+1, len(urls)))
 
             if isinstance(url, str):
                 url = url.lstrip()
@@ -83,7 +86,8 @@ class Fetcher(QThread):
 
                 mp4s = parsemp4.get(url, self.res)
                 if mp4s is None:
-                    self.error.emit('Error', 'Failed to parse url: {}'.format(url))
+                    self.error.emit('Error', 'Failed to parse url: {}'
+                                    .format(url))
                     continue
 
                 title, https = parsemp4.get(url, self.res)
@@ -109,7 +113,8 @@ class Fetcher(QThread):
                                     subindex+1,
                                     len(https)))
                     try:
-                        urlretrieve(http, filename, reporthook=self.progressHook)
+                        urlretrieve(http, filename,
+                                    reporthook=self.progressHook)
                         names.append(filename)
                     except StopFetch:
                         pass
@@ -123,12 +128,13 @@ class Fetcher(QThread):
 
             if len(names) == len(https):
                 self.title.emit('Joining ...')
-                #filedes = os.path.join(mp4Path, '{}.mp4'.format(title))
+                # filedes = os.path.join(mp4Path, '{}.mp4'.format(title))
                 filedes = os.path.join(mp4Path, '{}.mp4'.format(episode))
                 if len(names) == 1:
                     copyfile(names[0], filedes)
                 else:
-                    cmd = [get_abs_file_path('MP4Box') if platform.system() == 'Windows' else 'MP4Box']
+                    cmd = [get_abs_file_path('MP4Box')
+                           if platform.system() == 'Windows' else 'MP4Box']
                     for name in names:
                         cmd += ['-force-cat', '-cat', name]
                     cmd.append('-new')
@@ -183,7 +189,8 @@ class MP4Fetcher(QDialog):
         layoutTopRight.addWidget(resolutionLabel)
         layoutTopRight.addWidget(self.resolution)
 
-        label = QLabel('Paste url(with http) line by line into box, then press Fetch')
+        label = QLabel('Paste url(with http) line by line into box, '
+                       'then press Fetch')
         layoutTopLeft = QHBoxLayout()
         layoutTopLeft.addWidget(label)
         layoutTopLeft.addWidget(self.btnFetch)
@@ -214,7 +221,9 @@ class MP4Fetcher(QDialog):
             fetcher.res = self.resolution.currentText()[0].lower()
             fetcher.start()
         else:
-            if QMessageBox.warning(self, '', 'Stop ?', QMessageBox.Ok | QMessageBox.Cancel) == QMessageBox.Ok:
+            msg_ret = QMessageBox.warning(self, '', 'Stop ?',
+                                          QMessageBox.Ok | QMessageBox.Cancel)
+            if msg_ret == QMessageBox.Ok:
                 self.btnFetch.setEnabled(False)
                 self.stop.emit()
 
@@ -247,7 +256,9 @@ class MP4Fetcher(QDialog):
 
     def closeEvent(self, event):
         if not self.isFetch:
-            QMessageBox.information(self, 'Cannot Quit', 'Please wait for fetching finish or click Stop button')
+            QMessageBox.information(self, 'Cannot Quit',
+                                    'Please wait for fetching finish '
+                                    'or click Stop button')
             event.ignore()
 
     def reject(self):
