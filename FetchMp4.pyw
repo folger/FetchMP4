@@ -117,7 +117,7 @@ class Fetcher(QThread):
                                     reporthook=self.progressHook)
                         names.append(filename)
                     except StopFetch:
-                        pass
+                        os.remove(filename)
                     except Exception as e:
                         fails.append(name + '---' + str(e))
                 else:
