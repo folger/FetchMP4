@@ -262,7 +262,7 @@ class MP4Fetcher(QDialog):
             event.ignore()
 
     def reject(self):
-        return self.close()
+        self.close()
 
 
 app = QApplication(sys.argv)

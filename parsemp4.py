@@ -119,12 +119,15 @@ def _get_qq(url, res):
     if vid is None:
         vid = re.search(r'(\w+)\.html', url)
     vid = vid.group(1)
-    data = _read_data(
-            'http://vv.video.qq.com/getinfo?vid={}&otype=json'.format(vid))
-    playlist = json.loads(data[data.find(b'{'):-1].decode())
-    title = playlist['vl']['vi'][0]['ti']
+    try:
+        data = _read_data(
+                'http://vv.video.qq.com/getinfo?vid={}&otype=json'.format(vid))
+        playlist = json.loads(data[data.find(b'{'):-1].decode())
+        title = playlist['vl']['vi'][0]['ti']
+    except Exception:
+        title = vid
 
-    with urlopen('http://www.apifree.net/qq.jsp?vid={}'.format(vid)) as fp:
+    with urlopen('http://www.apifree.net/qq.jsp?url={}'.format(url)) as fp:
         resolution = {'n': '标清', 'h': '高清', 's': '高清', 'o': '高清'}
         tree = etree.parse(fp)
         root = tree.getroot()
