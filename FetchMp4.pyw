@@ -12,6 +12,11 @@ import inspect
 import parsemp4
 import base64
 import platform
+try:
+    import ctypes
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
+except Exception:
+    pass
 
 
 def get_abs_file_path(f):
