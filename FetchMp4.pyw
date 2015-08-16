@@ -171,7 +171,7 @@ class MP4Fetcher(QDialog):
         self.setWindowTitle('MP4 Fetcher')
 
         icon = QIcon()
-        icon.addPixmap(QPixmap(get_abs_file_path('main.ico')))
+        icon.addPixmap(QPixmap(get_abs_file_path('main.png')))
         self.setWindowIcon(icon)
 
         self.resize(600, 300)
