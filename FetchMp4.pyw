@@ -3,6 +3,7 @@
 import sys
 import os
 import re
+import json
 import subprocess
 from urllib.request import urlretrieve
 from PyQt4.QtGui import *
@@ -46,10 +47,19 @@ class Fetcher(QThread):
         if len(urls) == 0:
             return
 
-        fetchPath = get_abs_file_path('temp')
-        mp4Path = get_abs_file_path('Mp4')
+        with open('settings.json') as f:
+            settings = json.load(f)
+            tempPath = settings['tempPath']
+            if not tempPath:
+                tempPath = get_abs_file_path('temp')
+            mp4Path = settings['mp4Path']
+            if not mp4Path:
+                mp4Path = get_abs_file_path('Mp4')
+            mp4box = settings['mp4box']
+            if not mp4box:
+                mp4box = get_abs_file_path('MP4Box') if platform.system() == 'Windows' else 'MP4Box'
         try:
-            os.makedirs(fetchPath)
+            os.makedirs(tempPath)
             os.makedirs(mp4Path)
         except FileExistsError:
             pass
@@ -110,7 +120,7 @@ class Fetcher(QThread):
             names = []
             for subindex, http in enumerate(https):
                 name = '{}.{:03d}.mp4'.format(episode, subindex+1)
-                filename = os.path.join(fetchPath, name)
+                filename = os.path.join(tempPath, name)
                 if not os.path.exists(filename):
                     self.title.emit('({}/{}) {} ({}/{})'.format(index+1,
                                     len(urls),
@@ -138,8 +148,7 @@ class Fetcher(QThread):
                 if len(names) == 1:
                     copyfile(names[0], filedes)
                 else:
-                    cmd = [get_abs_file_path('MP4Box')
-                           if platform.system() == 'Windows' else 'MP4Box']
+                    cmd = [mp4box]
                     for name in names:
                         cmd += ['-force-cat', '-cat', name]
                     cmd.append('-new')
