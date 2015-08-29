@@ -50,7 +50,7 @@ def _get_sohu(url, res):
         mp4js = mp4js['data']
         for u in mp4js['su']:
             mp4s.append(
-                    'http://data.vod.itc.cn/?prot=1&prod=flash&pt=1&new={}'
+                    'http://data.vod.itc.cn/?prot=1&prod=mp4&pt=1&new={}'
                     .format(u))
         return mp4js['tvName'], mp4s
 
