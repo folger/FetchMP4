@@ -57,7 +57,10 @@ class Fetcher(QThread):
                 mp4Path = get_abs_file_path('Mp4')
             mp4box = settings['mp4box']
             if not mp4box:
-                mp4box = get_abs_file_path('MP4Box') if platform.system() == 'Windows' else 'MP4Box'
+                mp4box = 'MP4Box'
+                if platform.system() != 'Windows':
+                    get_abs_file_path('MP4Box')
+            aria2c = settings['aria2c']
         try:
             os.makedirs(tempPath)
             os.makedirs(mp4Path)
@@ -128,8 +131,18 @@ class Fetcher(QThread):
                                     subindex+1,
                                     len(https)))
                     try:
-                        urlretrieve(http, filename,
-                                    reporthook=self.progressHook)
+                        if aria2c:
+                            subprocess.call(['aria2c',
+                                             '-x5',
+                                             '-d',
+                                             tempPath,
+                                             '-o',
+                                             name,
+                                             http,
+                                             ])
+                        else:
+                            urlretrieve(http, filename,
+                                        reporthook=self.progressHook)
                         names.append(filename)
                     except StopFetch:
                         os.remove(filename)
