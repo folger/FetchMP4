@@ -190,6 +190,9 @@ class MP4Fetcher(QDialog):
 
     def __init__(self, parent=None):
         super(MP4Fetcher, self).__init__(parent)
+        self.setWindowFlags(self.windowFlags() |
+                            Qt.WindowMinimizeButtonHint |
+                            Qt.WindowMaximizeButtonHint)
         self.setWindowTitle('MP4 Fetcher')
 
         icon = QIcon()
