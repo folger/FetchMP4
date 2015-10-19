@@ -10,14 +10,10 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from shutil import copyfile
 import inspect
-import parsemp4
 import base64
 import platform
-try:
-    import ctypes
-    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
-except Exception:
-    pass
+import parsemp4
+from folstools.qt.utils import *
 
 
 def get_abs_file_path(f):
