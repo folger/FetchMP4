@@ -25,6 +25,22 @@ class StopFetch(Exception):
     pass
 
 
+with open('settings.json') as f:
+    settings = json.load(f)
+    tempPath = settings['tempPath']
+    if not tempPath:
+        tempPath = get_abs_file_path('temp')
+    mp4Path = settings['mp4Path']
+    if not mp4Path:
+        mp4Path = get_abs_file_path('Mp4')
+    mp4box = settings['mp4box']
+    if not mp4box:
+        mp4box = 'MP4Box'
+        if platform.system() != 'Windows':
+            get_abs_file_path('MP4Box')
+    aria2c = settings['aria2c']
+
+
 class Fetcher(QThread):
     title = pyqtSignal(str)
     setrange = pyqtSignal(int, int)
@@ -43,20 +59,6 @@ class Fetcher(QThread):
         if len(urls) == 0:
             return
 
-        with open('settings.json') as f:
-            settings = json.load(f)
-            tempPath = settings['tempPath']
-            if not tempPath:
-                tempPath = get_abs_file_path('temp')
-            mp4Path = settings['mp4Path']
-            if not mp4Path:
-                mp4Path = get_abs_file_path('Mp4')
-            mp4box = settings['mp4box']
-            if not mp4box:
-                mp4box = 'MP4Box'
-                if platform.system() != 'Windows':
-                    get_abs_file_path('MP4Box')
-            aria2c = settings['aria2c']
         try:
             os.makedirs(tempPath)
             os.makedirs(mp4Path)
@@ -211,6 +213,8 @@ class MP4Fetcher(QDialog):
 
         self.btnFetch = QPushButton('Fetch')
         self.connect(self.btnFetch, SIGNAL('clicked()'), self.fetch)
+        btnMp4Path = QPushButton('Mp4 Path')
+        self.connect(btnMp4Path, SIGNAL('clicked()'), self.openMp4Path)
         layoutTopRight = QHBoxLayout()
         layoutTopRight.addWidget(resolutionLabel)
         layoutTopRight.addWidget(self.resolution)
@@ -220,6 +224,7 @@ class MP4Fetcher(QDialog):
         layoutTopLeft = QHBoxLayout()
         layoutTopLeft.addWidget(label)
         layoutTopLeft.addWidget(self.btnFetch)
+        layoutTopLeft.addWidget(btnMp4Path)
         self.edit = QTextEdit()
         layout = QGridLayout()
         layout.addLayout(layoutTopLeft, 0, 0, Qt.AlignLeft)
@@ -252,6 +257,9 @@ class MP4Fetcher(QDialog):
             if msg_ret == QMessageBox.Ok:
                 self.btnFetch.setEnabled(False)
                 self.stop.emit()
+
+    def openMp4Path(self):
+        os.startfile(mp4Path)
 
     def updateTitle(self, text):
         self.title.setText(text)
