@@ -115,7 +115,7 @@ class Fetcher(QThread):
             try:
                 episode = re.findall('\d+', title)[-1]
             except IndexError:
-                episode = base64.b64encode(title.encode()).decode()
+                episode = base64.urlsafe_b64encode(title.encode()).decode()
             names = []
             for subindex, http in enumerate(https):
                 name = '{}.{:03d}.mp4'.format(episode, subindex+1)
