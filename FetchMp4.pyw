@@ -21,6 +21,13 @@ def get_abs_file_path(f):
             os.path.dirname(inspect.getfile(inspect.currentframe())), f)
 
 
+def remove_file(f):
+    try:
+        os.remove(f)
+    except Exception:
+        pass
+
+
 class StopFetch(Exception):
     pass
 
@@ -140,8 +147,9 @@ class Fetcher(QThread):
                                         reporthook=self.progressHook)
                         names.append(filename)
                     except StopFetch:
-                        os.remove(filename)
+                        remove_file(filename)
                     except Exception as e:
+                        remove_file(filename)
                         fails.append(name + '---' + str(e))
                 else:
                     names.append(filename)
