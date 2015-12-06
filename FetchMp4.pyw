@@ -59,6 +59,7 @@ class Fetcher(QThread):
         super().__init__(parent)
         self.stop = False
         parent.stop.connect(self.setStop)
+        self._cache = {}
 
     def run(self):
         fails = []
@@ -107,13 +108,17 @@ class Fetcher(QThread):
                 if len(url) == 0:
                     continue
 
-                mp4s = parsemp4.get(url, self.res)
+                mp4s = self._cache.get(url)
                 if mp4s is None:
-                    self.error.emit('Error', 'Failed to parse url: {}'
-                                    .format(url))
-                    continue
+                    mp4s = parsemp4.get(url, self.res)
+                    if mp4s is None:
+                        self.error.emit('Error', 'Failed to parse url: {}'
+                                        .format(url))
+                        continue
+                    print('Fetchong from URL')
+                    self._cache[url] = mp4s
 
-                title, https = parsemp4.get(url, self.res)
+                title, https = mp4s
             else:
                 title, https = url
 
@@ -150,7 +155,7 @@ class Fetcher(QThread):
                         remove_file(filename)
                     except Exception as e:
                         remove_file(filename)
-                        fails.append(name + '---' + str(e))
+                        fails.append('{}.{:03d}.mp4---{}'.format(title, subindex + 1, str(e)))
                 else:
                     names.append(filename)
                 self.setrange.emit(0, 0)
