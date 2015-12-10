@@ -1,6 +1,5 @@
 import re
 import json
-from urllib.request import urlretrieve
 import pyperclip
 
 
@@ -12,7 +11,8 @@ for entry in jj['log']['entries']:
         for h in response['headers']:
             if h['name'] == 'Content-Type' and h['value']== 'video/mp4':
                 url = entry['request']['url']
-                if url.find('.p40') > 0:
+                if url.find('.p401') > 0:
                     url = re.sub(r'(&|\?)start=\d+', '', url)
-                    urls.append(url)
-pyperclip.copy('\n'.join(urls))
+                    if url not in urls:
+                        urls.append(url)
+pyperclip.copy('\r\n'.join(urls))
