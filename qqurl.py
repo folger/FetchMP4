@@ -15,4 +15,6 @@ for entry in jj['log']['entries']:
                     url = re.sub(r'(&|\?)start=\d+', '', url)
                     if url not in urls:
                         urls.append(url)
-pyperclip.copy('\r\n'.join(urls))
+
+with open('qq.txt', 'w') as f:
+    f.write('\n'.join(urls))
