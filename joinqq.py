@@ -29,7 +29,6 @@ with open('qq.txt') as f:
         line = line.rstrip()
         m = p.search(line)
         mp4 = m.group(1)
-        print(mp4)
 
         if mp4s and mainpart(mp4s[0]) != mainpart(mp4):
             joinmp4s()
