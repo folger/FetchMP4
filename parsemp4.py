@@ -7,6 +7,7 @@ from urllib.request import urlopen
 import xml.etree.ElementTree as etree
 import base64
 from urllib.parse import quote
+import requests
 
 
 def get(url, res='h'):
@@ -35,8 +36,8 @@ def _read_data(url):
 
 def _get_sohu(url, res):
     def read_vid(vid):
-        return _read_data(
-                'http://hot.vrs.sohu.com/vrs_flash.action?vid={}'.format(vid))
+        return _read_data('http://hot.vrs.sohu.com/vrs_flash.action?vid={}'
+                          .format(vid))
 
     mapres = {'n': 'norVid', 'h': 'highVid', 's': 'superVid', 'o': 'oriVid'}
     data = _read_data(url)
@@ -49,9 +50,8 @@ def _get_sohu(url, res):
         mp4s = []
         mp4js = mp4js['data']
         for u in mp4js['su']:
-            mp4s.append(
-                    'http://data.vod.itc.cn/?prot=1&prod=mp4&pt=1&new={}'
-                    .format(u))
+            mp4s.append('http://data.vod.itc.cn/?prot=1&prod=mp4&pt=1&new={}'
+                        .format(u))
         return mp4js['tvName'], mp4s
 
 
@@ -96,14 +96,13 @@ def _get_youku(url, res):  # resolution only support high for youku
     playlist = json.loads(data.decode())
     data0 = playlist['data'][0]
     ep, token, sid = getEp(vid, data0['ep'])
-    data = _read_data(
-            'http://pl.youku.com/playlist/m3u8?ctype=12&ep={0}'
-            '&ev=1&keyframe=1&oip={1}&sid={2}&token={3}&type=mp4&vid={4}'
-            .format(quote(ep),
-                    data0["ip"],
-                    sid.decode(),
-                    token.decode(),
-                    vid))
+    data = _read_data('http://pl.youku.com/playlist/m3u8?ctype=12&ep={0}&ev=1'
+                      '&keyframe=1&oip={1}&sid={2}&token={3}&type=mp4&vid={4}'
+                      .format(quote(ep),
+                              data0["ip"],
+                              sid.decode(),
+                              token.decode(),
+                              vid))
     mp4s = []
     for line in data.decode().split('\n'):
         line = line.strip()
@@ -115,13 +114,13 @@ def _get_youku(url, res):  # resolution only support high for youku
 
 
 def _get_qq(url, res):
-    vid = re.search(r'vid=(\w+)', url)
-    if vid is None:
-        vid = re.search(r'(\w+)\.html', url)
-    vid = vid.group(1)
+    r = requests.get(url)
+    m = re.search(r'{}/\w+/(\w+)\.html'.format(url[:url.rfind('/')]),
+                  r.text)
+    vid = m.group(1)
     try:
-        data = _read_data(
-                'http://vv.video.qq.com/getinfo?vid={}&otype=json'.format(vid))
+        data = _read_data('http://vv.video.qq.com/getinfo?vid={}&otype=json'
+                          .format(vid))
         playlist = json.loads(data[data.find(b'{'):-1].decode())
         title = playlist['vl']['vi'][0]['ti']
     except Exception:

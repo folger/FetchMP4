@@ -115,7 +115,7 @@ class Fetcher(QThread):
                         self.error.emit('Error', 'Failed to parse url: {}'
                                         .format(url))
                         continue
-                    print('Fetchong from URL')
+                    print('Fetching from URL')
                     self._cache[url] = mp4s
 
                 title, https = mp4s
