@@ -175,12 +175,12 @@ class Fetcher(QThread):
                     cmd.append('-new')
                     cmd.append(filedes)
                     subprocess.call(cmd)
-                    try:
-                        os.rename(filedes, os.path.join(mp4Path,
-                                  '{}.mp4'.format(title)))
-                    except:
-                        self.error.emit('Mp4 Rename Error',
-                                        'Fail to rename {}.mp4'.format(title))
+                try:
+                    os.rename(filedes, os.path.join(mp4Path,
+                              '{}.mp4'.format(title)))
+                except:
+                    self.error.emit('Mp4 Rename Error',
+                                    'Fail to rename {}.mp4'.format(title))
             if self.stop:
                 break
 
