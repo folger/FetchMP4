@@ -114,10 +114,12 @@ def _get_youku(url, res):  # resolution only support high for youku
 
 
 def _get_qq(url, res):
-    r = requests.get(url)
-    m = re.search(r'{}/\w+/(\w+)\.html'.format(url[:url.rfind('/')]),
-                  r.text)
-    vid = m.group(1)
+    m = re.search(r'vid=(\w+)', url)
+    if m is None:
+        r = requests.get(url)
+        m = re.search(r'{}/\w+/(\w+)\.html'.format(url[:url.rfind('/')]),
+                      r.text)
+    vid = m.group(1) if m else re.search(r'(\w+)\.html', url).group(1)
     try:
         data = _read_data('http://vv.video.qq.com/getinfo?vid={}&otype=json'
                           .format(vid))
